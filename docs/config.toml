@@ -1,0 +1,43 @@
+baseURL = "http://dovetail.io.s3-website-us-east-1.amazonaws.com/"
+languageCode = "en-us"
+title = "Project Dovetail™ - Docs and Tutorials"
+theme = "hugo-theme-learn"
+
+[outputs]
+home = [ "HTML", "JSON"]
+
+[params]
+  # Author of the site, will be used in meta information
+  author = "retgits"
+  # Give people the opportunity to submir PRs for documentation content directly
+  editURL = "https://github.com/fcenedes/dovetail-docs/edit/master/docs/content/"
+  # Description of the site, will be used in meta information
+  description = "Project Dovetail™ - Docs and Tutorials"
+  # Shows a checkmark for visited pages on the menu
+  showVisitedLinks = false
+  # Disable search function. It will hide search bar
+  disableSearch = false
+  # Javascript and CSS cache are automatically busted when new version of site is generated. 
+  # Set this to true to disable this behavior (some proxies don't handle well this optimization)
+  disableAssetsBusting = false
+  # Set this to true to disable copy-to-clipboard button for inline code.
+  disableInlineCopyToClipBoard = true
+  # A title for shortcuts in menu is set by default. Set this to true to disable it. 
+  disableShortcutsTitle = true
+  # When using mulitlingual website, disable the switch language button.
+  disableLanguageSwitchingButton = false
+  # Order sections in menu by "weight" or "title". Default to "weight"
+  ordersectionsby = "weight"
+  # Change default color scheme with a variant one. Can be "red", "blue", "green".
+  themeVariant = "blue"
+
+[[menu.shortcuts]] 
+name = "<i class='fab fa-github'></i> Github repo"
+identifier = "ds"
+url = "https://github.com/tibcosoftware/dovetail"
+weight = 10
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-comments'></i> Community"
+url = "https://community.tibco.com/modules/project-dovetail"
+weight = 11
