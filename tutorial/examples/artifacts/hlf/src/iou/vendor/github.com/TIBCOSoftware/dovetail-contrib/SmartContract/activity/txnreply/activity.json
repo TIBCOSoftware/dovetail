@@ -1,0 +1,90 @@
+{
+    "name": "txnreply",
+    "title": "Transaction Response",
+    "version": "1.0.0",
+    "type": "flogo:activity",
+    "author": "TIBCO Software Inc.",
+    "display": {
+       "category": "SmartContract",
+       "visible": true,
+       "smallIcon": "txnreply.png",
+       "description": "Log message"
+    },
+    "reply": true,
+    "ref": "github.com/TIBCOSoftware/dovetail-contrib/SmartContract/activity/txnreply",
+    "inputs": [
+        {
+            "name": "status",
+            "type": "string",
+            "required": true,
+            "allowed": ["Success", "Success with Data", "Error with Message"],
+            "display": {
+                "name": "Reply",
+                "type": "dropdown",
+                "selection": "single"
+            },
+            "value": "Success with Data"
+        },
+        {
+            "name": "message",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "model",
+            "type": "string",
+            "required": false,
+            "display": {
+                "name": "Common Data Model",
+                "type": "dropdown",
+                "selection":"single"
+            },
+            "allowed":[]
+        },
+        {
+            "name": "dataType",
+            "type": "string",
+            "required":false,
+            "allowed": [],
+            "display": {
+                 "name": "Response Data Type",
+                 "type": "dropdown",
+                 "selection": "single"
+            }
+        },
+        {
+            "name": "isArray",
+            "type": "boolean",
+            "required": true,
+            "display":{
+                "name": "Is Array",
+                "description": "",
+                "visible": true
+            },
+            "value": false
+           },
+        {
+         "name": "input",
+         "type": "complex_object",
+         "display":{
+             "name": "Response Schema",
+             "type": "texteditor",
+             "syntax": "json",
+             "mappable":true,
+             "readonly":true
+         }
+     },
+     {
+         "name": "userInput",
+         "type": "complex_object",
+         "display":{
+             "name": "Response Schema",
+             "type": "texteditor",
+             "syntax": "json",
+             "mappable":true
+         }
+     }
+    ],
+  
+    "outputs": []
+}
