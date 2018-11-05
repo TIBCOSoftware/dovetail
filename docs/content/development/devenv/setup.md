@@ -1,4 +1,7 @@
-# Setup Project Dovetail™ Development Environment
+---
+title: Setup your Dev environment
+weight: 4604
+---
 
 1. Install [Go](https://golang.org/doc/install) and create workspace and setup GOPATH environment viarable as instructed
 2. Install [Docker](https://docs.docker.com/) and [Docker Compose](https://docs.docker.com/compose/install/)
@@ -30,9 +33,11 @@
             <version>0.0.1</version>
         </dependency>
     ```
-7. Install [go-bindata](https://github.com/jteeuwen/go-bindata)
-8. Intall [govendor](https://github.com/kardianos/govendor)
-9. Download [Project Dovetail™ Studio]()
+7. Install [flogo-lib](https://github.com/TIBCOSoftware/flogo-lib)
+8. Install [flogo-contrib](https://github.com/TIBCOSoftware/flogo-contrib)
+9. Install [go-bindata](https://github.com/jteeuwen/go-bindata)
+10. Intall [govendor](https://github.com/kardianos/govendor)
+11. Download [Project Dovetail™ Studio]()
    - after starting up the studio, you can upload [contrib-smartcontract.zip](https://github.com/TIBCOSoftware/dovetail-contrib/blob/master/) from the Extensions tab
-10. Download [dovetail-cli](https://github.com/TIBCOSoftware/dovetail-cli/blob/master/)
+12. Download [dovetail-cli](https://github.com/TIBCOSoftware/dovetail-cli/blob/master/)
 
