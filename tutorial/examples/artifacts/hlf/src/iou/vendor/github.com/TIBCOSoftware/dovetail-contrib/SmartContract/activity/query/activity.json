@@ -1,0 +1,78 @@
+{
+    "name": "query",
+    "title": "Custom Query",
+    "version": "1.0.0",
+    "type": "flogo:activity",
+    "author": "TIBCO Software Inc.",
+    "display": {
+       "category": "SmartContract",
+       "visible": true,
+       "smallIcon": "query.png",
+       "description": "This activity executes custom query of a blockchain platform"
+    },
+ 
+    "ref": "github.com/TIBCOSoftware/dovetail-contrib/SmartContract/activity/query",
+    "inputs": [
+            {
+                "name": "model",
+                "type": "string",
+                "required": true,
+                "display": {
+                    "name": "Common Data Model",
+                    "type": "dropdown",
+                    "selection":"single"
+                },
+                "allowed":[]
+            },
+           {
+                "name": "assetName",
+                "type": "string",
+                "required": true,
+                "display":{
+                    "name": "Asset",
+                    "type": "dropdown",
+                    "selection": "single"
+                },
+                "allowed": []
+           },
+           {
+                "name": "params",
+                "type": "complex_object",
+                "required": false,
+                "display":{
+                    "name": "Define parameters used in query string",
+                    "type": "params",
+                    "schema": "{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"paramName\":{\"type\":\"string\"},\"type\":{\"type\":{\"enum\":[\"string\",\"number\",\"boolean\"]}}}}}"
+                }
+           },
+           {
+                "name": "queryString",
+                "type": "string",
+                "required": true,
+                "display": {
+                    "name": "Define query string",
+                    "description": "use _$paramName in place of input parameters",
+                    "type": "texteditor",
+                    "mappable": false
+                }
+           },
+           {
+                "name": "input",
+                "type": "complex_object",
+                "required": false
+           },
+           {
+                "name": "containerServiceStub",
+                "type": "any",
+                "required":true
+           }
+    ],
+  
+    "outputs": [
+        {
+            "name": "output",
+            "type": "complex_object",
+            "required": true
+        }
+    ]
+}

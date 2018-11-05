@@ -1,0 +1,38 @@
+namespace com.example.iou
+
+import  com.tibco.dovetail.system.*
+
+    asset  IOU identified by linearId extends LinearState {
+      --> Party issuer
+      --> Party owner
+      o Amount amt
+    }
+
+    /*
+    @InitiatedBy
+      - arg0: comma delimited list of authorized participants in the format of $tx.path.to.participant, or * for any participant
+      - arg1: optional, comma delimited list of required attributes that must exist in the initiator's certificate in the format of name=value.
+    */
+    @InitiatedBy("$tx.iou.issuer")
+    transaction IssueIOU {
+      o IOU iou 
+    }
+
+    @InitiatedBy("$tx.iou.owner")
+    transaction TransferIOU {
+      --> IOU iou //by reference because the asset is already on the ledger
+      --> Party newOwner
+    }
+
+    /* 
+    @Query : mark transaction as query only
+    */
+    @Query()
+    transaction getIOU {
+      o String linearId
+    }
+
+     @Query()
+    transaction getIOUIssuedBy {
+      o String issuerPartyId
+    }

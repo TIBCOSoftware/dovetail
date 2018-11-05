@@ -1,0 +1,109 @@
+{
+    "name": "ledger",
+    "title": "Ledger Operation",
+    "version": "1.0.0",
+    "type": "flogo:activity",
+    "author": "TIBCO Software Inc.",
+    "display": {
+       "category": "SmartContract",
+       "visible": true,
+       "smallIcon": "ledger.png",
+       "description": "This activity create, update or delete assets on the ledger"
+    },
+ 
+    "ref": "github.com/TIBCOSoftware/dovetail-contrib/SmartContract/activity/ledger",
+    "inputs": [
+            {
+                "name": "model",
+                "type": "string",
+                "required": true,
+                "display": {
+                    "name": "Common Data Model",
+                    "type": "dropdown",
+                    "selection":"single"
+                },
+                "allowed":[]
+            },
+           {
+                "name": "assetName",
+                "type": "string",
+                "required": true,
+                "display":{
+                    "name": "Asset",
+                    "type": "dropdown",
+                    "selection": "single"
+                },
+                "allowed": []
+           },
+           {
+            "name": "operation",
+            "type": "string",
+            "required": true,
+            "display":{
+                "name": "Action",
+                "description": "get, put, delete or partial key lookup from ledger",
+                "type": "dropdown",
+                "selection": "single"
+            },
+            "allowed": ["PUT", "DELETE", "GET","LOOKUP"],
+            "value": "PUT"
+           },
+           {
+            "name": "isArray",
+            "type": "boolean",
+            "required": true,
+            "display":{
+                "name": "Is Array",
+                "description": "True to perform operation on multiple assets",
+                "visible": true
+            },
+            "value": false
+           },
+           {
+            "name": "compositeKey",
+            "type": "string",
+            "required": false,
+            "display":{
+                "name": "Select Lookup Keys",
+                "description": "Composite key used for partial key lookup",
+                "type": "dropdown",
+                "selection": "single"
+            },
+            "allowed": []
+           },
+           {
+            "name": "input",
+            "type": "complex_object",
+            "required": false
+           },
+           {
+            "name": "containerServiceStub",
+            "type": "any",
+            "required":true
+           },
+           {
+            "name": "identifier",
+            "type": "string",
+            "required":true,
+            "display": {
+                "visible": false
+            }
+           },
+           {
+            "name": "compositeKeys",
+            "type": "string",
+            "required":true,
+            "display": {
+                "visible": false
+            }
+           }
+    ],
+  
+    "outputs": [
+        {
+            "name": "output",
+            "type": "complex_object",
+            "required": false
+        }
+    ]
+}

@@ -1,0 +1,146 @@
+{
+    "name": "SmartContractTrigger",
+    "author": "TIBCO Software Inc.",
+    "type": "flogo:trigger",
+    "version": "1.0.0",
+    "title": "SmartContract TXN Trigger",
+
+    "display": {
+       "description": "Invoke smart contract transaction",
+       "uid": "smartcontract-txn-trigger",
+       "category": "SmartContract",
+       "visible": true,
+       "wizard": ["Choose Common Data Model"],
+       "smallIcon": "trigger.png",
+       "largeIcon": "trigger.png"
+    },
+    "useReplyHandler": true,
+    "ref": "github.com/TIBCOSoftware/dovetail-contrib/SmartContract/trigger/transaction",
+         
+    "settings": [
+        {
+            "name": "model",
+            "type": "object",
+            "required": true,
+            "display": {
+                "name": "Common Data Model",
+                "visible": true
+            },
+            "wizard": {
+                "type": "dropdown",
+                "selection": "single",
+                "step": "Choose Common Data Model"
+            },
+            "allowed": []
+        },
+        {
+            "name": "createAll",
+            "type": "boolean",
+            "required": true,
+            "display": {
+                "name": "Create flows for all transactions",
+                "visible": true,
+                "type": "choice"
+            },
+            "wizard": {
+                "type": "boolean",
+                "step": "Choose Common Data Model"
+            },
+            "value": false
+        },
+        {
+            "name": "assets",
+            "type": "string",
+            "required":false,
+            "display":{
+                "visible":false
+            }
+        },
+        {
+            "name": "transactions",
+            "type": "string",
+            "required":false,
+            "display":{
+                "visible":false
+            }
+        },
+        {
+            "name": "concepts",
+            "type": "string",
+            "required":false,
+            "display":{
+                "visible":false
+            }
+        },
+        {
+            "name": "schemas",
+            "type": "string",
+            "required":false,
+            "display":{
+                "visible":false
+            }
+        }
+    ],
+ 
+    "handler": {
+      "settings": [
+        {
+            "name": "transaction",
+            "type": "string",
+            "required": false,
+            "display": {
+                "name": "Transaction",
+                "visible":false
+            },
+            "wizard": {
+                "type": "dropdown",
+                "selection": "single",
+                "step": "Choose Common Data Model"
+            },
+            "allowed": []
+          }
+     ]
+    },
+     
+    "outputs": [
+        {
+            "name": "transactionInput",
+            "type": "complex_object",
+            "display": {
+                "name": "Transaction Input",
+                "description": "schema",
+                "type": "texteditor",
+                "syntax": "json",
+                "readonly": true,
+                "mappable":true
+            }
+        },
+        {
+        "name": "containerServiceStub",
+        "type": "any"
+        }
+    ],
+    "reply": [
+        {
+            "name": "status",
+            "type": "string",
+            "allowed": ["Success", "Success with Data", "Error with Message"],
+            "required": true
+        },
+        {
+            "name": "message",
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "data",
+            "type": "complex_object",
+            "required": false
+        }  
+    ],    
+    "actions": [
+          {
+            "name": "Finish"
+          }
+    ]
+}

@@ -1,0 +1,47 @@
+namespace com.tibco.dovetail.system
+
+/*
+for Hyperledger Fabric, id is the member's mspId
+for Corda, id is the member's cert name
+*/
+participant Party identified by id {
+  o String id
+}
+
+/*
+All non-fungible asset should inherit from LinearState
+*/
+@CordaClass("net.corda.core.contracts.LinearState")
+abstract asset LinearState {
+  o String linearId
+}
+
+@CordaClass("net.corda.core.contracts.OwnableState")
+abstract asset OwnableState {
+  o String linearId
+  -->Party owner
+}
+
+@CordaClass("net.corda.core.contracts.FungibleAsset")
+abstract asset FungibleAsset {
+  -->Party owner
+  o Amount amt
+}
+
+@CordaClass("net.corda.finance.contracts.asset.Cash.State")
+asset Cash identified by assetId extends FungibleAsset {  
+  o String assetId
+}
+
+@CordaClass("net.corda.core.contracts.Amount<Currency>")
+concept Amount {
+  o String currency
+  o Long quantity default = 0
+}
+
+@CordaClass("net.corda.core.contracts.Amount<Issue<Currency>>")
+concept IssueAmount {
+  -->Party issuer
+  o String currency
+  o Long quantity default = 0
+}
