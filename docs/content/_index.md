@@ -22,8 +22,8 @@
         {{< smallcard img="./images/get-started/006-idea.svg" headercolor="bg6" text="Our quickstart" href="./getting-started/quickstart/">}}
         {{< smallcard img="./images/get-started/008-monitor.svg" headercolor="bg6" text="Getting started with the UI" href="./getting-started/getting-started-webui/">}}
         {{< smallcard img="./images/get-started/009-list.svg" headercolor="bg7" text="Check out some labs on Blockchain" href="./labs">}}
-        {{< smallcard img="../images/labs/034-experiment.svg" headercolor="bg2" text="HyperLedger Fabric™  : in this demo you explore how to design and test a Dovetail™ smart contract against Hyperledger Fabric™." href="../labs/hyerpledger">}}
-        {{< smallcard img="../images/labs/034-experiment.svg" headercolor="bg2" text="R3 Corda : in this demo you explore how to design and test a Dovetail™ smart contract against Corda™." href="../labs/R3Corda">}}
+        {{< smallcard img="../images/labs/034-experiment.svg" headercolor="bg2" text="HyperLedger Fabric™  : in this demo you explore how to design and test a Dovetail™ smart contract against Hyperledger Fabric™." href="./labs/iou-smart-app">}}
+        {{< smallcard img="../images/labs/034-experiment.svg" headercolor="bg2" text="R3 Corda : in this demo you explore how to design and test a Dovetail™ smart contract against Corda™." href="./labs/iou-smart-app">}}
 
     </div>
 </div>

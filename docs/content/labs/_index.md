@@ -35,7 +35,7 @@ These labs have an emphasis on using the [Dovetail Web UI](../getting-started/ge
 
 </div>
 
-## Blockchain™ tools
+## Blockchain™ tutorials
 
 These labs have an emphasis on using external tools together with Project Dovetail™, like R3 Corda or Hyperledger Fabric on turn-key cloud solution such as Kubernetes
 
@@ -43,9 +43,8 @@ These labs have an emphasis on using external tools together with Project Doveta
 
   {{< bigcard img="../images/labs/034-experiment.svg" headercolor="bg2" title="Kubernetes" text="Kubernetes is probably the most wellknown container orchestration platform out there. In this demo you explore how to run Flogo apps on Kubernetes." href="./kubernetes">}}
 
-  {{< bigcard img="../images/labs/034-experiment.svg" headercolor="bg2" title="Docker" text="Flogo apps are ultralight, so building docker images is not only really easy, because it can embed all dependencies it can also run inside of super small containers." href="./docker">}}
+  {{< bigcard img="../images/labs/034-experiment.svg" headercolor="bg2" title="TUTORIAL" text="IOU smart contract application tutorial" href="./iou-smart-app">}}
 
-  {{< bigcard img="../images/labs/034-experiment.svg" headercolor="bg2" title="Cloud Foundry" text="Cloud Foundry is an open-source platform as a service (PaaS) that provides you with a choice of clouds, developer frameworks, and application services (like Flogo!)." href="./cloudfoundry">}}
 
  
 
