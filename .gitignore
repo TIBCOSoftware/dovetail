@@ -1,0 +1,88 @@
+## Intellij
+.idea/
+*.ipr
+*.iml
+*.iws
+## Eclipse stuff
+# Src : https://github.com/github/gitignore/blob/master/Global/Eclipse.gitignore
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+# External tool builders
+.externalToolBuilders/
+# Locally stored "Eclipse launch configurations"
+*.launch
+# PyDev specific (Python IDE for Eclipse)
+*.pydevproject
+# CDT-specific (C/C++ Development Tooling)
+.cproject
+# CDT- autotools
+.autotools
+# Java annotation processor (APT)
+.factorypath
+# PDT-specific (PHP Development Tools)
+.buildpath
+# sbteclipse plugin
+.target
+# Tern plugin
+.tern-project
+# TeXlipse plugin
+.texlipse
+# STS (Spring Tool Suite)
+.springBeans
+# Code Recommenders
+.recommenders/
+# Annotation Processing
+.apt_generated/
+# Scala IDE specific (Scala & Java development for Eclipse)
+.cache-main
+.scala_dependencies
+.worksheet
+## Atom Start
+atom.sh
+## Gradle
+.gradle
+# Build dirs
+build/
+out/
+## OS X Resources
+.DS_Store
+bin/
+pkg/
+**/vendor/src/
+**/vendor/manifest
+## Golang
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.so
+## JAVA
+*.class
+# Folders
+_obj
+_test
+# Architecture specific extensions/prefixes
+*.[568vq]
+[568vq].out
+*.cgo1.go
+*.cgo2.c
+_cgo_defun.c
+_cgo_gotypes.go
+_cgo_export.*
+_testmain.go
+*.exe
+*.test
+*.prof
+tags
+.vscode/symbols.json
+.build-cache
+submodules/flogo-cicd/.build-cache
+./Dockerfile
