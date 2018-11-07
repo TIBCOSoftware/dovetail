@@ -1,6 +1,5 @@
 ---
 title: IOU Smart Contract for HyperFabric Ledger
-hidden: true
 ---
 
 # Test IOU chaincode in Hyperledger Fabric Network

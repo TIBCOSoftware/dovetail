@@ -11,7 +11,7 @@ We will use [Corda Demo Bench](https://docs.corda.net/demobench.html), install i
    * Start up 3 nodes: Notary, charlie, alice, and bob
    * Make sure they are all running befor contine. Follow the video for step by step instructions.
 
-<p><a target="_blank" rel="noopener noreferrer" href="../../../recordings/corddemo.gif"><img src="../../../recordings/corddemo.gif" alt="Corda Demo Bench" style="max-width:75%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="../../../images/recordings/corddemo.gif"><img src="../../../images/recordings/corddemo.gif" alt="Corda Demo Bench" style="max-width:75%;"></a></p>
 
 ## 2. Issue an IOU
 
