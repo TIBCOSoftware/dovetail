@@ -1,6 +1,5 @@
 ---
 title: IOU Smart Contract for Corda
-hidden: true
 ---
 
 # Test IOU Smart Contract in R3 Cora Network

@@ -8,7 +8,7 @@ hidden: true
 
 In this tutorial, we will walk you through the steps to model, implement and test smart contracts into blockchain platform of your choice. The example is a simple "I owe you" use case, the issuer of an IOU is obligated to pay the owner of the IOU amount issued, the ownership of the IOU can be transferred by current owner, and all transactions will be recorded on the ledger.
 
-Before getting started, you should have your development environment [setup](../development/devenv/setup.md).
+Before getting started, you should have your development environment [setup](../../development/devenv/setup).
 
 ******
 
