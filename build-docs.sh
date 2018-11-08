@@ -30,9 +30,12 @@ ext_docs() {
 
 update_page_cli() {
     echo "Getting the docs for the commandline tools"
-    curl -o docs/content/dovetail-cli/dovetail-cli.md https://raw.githubusercontent.com/${GIT_ACCOUNT}/${GIT_REPO}/master/docs/flogo-cli.md
-    curl -o docs/content/dovetail-cli/flogodevice-cli.md https://raw.githubusercontent.com/${GIT_ACCOUNT}/${GIT_REPO}/master/docs/flogodevice-cli.md
-    curl -o docs/content/dovetail-cli/flogogen-cli.md https://raw.githubusercontent.com/${GIT_ACCOUNT}/${GIT_REPO}/master/docs/flogogen-cli.md
+    curl -o docs/content/dovetail-cli/dovetail-cli.md https://raw.githubusercontent.com/TIBCOSoftware/flogo-cli/master/docs/flogo-cli.md
+    curl -o docs/content/dovetail-cli/flogodevice-cli.md https://raw.githubusercontent.com/TIBCOSoftware/flogo-cli/master/docs/flogodevice-cli.md
+    curl -o docs/content/dovetail-cli/flogogen-cli.md https://raw.githubusercontent.com/TIBCOSoftware/flogo-cli/master/docs/flogogen-cli.md
+    #curl -o docs/content/dovetail-cli/dovetail-cli.md https://raw.githubusercontent.com/${GIT_ACCOUNT}/${GIT_REPO}/master/docs/flogo-cli.md
+    #curl -o docs/content/dovetail-cli/flogodevice-cli.md https://raw.githubusercontent.com/${GIT_ACCOUNT}/${GIT_REPO}/master/docs/flogodevice-cli.md
+    #curl -o docs/content/dovetail-cli/flogogen-cli.md https://raw.githubusercontent.com/${GIT_ACCOUNT}/${GIT_REPO}/master/docs/flogogen-cli.md
     #curl -o docs/content/dovetail-cli/tools-overview.md https://raw.githubusercontent.com/TIBCOSoftware/flogo-cli/master/docs/tools-overview.md
 }
 
@@ -74,7 +77,6 @@ update_page() {
             ;;
         *)
             echo "Updating all pages"
-            ext_docs
             update_page_cli
             update_page_contrib
             update_page_introduction
@@ -109,7 +111,6 @@ gitprep() {
 gitupdate() {
     echo "Updating gh-pages branch"
     cd docs/public && git add --all && git commit -m "Publishing to gh-pages (build-doc.sh)"
-
 }
 
 
