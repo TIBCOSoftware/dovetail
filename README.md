@@ -1,5 +1,5 @@
 <p align="center">
-  <img src ="images/noutfoundprojectflogo.png" alt ="TODO : Replace with project Dovetail image" />
+  <img src ="images/TIBCO Labs final with TM2-08_email.png" />
 </p>
 
 <p align="center" >
@@ -79,69 +79,17 @@ Dovetail Flows provides smart contract logic design capabilities and includes th
 
 We've made getting started with Dovetail Flows as easy as possible. The current set of tooling is designed for:
 
-- Serverless function developers
-- Cloud-native microservices developers
-- IoT Solutions developers
-- <a href="#golang-api">Go Developers</a>
+- Smart contract developers
+
+For step by step instructions on how to get started please go to the [documentation page](https://tibcosoftware.github.io/dovetail/)
 
 ### Zero-code Developers
 
-If your background is in or you prefer to develop your apps using zero-coding environments, then read on, because we’ve got something special for you.
+If your background is in or you prefer to develop your smart contracts using zero-coding environments, then read on, because we’ve got something special for you.
 
-Flows Web UI is available via [Docker Hub](https://hub.docker.com/r/flogo/flogo-docker) or [Dovetail.io](http://flogo.io). The Docker image contains the Flows Web UI along with all required components to begin developing, testing and building deployable artifacts right from your web browser.
+Flows Web UI is available via [Dovetail releases page](https://github.com/TIBCOSoftware/dovetail/releases).
 
 To report any issues with the Issue tracker on this project.
-
-![Dovetail Web In Action](images/flogo-web2.gif)
-
-## Getting Started
-
-We’ve made building powerful streaming pipelines as easy as possible. Develop your smart contracts pipelines using:
-
-- A simple, clean JSON-based DSL
-- Golang API
-
-See the sample below of an aggregation pipeline (for brevity, the triggers and metadata of the resource has been omitted). Also don’t forget to check out the examples in the [project-flogo/stream](https://github.com/project-flogo/stream/tree/master/examples) repo.
-
-```json
-  "stages": [
-    {
-      "ref": "github.com/TIBCOSoftware/dovetail-contrib/activity/aggregate",
-      "settings": {
-        "function": "sum",
-        "windowType": "timeTumbling",
-        "windowSize": "5000"
-      },
-      "input": {
-        "value": "=$.input"
-      }
-    },
-    {
-      "ref": "github.com/TIBCOSoftware/dovetail-contrib/activity/log",
-      "input": {
-        "message": "=$.result"
-      }
-    }
-  ]
-```
-
-# The CLI
-
-The CLI is used to build all applications that leverage the JSON-based DSL. If you’re using the Go API to build your apps, feel free to just `go build` your stuff without the flogo CLI.
-
-Getting started with the CLI couldn't be any easier (refer to [Dovetail CLI](https://github.com/TIBCOSoftware/dovetail-cli) repo for detail instructions and dependencies):
-
-* Install the CLI
-```bash
-go get -u github.com/TIBCOSoftware/dovetail-cli/...
-```
-
-* Create & build your app
-<img src="images/dovetail-cli.gif" width="70%"/>
-
-* **dovetail** the main CLI for creating and building  and testing your blockchains smart contracts
-
-If you're interested in building your own contribution(s), refer to the [Dovetail Documentation](https://tibcosoftware.github.io/flogo/) or join us on the [project-flogo/Lobby Gitter Channel](https://gitter.im/project-flogo/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link).
 
 # Contributing
 Want to contribute to Project Dovetail? We've made it easy, all you need to do is fork the repository you intend to contribute to, make your changes and create a Pull Request! Once the pull request has been created, you'll be prompted to sign the CLA (Contributor License Agreement) online.
@@ -151,18 +99,11 @@ Not sure where to start? No problem, here are a few suggestions:
 * [dovetail-contrib](https://github.com/TIBCOSoftware/dovetail-contrib): This repository contains all of the contributions, such as activities, triggers, etc. Perhaps there is something missing? Create a new activity or trigger or fix a bug in an existing activity or trigger.
 * Browse all of the Project Dovetail repositories and look for issues tagged `kind/help-wanted` or `good first issue`
 
-If you have any questions, feel free to post an issue and tag it as a question, email flogo-oss@tibco.com or chat with the team and community:
+If you have any questions, feel free to post an issue and tag it as a question or email tibcolabs@tibco.com. 
 
-* The [project-flogo/Lobby](https://gitter.im/project-flogo/Lobby) Gitter channel should be used for general discussions, start here for all things Dovetail!
-* The [project-flogo/developers](https://gitter.im/project-flogo/developers) Gitter channel should be used for developer/contributor focused conversations. 
-
-For additional details, refer to the [Contribution Guidelines](https://github.com/TIBCOSoftware/flogo/blob/master/CONTRIBUTING.md).
+For additional details, refer to the [Contribution Guidelines](https://github.com/TIBCOSoftware/dovetail/blob/master/CONTRIBUTING.md).
 
 # License 
-The top level flogo repo, consisting of flow samples & documentation, is licensed licensed under a BSD-style license. Refer to [LICENSE](https://github.com/TIBCOSoftware/flogo/blob/master/LICENSE) for license text.
+The top level flogo repo, consisting of flow samples & documentation, is licensed licensed under a BSD-style license. Refer to [LICENSE](https://github.com/TIBCOSoftware/dovetail/blob/master/LICENSE) for license text.
 
-Dovetail source code in [dovetail-cli](https://github.com/TIBCOSoftware/dovetail-cli), [flogo-lib](https://github.com/TIBCOSoftware/flogo-lib), [dovetail-contrib](https://github.com/TIBCOSoftware/dovetail-contrib), [flogo-services](https://github.com/TIBCOSoftware/flogo-services) are all licensed under a BSD-style license, refer to [LICENSE](https://github.com/TIBCOSoftware/flogo/blob/master/LICENSE) 
-
-## Usage Guidelines
-
-We’re excited that you’re using Project Dovetail to power your project(s). Please adhere to the [usage guidelines](http://flogo.io/brand-guidelines) when referencing the use of Project Dovetail within your project(s) and don't forget to let others know you're using Project Dovetail by proudly displaying one of the following badges or the Flynn logo, found in the [branding](branding) folder of this project.
+Dovetail source code in [dovetail-cli](https://github.com/TIBCOSoftware/dovetail-cli), [dovetail-contrib](https://github.com/TIBCOSoftware/dovetail-contrib), [dovetail-java-lib](https://github.com/TIBCOSoftware/dovetail-java-lib) are all licensed under a BSD-style license, refer to [LICENSE](https://github.com/TIBCOSoftware/dovetail/blob/master/LICENSE) 
