@@ -19,5 +19,5 @@ Now that you've installed the Go programming language there are a few commands y
 * Third you can build the binary by running `go install ./...`.
 
 {{% notice note %}}
-If you want to update the CLI tools, you can run `go get -u github.com/TIBCOSoftware/flogo-cli/...` to get the latest version. 
+If you want to update the CLI tools, you can run `go get -u github.com/TIBCOSoftware/dovetail-cli/...` to get the latest version. 
 {{% /notice %}}
