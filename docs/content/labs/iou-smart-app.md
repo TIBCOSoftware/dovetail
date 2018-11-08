@@ -144,7 +144,7 @@ Run folloowing command from tutorial directory, R3 Corda contract is written to 
 ## 7. Import an existing application
 * You can import an application into Project Dovetail™ Studio
    - Go to Project Dovetail™ Studio
-   - Create a new Application "IOUImport", click on "Import" button, use this [IOU.json](examples/artifacts/IOU.json)
+   - Create a new Application "IOUImport", click on "Import" button, use this [IOU.json(artifacts/IOU.json)
 
 <p><a target="_blank" rel="noopener noreferrer" href="images/recordings/importiou.gif"><img src="images/recordings/importiou.gif" alt="Get IOU Issued by" style="max-width:75%;"></a></p>
 
