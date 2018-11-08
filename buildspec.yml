@@ -23,14 +23,10 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Update Documentation
-      - cd /opt/app/ && sh ./build-docs.sh update-page
-      - echo Build Hugo site
-      - cd /opt/app/docs && hugo 
+      - cd /opt/app/ && sh ./build-docs.sh magic
   post_build:
     commands:
       - echo Build completed on `date`
-      - echo Syncing with S3
-      - aws s3 sync --delete public s3://${S3_BUCKETNAME} --cache-control max-age=3600
 #artifacts:
 #  files:
 #    - /opt/app/docs/public/**/*
