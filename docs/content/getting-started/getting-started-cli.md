@@ -15,7 +15,8 @@ Don't forget to set your `GOPATH` variable and make sure that `$GOPATH/bin` is p
 Now that you've installed the Go programming language there are a few commands you can run to install the cli and make developing with the cli tools even easier
 
 * First you'll need to **go get** flogo by running `go get -u github.com/TIBCOSoftware/dovetail-cli/...`. This will get you both the CLI tools.
-* Second you can build the binary by running `go install ./...`.
+* Second go to your dovetail-cli directory `cd $GOPATH/src/github.com/TIBCOSoftware/dovetail-cli`
+* Third you can build the binary by running `go install ./...`.
 
 {{% notice note %}}
 If you want to update the CLI tools, you can run `go get -u github.com/TIBCOSoftware/flogo-cli/...` to get the latest version. 
