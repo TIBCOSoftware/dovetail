@@ -88,14 +88,16 @@ update_page() {
 build() {
     echo "Build docs site..."
     cd docs && hugo
-    cd ../showcases && hugo
-    mv public ../docs/public/showcases
-    cd ../docs/public
+    #cd ../showcases && hugo
+    #mv public ../docs/public/showcases
+    cd public/
     ls -alh
     cd ../../
 }
 
 gitprep() {
+    git config --global user.email "fcenedes@tibco.com"
+    git config --global user.name "fcenedes"
     echo "Deleting old publication"
     cd docs
     rm -rf public
