@@ -15,6 +15,7 @@ phases:
       - dpkg -i /tmp/hugo.dep
   pre_build:
     commands:
+      - mkdir -p ${CODEBUILD_SRC_DIR}/dovetail-contrib/
       - mv ${CODEBUILD_SRC_DIR_contrib}/* ${CODEBUILD_SRC_DIR}/dovetail-contrib/
   build:
     commands:
