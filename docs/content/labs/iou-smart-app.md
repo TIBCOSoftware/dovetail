@@ -8,7 +8,7 @@ hidden: true
 
 In this tutorial, we will walk you through the steps to model, implement and test smart contracts into blockchain platform of your choice. The example is a simple "I owe you" use case, the issuer of an IOU is obligated to pay the owner of the IOU amount issued, the ownership of the IOU can be transferred by current owner, and all transactions will be recorded on the ledger.
 
-Before getting started, you should have your development environment [setup](../../development/devenv/setup).
+Before getting started, you should have your development environment [setup](../development/devenv/setup).
 
 ******
 
@@ -88,7 +88,7 @@ We will use Visio Studio Code to create IOU smart contract model.
 * Go to Connections Tab > Add Connection > Select Composer Connector
 * Give the connection a name, then "Browse" to find the iou.bna file, click "Save Model" button. 
 
-<p><a target="_blank" rel="noopener noreferrer" href="../images/recordings/importbna.gif"><img src="../images/recordings/importbna.gif" alt="Import Model" style="max-width:75%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="../images/recordings/importbna.gif"><img src="images/recordings/importbna.gif" alt="Import Model" style="max-width:75%;"></a></p>
 
 ## 3. Implement IOU Smart Contract
 ### *3.1 IssueIOU Transaction*
@@ -96,15 +96,15 @@ We will use Visio Studio Code to create IOU smart contract model.
 * Create a flow > flow name "IssueIOU" > Select "SmartContract TXN Trigger" > Select "IOU" from model dropdown > Select "com.example.iou.IssueIOU" from transaction dropdown > Click "Done" button
 * We will add a logger activity, ledger activity and response activity. We will also validate input before writing to ledger. 
 
-<p><a target="_blank" rel="noopener noreferrer" href="../images/recordings/issueiou.gif"><img src="../images/recordings/issueiou.gif" alt="Issue IOU" style="max-width:75%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="images/recordings/issueiou.gif"><img src="images/recordings/issueiou.gif" alt="Issue IOU" style="max-width:75%;"></a></p>
 
 ### *3.2 TransferIOU Transaction*
 * Create a new flow to implement TransferIOU transaction
-<p><a target="_blank" rel="noopener noreferrer" href="../images/recordings/transferiou.gif"><img src="../images/recordings/transferiou.gif" alt="Transfer IOU" style="max-width:75%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="images/recordings/transferiou.gif"><img src="images/recordings/transferiou.gif" alt="Transfer IOU" style="max-width:75%;"></a></p>
 
 ### *3.3 getIOU Transaction*
 * Create a new flow to implement getIOU transaction
-<p><a target="_blank" rel="noopener noreferrer" href="../images/recordings/getiou.gif"><img src="../images/recordings/getiou.gif" alt="Get IOU" style="max-width:75%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="images/recordings/getiou.gif"><img src="images/recordings/getiou.gif" alt="Get IOU" style="max-width:75%;"></a></p>
 
 ### *3.4 getIOUIssuedBy Transaction*
 * Create a new flow to implement getIOUIssuedBy transaction
@@ -112,14 +112,14 @@ We will use Visio Studio Code to create IOU smart contract model.
    - define a input parameter "issuerId"
    - define blochchain specific query string, use _$paramName for input substitution, in this example, we use [Hyperledger Fabric CouchDB query syntax](https://hyperledger-fabric.readthedocs.io/en/release-1.3/couchdb_tutorial.html)
 
-<p><a target="_blank" rel="noopener noreferrer" href="../images/recordings/getiouissuedby.gif"><img src="../images/recordings/getiouissuedby.gif" alt="Get IOU Issued by" style="max-width:75%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="images/recordings/getiouissuedby.gif"><img src="images/recordings/getiouissuedby.gif" alt="Get IOU Issued by" style="max-width:75%;"></a></p>
 
 ## 4. Export IOU Smart Contract Application
 * Go to IOU application
 * Click on "Export app" button, save the file IOU.json to artifacts folder
 
 ## 5. Generate Blockchain Artifacts
-copy [generate.sh](scripts/generate.sh) to tutorial/scripts folder, run ```chmod +x generate.sh``` to make it executable
+
 ### *5.1 Hyperledger Fabric*
 Run following command from tutorial directory Hyperledger Fabric chaincode is written to tutorial/artifacts/hlf folder
 
@@ -134,18 +134,18 @@ Run folloowing command from tutorial directory, R3 Corda contract is written to 
 
 ## 6. Test IOU Smart Contract
 ### *6.1 Hyperledger Fabric*
-* Copy [sample Hyperledger Fabric Network](https://github.com/TIBCOSoftware/dovetail/blob/master/tutorial/examples/network/fabric) to your network/fabric directory
-* Follow [instructions](../network/fabric/fabric_network), assuing you are running commands from fabric directory.
+* Copy [sample Hyperledger Fabric Network](https://github.com/TIBCOSoftware/dovetail/blob/master/docs/content/labs/network/fabric) to your network/fabric directory
+* Follow [instructions](network/fabric/fabric_network), assuing you are running commands from fabric directory.
 
 ### *6.2 R3 Corda*
-* Copy [sample R3 CordApp](https://github.com/TIBCOSoftware/dovetail/blob/master/tutorial/examples/network/corda) to network/corda directory
-* Follow [instructions](../network/corda/corda_network)
+* Copy [sample R3 CordApp](https://github.com/TIBCOSoftware/dovetail/blob/master/docs/content/labs/network/corda) to network/corda directory
+* Follow [instructions](network/corda/corda_network)
 
 ## 7. Import an existing application
 * You can import an application into Project Dovetail™ Studio
    - Go to Project Dovetail™ Studio
    - Create a new Application "IOUImport", click on "Import" button, use this [IOU.json](examples/artifacts/IOU.json)
 
-<p><a target="_blank" rel="noopener noreferrer" href="../images/recordings/importiou.gif"><img src="../images/recordings/importiou.gif" alt="Get IOU Issued by" style="max-width:75%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="images/recordings/importiou.gif"><img src="images/recordings/importiou.gif" alt="Get IOU Issued by" style="max-width:75%;"></a></p>
 
 

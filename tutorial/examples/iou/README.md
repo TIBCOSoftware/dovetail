@@ -1,1 +1,0 @@
-This is a template project for Project Dovetail™ asset modeling, it contains the required resource definitions in the system namespace.
