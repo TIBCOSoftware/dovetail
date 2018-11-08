@@ -15,7 +15,7 @@ phases:
       - dpkg -i /tmp/hugo.dep
   pre_build:
     commands:
-      - mv ${CODEBUILD_SRC_DIR_contrib}/* /opt/app/dovetail-contrib/
+      - mv ${CODEBUILD_SRC_DIR_contrib}/* ${CODEBUILD_SRC_DIR}/dovetail-contrib/
   build:
     commands:
       - echo Build started on `date`

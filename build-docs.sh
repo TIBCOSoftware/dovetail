@@ -77,6 +77,7 @@ update_page() {
             ;;
         *)
             echo "Updating all pages"
+            ext_docs
             update_page_cli
             update_page_contrib
             update_page_introduction
