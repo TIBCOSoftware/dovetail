@@ -135,11 +135,11 @@ Run folloowing command from tutorial directory, R3 Corda contract is written to 
 ## 6. Test IOU Smart Contract
 ### *6.1 Hyperledger Fabric*
 * Copy [sample Hyperledger Fabric Network](https://github.com/TIBCOSoftware/dovetail/blob/master/docs/content/labs/network/fabric) to your network/fabric directory
-* Follow [instructions](network/fabric/fabric_network), assuing you are running commands from fabric directory.
+* Follow [instructions](network/fabric/fabric_network.md), assuing you are running commands from fabric directory.
 
 ### *6.2 R3 Corda*
 * Copy [sample R3 CordApp](https://github.com/TIBCOSoftware/dovetail/blob/master/docs/content/labs/network/corda) to network/corda directory
-* Follow [instructions](network/corda/corda_network)
+* Follow [instructions](network/corda/corda_network.md)
 
 ## 7. Import an existing application
 * You can import an application into Project Dovetail™ Studio
