@@ -6,9 +6,9 @@
 # Last Updated: 2018-11-11
 
 #--- Variables ---
-HUGO_VERSION=0.49
-GIT_ACCOUNT="fcenedes"
-GIT_REPO="dovetail-docs"
+HUGO_VERSION=0.50
+GIT_ACCOUNT="TIBCOSoftware"
+GIT_REPO="dovetail"
 
 #--- Download and install prerequisites ---
 prerequisites() {
@@ -30,9 +30,9 @@ ext_docs() {
 
 update_page_cli() {
     echo "Getting the docs for the commandline tools"
-    curl -o docs/content/dovetail-cli/dovetail-cli.md https://raw.githubusercontent.com/TIBCOSoftware/flogo-cli/master/docs/flogo-cli.md
-    curl -o docs/content/dovetail-cli/flogodevice-cli.md https://raw.githubusercontent.com/TIBCOSoftware/flogo-cli/master/docs/flogodevice-cli.md
-    curl -o docs/content/dovetail-cli/flogogen-cli.md https://raw.githubusercontent.com/TIBCOSoftware/flogo-cli/master/docs/flogogen-cli.md
+    curl -o docs/content/dovetail-cli/dovetail-cli.md https://raw.githubusercontent.com/${GIT_ACCOUNT}/${GIT_REPO}/master/docs/flogo-cli.md
+    curl -o docs/content/dovetail-cli/flogodevice-cli.md https://raw.githubusercontent.com/${GIT_ACCOUNT}/${GIT_REPO}/master/docs/flogodevice-cli.md
+    curl -o docs/content/dovetail-cli/flogogen-cli.md https://raw.githubusercontent.com/${GIT_ACCOUNT}/${GIT_REPO}/master/docs/flogogen-cli.md
     #curl -o docs/content/dovetail-cli/tools-overview.md https://raw.githubusercontent.com/TIBCOSoftware/flogo-cli/master/docs/tools-overview.md
 }
 
@@ -87,8 +87,29 @@ build() {
     cd docs && hugo
     cd ../showcases && hugo
     mv public ../docs/public/showcases
-    cd ../docs
-    cd public && ls -alh
+    cd ../docs/public
+    ls -alh
+    cd ../../
+}
+
+gitprep() {
+    echo "Deleting old publication"
+    cd docs
+    rm -rf public
+    mkdir public
+    git worktree prune
+    rm -rf .git/worktrees/public/
+    echo "Checking out gh-pages branch into public"
+    git worktree add -B gh-pages public origin/gh-pages
+    echo "Removing existing files"
+    rm -rf public/*
+    cd ../..  
+}
+
+gitupdate() {
+    echo "Updating gh-pages branch"
+    cd docs/public && git add --all && git commit -m "Publishing to gh-pages (build-doc.sh)"
+
 }
 
 
@@ -105,6 +126,13 @@ case "$1" in
     "build")
         build
         ;;
+    "magic")
+        gitprep
+        update_page $2
+        build
+        gitupdate
+        ;;
+        
     *)
         echo "The target {$1} you want to execute doesn't exist"
 esac
