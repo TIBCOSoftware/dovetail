@@ -40,15 +40,15 @@
 </div>
 
 <div class="line hidden" id="talk">    
-    <p class="center">If you have any questions, feel free to <a href="https://github.com/TIBCOSoftware/flogo/issues/new" target="_blank">post an issue</a> and tag it as a question, email <i>flogo-oss at tibco dot com</i> or chat with the team and community in:</p>
+    <p class="center">If you have any questions, feel free to <a href="https://github.com/TIBCOSoftware/dovetail/issues/new" target="_blank">post an issue</a> and tag it as a question, email <i>flogo-oss at tibco dot com</i> or chat with the team and community in:</p>
     <div class="cards">
 
-        {{< smallcard img="./images/get-started/001-support.svg" headercolor="bg5" text="Come join our Gitter channel to talk all things Flogo!" href="https://gitter.im/project-flogo/Lobby">}}
-        {{< smallcard img="./images/get-started/001-support.svg" headercolor="bg5" text="Join this Gitter channel for developer questions!" href="https://gitter.im/project-flogo/developers">}}
+        {{< smallcard img="./images/get-started/001-support.svg" headercolor="bg5" text="Come join our Gitter channel to talk all things Flogo!" href="https://gitter.im/project-dovetail/Lobby">}}
+        {{< smallcard img="./images/get-started/001-support.svg" headercolor="bg5" text="Join this Gitter channel for developer questions!" href="https://gitter.im/project-dovetail/developers">}}
 
     </div>
 </div>
-
+--!!
 <script>
     function show(arg) {
         document.getElementById("app").classList = "line hidden"
