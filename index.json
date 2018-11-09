@@ -207,7 +207,7 @@
 	"title": "Overview",
 	"tags": [],
 	"description": "",
-	"content": "Project Dovetail provides different command-line interfaces and which you need depends on the task you need to execute.\n dovetail: This CLI gives you the ability to build smart contracts for Blockchain. With this tool you can, among other things, create your own logic, build the contract and test it. This tool is great to use with Continuous Integration and Continuous Deployment tools like Jenkins and Travis-CI.  "
+	"content": "Project Flogo provides different command-line interfaces and which you need depends on the task you need to execute.\n flogo: This CLI gives you the ability to build flows and microservices. With this tool you can, among other things, create your applications, build applications and install new extensions. This tool is great to use with Continuous Integration and Continuous Deployment tools like Jenkins and Travis-CI. flogodevice: This CLI gives you the ability to build your apps to run on different types of devices using the device profile option. flogogen: If you\u0026rsquo;re looking to extend the functionality that Project Flogo offers out of the box, this is the tool you want to use. Flogogen generates the scafolding used by extensions (activity/trigger) developers to build new extensions.  "
 },
 {
 	"uri": "https://tibcosoftware.github.io/dovetail/dovetail-cli/dovetail-cli/",
@@ -278,6 +278,13 @@
 	"tags": [],
 	"description": "",
 	"content": " Project Dovetail™ Docs and Tutorials for project Dovetail™\nGet started...  I\u0026#39;m an Business Developer!\n    I\u0026#39;m a Go Developer!\n    I need help!\n     As an Business Developer you might want to try...\n Our quickstart\n    Getting started with the UI\n    Check out some labs on Blockchain\n    HyperLedger Fabric™ : in this demo you explore how to design and test a Dovetail™ smart contract against Hyperledger Fabric™.\n    R3 Corda : in this demo you explore how to design and test a Dovetail™ smart contract against Corda™.\n     As an Go Developer you might want to try...\n Mapping some fields\n      If you have any questions, feel free to post an issue and tag it as a question, email flogo-oss at tibco dot com or chat with the team and community in:\n Come join our Gitter channel to talk all things Flogo!\n    Join this Gitter channel for developer questions!\n      function show(arg) { document.getElementById(\"app\").classList = \"line hidden\" document.getElementById(\"golang\").classList = \"line hidden\" document.getElementById(\"docs\").classList = \"line hidden\" document.getElementById(\"talk\").classList = \"line hidden\" document.getElementById(arg).classList.remove(\"hidden\") document.getElementById(arg).classList.add(\"block\") }  "
+},
+{
+	"uri": "https://tibcosoftware.github.io/dovetail/dovetail-cli/flogo-cli/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": "THIS PAGE IS AUTOMATICALLY GENERATED DURING BUILD\n"
 },
 {
 	"uri": "https://tibcosoftware.github.io/dovetail/labs/flogo-cli/",
