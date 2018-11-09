@@ -6,9 +6,9 @@
 # Last Updated: 2018-11-11
 
 #--- Variables ---
-HUGO_VERSION=0.49
-GIT_ACCOUNT="fcenedes"
-GIT_REPO="dovetail-docs"
+HUGO_VERSION=0.50
+GIT_ACCOUNT="TIBCOSoftware"
+GIT_REPO="dovetail"
 
 #--- Download and install prerequisites ---
 prerequisites() {
@@ -25,7 +25,7 @@ ext_docs() {
     #git clone https://github.com/TIBCOSoftware/dovetail-contrib
     for i in `find dovetail-contrib/activity -name \*.md` ; do filename=$(basename $(dirname $i)); cp $i docs/content/development/webui/activities/$filename.md; done;
     for i in `find dovetail-contrib/trigger -name \*.md` ; do filename=$(basename $(dirname $i)); cp $i docs/content/development/webui/triggers/$filename.md; done;
-    rm -rf /opt/dovetail-contrib
+    rm -rf ./dovetail-contrib
 }
 
 update_page_cli() {
@@ -33,7 +33,10 @@ update_page_cli() {
     curl -o docs/content/dovetail-cli/dovetail-cli.md https://raw.githubusercontent.com/TIBCOSoftware/flogo-cli/master/docs/flogo-cli.md
     curl -o docs/content/dovetail-cli/flogodevice-cli.md https://raw.githubusercontent.com/TIBCOSoftware/flogo-cli/master/docs/flogodevice-cli.md
     curl -o docs/content/dovetail-cli/flogogen-cli.md https://raw.githubusercontent.com/TIBCOSoftware/flogo-cli/master/docs/flogogen-cli.md
-    #curl -o docs/content/dovetail-cli/tools-overview.md https://raw.githubusercontent.com/TIBCOSoftware/flogo-cli/master/docs/tools-overview.md
+    #curl -o docs/content/dovetail-cli/dovetail-cli.md https://raw.githubusercontent.com/${GIT_ACCOUNT}/${GIT_REPO}/master/docs/flogo-cli.md
+    #curl -o docs/content/dovetail-cli/flogodevice-cli.md https://raw.githubusercontent.com/${GIT_ACCOUNT}/${GIT_REPO}/master/docs/flogodevice-cli.md
+    #curl -o docs/content/dovetail-cli/flogogen-cli.md https://raw.githubusercontent.com/${GIT_ACCOUNT}/${GIT_REPO}/master/docs/flogogen-cli.md
+    curl -o docs/content/dovetail-cli/tools-overview.md https://raw.githubusercontent.com/TIBCOSoftware/flogo-cli/master/docs/tools-overview.md
 }
 
 #--- Update contributions page ---
@@ -85,10 +88,43 @@ update_page() {
 build() {
     echo "Build docs site..."
     cd docs && hugo
-    cd ../showcases && hugo
-    mv public ../docs/public/showcases
-    cd ../docs
-    cd public && ls -alh
+    #cd ../showcases && hugo
+    #mv public ../docs/public/showcases
+    cd public/
+    ls -alh
+    cd ../../
+}
+
+gitprep() {
+    git config --global user.email "fcenedes@tibco.com"
+    git config --global user.name "fcenedes"
+    echo "Deleting old publication"
+    cd docs
+    rm -rf public
+    mkdir public
+    git worktree prune
+    rm -rf .git/worktrees/public/
+    echo "Checking out gh-pages branch into public"
+    git worktree add -B gh-pages public origin/gh-pages
+    echo "Removing existing files"
+    rm -rf public/*
+    cd ../
+    echo $PWD  
+}
+
+gitupdate() {
+    echo "Updating gh-pages branch"
+    cd docs
+    git add -A .
+    cd public
+    git add -A .
+    git commit -a -m "Publishing to gh-pages (build-doc.sh)" 
+    if [[ $(git status -s) ]]
+        then
+        echo "The working directory is dirty. Please commit any pending changes."
+        exit 1;
+    fi 
+    git push origin gh-pages
 }
 
 
@@ -105,6 +141,13 @@ case "$1" in
     "build")
         build
         ;;
+    "magic")
+        gitprep
+        update_page $2
+        build
+        gitupdate
+        ;;
+        
     *)
         echo "The target {$1} you want to execute doesn't exist"
 esac
