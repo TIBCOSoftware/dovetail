@@ -1,4 +1,4 @@
-baseURL = "https://tibcosoftware.github.io/dovetail/
+baseURL = "https://tibcosoftware.github.io/dovetail/"
 languageCode = "en-us"
 title = "Project Dovetail™ - Docs and Tutorials"
 theme = "hugo-theme-learn"
