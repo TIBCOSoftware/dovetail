@@ -114,6 +114,8 @@ gitprep() {
 
 gitupdate() {
     echo "Updating gh-pages branch"
+    cd docs
+    git add -A .
     cd docs/public
     git add -A .
     git commit -a -m "Publishing to gh-pages (build-doc.sh)" 
