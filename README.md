@@ -57,8 +57,9 @@ Dovetail Core provides the following key benefits:
 
 Dovetail™ Core exposes three principal contribution interfaces that enable developers to build common capabilities and functionality. These contribution interfaces include:
 
-* **Trigger Interface** a common interface for building event-consumers that dispatch events to one or more actions. The Kafka subscriber is an example of a trigger.
-* **Activity Interface** a common interface for exposing common application logic in a reusable manner. Think of this as a function, such as write to database, publish to Kafka, etc that can be used by all Dovetail apps.
+* **Connector Interface** a common interface for importing predefined schemas into Dovetail, Hyperledger Composer Connector is an example
+* **Trigger Interface** a common interface for building event-consumers that dispatch events to one or more actions. The Smart Contract TXN Trigger is an example of a trigger.
+* **Activity Interface** a common interface for exposing common application logic in a reusable manner. Think of this as a function, such as write to ledger, publish events, etc that can be used by all Dovetail apps.
 
 # Repos
 
@@ -66,6 +67,8 @@ Project Dovetail consists of the following sub-projects available as separate re
 
 * [dovetail-cli](https://github.com/TIBCOSoftware/dovetail-cli):  Command line tools for building Dovetail apps & extensions
 * [dovetail-contrib](https://github.com/TIBCOSoftware/dovetail-contrib): Dovetail contributions/extensions
+* [dovetail-java-lib](https://github.com/TIBCOSoftware/dovetail-java-lib): Dovetail 
+java runtime for smart contract flows
 
 # Dovetail Flows
 
