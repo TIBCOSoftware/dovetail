@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <b>Documentation Status :</b> <img src="https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiUjc3ZFJUN3NnRlkzaU5wVlM0M0lqdjFZMmVJWlFOZmxoWlVSd0R1dTc4SUFoSHBDTklhQ3NHM3BvZFVPeU9ScXBWcllRRDJ6bVJ1NGRSQ1dJZU8wMEE4PSIsIml2UGFyYW1ldGVyU3BlYyI6ImNURlRVRkNTd0pHY3ZZQngiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master"/>
+  <b>Documentation Status :</b> <img src="" alt="Place holder fro Travis badge URL">
   <img src="https://img.shields.io/badge/license-BSD%20style-blue.svg"/>
   </a>
 </p>
