@@ -114,7 +114,13 @@ gitprep() {
 
 gitupdate() {
     echo "Updating gh-pages branch"
-    cd docs/public && git add --all && git commit -a -m "Publishing to gh-pages (build-doc.sh)" && git push origin gh-pages
+    cd docs/public
+    if [[ $(git status -s) ]]
+        then
+        echo "The working directory is dirty. Please commit any pending changes."
+        exit 1;
+    fi
+    git add -A . && git commit -a -m "Publishing to gh-pages (build-doc.sh)" && git push origin gh-pages
 }
 
 
