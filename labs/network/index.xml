@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>BlockChain Network on Project Dovetail™ - Docs and Tutorials</title>
-    <link>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/network/</link>
+    <link>https://tibcosoftware.github.io/dovetail/labs/network/</link>
     <description>Recent content in BlockChain Network on Project Dovetail™ - Docs and Tutorials</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/network/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tibcosoftware.github.io/dovetail/labs/network/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>IOU Smart Contract for Corda</title>
-      <link>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/network/corda/corda_network/</link>
+      <link>https://tibcosoftware.github.io/dovetail/labs/network/corda/corda_network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/network/corda/corda_network/</guid>
+      <guid>https://tibcosoftware.github.io/dovetail/labs/network/corda/corda_network/</guid>
       <description>Test IOU Smart Contract in R3 Cora Network We will use Corda Demo Bench, install it if you don&amp;rsquo;t have it installed already.
 1. Start up Corda Demo Bench  First add all jars from corda directory Start up 3 nodes: Notary, charlie, alice, and bob Make sure they are all running befor contine. Follow the video for step by step instructions.  
 2. Issue an IOU At charlie terminal, issue an IOU</description>
@@ -23,10 +23,10 @@
     
     <item>
       <title>IOU Smart Contract for HyperFabric Ledger</title>
-      <link>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/network/fabric/fabric_network/</link>
+      <link>https://tibcosoftware.github.io/dovetail/labs/network/fabric/fabric_network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/network/fabric/fabric_network/</guid>
+      <guid>https://tibcosoftware.github.io/dovetail/labs/network/fabric/fabric_network/</guid>
       <description>Test IOU chaincode in Hyperledger Fabric Network We need four docker images in order for &amp;ldquo;dev mode&amp;rdquo; to run against the supplied docker compose script. If you installed the fabric-samples repo clone and followed the instructions to download-platform-specific-binaries, then you should have the necessary Docker images installed locally.
 1. open a terminal, and execute following command to start up the network  docker-compose -f docker-compose-simple.yaml up
  open a terminal window, run docker ps, make sure container cli, chaincode, peer, orderer and couchdb are running</description>

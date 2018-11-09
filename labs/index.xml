@@ -2,50 +2,50 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Labs on Project Dovetail™ - Docs and Tutorials</title>
-    <link>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/</link>
+    <link>https://tibcosoftware.github.io/dovetail/labs/</link>
     <description>Recent content in Labs on Project Dovetail™ - Docs and Tutorials</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tibcosoftware.github.io/dovetail/labs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Building apps with Flogo CLI</title>
-      <link>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/flogo-cli/</link>
+      <link>https://tibcosoftware.github.io/dovetail/labs/flogo-cli/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/flogo-cli/</guid>
+      <guid>https://tibcosoftware.github.io/dovetail/labs/flogo-cli/</guid>
       <description>Project Flogo provides two different command-line interfaces and which you need depends on the task you need to execute.
  flogo: This CLI gives you the ability to build flows and microservices. With this tool you can, among other things, create your applications, build applications and install new extensions. This tool is great to use with Continuous Integration and Continuous Deployment tools like Jenkins and Travis-CI. flogogen: If you’re looking to extend the functionality that Project Flogo offers out of the box, this is the tool you want to use.</description>
     </item>
     
     <item>
       <title>Building your first activity</title>
-      <link>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/building-activities/</link>
+      <link>https://tibcosoftware.github.io/dovetail/labs/building-activities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/building-activities/</guid>
+      <guid>https://tibcosoftware.github.io/dovetail/labs/building-activities/</guid>
       <description>Project Flogo provides two different command-line interfaces and which you need depends on the task you need to execute.
  flogo: This CLI gives you the ability to build flows and microservices. With this tool you can, among other things, create your applications, build applications and install new extensions. This tool is great to use with Continuous Integration and Continuous Deployment tools like Jenkins and Travis-CI. flogogen: If you’re looking to extend the functionality that Project Flogo offers out of the box, this is the tool you want to use.</description>
     </item>
     
     <item>
       <title>Building your first trigger</title>
-      <link>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/building-triggers/</link>
+      <link>https://tibcosoftware.github.io/dovetail/labs/building-triggers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/building-triggers/</guid>
+      <guid>https://tibcosoftware.github.io/dovetail/labs/building-triggers/</guid>
       <description>Project Flogo provides two different command-line interfaces and which you need depends on the task you need to execute.
  flogo: This CLI gives you the ability to build flows and microservices. With this tool you can, among other things, create your applications, build applications and install new extensions. This tool is great to use with Continuous Integration and Continuous Deployment tools like Jenkins and Travis-CI. flogogen: If you’re looking to extend the functionality that Project Flogo offers out of the box, this is the tool you want to use.</description>
     </item>
     
     <item>
       <title>Cloud Deployments: Cloud Foundry</title>
-      <link>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/cloudfoundry/</link>
+      <link>https://tibcosoftware.github.io/dovetail/labs/cloudfoundry/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/cloudfoundry/</guid>
+      <guid>https://tibcosoftware.github.io/dovetail/labs/cloudfoundry/</guid>
       <description>Cloud Foundry is an open-source platform as a service (PaaS) that provides you with a choice of clouds, developer frameworks, and application services.
 What you&amp;rsquo;ll need Flogo CLI This demo makes use of the Flogo CLI. If you don&amp;rsquo;t have that one running yet, please check out Getting Started with the Flogo CLI
 Cloud Foundry If you want to run Flogo apps in a Cloud Foundry environment, you have two options:</description>
@@ -53,10 +53,10 @@ Cloud Foundry If you want to run Flogo apps in a Cloud Foundry environment, you 
     
     <item>
       <title>Cloud Deployments: Docker</title>
-      <link>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/docker/</link>
+      <link>https://tibcosoftware.github.io/dovetail/labs/docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/docker/</guid>
+      <guid>https://tibcosoftware.github.io/dovetail/labs/docker/</guid>
       <description>Flogo apps are ultralight so building docker images is not only really easy, because it can embed all dependencies it can also run inside of super small docker containers.
 What you&amp;rsquo;ll need Flogo CLI This demo makes use of the Flogo CLI. If you don&amp;rsquo;t have that one running yet, please check out Getting Started with the Flogo CLI
 Using flogo Out of the box, Flogo has the option to build a docker container from the app.</description>
@@ -64,10 +64,10 @@ Using flogo Out of the box, Flogo has the option to build a docker container fro
     
     <item>
       <title>HyperLedger Fabric</title>
-      <link>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/hyperledger/</link>
+      <link>https://tibcosoftware.github.io/dovetail/labs/hyperledger/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/hyperledger/</guid>
+      <guid>https://tibcosoftware.github.io/dovetail/labs/hyperledger/</guid>
       <description>Dovetail can run almost anywhere&amp;hellip;..
 What you&amp;rsquo;ll need Flogo CLI This demo makes use of the Flogo CLI. If you don&amp;rsquo;t have that one running yet, please check out Getting Started with the Flogo CLI
 Need help If you have any questions, feel free to post an issue on GitHub and tag it as a question or chat with the team and community:
@@ -76,20 +76,20 @@ Need help If you have any questions, feel free to post an issue on GitHub and ta
     
     <item>
       <title>IOU Smart Contract</title>
-      <link>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/iou-smart-app/</link>
+      <link>https://tibcosoftware.github.io/dovetail/labs/iou-smart-app/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/iou-smart-app/</guid>
+      <guid>https://tibcosoftware.github.io/dovetail/labs/iou-smart-app/</guid>
       <description># A Simple IOU Smart Contract Tutorial
 In this tutorial, we will walk you through the steps to model, implement and test smart contracts into blockchain platform of your choice. The example is a simple &amp;ldquo;I owe you&amp;rdquo; use case, the issuer of an IOU is obligated to pay the owner of the IOU amount issued, the ownership of the IOU can be transferred by current owner, and all transactions will be recorded on the ledger.</description>
     </item>
     
     <item>
       <title>IoT Apps</title>
-      <link>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/r3corda/</link>
+      <link>https://tibcosoftware.github.io/dovetail/labs/r3corda/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/r3corda/</guid>
+      <guid>https://tibcosoftware.github.io/dovetail/labs/r3corda/</guid>
       <description>Flogo can run almost anywhere. From the largest clouds, to the smallest of devices and everything in between. Take this lab to get yourself familiar with how to develop apps for IoT devices using the Flogo CLI.
 What you&amp;rsquo;ll need Flogo CLI This demo makes use of the Flogo CLI. If you don&amp;rsquo;t have that one running yet, please check out Getting Started with the Flogo CLI
 Need help If you have any questions, feel free to post an issue on GitHub and tag it as a question or chat with the team and community:</description>
@@ -97,20 +97,20 @@ Need help If you have any questions, feel free to post an issue on GitHub and ta
     
     <item>
       <title>Kubernetes</title>
-      <link>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/kubernetes/</link>
+      <link>https://tibcosoftware.github.io/dovetail/labs/kubernetes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/kubernetes/</guid>
+      <guid>https://tibcosoftware.github.io/dovetail/labs/kubernetes/</guid>
       <description>Kubernetes is probably the most wellknown container orchestration platform out there, with a ton of companies building and hosting their own specific version or making use of of one. In this demo you explore how to run Flogo apps on Kubernetes. The demo will walk you through deploying two apps:
  An invoice service which gets details on the invoice you specify in the URL A payment service which gets details on the expected payment date for the invoice (The invoice service will make use of the payment service to display all data)  What you&amp;rsquo;ll need The demo needs a working Kubernetes cluster.</description>
     </item>
     
     <item>
       <title>My First App: Hello World</title>
-      <link>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/helloworld/</link>
+      <link>https://tibcosoftware.github.io/dovetail/labs/helloworld/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/helloworld/</guid>
+      <guid>https://tibcosoftware.github.io/dovetail/labs/helloworld/</guid>
       <description>Like with every programming language, a &amp;ldquo;Hello World&amp;rdquo; project gets you started with some basic fundamentals and Project Flogo really isn&amp;rsquo;t that different. This lab will get you started with the Flogo Web UI and building a simple flow.
 What you&amp;rsquo;ll need The Flogo Web UI This demo makes use of the Flogo Web UI. To make it easy to get started the Flogo Web UI is packaged up as a docker image which you can get from [docker hub](docker hub.</description>
     </item>

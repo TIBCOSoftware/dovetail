@@ -3,220 +3,220 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/introduction/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/introduction/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/getting-started/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/getting-started/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/getting-started/quickstart/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/getting-started/quickstart/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/getting-started/getting-started-webui/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/getting-started/getting-started-webui/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/getting-started/getting-started-cli/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/getting-started/getting-started-cli/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/network/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/labs/network/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/labs/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/configuration/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/configuration/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/configuration/environment-vars/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/configuration/environment-vars/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/development/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/apps/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/development/apps/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/devenv/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/development/devenv/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/apps/app-structure/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/development/apps/app-structure/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/flows/tensorflow/getting-started/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/development/flows/tensorflow/getting-started/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/apps/app-configuration/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/development/apps/app-configuration/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/flows/tensorflow/inferencing-tf/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/development/flows/tensorflow/inferencing-tf/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/apps/application-configuration-provider/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/development/apps/application-configuration-provider/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/apps/best-practices-app-development/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/development/apps/best-practices-app-development/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/flows/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/development/flows/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/flows/tensorflow/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/development/flows/tensorflow/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/flows/property-bag/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/development/flows/property-bag/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/flows/io-parameters/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/development/flows/io-parameters/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/flows/iterators/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/development/flows/iterators/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/flows/mapping/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/development/flows/mapping/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/webui/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/development/webui/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/webui/activities/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/development/webui/activities/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/devenv/setup/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/development/devenv/setup/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/webui/triggers/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/development/webui/triggers/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/dovetail-cli/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/dovetail-cli/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/dovetail-cli/tools-overview/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/dovetail-cli/tools-overview/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/dovetail-cli/dovetail-cli/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/dovetail-cli/dovetail-cli/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/dovetail-cli/flogogen-cli/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/dovetail-cli/flogogen-cli/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/dovetail-cli/flogodevice-cli/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/dovetail-cli/flogodevice-cli/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/deployments/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/deployments/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/contributing/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/contributing/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/contributing/contributing/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/contributing/contributing/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/contributing/contribute-to-docs/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/contributing/contribute-to-docs/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/contributing/contribute-to-showcase/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/contributing/contribute-to-showcase/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/glossary/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/glossary/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/flogo-cli/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/labs/flogo-cli/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/building-activities/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/labs/building-activities/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/building-triggers/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/labs/building-triggers/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/categories/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/cloudfoundry/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/labs/cloudfoundry/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/docker/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/labs/docker/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/hyperledger/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/labs/hyperledger/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/iou-smart-app/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/labs/iou-smart-app/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/network/corda/corda_network/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/labs/network/corda/corda_network/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/network/fabric/fabric_network/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/labs/network/fabric/fabric_network/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/r3corda/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/labs/r3corda/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/kubernetes/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/labs/kubernetes/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/helloworld/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/labs/helloworld/</loc>
   </url>
   
   <url>
-    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/tags/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/tags/</loc>
     <priority>0</priority>
   </url>
   

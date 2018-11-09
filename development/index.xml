@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Development on Project Dovetail™ - Docs and Tutorials</title>
-    <link>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/</link>
+    <link>https://tibcosoftware.github.io/dovetail/development/</link>
     <description>Recent content in Development on Project Dovetail™ - Docs and Tutorials</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tibcosoftware.github.io/dovetail/development/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

@@ -2,50 +2,50 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dovetail CLI Tools on Project Dovetail™ - Docs and Tutorials</title>
-    <link>http://dovetail.io.s3-website-us-east-1.amazonaws.com/dovetail-cli/</link>
+    <link>https://tibcosoftware.github.io/dovetail/dovetail-cli/</link>
     <description>Recent content in Dovetail CLI Tools on Project Dovetail™ - Docs and Tutorials</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://dovetail.io.s3-website-us-east-1.amazonaws.com/dovetail-cli/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tibcosoftware.github.io/dovetail/dovetail-cli/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Overview</title>
-      <link>http://dovetail.io.s3-website-us-east-1.amazonaws.com/dovetail-cli/tools-overview/</link>
+      <link>https://tibcosoftware.github.io/dovetail/dovetail-cli/tools-overview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dovetail.io.s3-website-us-east-1.amazonaws.com/dovetail-cli/tools-overview/</guid>
+      <guid>https://tibcosoftware.github.io/dovetail/dovetail-cli/tools-overview/</guid>
       <description>Project Dovetail provides different command-line interfaces and which you need depends on the task you need to execute.
  dovetail: This CLI gives you the ability to build smart contracts for Blockchain. With this tool you can, among other things, create your own logic, build the contract and test it. This tool is great to use with Continuous Integration and Continuous Deployment tools like Jenkins and Travis-CI.  </description>
     </item>
     
     <item>
       <title>flogo</title>
-      <link>http://dovetail.io.s3-website-us-east-1.amazonaws.com/dovetail-cli/dovetail-cli/</link>
+      <link>https://tibcosoftware.github.io/dovetail/dovetail-cli/dovetail-cli/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dovetail.io.s3-website-us-east-1.amazonaws.com/dovetail-cli/dovetail-cli/</guid>
+      <guid>https://tibcosoftware.github.io/dovetail/dovetail-cli/dovetail-cli/</guid>
       <description>The flogo CLI tool gives you the ability to build flows and microservices. With this tool you can, among other things, create your applications, build applications and install new extensions. It is also great to use with Continuous Integration and Continuous Deployment tools like Jenkins and Travis-CI. Below is a complete list of all all commands supported, including samples on how to use them.
 Please make sure that you have installed the flogo tools as described in Getting Started &amp;gt; Flogo CLI</description>
     </item>
     
     <item>
       <title>flogogen</title>
-      <link>http://dovetail.io.s3-website-us-east-1.amazonaws.com/dovetail-cli/flogogen-cli/</link>
+      <link>https://tibcosoftware.github.io/dovetail/dovetail-cli/flogogen-cli/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dovetail.io.s3-website-us-east-1.amazonaws.com/dovetail-cli/flogogen-cli/</guid>
+      <guid>https://tibcosoftware.github.io/dovetail/dovetail-cli/flogogen-cli/</guid>
       <description>The flogogen CLI tool is the tool you want to use if you&amp;rsquo;re looking to extend the functionality that Project Flogo offers out of the box, this is the tool you want to use. Flogogen generates the scafolding used by extensions (activity/trigger) developers to build new extensions.. Below is a complete list of all all commands supported, including samples on how to use them.
 Please make sure that you have installed the flogo tools as described in Getting Started &amp;gt; Flogo CLI</description>
     </item>
     
     <item>
       <title>flogodevice</title>
-      <link>http://dovetail.io.s3-website-us-east-1.amazonaws.com/dovetail-cli/flogodevice-cli/</link>
+      <link>https://tibcosoftware.github.io/dovetail/dovetail-cli/flogodevice-cli/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dovetail.io.s3-website-us-east-1.amazonaws.com/dovetail-cli/flogodevice-cli/</guid>
+      <guid>https://tibcosoftware.github.io/dovetail/dovetail-cli/flogodevice-cli/</guid>
       <description>The flogodevice CLI tool gives you the ability to build your apps to run on different types of devices using the device profile option. Below is a complete list of all all commands supported, including samples on how to use them.
 Please make sure that you have installed the flogo tools as described in Getting Started &amp;gt; Flogo CLI and that PlatformIO is installed as well.
  build Build the flogo device application</description>
