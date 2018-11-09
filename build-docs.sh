@@ -36,7 +36,7 @@ update_page_cli() {
     #curl -o docs/content/dovetail-cli/dovetail-cli.md https://raw.githubusercontent.com/${GIT_ACCOUNT}/${GIT_REPO}/master/docs/flogo-cli.md
     #curl -o docs/content/dovetail-cli/flogodevice-cli.md https://raw.githubusercontent.com/${GIT_ACCOUNT}/${GIT_REPO}/master/docs/flogodevice-cli.md
     #curl -o docs/content/dovetail-cli/flogogen-cli.md https://raw.githubusercontent.com/${GIT_ACCOUNT}/${GIT_REPO}/master/docs/flogogen-cli.md
-    #curl -o docs/content/dovetail-cli/tools-overview.md https://raw.githubusercontent.com/TIBCOSoftware/flogo-cli/master/docs/tools-overview.md
+    curl -o docs/content/dovetail-cli/tools-overview.md https://raw.githubusercontent.com/TIBCOSoftware/flogo-cli/master/docs/tools-overview.md
 }
 
 #--- Update contributions page ---
