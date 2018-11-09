@@ -25,7 +25,7 @@ ext_docs() {
     #git clone https://github.com/TIBCOSoftware/dovetail-contrib
     for i in `find dovetail-contrib/activity -name \*.md` ; do filename=$(basename $(dirname $i)); cp $i docs/content/development/webui/activities/$filename.md; done;
     for i in `find dovetail-contrib/trigger -name \*.md` ; do filename=$(basename $(dirname $i)); cp $i docs/content/development/webui/triggers/$filename.md; done;
-    rm -rf /opt/dovetail-contrib
+    rm -rf ./dovetail-contrib
 }
 
 update_page_cli() {
