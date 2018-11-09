@@ -1,1 +1,0 @@
-mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -DgeneratePom=true -DgroupId=com.example.iou -DartifactId=kotlin-IOU -Dversion=1.0.0 -Dfile=artifacts/corda/iou/kotlin-IOU-1.0.0.jar -Dpackaging=jar
