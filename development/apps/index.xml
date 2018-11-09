@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apps on Project Dovetail™ - Docs and Tutorials</title>
+    <link>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/apps/</link>
+    <description>Recent content in Apps on Project Dovetail™ - Docs and Tutorials</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/apps/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>App structure</title>
+      <link>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/apps/app-structure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/apps/app-structure/</guid>
+      <description> Every Flogo app has the same basic structure and files for an application.
+my_app/ flogo.json src/ my_app/ imports.go main.go vendor/  files The most important files are
+ flogo.json : flogo project application configuration descriptor file imports.go : contains go imports for contributions (activities, triggers and models) used by the application main.go : main file for the engine.  directories The most important directories are
+ src : the place where all code is stored vendor : the place where go libraries are stored  </description>
+    </item>
+    
+    <item>
+      <title>App Model</title>
+      <link>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/apps/app-configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/apps/app-configuration/</guid>
+      <description>Flogo Application Model The flogo.json file is the metadata describing an application. The application dictates the dependencies to be used during compile time and can also be embeded into the compiled binary.
+{ &amp;quot;name&amp;quot;: &amp;quot;myApp&amp;quot;, &amp;quot;type&amp;quot;: &amp;quot;flogo:app&amp;quot;, &amp;quot;version&amp;quot;: &amp;quot;0.0.1&amp;quot;, &amp;quot;description&amp;quot;: &amp;quot;My flogo application description&amp;quot;, &amp;quot;triggers&amp;quot;: [ { &amp;quot;id&amp;quot;: &amp;quot;my_rest_trigger&amp;quot;, &amp;quot;ref&amp;quot;: &amp;quot;github.com/TIBCOSoftware/flogo-contrib/trigger/rest&amp;quot;, &amp;quot;settings&amp;quot;: { &amp;quot;port&amp;quot;: &amp;quot;9233&amp;quot; }, &amp;quot;handlers&amp;quot;: [ { &amp;quot;actionId&amp;quot;: &amp;quot;my_simple_flow&amp;quot;, &amp;quot;settings&amp;quot;: { &amp;quot;method&amp;quot;: &amp;quot;GET&amp;quot;, &amp;quot;path&amp;quot;: &amp;quot;/test&amp;quot; } } ] } ], &amp;quot;actions&amp;quot;: [ { &amp;quot;id&amp;quot;: &amp;quot;my_simple_flow&amp;quot;, &amp;quot;ref&amp;quot;: &amp;quot;github.</description>
+    </item>
+    
+    <item>
+      <title>Application Configuration Provider</title>
+      <link>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/apps/application-configuration-provider/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/apps/application-configuration-provider/</guid>
+      <description>Unless you want to provide the application configuration (for example: flogo.json) in a different way or format you should not worry about this feature.
+We have provided an extension mechanism for you to override the default way of providing the application configuration if needed.
+Topics  Default behavior Embedded configuration Custom configuration  Default behavior Out of the box, the default behavior will be as follows:
+ Configuration will be passed to the engine in the JSON format Default path for the JSON file will be in the same directory as the application&amp;rsquo;s binary Default name for the JSON file will be &amp;ldquo;flogo.</description>
+    </item>
+    
+    <item>
+      <title>Best practices for app development</title>
+      <link>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/apps/best-practices-app-development/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/apps/best-practices-app-development/</guid>
+      <description>There are a few best practices that we recommend when developing apps and functions using Flogo.
+.gitignore You definitely want to store your apps in a source control system and we recommend the the below template for your .gitignore for Flogo apps
+## Project Flogo .gitignore ## To restore all dependencies and prepare the project for build run ## the command `flogo ensure` ## bin folder is constructed using flogo build /bin ## pkg folder is constructed using flogo ensure /pkg ## vendor folder in src is constructed using flogo ensure /src/*/vendor  using the -flv flag With the flogo cli you&amp;rsquo;re usually on the latest tagged version of the main flogo repos.</description>
+    </item>
+    
+  </channel>
+</rss>

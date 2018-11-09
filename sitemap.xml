@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/introduction/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/getting-started/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/getting-started/quickstart/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/getting-started/getting-started-webui/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/getting-started/getting-started-cli/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/network/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/configuration/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/configuration/environment-vars/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/apps/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/devenv/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/apps/app-structure/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/flows/tensorflow/getting-started/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/apps/app-configuration/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/flows/tensorflow/inferencing-tf/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/apps/application-configuration-provider/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/apps/best-practices-app-development/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/flows/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/flows/tensorflow/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/flows/property-bag/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/flows/io-parameters/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/flows/iterators/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/flows/mapping/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/webui/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/webui/activities/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/devenv/setup/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/development/webui/triggers/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/dovetail-cli/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/dovetail-cli/tools-overview/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/dovetail-cli/dovetail-cli/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/dovetail-cli/flogogen-cli/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/dovetail-cli/flogodevice-cli/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/deployments/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/contributing/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/contributing/contributing/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/contributing/contribute-to-docs/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/contributing/contribute-to-showcase/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/glossary/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/flogo-cli/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/building-activities/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/building-triggers/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/cloudfoundry/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/docker/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/hyperledger/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/iou-smart-app/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/network/corda/corda_network/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/network/fabric/fabric_network/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/r3corda/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/kubernetes/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/labs/helloworld/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dovetail.io.s3-website-us-east-1.amazonaws.com/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
