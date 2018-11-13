@@ -14,19 +14,7 @@ Before getting started, you should have your development environment [setup](../
 
 ## 1. Model IOU Smart Contract
 ### *1.1 Introduction to smart contract modeling*
-Project Dovetail™ supports [Hyperledger Composer modeling language](https://hyperledger.github.io/composer/v0.19/reference/cto_language.html) to model smart contract assets and transactions, not all features are supported, see below for support and limitations
-* **Features Supported**
-    - Resource definitions, including assets, concepts, enums, transactions, events and participants.
-    - Relationships
-    - Imports
-    - Decorators, Project Dovetail™ has a predefine set of decorators
-
-* **Features Not Supported Yet**
-    - Field validators
-
-* **Limited Support**
-
-   In order to be blockchain agnostic, Project Dovetail™ maps participants to network participant's identity, e.g. MSP identifier for Hyperledger Fabric, and party's legal name for R3 Corda, participants are not stored on the ledger. Project Dovetail™ defines a Party participant in its system namespace, it should be used by all resource definitions where participants are required, and Party should be alreays be by reference since they are exsiting entities.
+Project Dovetail™ supports [Hyperledger Composer modeling language](https://hyperledger.github.io/composer/v0.19/reference/cto_language.html) to model smart contract assets and transactions, please refer to [Composer Connector](https://github.com/TIBCOSoftware/dovetail-contrib/tree/master/SmartContract/connector/composer) for support detail
 
 ### *1.2 IOU Smart Contract*
 We will use Visio Studio Code to create IOU smart contract model.
@@ -36,7 +24,7 @@ We will use Visio Studio Code to create IOU smart contract model.
      - network
         - fabric
         - corda
-- copy [template project](https://github.com/TIBCOSoftware/dovetail/blob/master/tutorial/template) to the workspace, and rename the project as iou
+- copy [template project](https://github.com/TIBCOSoftware/dovetail/docs/content/labs/artifacts/composer-project-template) to the workspace, and rename the project as iou
 - under folder iou/model, create a file iou.cto
 - copy following resource definitions into iou.cto file
 ```
