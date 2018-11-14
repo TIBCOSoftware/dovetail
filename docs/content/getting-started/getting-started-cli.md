@@ -1,8 +1,10 @@
 ---
-title: Flogo CLI
+title: Dovetail CLI
 weight: 2030
 pre: "<i class=\"fas fa-terminal\" aria-hidden=\"true\"></i> "
 ---
+### Introduction
+The dovetail cli is a tool to mainly generate smart contracts for a given model built using ui tool [Dovetail Studio](getting-started-webui), so we recommend you to learn how to do that first.
 
 ### Before you get started
 Before you can get started with the cli tools you need to make sure you the [Go programming language](https://golang.org/doc/install) installed. 
