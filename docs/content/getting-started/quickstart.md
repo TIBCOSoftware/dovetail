@@ -8,7 +8,7 @@ We think it is awesome that you want to get started with Project Dovetail! To ge
 
 <div class="cards">
 
-  {{< bigcard img="../../images/labs/009-scientific.svg" headercolor="bg1" text="Hello World! This lab will walk you through building your first smart contract with Project Dovetail™" href="../../labs/helloworld">}}
+  {{< bigcard img="../../images/labs/009-scientific.svg" headercolor="bg1" text="IOU smart contract! This lab will walk you through building your first smart contract with Project Dovetail™" href="../../labs/iou-smart-app">}}
 
 </div>
 
