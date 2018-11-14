@@ -22,8 +22,6 @@
         {{< smallcard img="./images/get-started/006-idea.svg" headercolor="bg6" text="Our quickstart" href="./getting-started/quickstart/">}}
         {{< smallcard img="./images/get-started/008-monitor.svg" headercolor="bg6" text="Getting started with the UI" href="./getting-started/getting-started-webui/">}}
         {{< smallcard img="./images/get-started/009-list.svg" headercolor="bg7" text="Check out some labs on Blockchain" href="./labs">}}
-        {{< smallcard img="../images/labs/034-experiment.svg" headercolor="bg2" text="HyperLedger Fabric™  : in this demo you explore how to design and test a Dovetail™ smart contract against Hyperledger Fabric™." href="./labs/iou-smart-app">}}
-        {{< smallcard img="../images/labs/034-experiment.svg" headercolor="bg2" text="R3 Corda : in this demo you explore how to design and test a Dovetail™ smart contract against Corda™." href="./labs/iou-smart-app">}}
 
     </div>
 </div>
@@ -31,7 +29,7 @@
 <div class="line hidden" id="golang">
     <p class="center">As an Go Developer you might want to try...</p>
     <div class="cards">
-        {{< smallcard img="./images/get-started/012-diagram.svg" headercolor="bg6" text="Mapping some fields" href="./development/flows/mapping/">}}
+        {{< smallcard img="./images/get-started/012-diagram.svg" headercolor="bg6" text="Development docs" href="./development">}}
 
     </div>
 </div>
@@ -40,13 +38,7 @@
 </div>
 
 <div class="line hidden" id="talk">    
-    <p class="center">If you have any questions, feel free to <a href="https://github.com/TIBCOSoftware/flogo/issues/new" target="_blank">post an issue</a> and tag it as a question, email <i>flogo-oss at tibco dot com</i> or chat with the team and community in:</p>
-    <div class="cards">
-
-        {{< smallcard img="./images/get-started/001-support.svg" headercolor="bg5" text="Come join our Gitter channel to talk all things Flogo!" href="https://gitter.im/project-flogo/Lobby">}}
-        {{< smallcard img="./images/get-started/001-support.svg" headercolor="bg5" text="Join this Gitter channel for developer questions!" href="https://gitter.im/project-flogo/developers">}}
-
-    </div>
+    <p class="center">If you have any questions, feel free to <a href="https://github.com/TIBCOSoftware/dovetail/issues/new" target="_blank">post an issue</a> and tag it as a question, email <i>tibcolabs at tibco dot com</i></p>
 </div>
 
 <script>
