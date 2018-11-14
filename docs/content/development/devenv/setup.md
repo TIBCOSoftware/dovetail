@@ -36,7 +36,7 @@ weight: 4604
 7. Install [flogo-lib](https://github.com/TIBCOSoftware/flogo-lib)
 8. Install [flogo-contrib](https://github.com/TIBCOSoftware/flogo-contrib)
 9. Install [go-bindata](https://github.com/jteeuwen/go-bindata)
-10. Intall [govendor](https://github.com/kardianos/govendor)
+10. Install [govendor](https://github.com/kardianos/govendor)
 11. Install [Project Dovetail™ Studio]()
    - after starting up the studio, you can upload contrib-smartcontract.zip from the Extensions tab
 12. Install [dovetail-cli](https://github.com/TIBCOSoftware/dovetail-cli/blob/master/)
