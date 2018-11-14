@@ -96,8 +96,6 @@ build() {
 }
 
 gitprep() {
-    git config --global user.email "fcenedes@tibco.com"
-    git config --global user.name "fcenedes"
     echo "Deleting old publication"
     cd docs
     rm -rf public
