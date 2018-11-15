@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Labs on Project Dovetail™ - Docs and Tutorials</title>
+    <link>https://tibcosoftware.github.io/dovetail/labs/</link>
+    <description>Recent content in Labs on Project Dovetail™ - Docs and Tutorials</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://tibcosoftware.github.io/dovetail/labs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://tibcosoftware.github.io/dovetail/labs/artifacts/composer-project-template/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/labs/artifacts/composer-project-template/readme/</guid>
+      <description>This is a template project for Project Dovetail™ asset modeling, it contains the required resource definitions in the system namespace.</description>
+    </item>
+    
+    <item>
+      <title>IOU Smart Contract</title>
+      <link>https://tibcosoftware.github.io/dovetail/labs/iou-smart-app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/labs/iou-smart-app/</guid>
+      <description>A Simple IOU Smart Contract Tutorial In this tutorial, we will walk you through the steps to model, implement and test smart contracts into blockchain platform of your choice. The example is a simple &amp;ldquo;I owe you&amp;rdquo; use case, the issuer of an IOU is obligated to pay the owner of the IOU amount issued, the ownership of the IOU can be transferred by current owner, and all transactions will be recorded on the ledger.</description>
+    </item>
+    
+  </channel>
+</rss>
