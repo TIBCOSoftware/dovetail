@@ -4,7 +4,7 @@ weight: 2010
 pre: "<i class=\"fas fa-bolt\" aria-hidden=\"true\"></i> "
 ---
 
-We think it is awesome that you want to get started with Project Dovetail! To get started you don't even need to install anything other than Docker!
+We think it is awesome that you want to get started with Project Dovetail!
 
 <div class="cards">
 
