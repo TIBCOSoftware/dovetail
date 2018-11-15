@@ -60,7 +60,7 @@ update_page_introduction() {
     sed -i '1i weight: 1000' docs/content/introduction/_index.md
     sed -i '1i title: Introduction' docs/content/introduction/_index.md
     sed -i '1i ---' docs/content/introduction/_index.md
-    sed -i "s#images/eventhandlers.png#https://github.com/${GIT_ACCOUNT}/${GIT_REPO}/blob/master/images/eventhandlers.png#g" docs/content/introduction/_index.md
+    #sed -i "s#images/eventhandlers.png#https://github.com/${GIT_ACCOUNT}/${GIT_REPO}/blob/master/images/eventhandlers.png#g" docs/content/introduction/_index.md
 }
 
 #--- Update page ---
