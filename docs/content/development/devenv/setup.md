@@ -5,26 +5,12 @@ weight: 4604
 
 # Prerequisites
 
-### Hyperledger Composer
-Project Dovetail™ uses Hyperledger Composer Modeling Language to model assets, transactions and events, the resulted Business Network Archive(.bna) file is imported into Project Dovetail™ Studio to create common json schemas. 
-
-You can use Visual Studio Code or Hyperledger Composer Playground for development
-
-* [Hyperledger Composer CLI]((https://hyperledger.github.io/composer/v0.19/installing/installing-index))
-* [Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) 
-* Visual Studio Code Hyperledger Composer Plugin
-* [Hyperledger Composer Playground](https://composer-playground.mybluemix.net/editor)
-
 ### Go Programming Language and Toools
 Project Dovetail™ CLI is written in Go Programming Language, and it uses a few Go tools to package dependencies and resources
 
 * [Go](https://golang.org/doc/install) version 1.11.x is required
 * [go-bindata](https://github.com/jteeuwen/go-bindata)
 * [govendor](https://github.com/kardianos/govendor)
-
-### git
-You will need git to checkout Project Dovetail™ and its dependency source codes
-* [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 ### Flogo Libraries
 Project Dovetail™ smart contract go runtime is built on Project Flogo™, please make sure the correct version of flogo libraries in on your GOPATH
@@ -77,17 +63,6 @@ If you are developing for R3 Corda, following jars must be available in your loc
     ```
  *** com.tibco.dovetail:dovetail-corda:0.0.1 jar is available [here](https://github.com/TIBCOSoftware/dovetail-java-lib/releases/tag/v0.1.0)
 
-# Install Project Dovetail™ CLI
-Follow these steps to install Project Dovetail™ commandline tool, the binary dovetail will be in your $GOPATH/bin directory
-```
-git clone git@github.com:TIBCOSoftware/dovetail.git
-
-cd dovetail-cli
-
-go install ./...
-```
-
-# Install Project Dovetail™ Studio
 
 
 
