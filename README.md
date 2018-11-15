@@ -23,7 +23,7 @@ Developing blockchain solutions with today’s technology is challenging, given 
 <br/>
 
 <p align="center">
-  <img src ="../images/eventhandlers.png" />
+  <img src ="images/eventhandlers.png" />
 </p>
 
 # What are Smart Contracts
