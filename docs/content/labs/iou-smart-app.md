@@ -1,12 +1,9 @@
 ---
-title: IOU Smart Contract
+title:  A Simple IOU Smart Contract Tutorial
 hidden: true
 ---
 
-
- # A Simple IOU Smart Contract Tutorial
-
-In this tutorial, we will walk you through the steps to model, implement and test smart contracts into blockchain platform of your choice. The example is a simple "I owe you" use case, the issuer of an IOU is obligated to pay the owner of the IOU amount issued, the ownership of the IOU can be transferred by current owner, and all transactions will be recorded on the ledger.
+In this tutorial, we will walk you through the steps to model, implement and test smart contracts on distributed ledger technology platform of your choice. The example is a simple "I owe you" use case, the issuer of an IOU is obligated to pay the owner of the IOU amount issued, the ownership of the IOU can be transferred by current owner, and all transactions will be recorded on the ledger.
 
 Before getting started, you should have [Project Dovetail™ Studio](../getting-started/getting-started-webui.md) and [Project Dovetail™ CLI](../getting-started/getting-started-cli.md) installed, and your [development environment setup](../../development/devenv/setup).
 
@@ -18,15 +15,15 @@ Project Dovetail™ supports [Hyperledger Composer modeling language](https://hy
 
 ### *1.2 IOU Smart Contract*
 We will use Visio Studio Code to create IOU smart contract model.
-- create a workspace folder, e.g. tutorial
-- create subfolders under tutorial
-     - artifacts
-     - network
-        - fabric
-        - corda
-- copy [template project](https://github.com/TIBCOSoftware/dovetail/docs/content/labs/artifacts/composer-project-template) to the workspace, and rename the project as iou
-- under folder iou/model, create a file iou.cto
-- copy following resource definitions into iou.cto file
+* create a workspace folder, e.g. tutorial
+* create subfolders under tutorial
+     * artifacts
+     * network
+        * fabric
+        * corda
+* copy [template project](https://github.com/TIBCOSoftware/dovetail/docs/content/labs/artifacts/composer-project-template) to the workspace, and rename the project as iou
+* under folder iou/model, create a file iou.cto
+* copy following resource definitions into iou.cto file
 ```
     namespace com.example.iou
 
