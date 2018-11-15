@@ -1,7 +1,3 @@
----
-title: IOU Smart Contract for HyperFabric Ledger
----
-
 # Test IOU chaincode in Hyperledger Fabric Network
 
 We need four docker images in order for "dev mode" to run against the supplied

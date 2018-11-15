@@ -8,7 +8,7 @@ hidden: true
 
 In this tutorial, we will walk you through the steps to model, implement and test smart contracts into blockchain platform of your choice. The example is a simple "I owe you" use case, the issuer of an IOU is obligated to pay the owner of the IOU amount issued, the ownership of the IOU can be transferred by current owner, and all transactions will be recorded on the ledger.
 
-Before getting started, you should have your development environment [setup](../../development/devenv/setup).
+Before getting started, you should have [Project Dovetail™ Studio](../getting-started/getting-started-webui.md) and [Project Dovetail™ CLI](../getting-started/getting-started-cli.md) installed, and your [development environment setup](../../development/devenv/setup).
 
 ******
 
@@ -123,11 +123,11 @@ Run folloowing command from tutorial directory, R3 Corda contract is written to 
 ## 6. Test IOU Smart Contract
 ### *6.1 Hyperledger Fabric*
 * Copy [sample Hyperledger Fabric Network](https://github.com/TIBCOSoftware/dovetail/blob/master/docs/content/labs/network/fabric) to your network/fabric directory
-* Follow [instructions](network/fabric/fabric_network), assuing you are running commands from fabric directory.
+* Follow [instructions](https://github.com/TIBCOSoftware/dovetail/blob/master/docs/content/labs/network/fabric/fabric_network), assuing you are running commands from fabric directory.
 
 ### *6.2 R3 Corda*
 * Copy [sample R3 CordApp](https://github.com/TIBCOSoftware/dovetail/blob/master/docs/content/labs/network/corda) to network/corda directory
-* Follow [instructions](network/corda/corda_network)
+* Follow [instructions](https://github.com/TIBCOSoftware/dovetail/blob/master/docs/content/labs/network/corda/corda_network)
 
 ## 7. Import an existing application
 * You can import an application into Project Dovetail™ Studio

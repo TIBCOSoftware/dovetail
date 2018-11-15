@@ -28,4 +28,14 @@ To launch Dovetail Studio simply open your favorite web browser, and navigate to
 
 ![Web UI](../../images/labs/helloworld/step1b.png)
 
+### Hyperledger Composer
+Project Dovetail™ uses Hyperledger Composer Modeling Language to model assets, transactions and events, the resulted Business Network Archive(.bna) file is imported into Project Dovetail™ Studio to create common json schemas. 
+
+You can use Visual Studio Code or Hyperledger Composer Playground for development
+
+* [Hyperledger Composer CLI]((https://hyperledger.github.io/composer/v0.19/installing/installing-index))
+* [Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) 
+* Visual Studio Code Hyperledger Composer Plugin
+* [Hyperledger Composer Playground](https://composer-playground.mybluemix.net/editor)
+
 After you're done launching dovetail studio , why not check out the other [labs](../../labs) we have for you!

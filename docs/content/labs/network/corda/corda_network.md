@@ -1,7 +1,3 @@
----
-title: IOU Smart Contract for Corda
----
-
 # Test IOU Smart Contract in R3 Cora Network
 
 We will use [Corda Demo Bench](https://docs.corda.net/demobench.html), install it if you don't have it installed already.
