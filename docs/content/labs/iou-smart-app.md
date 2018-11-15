@@ -15,6 +15,7 @@ Project Dovetail™ supports [Hyperledger Composer modeling language](https://hy
 
 ### *1.2 IOU Smart Contract*
 We will use Visio Studio Code to create IOU smart contract model.
+
 * create a workspace folder, e.g. tutorial
 * create subfolders under tutorial
      * artifacts
@@ -64,10 +65,13 @@ We will use Visio Studio Code to create IOU smart contract model.
       o String issuerPartyId
     }
 ```
-- Run Composer command from toturial directory to package the iou project, it will create a iou.bna file
-   > composer archive create -a iou.bna -t dir -n iou
+* Run Composer command from toturial directory to package the iou project, it will create a iou.bna file
+  
+> composer archive create -a iou.bna -t dir -n iou
+
 
 ## 2. Import IOU Smart Contract Model
+
 * Start up Project Dovetail™ Studio, it will display web URL to use
 * Go to a browser and open the Web Studio
 * Go to Connections Tab > Add Connection > Select Composer Connector
@@ -77,6 +81,7 @@ We will use Visio Studio Code to create IOU smart contract model.
 
 ## 3. Implement IOU Smart Contract
 ### *3.1 IssueIOU Transaction*
+
 * Go to Apps Tab > Create to create a new Application "IOU"
 * Create a flow > flow name "IssueIOU" > Select "SmartContract TXN Trigger" > Select "IOU" from model dropdown > Select "com.example.iou.IssueIOU" from transaction dropdown > Click "Done" button
 * We will add a logger activity, ledger activity and response activity. We will also validate input before writing to ledger. 
@@ -84,14 +89,17 @@ We will use Visio Studio Code to create IOU smart contract model.
 <p><a target="_blank" rel="noopener noreferrer" href="../images/recordings/issueiou.gif"><img src="../images/recordings/issueiou.gif" alt="Issue IOU" style="max-width:75%;"></a></p>
 
 ### *3.2 TransferIOU Transaction*
+
 * Create a new flow to implement TransferIOU transaction
 <p><a target="_blank" rel="noopener noreferrer" href="../images/recordings/transferiou.gif"><img src="../images/recordings/transferiou.gif" alt="Transfer IOU" style="max-width:75%;"></a></p>
 
 ### *3.3 getIOU Transaction*
+
 * Create a new flow to implement getIOU transaction
 <p><a target="_blank" rel="noopener noreferrer" href="../images/recordings/getiou.gif"><img src="../images/recordings/getiou.gif" alt="Get IOU" style="max-width:75%;"></a></p>
 
 ### *3.4 getIOUIssuedBy Transaction*
+
 * Create a new flow to implement getIOUIssuedBy transaction
 * We use "Custom Query" activity to query the ledger. This activity is **NOT blockchain agnostic**
    - define a input parameter "issuerId"
@@ -100,6 +108,7 @@ We will use Visio Studio Code to create IOU smart contract model.
 <p><a target="_blank" rel="noopener noreferrer" href="../images/recordings/getiouissuedby.gif"><img src="images/recordings/getiouissuedby.gif" alt="Get IOU Issued by" style="max-width:75%;"></a></p>
 
 ## 4. Export IOU Smart Contract Application
+
 * Go to IOU application
 * Click on "Export app" button, save the file IOU.json to artifacts folder
 
@@ -119,17 +128,20 @@ Run folloowing command from tutorial directory, R3 Corda contract is written to 
 
 ## 6. Test IOU Smart Contract
 ### *6.1 Hyperledger Fabric*
+
 * Copy [sample Hyperledger Fabric Network](https://github.com/TIBCOSoftware/dovetail/blob/master/docs/content/labs/network/fabric) to your network/fabric directory
-* Follow [instructions](https://github.com/TIBCOSoftware/dovetail/blob/master/docs/content/labs/network/fabric/fabric_network), assuing you are running commands from fabric directory.
+* Follow [instructions](https://github.com/TIBCOSoftware/dovetail/blob/master/docs/content/labs/network/fabric/fabric_network.md), assuing you are running commands from fabric directory.
 
 ### *6.2 R3 Corda*
+
 * Copy [sample R3 CordApp](https://github.com/TIBCOSoftware/dovetail/blob/master/docs/content/labs/network/corda) to network/corda directory
-* Follow [instructions](https://github.com/TIBCOSoftware/dovetail/blob/master/docs/content/labs/network/corda/corda_network)
+* Follow [instructions](https://github.com/TIBCOSoftware/dovetail/blob/master/docs/content/labs/network/corda/corda_network.md)
 
 ## 7. Import an existing application
+
 * You can import an application into Project Dovetail™ Studio
-   - Go to Project Dovetail™ Studio
-   - Create a new Application "IOUImport", click on "Import" button, use this [IOU.json](artifacts/IOU.json)
+   * Go to Project Dovetail™ Studio
+   * Create a new Application "IOUImport", click on "Import" button, use this [IOU.json](https://github.com/TIBCOSoftware/dovetail/blob/master/docs/content/labs/artifacts/IOU.json)
 
 <p><a target="_blank" rel="noopener noreferrer" href="../images/recordings/importiou.gif"><img src="../images/recordings/importiou.gif" alt="Get IOU Issued by" style="max-width:75%;"></a></p>
 
