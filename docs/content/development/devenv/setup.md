@@ -1,9 +1,7 @@
 ---
-title: Setup your Project Dovetail™ Development Environment
+title: Prerequisites of Project Dovetail™ Development Environment
 weight: 4604
 ---
-
-# Prerequisites
 
 ### Go Programming Language and Toools
 Project Dovetail™ CLI is written in Go Programming Language, and it uses a few Go tools to package dependencies and resources
