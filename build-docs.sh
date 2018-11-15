@@ -60,10 +60,7 @@ update_page_introduction() {
     sed -i '1i weight: 1000' docs/content/introduction/_index.md
     sed -i '1i title: Introduction' docs/content/introduction/_index.md
     sed -i '1i ---' docs/content/introduction/_index.md
-    sed -i "s#images/eventhandlers.png#https://raw.githubusercontent.com/${GIT_ACCOUNT}/${GIT_REPO}/master/images/eventhandlers.png#g" docs/content/introduction/_index.md
-    sed -i "s#images/flogostack.png#https://raw.githubusercontent.com/${GIT_ACCOUNT}/${GIT_REPO}/master/images/flogostack.png#g" docs/content/introduction/_index.md
-    sed -i "s#images/flogo-web2.gif#https://raw.githubusercontent.com/${GIT_ACCOUNT}/${GIT_REPO}/master/images/flogo-web2.gif#g" docs/content/introduction/_index.md
-    sed -i "s#images/flogo-cli.gif#https://raw.githubusercontent.com/${GIT_ACCOUNT}/${GIT_REPO}/master/images/flogo-cli.gif#g" docs/content/introduction/_index.md
+    sed -i "s#../images/eventhandlers.png#https://raw.githubusercontent.com/${GIT_ACCOUNT}/${GIT_REPO}/master/images/eventhandlers.png#g" docs/content/introduction/_index.md
 }
 
 #--- Update page ---
