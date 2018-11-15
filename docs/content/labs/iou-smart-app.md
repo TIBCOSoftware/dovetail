@@ -100,7 +100,7 @@ We will use Visio Studio Code to create IOU smart contract model.
    - define a input parameter "issuerId"
    - define blochchain specific query string, use _$paramName for input substitution, in this example, we use [Hyperledger Fabric CouchDB query syntax](https://hyperledger-fabric.readthedocs.io/en/release-1.3/couchdb_tutorial.html)
 
-<p><a target="_blank" rel="noopener noreferrer" href="images/recordings/getiouissuedby.gif"><img src="images/recordings/getiouissuedby.gif" alt="Get IOU Issued by" style="max-width:75%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="../images/recordings/getiouissuedby.gif"><img src="images/recordings/getiouissuedby.gif" alt="Get IOU Issued by" style="max-width:75%;"></a></p>
 
 ## 4. Export IOU Smart Contract Application
 * Go to IOU application
