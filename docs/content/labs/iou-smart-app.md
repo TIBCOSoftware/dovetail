@@ -122,7 +122,7 @@ For testing, transaction security support is not enabled.
 > /path/to/dovetail-cli contract generate -b fabric -m artifacts/IOU.json -v 1.0.0 -t artifacts/
 
 ### *5.2 R3 Corda*
-Run folloowing command from tutorial directory, R3 Corda contract is written to tutorial/artifacts/corda folder, put kotlin-IOU-1.0.0.jar on your classpath to develop CordApps.
+Run folloowing command from tutorial directory, R3 Corda contract is written to tutorial/artifacts/corda folder, put kotlin-IOU-1.0.0.jar on your classpath to develop your CorDapp. A sample IOUApp has been created and availble [here](https://github.com/TIBCOSoftware/dovetail/blob/master/docs/content/labs/network/corda)
 
 > /path/to/dovetail-cli contract generate -b corda -m artifacts/IOU.json -v 1.0.0 -t artifacts/ --namespace com.example.iou
 
@@ -134,7 +134,7 @@ Run folloowing command from tutorial directory, R3 Corda contract is written to 
 
 ### *6.2 R3 Corda*
 
-* Copy [sample R3 CordApp](https://github.com/TIBCOSoftware/dovetail/blob/master/docs/content/labs/network/corda) to network/corda directory
+* Copy [sample R3 CorDapp](https://github.com/TIBCOSoftware/dovetail/blob/master/docs/content/labs/network/corda) to network/corda directory
 * Follow [instructions](https://github.com/TIBCOSoftware/dovetail/blob/master/docs/content/labs/network/corda/corda_network.md)
 
 ## 7. Import an existing application
