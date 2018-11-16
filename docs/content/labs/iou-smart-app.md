@@ -5,7 +5,7 @@ hidden: true
 
 In this tutorial, we will walk you through the steps to model, implement and test smart contracts on distributed ledger technology platform of your choice. The example is a simple "I owe you" use case, the issuer of an IOU is obligated to pay the owner of the IOU amount issued, the ownership of the IOU can be transferred by current owner, and all transactions will be recorded on the ledger.
 
-Before getting started, you should have [Project Dovetail™ Studio](../getting-started/getting-started-webui.md) and [Project Dovetail™ CLI](../getting-started/getting-started-cli.md) installed, and your [development environment setup](../../development/devenv/setup).
+Before getting started, you should have [Project Dovetail™ Studio](../../getting-started/getting-started-webui) and [Project Dovetail™ CLI](../../getting-started/getting-started-cli) installed, and your [development environment setup](../../development/devenv/setup).
 
 ******
 
@@ -22,7 +22,7 @@ We will use Visio Studio Code to create IOU smart contract model.
      * network
         * fabric
         * corda
-* copy [template project](https://github.com/TIBCOSoftware/dovetail/docs/content/labs/artifacts/composer-project-template) to the workspace, and rename the project as iou
+* copy [template project](https://github.com/TIBCOSoftware/dovetail/tree/master/docs/content/labs/artifacts/composer-project-template) to the workspace, and rename the project as iou
 * under folder iou/model, create a file iou.cto
 * copy following resource definitions into iou.cto file
 ```
