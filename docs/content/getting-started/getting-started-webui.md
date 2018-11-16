@@ -33,7 +33,6 @@ Project Dovetail™ uses Hyperledger Composer Modeling Language to model assets,
 
 You can use Visual Studio Code or Hyperledger Composer Playground for development
 
-* [Hyperledger Composer CLI]((https://hyperledger.github.io/composer/v0.19/installing/installing-index))
 * [Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) 
 * Visual Studio Code Hyperledger Composer Plugin
 * [Hyperledger Composer Playground](https://composer-playground.mybluemix.net/editor)

@@ -1,9 +1,7 @@
 ---
-title: Setup your Project Dovetail™ Development Environment
+title: Prerequisites of Project Dovetail™ Development Environment
 weight: 4604
 ---
-
-# Prerequisites
 
 ### Go Programming Language and Toools
 Project Dovetail™ CLI is written in Go Programming Language, and it uses a few Go tools to package dependencies and resources
@@ -14,6 +12,7 @@ Project Dovetail™ CLI is written in Go Programming Language, and it uses a few
 
 ### Flogo Libraries
 Project Dovetail™ smart contract go runtime is built on Project Flogo™, please make sure the correct version of flogo libraries in on your GOPATH
+
 * [flogo-lib v0.5.5](https://github.com/TIBCOSoftware/flogo-lib/releases/tag/v0.5.5)
 * [flogo-contrib v0.5.5](https://github.com/TIBCOSoftware/flogo-contrib/releases/tag/v0.5.5) 
 
@@ -29,6 +28,7 @@ git checkout tags/v0.5.5
 
 ## Hyperledger Fabric SDK
 If you are developing for Hyperledger Fabric, below is a link to its installation instructions
+
 * [Hyperledger Fabric](https://hyperledger-fabric.readthedocs.io/en/release-1.3/install.html)
 
 ### Java Programming Language and Tools
@@ -64,6 +64,7 @@ If you are developing for R3 Corda, following jars must be available in your loc
  *** com.tibco.dovetail:dovetail-corda:0.0.1 jar is available [here](https://github.com/TIBCOSoftware/dovetail-java-lib/releases/tag/v0.1.0)
 
 ### Docker
+
 * [Docker](https://docs.docker.com/)
 * [Docker Compose](https://docs.docker.com/compose/install/)
 
