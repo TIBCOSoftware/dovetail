@@ -65,9 +65,9 @@ We will use Visio Studio Code to create IOU smart contract model.
       o String issuerPartyId
     }
 ```
-* Run Composer command from toturial directory to package the iou project, it will create a iou.bna file
+* Run zip command from iou directory to package the iou project, it will create a iou.bna file in the tutorial folder
   
-> composer archive create -a iou.bna -t dir -n iou
+> zip -r ../iou.bna *
 
 
 ## 2. Import IOU Smart Contract Model
