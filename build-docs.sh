@@ -7,7 +7,7 @@
 
 #--- Variables ---
 HUGO_VERSION=0.50
-GIT_ACCOUNT="yxuco"
+GIT_ACCOUNT="TIBCOSoftware"
 GIT_REPO="dovetail"
 
 #--- Download and install prerequisites ---
