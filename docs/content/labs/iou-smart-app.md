@@ -104,6 +104,7 @@ We will use Visio Studio Code to create IOU smart contract model.
 * We use "Custom Query" activity to query the ledger. This activity is **NOT blockchain agnostic**
    - define a input parameter "issuerId"
    - define blochchain specific query string, use _$paramName for input substitution, in this example, we use [Hyperledger Fabric CouchDB query syntax](https://hyperledger-fabric.readthedocs.io/en/release-1.3/couchdb_tutorial.html)
+   *** During the mapping of transaction response, you will notice tht "array." is underlined with a red line, it is a UI validation error because Project Dovetail™ Studio UI does not support function yet, the error has no impact to runtime. Function will be supported in the very near future.
 
 <p><a target="_blank" rel="noopener noreferrer" href="../images/recordings/getiouissuedby.gif"><img src="../images/recordings/getiouissuedby.gif" alt="Get IOU Issued by" style="max-width:75%;"></a></p>
 
@@ -141,6 +142,7 @@ Run folloowing command from tutorial directory, R3 Corda contract is written to 
 
 * You can import an application into Project Dovetail™ Studio
    * Go to Project Dovetail™ Studio
+   * If you haven't import iou.bna file from Connections tab, you can do so now following step 2 in this document
    * Create a new Application "IOUImport", click on "Import" button, use this [IOU.json](https://github.com/TIBCOSoftware/dovetail/blob/master/docs/content/labs/artifacts/IOU.json)
 
 <p><a target="_blank" rel="noopener noreferrer" href="../images/recordings/importiou.gif"><img src="../images/recordings/importiou.gif" alt="Get IOU Issued by" style="max-width:75%;"></a></p>
