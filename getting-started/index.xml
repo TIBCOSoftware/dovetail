@@ -39,7 +39,7 @@ Starting Dovetail Studio To get started with your downloaded version of the Dove
       
       <guid>https://tibcosoftware.github.io/dovetail/getting-started/getting-started-cli/</guid>
       <description>Introduction The dovetail cli is a tool to mainly generate smart contracts for a given model built using ui tool Dovetail Studio, so we recommend you to learn how to do that first.
-Before you get started Before you can get started with the cli tools you need to make sure you have the Go programming language and git installed.
+Before you get started Before you can get started with the cli tools you need to make sure you have the Go programming language and git installed. Go v1.11.x is required.
 Don&amp;rsquo;t forget to set your GOPATH variable and make sure that $GOPATH/bin is part of your path.</description>
     </item>
     

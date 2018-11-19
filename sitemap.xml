@@ -23,10 +23,6 @@
   </url>
   
   <url>
-    <loc>https://tibcosoftware.github.io/dovetail/labs/network/</loc>
-  </url>
-  
-  <url>
     <loc>https://tibcosoftware.github.io/dovetail/labs/</loc>
   </url>
   
@@ -67,12 +63,12 @@
   </url>
   
   <url>
-    <loc>https://tibcosoftware.github.io/dovetail/categories/</loc>
-    <priority>0</priority>
+    <loc>https://tibcosoftware.github.io/dovetail/labs/iou-smart-app/</loc>
   </url>
   
   <url>
-    <loc>https://tibcosoftware.github.io/dovetail/labs/iou-smart-app/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/categories/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
