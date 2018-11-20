@@ -94,6 +94,22 @@ Flows Web UI is available via [Dovetail releases page](https://github.com/TIBCOS
 
 To report any issues with the Issue tracker on this project.
 
+# Dovetail Documentation
+
+Dovetail documentation can be found on the [documentation page](https://tibcosoftware.github.io/dovetail/) and the source code in the [github page](https://github.com/TIBCOSoftware/dovetail).
+
+In order to regenerate the docs you need to run:
+
+* Clone the github page
+```
+> git clone https://github.com/TIBCOSoftware/dovetail
+> cd dovetail
+> docker build -t dovetail-docs .
+> docker run dovetail-docs
+```
+
+* (Note that you will need write access to the github repo)
+
 # Contributing
 Want to contribute to Project Dovetail? We've made it easy, all you need to do is fork the repository you intend to contribute to, make your changes and create a Pull Request! Once the pull request has been created, you'll be prompted to sign the CLA (Contributor License Agreement) online.
 

@@ -25,6 +25,7 @@ We will use Visio Studio Code to create IOU smart contract model.
 * copy [template project](https://github.com/TIBCOSoftware/dovetail/tree/master/docs/content/labs/artifacts/composer-project-template) to the workspace, and rename the project as iou
 * under folder iou/model, create a file iou.cto
 * copy following resource definitions into iou.cto file
+
 ```
     namespace com.example.iou
 
@@ -66,8 +67,11 @@ We will use Visio Studio Code to create IOU smart contract model.
     }
 ```
 * Run zip command from iou directory to package the iou project, it will create a iou.bna file in the tutorial folder
-  
+
+``` 
+> cd /path/to/iou
 > zip -r ../iou.bna *
+```
 
 
 ## 2. Import IOU Smart Contract Model
