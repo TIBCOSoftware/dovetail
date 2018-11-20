@@ -13,7 +13,7 @@ Installing the Project Dovetail Studio is quite simple just follow these steps:
 1.- Go to the [releases](https://github.com/TIBCOSoftware/dovetail/releases) page and download the latest version for your os architecture.
 2.- Unzip the downloaded release (for example on mac).
 ```cd /path/to/downloaded/file```
-```unzip TIB_dovetail_0.1.0_macosx_x86_64.zip```
+```unzip TIB_dovetail_0.1.1_macosx_x86_64.zip```
 
 ### Starting Dovetail Studio
 To get started with your downloaded version of the Dovetail Studio in the previous step just do the following:
