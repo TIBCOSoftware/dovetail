@@ -18,9 +18,15 @@ RUN apk --no-cache add \
     && mkdir -p ${HUGO_SITE} \
     && rm -rf /tmp/*
 
+ARG git_user_email
+ARG git_user_name
+
+RUN git config --global user.email $git_user_email
+RUN git config --global user.name $git_user_name
+
 RUN mkdir /dovetail
 
-COPY . /dovetail
+COPY build-docs.sh /dovetail
 
 WORKDIR /dovetail
 

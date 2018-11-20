@@ -93,6 +93,16 @@ build() {
 }
 
 gitprep() {
+    if [ -d "dovetail" ]; then
+        echo "Your working directory is dirty, please run the script again after cleaning it up"
+        exit 1;
+    fi 
+    echo "cloning dovetail"
+    git clone https://github.com/TIBCOSoftware/dovetail.git
+    echo "cloning dovetail-contrib"
+    git clone https://github.com/TIBCOSoftware/dovetail-contrib.git 
+    mv dovetail-contrib/ dovetail/dovetail-contrib
+    cd dovetail
     echo "Deleting old publication"
     cd docs
     rm -rf public

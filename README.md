@@ -100,15 +100,14 @@ Dovetail documentation can be found on the [documentation page](https://tibcosof
 
 In order to regenerate the docs you need to run:
 
-* Clone the github page
 ```
 > git clone https://github.com/TIBCOSoftware/dovetail
 > cd dovetail
-> docker build -t dovetail-docs .
-> docker run dovetail-docs
+> docker build -t dovetail-docs . --build-arg git_user_email=<your git email> --build-arg git_user_name=<your git name>
+> docker run -it dovetail-docs
 ```
 
-* (Note that you will need write access to the github repo)
+* (Note that you will be asked to enter your github credentials and will need write access to the github repo)
 
 # Contributing
 Want to contribute to Project Dovetail? We've made it easy, all you need to do is fork the repository you intend to contribute to, make your changes and create a Pull Request! Once the pull request has been created, you'll be prompted to sign the CLA (Contributor License Agreement) online.
