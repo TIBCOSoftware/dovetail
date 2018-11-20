@@ -21,8 +21,8 @@ prerequisites() {
 
 #--- Get external docs ---
 ext_docs() {
-    echo "Getting the docs for the activities and triggers"
-    #git clone https://github.com/TIBCOSoftware/dovetail-contrib
+    echo "cloning dovetail-contrib"
+    git clone https://github.com/TIBCOSoftware/dovetail-contrib.git 
     #for i in `find dovetail-contrib/activity -name \*.md` ; do filename=$(basename $(dirname $i)); cp $i docs/content/development/webui/activities/$filename.md; done;
     #for i in `find dovetail-contrib/trigger -name \*.md` ; do filename=$(basename $(dirname $i)); cp $i docs/content/development/webui/triggers/$filename.md; done;
     rm -rf ./dovetail-contrib
@@ -93,9 +93,6 @@ gitprep() {
     fi 
     echo "cloning dovetail"
     git clone https://github.com/TIBCOSoftware/dovetail.git
-    echo "cloning dovetail-contrib"
-    git clone https://github.com/TIBCOSoftware/dovetail-contrib.git 
-    mv dovetail-contrib/ dovetail/dovetail-contrib
     cd dovetail
     echo "Deleting old publication"
     cd docs
