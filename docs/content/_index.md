@@ -2,7 +2,7 @@
 
 <center>Docs and Tutorials for project Dovetail™</center>
 
-<img src="./images/tibco_labs.png" width="250" height="174"/>
+<img src="./images/tibco_labs.png" width="250" height="250"/>
 
 <div class="line center">
     <p>Get started...<p/>
