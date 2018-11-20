@@ -39,13 +39,13 @@ Project Dovetail™ is a framework that allows for the end to end design, develo
 * **Simplify** development via an extendable abstraction layer (flow model)
 * **Decouple** your code from the underlying blockchain technology
 * **Reduce** the amount of code needed
-* Increase visibility and audit-ability
-* Allow customizable modeling for your industry
+* **Increase visibility** and audit-ability
+* **Allow customizable modeling** for your industry
 * **Expose** a better UI for the design of smart contracts
 
 # Dovetail Core
 
-Dovetail is based on TIBCO FLOGO™, an event-driven app framework used to develop apps for the cloud & IoT edge. It can also be thought of as a lightweight *app kernel* used by open source & commercial solutions like Dovetail here. The trigger used is based on the cli to generate or transpile your smart contract logic into blockahin technologies languages : R3 Corda, HyperLedger Fabric...
+Dovetail is based on TIBCO FLOGO™, an event-driven app framework used to develop apps for the cloud & IoT edge. It can also be thought of as a lightweight *app kernel* used by open source & commercial solutions like Dovetail here. The trigger used is based on the cli to generate or transpile your smart contract logic into blockchain technologies languages : R3 Corda, HyperLedger Fabric...
 
 Dovetail Core provides the following key benefits:
 
@@ -57,7 +57,7 @@ Dovetail Core provides the following key benefits:
 
 Dovetail™ Core exposes three principal contribution interfaces that enable developers to build common capabilities and functionality. These contribution interfaces include:
 
-* **Connector Interface** a common interface for importing predefined schemas into Dovetail, Hyperledger Composer Connector is an example
+* **Connector Interface** a common interface for importing predefined schemas into Dovetail, Hyperledger Composer Connector is an example.
 * **Trigger Interface** a common interface for building event-consumers that dispatch events to one or more actions. The Smart Contract TXN Trigger is an example of a trigger.
 * **Activity Interface** a common interface for exposing common application logic in a reusable manner. Think of this as a function, such as write to ledger, publish events, etc that can be used by all Dovetail apps.
 
