@@ -2,7 +2,7 @@
 
 <center>Docs and Tutorials for project Dovetail™</center>
 
-<img src="./images/tibco_labs.png" width="250" height="174"/>
+<img src="./images/tibco_labs.png" width="250" height="250"/>
 
 <div class="line center">
     <p>Get started...<p/>
@@ -38,7 +38,7 @@
 </div>
 
 <div class="line hidden" id="talk">    
-    <p class="center">If you have any questions, feel free to <a href="https://github.com/TIBCOSoftware/dovetail/issues/new" target="_blank">post an issue</a> and tag it as a question, email <i>tibcolabs at tibco dot com</i></p>
+    <p class="center">If you have any questions, feel free to <a href="https://github.com/TIBCOSoftware/dovetail/issues/new" target="_blank">post an issue</a> and tag it as a question, email <i>tibcolabs@tibco.com</i></p>
 </div>
 
 <script>

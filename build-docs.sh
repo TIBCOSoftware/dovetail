@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Description: Build script for Project Flogo documentation
+# Description: Build script for Project Dovetail documentation
 # Author: retgits <https://github.com/retgits>
 # Mod: fcenedes@tibco.com
 # Last Updated: 2018-11-11
@@ -21,8 +21,8 @@ prerequisites() {
 
 #--- Get external docs ---
 ext_docs() {
-    echo "Getting the docs for the activities and triggers"
-    #git clone https://github.com/TIBCOSoftware/dovetail-contrib
+    echo "cloning dovetail-contrib"
+    git clone https://github.com/TIBCOSoftware/dovetail-contrib.git 
     #for i in `find dovetail-contrib/activity -name \*.md` ; do filename=$(basename $(dirname $i)); cp $i docs/content/development/webui/activities/$filename.md; done;
     #for i in `find dovetail-contrib/trigger -name \*.md` ; do filename=$(basename $(dirname $i)); cp $i docs/content/development/webui/triggers/$filename.md; done;
     rm -rf ./dovetail-contrib
@@ -30,13 +30,7 @@ ext_docs() {
 
 update_page_cli() {
     echo "Getting the docs for the commandline tools"
-    #curl -o docs/content/dovetail-cli/dovetail-cli.md https://raw.githubusercontent.com/TIBCOSoftware/flogo-cli/master/docs/flogo-cli.md
-    #curl -o docs/content/dovetail-cli/flogodevice-cli.md https://raw.githubusercontent.com/TIBCOSoftware/flogo-cli/master/docs/flogodevice-cli.md
-    #curl -o docs/content/dovetail-cli/flogogen-cli.md https://raw.githubusercontent.com/TIBCOSoftware/flogo-cli/master/docs/flogogen-cli.md
-    #curl -o docs/content/dovetail-cli/dovetail-cli.md https://raw.githubusercontent.com/${GIT_ACCOUNT}/${GIT_REPO}/master/docs/flogo-cli.md
-    #curl -o docs/content/dovetail-cli/flogodevice-cli.md https://raw.githubusercontent.com/${GIT_ACCOUNT}/${GIT_REPO}/master/docs/flogodevice-cli.md
-    #curl -o docs/content/dovetail-cli/flogogen-cli.md https://raw.githubusercontent.com/${GIT_ACCOUNT}/${GIT_REPO}/master/docs/flogogen-cli.md
-    #curl -o docs/content/dovetail-cli/tools-overview.md https://raw.githubusercontent.com/TIBCOSoftware/flogo-cli/master/docs/tools-overview.md
+    #curl -o docs/content/dovetail-cli/dovetail-cli.md https://raw.githubusercontent.com/TIBCOSoftware/dovetail-cli/master/docs/dovetail-cli.md
 }
 
 #--- Update contributions page ---
@@ -46,7 +40,7 @@ update_page_contrib() {
     sed -i '1d' docs/content/contributing/contributing.md
     sed -i '1i ---' docs/content/contributing/contributing.md
     sed -i '1i weight: 9010' docs/content/contributing/contributing.md
-    sed -i '1i title: Contributing to Project Flogo' docs/content/contributing/contributing.md
+    sed -i '1i title: Contributing to Project Dovetail' docs/content/contributing/contributing.md
     sed -i '1i ---' docs/content/contributing/contributing.md
 }
 
@@ -93,6 +87,13 @@ build() {
 }
 
 gitprep() {
+    if [ -d "dovetail" ]; then
+        echo "Your working directory is dirty, please run the script again after cleaning it up"
+        exit 1;
+    fi 
+    echo "cloning dovetail"
+    git clone https://github.com/TIBCOSoftware/dovetail.git
+    cd dovetail
     echo "Deleting old publication"
     cd docs
     rm -rf public
