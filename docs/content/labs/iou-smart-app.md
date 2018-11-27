@@ -69,6 +69,7 @@ transaction getIOUIssuedBy {
 * Run zip command from iou directory to package the iou project, it will create a iou.bna file in the tutorial folder
 
 > cd /path/to/iou
+
 > zip -r ../iou.bna
 
 
