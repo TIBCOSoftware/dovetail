@@ -15,10 +15,19 @@ Don't forget to set your `GOPATH` variable and make sure that `$GOPATH/bin` is p
 
 ### Installing the cli tools
 Follow these steps to install Project Dovetail™ commandline tool, the binary dovetail will be in your $GOPATH/bin directory
+
 ```
-git clone git@github.com:TIBCOSoftware/dovetail-cli.git
+mkdir dovetail-cli
+
+export GOPATH=/path/to/new/dovetail-cli
+
+mkdir -p $GOPATH/src/github.com/TIBCOSoftware
+
+cd $GOPATH/src/github.com/TIBCOSoftware
+
+git clone https://github.com/TIBCOSoftware/dovetail-cli.git
 
 cd dovetail-cli
 
-go install ./...
+GO111MODULE=on go install ./...
 ```
