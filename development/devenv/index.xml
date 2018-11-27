@@ -1,25 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Development Environment on Project Dovetail™ - Docs and Tutorials</title>
+    <title>Environment Prerequisites on Project Dovetail™ - Docs and Tutorials</title>
     <link>https://tibcosoftware.github.io/dovetail/development/devenv/</link>
-    <description>Recent content in Development Environment on Project Dovetail™ - Docs and Tutorials</description>
+    <description>Recent content in Environment Prerequisites on Project Dovetail™ - Docs and Tutorials</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
 	<atom:link href="https://tibcosoftware.github.io/dovetail/development/devenv/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Prerequisites of Project Dovetail™ Development Environment</title>
-      <link>https://tibcosoftware.github.io/dovetail/development/devenv/setup/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://tibcosoftware.github.io/dovetail/development/devenv/setup/</guid>
-      <description>Go Programming Language and Toools Project Dovetail™ CLI is written in Go Programming Language, and it uses a few Go tools to package dependencies and resources
- Go version 1.11.x is required go-bindata govendor  Flogo Libraries Project Dovetail™ smart contract go runtime is built on Project Flogo™, please make sure the correct version of flogo libraries in on your GOPATH
- flogo-lib v0.5.5 flogo-contrib v0.5.5  go get github.</description>
-    </item>
     
   </channel>
 </rss>
