@@ -38,7 +38,7 @@
 </div>
 
 <div class="line hidden" id="talk">    
-    <p class="center">If you have any questions, feel free to <a href="https://github.com/TIBCOSoftware/dovetail/issues/new" target="_blank">post an issue</a> and tag it as a question, email <i>tibcolabs@tibco.com</i></p>
+    <p class="center">If you have any questions, feel free to <a href="https://github.com/TIBCOSoftware/dovetail/issues/new" target="_blank">post an issue</a> and tag it as a question, or email <i>tibcolabs@tibco.com</i></p>
 </div>
 
 <script>
