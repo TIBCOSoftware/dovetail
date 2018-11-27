@@ -21,11 +21,13 @@ mkdir dovetail-cli
 
 export GOPATH=/path/to/new/dovetail-cli
 
-cd $GOPATH
+mkdir -p $GOPATH/src/github.com/TIBCOSoftware
 
-go get github.com/TIBCOSoftware/dovetail-cli
+cd $GOPATH/src/github.com/TIBCOSoftware
 
-cd $GOPATH/src/github.com/TIBCOSoftware/dovetail-cli
+git clone https://github.com/TIBCOSoftware/dovetail-cli.git
+
+cd dovetail-cli
 
 GO111MODULE=on go install ./...
 ```
