@@ -81,7 +81,7 @@ We will use Visio Studio Code to create IOU smart contract model.
 * Go to Connections Tab > Add Connection > Select Composer Connector
 * Give the connection a name, then "Browse" to find the iou.bna file, click "Save Model" button. 
 
-<p><a target="_blank" rel="noopener noreferrer" href="../images/recordings/importbna.gif"><img src="../images/recordings/importbna.gif" alt="Import Model" style="max-width:75%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="../images/recordings/importbna.gif"><img src="../images/recordings/importbna.gif" alt="Import Model" style="max-width:100%;"></a></p>
 
 ## 3. Implement IOU Smart Contract
 ### *3.1 IssueIOU Transaction*
@@ -90,17 +90,17 @@ We will use Visio Studio Code to create IOU smart contract model.
 * Create a flow > flow name "IssueIOU" > Select "SmartContract TXN Trigger" > Select "IOU" from model dropdown > Select "com.example.iou.IssueIOU" from transaction dropdown > Click "Done" button
 * We will add a logger activity, ledger activity and response activity. We will also validate input before writing to ledger. 
 
-<p><a target="_blank" rel="noopener noreferrer" href="../images/recordings/issueiou.gif"><img src="../images/recordings/issueiou.gif" alt="Issue IOU" style="max-width:75%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="../images/recordings/issueiou.gif"><img src="../images/recordings/issueiou.gif" alt="Issue IOU" style="max-width:100%;"></a></p>
 
 ### *3.2 TransferIOU Transaction*
 
 * Create a new flow to implement TransferIOU transaction
-<p><a target="_blank" rel="noopener noreferrer" href="../images/recordings/transferiou.gif"><img src="../images/recordings/transferiou.gif" alt="Transfer IOU" style="max-width:75%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="../images/recordings/transferiou.gif"><img src="../images/recordings/transferiou.gif" alt="Transfer IOU" style="max-width:100%;"></a></p>
 
 ### *3.3 getIOU Transaction*
 
 * Create a new flow to implement getIOU transaction
-<p><a target="_blank" rel="noopener noreferrer" href="../images/recordings/getiou.gif"><img src="../images/recordings/getiou.gif" alt="Get IOU" style="max-width:75%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="../images/recordings/getiou.gif"><img src="../images/recordings/getiou.gif" alt="Get IOU" style="max-width:100%;"></a></p>
 
 ### *3.4 getIOUIssuedBy Transaction*
 
@@ -110,7 +110,7 @@ We will use Visio Studio Code to create IOU smart contract model.
    - define blochchain specific query string, use _$paramName for input substitution, in this example, we use [Hyperledger Fabric CouchDB query syntax](https://hyperledger-fabric.readthedocs.io/en/release-1.3/couchdb_tutorial.html)
    *** During the mapping of transaction response, you will notice tht "array." is underlined with a red line, it is a UI validation error because Project Dovetail™ Studio UI does not support function yet, the error has no impact to runtime. Function will be supported in the very near future.
 
-<p><a target="_blank" rel="noopener noreferrer" href="../images/recordings/getiouissuedby.gif"><img src="../images/recordings/getiouissuedby.gif" alt="Get IOU Issued by" style="max-width:75%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="../images/recordings/getiouissuedby.gif"><img src="../images/recordings/getiouissuedby.gif" alt="Get IOU Issued by" style="max-width:100%;"></a></p>
 
 ## 4. Export IOU Smart Contract Application
 
@@ -149,6 +149,6 @@ Run folloowing command from tutorial directory, R3 Corda contract is written to 
    * If you haven't import iou.bna file from Connections tab, you can do so now following step 2 in this document
    * Create a new Application "IOUImport", click on "Import" button, use this [IOU.json](https://github.com/TIBCOSoftware/dovetail/blob/master/docs/content/labs/artifacts/IOU.json)
 
-<p><a target="_blank" rel="noopener noreferrer" href="../images/recordings/importiou.gif"><img src="../images/recordings/importiou.gif" alt="Get IOU Issued by" style="max-width:75%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="../images/recordings/importiou.gif"><img src="../images/recordings/importiou.gif" alt="Get IOU Issued by" style="max-width:100%;"></a></p>
 
 
