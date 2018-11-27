@@ -4,9 +4,6 @@ weight: 2020
 pre: "<i class=\"fas fa-desktop\" aria-hidden=\"true\"></i> "
 ---
 
-### Getting Started
-For an overview of how to get started, check out the [Quickstart](../quickstart) guide
-
 ### Installing the Project Dovetail Studio
 Installing the Project Dovetail Studio is quite simple just follow these steps:
 
