@@ -10,23 +10,7 @@ Project Dovetail™ CLI is written in Go Programming Language, and it uses a few
 
 * [Go](https://golang.org/doc/install) version 1.11.x is required
 * [go-bindata](https://github.com/jteeuwen/go-bindata)
-* [govendor](https://github.com/kardianos/govendor)
 
-### Flogo Libraries
-Project Dovetail™ smart contract go runtime is built on Project Flogo™, please make sure the correct version of flogo libraries in on your GOPATH
-
-* [flogo-lib v0.5.5](https://github.com/TIBCOSoftware/flogo-lib/releases/tag/v0.5.5)
-* [flogo-contrib v0.5.5](https://github.com/TIBCOSoftware/flogo-contrib/releases/tag/v0.5.5) 
-
-```
-go get github.com/TIBCOSoftware/flogo-lib
-cd $GOPATH/src/github.com/TIBCOSoftware/flogo-lib
-git checkout tags/v0.5.5
-
-go get github.com/TIBCOSoftware/flogo-lib
-cd $GOPATH/src/github.com/TIBCOSoftware/flogo-lib
-git checkout tags/v0.5.5
-```
 
 ## Hyperledger Fabric SDK
 If you are developing for Hyperledger Fabric, below is a link to its installation instructions
@@ -63,7 +47,7 @@ If you are developing for R3 Corda, following jars must be available in your loc
             <version>0.1.0</version>
         </dependency>
     ```
- *** com.tibco.dovetail:dovetail-corda:0.0.1 jar is available [here](https://github.com/TIBCOSoftware/dovetail-java-lib/releases/tag/v0.1.0)
+ *** com.tibco.dovetail:dovetail-corda:0.1.0 jar is available [here](https://github.com/TIBCOSoftware/dovetail-java-lib/releases/tag/v0.1.0)
 
 ### Docker
 
