@@ -12,20 +12,20 @@
     
     <item>
       <title></title>
-      <link>https://tibcosoftware.github.io/dovetail/labs/cordanetwork/</link>
+      <link>https://tibcosoftware.github.io/dovetail/labs/network/corda/corda_network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://tibcosoftware.github.io/dovetail/labs/cordanetwork/</guid>
+      <guid>https://tibcosoftware.github.io/dovetail/labs/network/corda/corda_network/</guid>
       <description>Test IOU Smart Contract in R3 Cora Network We will use Corda Demo Bench, install it if you don&amp;rsquo;t have it installed already.
 1. Start up Corda Demo Bench  Click on &amp;ldquo;+Add CorDapp&amp;rdquo; button then browse to corda directory, select a jar to add(you can only add one jar at a time). Repeat, until all jars are added. You can replace kotlin-IOU-1.0.0.jar with your own. Start up 3 nodes: Notary, charlie, alice, and bob Make sure they are all running before continuing.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://tibcosoftware.github.io/dovetail/labs/fabricnetwork/</link>
+      <link>https://tibcosoftware.github.io/dovetail/labs/network/fabric/fabric_network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://tibcosoftware.github.io/dovetail/labs/fabricnetwork/</guid>
+      <guid>https://tibcosoftware.github.io/dovetail/labs/network/fabric/fabric_network/</guid>
       <description>Test IOU chaincode in Hyperledger Fabric Network We need four docker images in order for &amp;ldquo;dev mode&amp;rdquo; to run against the supplied docker compose script. If you installed the fabric-samples repo clone and followed the instructions to download-platform-specific-binaries, then you should have the necessary Docker images installed locally.
 1. open a terminal, and execute following command to start up the network  docker-compose -f docker-compose-simple.yaml up
  open a terminal window, run docker ps, make sure container cli, chaincode, peer, orderer and couchdb are running</description>
