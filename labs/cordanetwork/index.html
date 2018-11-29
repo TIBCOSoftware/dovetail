@@ -12,19 +12,19 @@
     <title> :: Project Dovetail™ - Docs and Tutorials</title>
     
     
-    <link href="/dovetail/css/nucleus.css?1543520748" rel="stylesheet" type="text/css">
-    <link href="/dovetail/css/fontawesome-all.min.css?1543520748" rel="stylesheet" type="text/css">
-    <link href="/dovetail/css/hybrid.css?1543520748" rel="stylesheet" type="text/css">
-    <link href="/dovetail/css/featherlight.min.css?1543520748" rel="stylesheet" type="text/css">
-    <link href="/dovetail/css/perfect-scrollbar.min.css?1543520748" rel="stylesheet" type="text/css">
-    <link href="/dovetail/css/auto-complete.css?1543520748" rel="stylesheet" type="text/css">
-    <link href="/dovetail/css/theme.css?1543520748" rel="stylesheet" type="text/css">
-    <link href="/dovetail/css/hugo-theme.css?1543520748" rel="stylesheet" type="text/css">
+    <link href="/dovetail/css/nucleus.css?1543522956" rel="stylesheet" type="text/css">
+    <link href="/dovetail/css/fontawesome-all.min.css?1543522956" rel="stylesheet" type="text/css">
+    <link href="/dovetail/css/hybrid.css?1543522956" rel="stylesheet" type="text/css">
+    <link href="/dovetail/css/featherlight.min.css?1543522956" rel="stylesheet" type="text/css">
+    <link href="/dovetail/css/perfect-scrollbar.min.css?1543522956" rel="stylesheet" type="text/css">
+    <link href="/dovetail/css/auto-complete.css?1543522956" rel="stylesheet" type="text/css">
+    <link href="/dovetail/css/theme.css?1543522956" rel="stylesheet" type="text/css">
+    <link href="/dovetail/css/hugo-theme.css?1543522956" rel="stylesheet" type="text/css">
     
-      <link href="/dovetail/css/theme-blue.css?1543520748" rel="stylesheet" type="text/css">
+      <link href="/dovetail/css/theme-blue.css?1543522956" rel="stylesheet" type="text/css">
     
 
-    <script src="/dovetail/js/jquery-2.x.min.js?1543520748"></script>
+    <script src="/dovetail/js/jquery-2.x.min.js?1543522956"></script>
 
     
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -46,7 +46,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/dovetail/labs/fabric_network/">
+  <body class="" data-url="/dovetail/labs/cordanetwork/">
     <nav id="sidebar" class="">
 
 
@@ -131,14 +131,14 @@
     <span data-search-clear=""><i class="fas fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/dovetail/js/lunr.min.js?1543520748"></script>
-<script type="text/javascript" src="/dovetail/js/auto-complete.js?1543520748"></script>
+<script type="text/javascript" src="/dovetail/js/lunr.min.js?1543522956"></script>
+<script type="text/javascript" src="/dovetail/js/auto-complete.js?1543522956"></script>
 <script type="text/javascript">
     
         var baseurl = '\/dovetail\/';
     
 </script>
-<script type="text/javascript" src="/dovetail/js/search.js?1543520748"></script>
+<script type="text/javascript" src="/dovetail/js/search.js?1543522956"></script>
 
     
   </div>
@@ -290,8 +290,8 @@
  
   
     
-      <li data-nav-id="/dovetail/labs/corda_network/" title="" class="dd-item ">
-        <a href="/dovetail/labs/corda_network/">
+      <li data-nav-id="/dovetail/labs/cordanetwork/" title="" class="dd-item active">
+        <a href="/dovetail/labs/cordanetwork/">
         
         
         </a>
@@ -309,8 +309,8 @@
  
   
     
-      <li data-nav-id="/dovetail/labs/fabric_network/" title="" class="dd-item active">
-        <a href="/dovetail/labs/fabric_network/">
+      <li data-nav-id="/dovetail/labs/fabricnetwork/" title="" class="dd-item ">
+        <a href="/dovetail/labs/fabricnetwork/">
         
         
         </a>
@@ -495,7 +495,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/tibcosoftware/dovetail/edit/master/docs/content/labs/fabric_network.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/tibcosoftware/dovetail/edit/master/docs/content/labs/cordanetwork.md" target="blank">
                       <i class="fas fa-code-fork"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -538,15 +538,11 @@
     <div class="wrapper">
 <nav id="TableOfContents">
 <ul>
-<li><a href="#test-iou-chaincode-in-hyperledger-fabric-network">Test IOU chaincode in Hyperledger Fabric Network</a>
+<li><a href="#test-iou-smart-contract-in-r3-cora-network">Test IOU Smart Contract in R3 Cora Network</a>
 <ul>
-<li><a href="#1-open-a-terminal-and-execute-following-command-to-start-up-the-network">1. open a terminal, and execute following command to start up the network</a></li>
-<li><a href="#2-open-another-terminal-execute-following-commands-to-connect-to-chaincode-container-and-compile-start-chaincode">2. open another terminal, execute following commands to connect to chaincode container and compile/start chaincode</a></li>
-<li><a href="#3-open-a-third-termial-execute-following-commands-to-install-instantiate-chaincoce-from-cli">3. open a third termial, execute following commands to install/instantiate chaincoce from cli</a></li>
-<li><a href="#4-from-the-third-cli-terminal-execute-following-commands-to-invoke-issueiou-and-getiou-transactions">4. from the third (cli) terminal,execute following commands to invoke IssueIOU and getIOU transactions</a></li>
-<li><a href="#5-from-the-cli-terminal-execute-following-commands-to-invoke-transferiou-and-getiou-transactions">5. from the cli terminal,execute following commands to invoke TransferIOU and getIOU transactions</a></li>
-<li><a href="#6-query-iou">6. query iou</a></li>
-<li><a href="#7-shutdown-network">7. shutdown network</a></li>
+<li><a href="#1-start-up-corda-demo-bench">1. Start up Corda Demo Bench</a></li>
+<li><a href="#2-issue-an-iou">2. Issue an IOU</a></li>
+<li><a href="#3-transfer-the-iou">3. Transfer the IOU</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -569,79 +565,47 @@
 
 
 
-<h1 id="test-iou-chaincode-in-hyperledger-fabric-network">Test IOU chaincode in Hyperledger Fabric Network</h1>
+<h1 id="test-iou-smart-contract-in-r3-cora-network">Test IOU Smart Contract in R3 Cora Network</h1>
 
-<p>We need four docker images in order for &ldquo;dev mode&rdquo; to run against the supplied
-docker compose script.  If you installed the <code>fabric-samples</code> repo clone and
-followed the instructions to <a href="http://hyperledger-fabric.readthedocs.io/en/latest/samples.html#download-platform-specific-binaries">download-platform-specific-binaries</a>, then
-you should have the necessary Docker images installed locally.</p>
+<p>We will use <a href="https://docs.corda.net/demobench.html">Corda Demo Bench</a>, install it if you don&rsquo;t have it installed already.</p>
 
-<h2 id="1-open-a-terminal-and-execute-following-command-to-start-up-the-network">1. open a terminal, and execute following command to start up the network</h2>
+<h2 id="1-start-up-corda-demo-bench">1. Start up Corda Demo Bench</h2>
+
+<ul>
+<li>Click on &ldquo;+Add CorDapp&rdquo; button then browse to corda directory, select a jar to add(you can only add one jar at a time). Repeat, until all jars are added. You can replace kotlin-IOU-1.0.0.jar with your own.</li>
+<li>Start up 3 nodes: Notary, charlie, alice, and bob</li>
+<li>Make sure they are all running before continuing.</li>
+<li>You can watch the video for step by step instructions.</li>
+</ul>
+
+<p><a target="_blank" rel="noopener noreferrer" href="../../images/recordings/corddemo.gif"><img src="../../images/recordings/corddemo.gif" alt="Corda Demo Bench" style="max-width:75%;"></a></p>
+
+<h2 id="2-issue-an-iou">2. Issue an IOU</h2>
+
+<p>At charlie&rsquo;s terminal, issue an IOU</p>
 
 <blockquote>
-<p>docker-compose -f docker-compose-simple.yaml up</p>
+<p>flow start com.example.iou.IOUIssueInitiatorFlow iouValue: $100, owner: &ldquo;O=alice,L=New York,C=US&rdquo;, externalId: charlie100</p>
 </blockquote>
 
-<p>open a terminal window, run <code>docker ps</code>, make sure container cli, chaincode, peer, orderer and couchdb are running</p>
-
-<h2 id="2-open-another-terminal-execute-following-commands-to-connect-to-chaincode-container-and-compile-start-chaincode">2. open another terminal, execute following commands to connect to chaincode container and compile/start chaincode</h2>
+<p>Now run following command from charlie, alice and bob&rsquo;s terminals, you should see the IOU is now on both charlie and alice&rsquo;s ledgers, but not on bob&rsquo;s</p>
 
 <blockquote>
-<p>docker exec -it chaincode bash</p>
-
-<p>cd iou</p>
-
-<p>go build</p>
-
-<p>CORE_PEER_ADDRESS=peer:7052 CORE_CHAINCODE_ID_NAME=iou:0 ./iou</p>
+<p>run vaultQuery contractStateType: com.example.iou.IOU</p>
 </blockquote>
 
-<h2 id="3-open-a-third-termial-execute-following-commands-to-install-instantiate-chaincoce-from-cli">3. open a third termial, execute following commands to install/instantiate chaincoce from cli</h2>
+<h2 id="3-transfer-the-iou">3. Transfer the IOU</h2>
+
+<p>At alice&rsquo;s termial, transfer IOU to bob</p>
 
 <blockquote>
-<p>docker exec -it cli bash</p>
-
-<p>peer chaincode install -p chaincodedev/chaincode/iou -n iou -v 0</p>
-
-<p>peer chaincode instantiate -n iou -v 0 -c &lsquo;{&ldquo;Args&rdquo;:[]}&rsquo; -C myc</p>
+<p>flow start com.example.iou.IOUTransferInitiatorFlow iouId: charlie100, newOwner: &ldquo;C=FR,L=Paris,O=bob&rdquo;</p>
 </blockquote>
 
-<h2 id="4-from-the-third-cli-terminal-execute-following-commands-to-invoke-issueiou-and-getiou-transactions">4. from the third (cli) terminal,execute following commands to invoke IssueIOU and getIOU transactions</h2>
+<p>Now run following command from charlie, alice and bob&rsquo;s terminals, you should see the IOU is now on both charlie and bob&rsquo;s ledgers, but no longer on charlie&rsquo;s</p>
 
 <blockquote>
-<p>peer chaincode invoke -n iou -c &lsquo;{&ldquo;Args&rdquo;:[&ldquo;com.example.iou.IssueIOU&rdquo;,&ldquo;{\&ldquo;issuer\&rdquo;:\&ldquo;charlie\&ldquo;,\&ldquo;owner\&rdquo;:\&ldquo;alice\&ldquo;,\&ldquo;amt\&rdquo;:{\&ldquo;quantity\&rdquo;:10000,\&ldquo;currency\&rdquo;:\&ldquo;USD\&ldquo;},\&ldquo;linearId\&rdquo;:\&ldquo;testiou\&ldquo;}&rdquo;]}&rsquo; -C myc</p>
-
-<p>peer chaincode query -n iou -c &lsquo;{&ldquo;Args&rdquo;:[&ldquo;com.example.iou.getIOU&rdquo;,&ldquo;testiou&rdquo;]}&rsquo; -C myc</p>
-</blockquote>
-
-<p>You should see the IOU returned.</p>
-
-<h2 id="5-from-the-cli-terminal-execute-following-commands-to-invoke-transferiou-and-getiou-transactions">5. from the cli terminal,execute following commands to invoke TransferIOU and getIOU transactions</h2>
-
-<blockquote>
-<p>peer chaincode invoke -n iou -c &lsquo;{&ldquo;Args&rdquo;:[&ldquo;com.example.iou.TransferIOU&rdquo;,&ldquo;{\&ldquo;linearId\&rdquo;:\&ldquo;testiou\&ldquo;}&rdquo;, &ldquo;bob&rdquo;]}&rsquo; -C myc</p>
-
-<p>peer chaincode query -n iou -c &lsquo;{&ldquo;Args&rdquo;:[&ldquo;com.example.iou.getIOU&rdquo;,&ldquo;testiou&rdquo;]}&rsquo; -C myc</p>
-</blockquote>
-
-<p>You should see the IOU now with new owner &ldquo;bob&rdquo; returned</p>
-
-<h2 id="6-query-iou">6. query iou</h2>
-
-<p>let&rsquo;s add another IOU issued by charlie</p>
-
-<blockquote>
-<p>peer chaincode invoke -n iou -c &lsquo;{&ldquo;Args&rdquo;:[&ldquo;com.example.iou.IssueIOU&rdquo;,&ldquo;{\&ldquo;issuer\&rdquo;:\&ldquo;charlie\&ldquo;,\&ldquo;owner\&rdquo;:\&ldquo;john\&ldquo;,\&ldquo;amt\&rdquo;:{\&ldquo;quantity\&rdquo;:20000,\&ldquo;currency\&rdquo;:\&ldquo;USD\&ldquo;},\&ldquo;linearId\&rdquo;:\&ldquo;testioujohn\&ldquo;}&rdquo;]}&rsquo; -C myc</p>
-
-<p>peer chaincode query -n iou -c &lsquo;{&ldquo;Args&rdquo;:[&ldquo;com.example.iou.getIOUIssuedBy&rdquo;, &ldquo;charlie&rdquo;]}&rsquo; -C myc</p>
-</blockquote>
-
-<p>You should see two IOUs returned, both issued by charlie.</p>
-
-<h2 id="7-shutdown-network">7. shutdown network</h2>
-
-<blockquote>
-<p>docker-compose -f docker-compose-simple.yaml down</p>
+<p>run vaultQuery contractStateType: com.example.iou.IOU</p>
 </blockquote>
 
 
@@ -778,8 +742,6 @@ you should have the necessary Docker images installed locally.</p>
 
     
         
-            
-            
         
     
     
@@ -797,6 +759,8 @@ you should have the necessary Docker images installed locally.</p>
 
     
         
+            
+            
         
     
     
@@ -821,9 +785,6 @@ you should have the necessary Docker images installed locally.</p>
 
 
     
-        
-            
-            
         
     
     
@@ -897,19 +858,19 @@ you should have the necessary Docker images installed locally.</p>
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
 <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>
-<script src="/dovetail/js/clipboard.min.js?1543520748"></script>
-<script src="/dovetail/js/perfect-scrollbar.min.js?1543520748"></script>
-<script src="/dovetail/js/perfect-scrollbar.jquery.min.js?1543520748"></script>
-<script src="/dovetail/js/jquery.sticky.js?1543520748"></script>
-<script src="/dovetail/js/html5shiv-printshiv.min.js?1543520748"></script>
-<script src="/dovetail/js/highlight.pack.js?1543520748"></script>
+<script src="/dovetail/js/clipboard.min.js?1543522956"></script>
+<script src="/dovetail/js/perfect-scrollbar.min.js?1543522956"></script>
+<script src="/dovetail/js/perfect-scrollbar.jquery.min.js?1543522956"></script>
+<script src="/dovetail/js/jquery.sticky.js?1543522956"></script>
+<script src="/dovetail/js/html5shiv-printshiv.min.js?1543522956"></script>
+<script src="/dovetail/js/highlight.pack.js?1543522956"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<script src="/dovetail/js/modernizr.custom.71422.js?1543520748"></script>
-<script src="/dovetail/js/learn.js?1543520748"></script>
-<script src="/dovetail/js/hugo-learn.js?1543520748"></script>
+<script src="/dovetail/js/modernizr.custom.71422.js?1543522956"></script>
+<script src="/dovetail/js/learn.js?1543522956"></script>
+<script src="/dovetail/js/hugo-learn.js?1543522956"></script>
 
-<link href="/dovetail/mermaid/mermaid.css?1543520748" type="text/css" rel="stylesheet" />
-<script src="/dovetail/mermaid/mermaid.js?1543520748"></script>
+<link href="/dovetail/mermaid/mermaid.css?1543522956" type="text/css" rel="stylesheet" />
+<script src="/dovetail/mermaid/mermaid.js?1543522956"></script>
 <script>
 mermaid.initialize({ startOnLoad: true });
 </script>

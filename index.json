@@ -74,7 +74,7 @@
 	"title": "",
 	"tags": [],
 	"description": "",
-	"content": " Dovetail documentation This documentation has been generated using hugo, which is available under the Apache License 2.0. You may obtail a copy of the license at http://apache.org/licenses/LICENSE-2.0.\n"
+	"content": " Dovetail documentation This documentation has been generated using hugo, which is available under the Apache License 2.0. You may obtain a copy of the license at http://apache.org/licenses/LICENSE-2.0.\n"
 },
 {
 	"uri": "https://tibcosoftware.github.io/dovetail/",
@@ -84,14 +84,14 @@
 	"content": " Project Dovetail™ Docs and Tutorials for project Dovetail™\nGet started...  I\u0026#39;m an Business Developer!\n    I\u0026#39;m a Go Developer!\n    I need help!\n     As an Business Developer you might want to try...\n Our quickstart\n    Getting started with the UI\n    Check out some labs on Blockchain\n     As an Go Developer you might want to try...\n Development docs\n      If you have any questions, feel free to post an issue and tag it as a question, or email tibcolabs@tibco.com\n  function show(arg) { document.getElementById(\"app\").classList = \"line hidden\" document.getElementById(\"golang\").classList = \"line hidden\" document.getElementById(\"docs\").classList = \"line hidden\" document.getElementById(\"talk\").classList = \"line hidden\" document.getElementById(arg).classList.remove(\"hidden\") document.getElementById(arg).classList.add(\"block\") }  "
 },
 {
-	"uri": "https://tibcosoftware.github.io/dovetail/labs/corda_network/",
+	"uri": "https://tibcosoftware.github.io/dovetail/labs/cordanetwork/",
 	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Test IOU Smart Contract in R3 Cora Network We will use Corda Demo Bench, install it if you don\u0026rsquo;t have it installed already.\n1. Start up Corda Demo Bench  Click on \u0026ldquo;+Add CorDapp\u0026rdquo; button then browse to corda directory, select a jar to add(you can only add one jar at a time). Repeat, until all jars are added. You can replace kotlin-IOU-1.0.0.jar with your own. Start up 3 nodes: Notary, charlie, alice, and bob Make sure they are all running before continuing. You can watch the video for step by step instructions.  \n2. Issue an IOU At charlie\u0026rsquo;s terminal, issue an IOU\n flow start com.example.iou.IOUIssueInitiatorFlow iouValue: $100, owner: \u0026ldquo;O=alice,L=New York,C=US\u0026rdquo;, externalId: charlie100\n Now run following command from charlie, alice and bob\u0026rsquo;s terminals, you should see the IOU is now on both charlie and alice\u0026rsquo;s ledgers, but not on bob\u0026rsquo;s\n run vaultQuery contractStateType: com.example.iou.IOU\n 3. Transfer the IOU At alice\u0026rsquo;s termial, transfer IOU to bob\n flow start com.example.iou.IOUTransferInitiatorFlow iouId: charlie100, newOwner: \u0026ldquo;C=FR,L=Paris,O=bob\u0026rdquo;\n Now run following command from charlie, alice and bob\u0026rsquo;s terminals, you should see the IOU is now on both charlie and bob\u0026rsquo;s ledgers, but no longer on charlie\u0026rsquo;s\n run vaultQuery contractStateType: com.example.iou.IOU\n "
 },
 {
-	"uri": "https://tibcosoftware.github.io/dovetail/labs/fabric_network/",
+	"uri": "https://tibcosoftware.github.io/dovetail/labs/fabricnetwork/",
 	"title": "",
 	"tags": [],
 	"description": "",
