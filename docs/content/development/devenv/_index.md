@@ -48,7 +48,7 @@ If you are developing for R3 Corda, following jars must be available in your loc
             <version>[0.1.0, )</version>
         </dependency>
     ```
- *** com.tibco.dovetail:dovetail-corda:0.1.2 jar is available [here](https://github.com/TIBCOSoftware/dovetail-contrib/releases/download/v0.1.2/dovetail_corda_v0.1.2.jar)
+ *** Project Dovetail™ library for R3 Corda is available [here](https://github.com/TIBCOSoftware/dovetail-contrib/releases)
 
 ### Docker
 
