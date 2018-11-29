@@ -45,10 +45,10 @@ If you are developing for R3 Corda, following jars must be available in your loc
         <dependency>
             <groupId>com.tibco.dovetail</groupId>
             <artifactId>dovetail-corda</artifactId>
-            <version>0.1.0</version>
+            <version>[0.1.0, )</version>
         </dependency>
     ```
- *** com.tibco.dovetail:dovetail-corda:0.1.0 jar is available [here](https://github.com/TIBCOSoftware/dovetail-java-lib/releases/tag/v0.1.0)
+ *** com.tibco.dovetail:dovetail-corda:0.1.2 jar is available [here](https://github.com/TIBCOSoftware/dovetail-contrib/releases/download/v0.1.2/dovetail_corda_v0.1.2.jar)
 
 ### Docker
 
