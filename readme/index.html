@@ -46,7 +46,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/dovetail/labs/network/corda/corda_network/">
+  <body class="" data-url="/dovetail/readme/">
     <nav id="sidebar" class="">
 
 
@@ -266,7 +266,7 @@
   
     
     <li data-nav-id="/dovetail/labs/" title="Labs" class="dd-item 
-        parent
+        
         
         
         ">
@@ -309,7 +309,7 @@
  
   
     
-      <li data-nav-id="/dovetail/labs/network/corda/corda_network/" title="" class="dd-item active">
+      <li data-nav-id="/dovetail/labs/network/corda/corda_network/" title="" class="dd-item ">
         <a href="/dovetail/labs/network/corda/corda_network/">
         
         
@@ -514,7 +514,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/tibcosoftware/dovetail/edit/master/docs/content/labs/network/corda/corda_network.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/tibcosoftware/dovetail/edit/master/docs/content/README.md" target="blank">
                       <i class="fas fa-code-fork"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -539,13 +539,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/dovetail/'></a> > <a href='/dovetail/labs/'>Labs</a> > 
-          
-         
+            <a href='/dovetail/'></a> > 
           
          
           
@@ -555,16 +549,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-<ul>
-<li><a href="#test-iou-smart-contract-in-r3-cora-network">Test IOU Smart Contract in R3 Cora Network</a>
-<ul>
-<li><a href="#1-start-up-corda-demo-bench">1. Start up Corda Demo Bench</a></li>
-<li><a href="#2-issue-an-iou">2. Issue an IOU</a></li>
-<li><a href="#3-transfer-the-iou">3. Transfer the IOU</a></li>
-</ul></li>
-</ul>
-</nav>
+
     </div>
 </div>
 
@@ -582,50 +567,7 @@
         
 
 
-
-
-<h1 id="test-iou-smart-contract-in-r3-cora-network">Test IOU Smart Contract in R3 Cora Network</h1>
-
-<p>We will use <a href="https://docs.corda.net/demobench.html">Corda Demo Bench</a>, install it if you don&rsquo;t have it installed already.</p>
-
-<h2 id="1-start-up-corda-demo-bench">1. Start up Corda Demo Bench</h2>
-
-<ul>
-<li>Click on &ldquo;+Add CorDapp&rdquo; button then browse to corda directory, select a jar to add(you can only add one jar at a time). Repeat, until all jars are added. You can replace kotlin-IOU-1.0.0.jar with your own.</li>
-<li>Start up 3 nodes: Notary, charlie, alice, and bob</li>
-<li>Make sure they are all running before continuing.</li>
-<li>You can watch the video for step by step instructions.</li>
-</ul>
-
-<p><a target="_blank" rel="noopener noreferrer" href="../../images/recordings/corddemo.gif"><img src="../../images/recordings/corddemo.gif" alt="Corda Demo Bench" style="max-width:75%;"></a></p>
-
-<h2 id="2-issue-an-iou">2. Issue an IOU</h2>
-
-<p>At charlie&rsquo;s terminal, issue an IOU</p>
-
-<blockquote>
-<p>flow start com.example.iou.IOUIssueInitiatorFlow iouValue: $100, owner: &ldquo;O=alice,L=New York,C=US&rdquo;, externalId: charlie100</p>
-</blockquote>
-
-<p>Now run following command from charlie, alice and bob&rsquo;s terminals, you should see the IOU is now on both charlie and alice&rsquo;s ledgers, but not on bob&rsquo;s</p>
-
-<blockquote>
-<p>run vaultQuery contractStateType: com.example.iou.IOU</p>
-</blockquote>
-
-<h2 id="3-transfer-the-iou">3. Transfer the IOU</h2>
-
-<p>At alice&rsquo;s termial, transfer IOU to bob</p>
-
-<blockquote>
-<p>flow start com.example.iou.IOUTransferInitiatorFlow iouId: charlie100, newOwner: &ldquo;C=FR,L=Paris,O=bob&rdquo;</p>
-</blockquote>
-
-<p>Now run following command from charlie, alice and bob&rsquo;s terminals, you should see the IOU is now on both charlie and bob&rsquo;s ledgers, but no longer on charlie&rsquo;s</p>
-
-<blockquote>
-<p>run vaultQuery contractStateType: com.example.iou.IOU</p>
-</blockquote>
+<p>Test of README</p>
 
 
 <footer class=" footline" >
@@ -747,7 +689,6 @@
 
     
         
-        
     
     
 
@@ -760,26 +701,6 @@
 
 
     
-        
-            
-            
-        
-    
-    
-
-        
-        
-        
-
-        
-
-
-        
-            
-
-
-    
-        
         
     
     
@@ -797,8 +718,21 @@
 
     
         
+    
+    
+
+        
+        
+        
+
+        
+
+
+        
             
-            
+
+
+    
         
     
     

@@ -26,10 +26,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://tibcosoftware.github.io/dovetail/getting-started/getting-started-webui/</guid>
-      <description>Getting Started For an overview of how to get started, check out the Quickstart guide
-Installing the Project Dovetail Studio Installing the Project Dovetail Studio is quite simple just follow these steps:
-1.- Go to the releases page and download the latest version for your os architecture. 2.- Unzip the downloaded release (for example on mac). cd /path/to/downloaded/file unzip TIB_dovetail_0.1.1_macosx_x86_64.zip
-Starting Dovetail Studio To get started with your downloaded version of the Dovetail Studio in the previous step just do the following:</description>
+      <description>Installing the Project Dovetail Studio Installing the Project Dovetail Studio is quite simple just follow these steps:
+1.- Go to the releases page and download the latest version for your os architecture.
+2.- Unzip the downloaded release (for example on mac).
+cd /path/to/downloaded/file
+unzip TIB_dovetail_0.1.1_macosx_x86_64.zip
+Starting Dovetail Studio To get started with your downloaded version of the Dovetail Studio in the previous step just do the following:
+1.- Go to the bin directory on the unzipped folder</description>
     </item>
     
     <item>
