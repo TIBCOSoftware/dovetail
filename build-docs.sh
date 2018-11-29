@@ -32,6 +32,7 @@ ext_docs() {
 add_readme() {
     echo "Adding readme and license files"
     cp docs/content/README.md docs/public
+    cp docs/content/LICENSE docs/public
 }
 
 update_page_cli() {
