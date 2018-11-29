@@ -134,12 +134,12 @@ Run folloowing command from tutorial directory, R3 Corda contract is written to 
 ### *6.1 Hyperledger Fabric*
 
 * Copy [sample Hyperledger Fabric Network](https://github.com/TIBCOSoftware/dovetail/blob/master/docs/content/labs/network/fabric) to your network/fabric directory
-* Follow [instructions](https://github.com/TIBCOSoftware/dovetail/blob/master/docs/content/labs/fabric_network.md) here, assuing you are running commands from fabric directory.
+* Follow [instructions](https://github.com/TIBCOSoftware/dovetail/blob/master/docs/content/labs/network/fabric/fabric_network.md) here, assuing you are running commands from fabric directory.
 
 ### *6.2 R3 Corda*
 
 * Copy [sample R3 CorDapp](https://github.com/TIBCOSoftware/dovetail/blob/master/docs/content/labs/network/corda) to network/corda directory
-* Follow [instructions](https://github.com/TIBCOSoftware/dovetail/blob/master/docs/content/labs/corda_network.md) here
+* Follow [instructions](https://github.com/TIBCOSoftware/dovetail/blob/master/docs/content/labs/network/corda/corda_network.md) here
 
 ## 7. Import an existing application
 
