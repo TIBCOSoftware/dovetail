@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/TIBCOSoftware/dovetail/master/images/tibcolabs.ico" type="image/vnd.microsoft.icon">
 
-    <title>Labs :: Project Dovetail™ - Docs and Tutorials</title>
+    <title> :: Project Dovetail™ - Docs and Tutorials</title>
     
     
     <link href="/dovetail/css/nucleus.css?1543519479" rel="stylesheet" type="text/css">
@@ -46,7 +46,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/dovetail/labs/">
+  <body class="" data-url="/dovetail/labs/corda_network/">
     <nav id="sidebar" class="">
 
 
@@ -267,7 +267,7 @@
     
     <li data-nav-id="/dovetail/labs/" title="Labs" class="dd-item 
         parent
-        active
+        
         
         ">
       <a href="/dovetail/labs/">
@@ -309,7 +309,7 @@
  
   
     
-      <li data-nav-id="/dovetail/labs/corda_network/" title="" class="dd-item ">
+      <li data-nav-id="/dovetail/labs/corda_network/" title="" class="dd-item active">
         <a href="/dovetail/labs/corda_network/">
         
         
@@ -514,7 +514,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/tibcosoftware/dovetail/edit/master/docs/content/labs/_index.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/tibcosoftware/dovetail/edit/master/docs/content/labs/corda_network.md" target="blank">
                       <i class="fas fa-code-fork"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -529,6 +529,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                     
           
@@ -537,7 +539,13 @@
             
           
           
-            <a href='/dovetail/'></a> > Labs
+            
+            
+          
+          
+            <a href='/dovetail/'></a> > <a href='/dovetail/labs/'>Labs</a> > 
+          
+         
           
          
           
@@ -545,14 +553,30 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li><a href="#test-iou-smart-contract-in-r3-cora-network">Test IOU Smart Contract in R3 Cora Network</a>
+<ul>
+<li><a href="#1-start-up-corda-demo-bench">1. Start up Corda Demo Bench</a></li>
+<li><a href="#2-issue-an-iou">2. Issue an IOU</a></li>
+<li><a href="#3-transfer-the-iou">3. Transfer the IOU</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
 
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1></h1>
           
 
         
@@ -560,28 +584,48 @@
 
 
 
-<h1 id="labs">Labs</h1>
+<h1 id="test-iou-smart-contract-in-r3-cora-network">Test IOU Smart Contract in R3 Cora Network</h1>
 
-<p>After getting up and running you might want to try your hand at some more advanced labs and tutorials. These labs provide you with a guides, tutorials and code samples and will help you work through building and deploying Dovetail smart contracts.</p>
+<p>We will use <a href="https://docs.corda.net/demobench.html">Corda Demo Bench</a>, install it if you don&rsquo;t have it installed already.</p>
 
-<h2 id="blockchain-tutorials">Blockchain™ tutorials</h2>
+<h2 id="1-start-up-corda-demo-bench">1. Start up Corda Demo Bench</h2>
 
-<p>These labs have an emphasis on using external tools together with Project Dovetail™, like R3 Corda or Hyperledger Fabric to build smart contracts</p>
+<ul>
+<li>Click on &ldquo;+Add CorDapp&rdquo; button then browse to corda directory, select a jar to add(you can only add one jar at a time). Repeat, until all jars are added. You can replace kotlin-IOU-1.0.0.jar with your own.</li>
+<li>Start up 3 nodes: Notary, charlie, alice, and bob</li>
+<li>Make sure they are all running before continuing.</li>
+<li>You can watch the video for step by step instructions.</li>
+</ul>
 
-<div class="cards">
+<p><a target="_blank" rel="noopener noreferrer" href="../../images/recordings/corddemo.gif"><img src="../../images/recordings/corddemo.gif" alt="Corda Demo Bench" style="max-width:75%;"></a></p>
 
-  <a href="./iou-smart-app">
-    <div class="card bigcard">
-        <div class="card-header bg2">
-            <img class="card-bigimage" src="../images/labs/034-experiment.svg" alt="Share" />
-        </div>
-        <div class="card-content">
-            <p class="card-text"><b>TUTORIAL</b><br/> IOU smart contract application tutorial  </p>
-        </div>
-    </div>
-</a>
+<h2 id="2-issue-an-iou">2. Issue an IOU</h2>
 
-</div>
+<p>At charlie&rsquo;s terminal, issue an IOU</p>
+
+<blockquote>
+<p>flow start com.example.iou.IOUIssueInitiatorFlow iouValue: $100, owner: &ldquo;O=alice,L=New York,C=US&rdquo;, externalId: charlie100</p>
+</blockquote>
+
+<p>Now run following command from charlie, alice and bob&rsquo;s terminals, you should see the IOU is now on both charlie and alice&rsquo;s ledgers, but not on bob&rsquo;s</p>
+
+<blockquote>
+<p>run vaultQuery contractStateType: com.example.iou.IOU</p>
+</blockquote>
+
+<h2 id="3-transfer-the-iou">3. Transfer the IOU</h2>
+
+<p>At alice&rsquo;s termial, transfer IOU to bob</p>
+
+<blockquote>
+<p>flow start com.example.iou.IOUTransferInitiatorFlow iouId: charlie100, newOwner: &ldquo;C=FR,L=Paris,O=bob&rdquo;</p>
+</blockquote>
+
+<p>Now run following command from charlie, alice and bob&rsquo;s terminals, you should see the IOU is now on both charlie and bob&rsquo;s ledgers, but no longer on charlie&rsquo;s</p>
+
+<blockquote>
+<p>run vaultQuery contractStateType: com.example.iou.IOU</p>
+</blockquote>
 
 
 <footer class=" footline" >
@@ -589,7 +633,6 @@
 </footer>
 
 
-</div> 
 
 </div> 
 
@@ -737,6 +780,7 @@
 
     
         
+        
     
     
 
@@ -752,6 +796,9 @@
 
 
     
+        
+            
+            
         
     
     
@@ -869,3 +916,4 @@ mermaid.initialize({ startOnLoad: true });
 
 </body>
 </html>
+

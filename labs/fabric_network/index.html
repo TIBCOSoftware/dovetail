@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/TIBCOSoftware/dovetail/master/images/tibcolabs.ico" type="image/vnd.microsoft.icon">
 
-    <title>Labs :: Project Dovetail™ - Docs and Tutorials</title>
+    <title> :: Project Dovetail™ - Docs and Tutorials</title>
     
     
     <link href="/dovetail/css/nucleus.css?1543519479" rel="stylesheet" type="text/css">
@@ -46,7 +46,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/dovetail/labs/">
+  <body class="" data-url="/dovetail/labs/fabric_network/">
     <nav id="sidebar" class="">
 
 
@@ -267,7 +267,7 @@
     
     <li data-nav-id="/dovetail/labs/" title="Labs" class="dd-item 
         parent
-        active
+        
         
         ">
       <a href="/dovetail/labs/">
@@ -328,7 +328,7 @@
  
   
     
-      <li data-nav-id="/dovetail/labs/fabric_network/" title="" class="dd-item ">
+      <li data-nav-id="/dovetail/labs/fabric_network/" title="" class="dd-item active">
         <a href="/dovetail/labs/fabric_network/">
         
         
@@ -514,7 +514,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/tibcosoftware/dovetail/edit/master/docs/content/labs/_index.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/tibcosoftware/dovetail/edit/master/docs/content/labs/fabric_network.md" target="blank">
                       <i class="fas fa-code-fork"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -529,6 +529,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                     
           
@@ -537,7 +539,13 @@
             
           
           
-            <a href='/dovetail/'></a> > Labs
+            
+            
+          
+          
+            <a href='/dovetail/'></a> > <a href='/dovetail/labs/'>Labs</a> > 
+          
+         
           
          
           
@@ -545,14 +553,34 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li><a href="#test-iou-chaincode-in-hyperledger-fabric-network">Test IOU chaincode in Hyperledger Fabric Network</a>
+<ul>
+<li><a href="#1-open-a-terminal-and-execute-following-command-to-start-up-the-network">1. open a terminal, and execute following command to start up the network</a></li>
+<li><a href="#2-open-another-terminal-execute-following-commands-to-connect-to-chaincode-container-and-compile-start-chaincode">2. open another terminal, execute following commands to connect to chaincode container and compile/start chaincode</a></li>
+<li><a href="#3-open-a-third-termial-execute-following-commands-to-install-instantiate-chaincoce-from-cli">3. open a third termial, execute following commands to install/instantiate chaincoce from cli</a></li>
+<li><a href="#4-from-the-third-cli-terminal-execute-following-commands-to-invoke-issueiou-and-getiou-transactions">4. from the third (cli) terminal,execute following commands to invoke IssueIOU and getIOU transactions</a></li>
+<li><a href="#5-from-the-cli-terminal-execute-following-commands-to-invoke-transferiou-and-getiou-transactions">5. from the cli terminal,execute following commands to invoke TransferIOU and getIOU transactions</a></li>
+<li><a href="#6-query-iou">6. query iou</a></li>
+<li><a href="#7-shutdown-network">7. shutdown network</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
 
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1></h1>
           
 
         
@@ -560,28 +588,80 @@
 
 
 
-<h1 id="labs">Labs</h1>
+<h1 id="test-iou-chaincode-in-hyperledger-fabric-network">Test IOU chaincode in Hyperledger Fabric Network</h1>
 
-<p>After getting up and running you might want to try your hand at some more advanced labs and tutorials. These labs provide you with a guides, tutorials and code samples and will help you work through building and deploying Dovetail smart contracts.</p>
+<p>We need four docker images in order for &ldquo;dev mode&rdquo; to run against the supplied
+docker compose script.  If you installed the <code>fabric-samples</code> repo clone and
+followed the instructions to <a href="http://hyperledger-fabric.readthedocs.io/en/latest/samples.html#download-platform-specific-binaries">download-platform-specific-binaries</a>, then
+you should have the necessary Docker images installed locally.</p>
 
-<h2 id="blockchain-tutorials">Blockchain™ tutorials</h2>
+<h2 id="1-open-a-terminal-and-execute-following-command-to-start-up-the-network">1. open a terminal, and execute following command to start up the network</h2>
 
-<p>These labs have an emphasis on using external tools together with Project Dovetail™, like R3 Corda or Hyperledger Fabric to build smart contracts</p>
+<blockquote>
+<p>docker-compose -f docker-compose-simple.yaml up</p>
+</blockquote>
 
-<div class="cards">
+<p>open a terminal window, run <code>docker ps</code>, make sure container cli, chaincode, peer, orderer and couchdb are running</p>
 
-  <a href="./iou-smart-app">
-    <div class="card bigcard">
-        <div class="card-header bg2">
-            <img class="card-bigimage" src="../images/labs/034-experiment.svg" alt="Share" />
-        </div>
-        <div class="card-content">
-            <p class="card-text"><b>TUTORIAL</b><br/> IOU smart contract application tutorial  </p>
-        </div>
-    </div>
-</a>
+<h2 id="2-open-another-terminal-execute-following-commands-to-connect-to-chaincode-container-and-compile-start-chaincode">2. open another terminal, execute following commands to connect to chaincode container and compile/start chaincode</h2>
 
-</div>
+<blockquote>
+<p>docker exec -it chaincode bash</p>
+
+<p>cd iou</p>
+
+<p>go build</p>
+
+<p>CORE_PEER_ADDRESS=peer:7052 CORE_CHAINCODE_ID_NAME=iou:0 ./iou</p>
+</blockquote>
+
+<h2 id="3-open-a-third-termial-execute-following-commands-to-install-instantiate-chaincoce-from-cli">3. open a third termial, execute following commands to install/instantiate chaincoce from cli</h2>
+
+<blockquote>
+<p>docker exec -it cli bash</p>
+
+<p>peer chaincode install -p chaincodedev/chaincode/iou -n iou -v 0</p>
+
+<p>peer chaincode instantiate -n iou -v 0 -c &lsquo;{&ldquo;Args&rdquo;:[]}&rsquo; -C myc</p>
+</blockquote>
+
+<h2 id="4-from-the-third-cli-terminal-execute-following-commands-to-invoke-issueiou-and-getiou-transactions">4. from the third (cli) terminal,execute following commands to invoke IssueIOU and getIOU transactions</h2>
+
+<blockquote>
+<p>peer chaincode invoke -n iou -c &lsquo;{&ldquo;Args&rdquo;:[&ldquo;com.example.iou.IssueIOU&rdquo;,&ldquo;{\&ldquo;issuer\&rdquo;:\&ldquo;charlie\&ldquo;,\&ldquo;owner\&rdquo;:\&ldquo;alice\&ldquo;,\&ldquo;amt\&rdquo;:{\&ldquo;quantity\&rdquo;:10000,\&ldquo;currency\&rdquo;:\&ldquo;USD\&ldquo;},\&ldquo;linearId\&rdquo;:\&ldquo;testiou\&ldquo;}&rdquo;]}&rsquo; -C myc</p>
+
+<p>peer chaincode query -n iou -c &lsquo;{&ldquo;Args&rdquo;:[&ldquo;com.example.iou.getIOU&rdquo;,&ldquo;testiou&rdquo;]}&rsquo; -C myc</p>
+</blockquote>
+
+<p>You should see the IOU returned.</p>
+
+<h2 id="5-from-the-cli-terminal-execute-following-commands-to-invoke-transferiou-and-getiou-transactions">5. from the cli terminal,execute following commands to invoke TransferIOU and getIOU transactions</h2>
+
+<blockquote>
+<p>peer chaincode invoke -n iou -c &lsquo;{&ldquo;Args&rdquo;:[&ldquo;com.example.iou.TransferIOU&rdquo;,&ldquo;{\&ldquo;linearId\&rdquo;:\&ldquo;testiou\&ldquo;}&rdquo;, &ldquo;bob&rdquo;]}&rsquo; -C myc</p>
+
+<p>peer chaincode query -n iou -c &lsquo;{&ldquo;Args&rdquo;:[&ldquo;com.example.iou.getIOU&rdquo;,&ldquo;testiou&rdquo;]}&rsquo; -C myc</p>
+</blockquote>
+
+<p>You should see the IOU now with new owner &ldquo;bob&rdquo; returned</p>
+
+<h2 id="6-query-iou">6. query iou</h2>
+
+<p>let&rsquo;s add another IOU issued by charlie</p>
+
+<blockquote>
+<p>peer chaincode invoke -n iou -c &lsquo;{&ldquo;Args&rdquo;:[&ldquo;com.example.iou.IssueIOU&rdquo;,&ldquo;{\&ldquo;issuer\&rdquo;:\&ldquo;charlie\&ldquo;,\&ldquo;owner\&rdquo;:\&ldquo;john\&ldquo;,\&ldquo;amt\&rdquo;:{\&ldquo;quantity\&rdquo;:20000,\&ldquo;currency\&rdquo;:\&ldquo;USD\&ldquo;},\&ldquo;linearId\&rdquo;:\&ldquo;testioujohn\&ldquo;}&rdquo;]}&rsquo; -C myc</p>
+
+<p>peer chaincode query -n iou -c &lsquo;{&ldquo;Args&rdquo;:[&ldquo;com.example.iou.getIOUIssuedBy&rdquo;, &ldquo;charlie&rdquo;]}&rsquo; -C myc</p>
+</blockquote>
+
+<p>You should see two IOUs returned, both issued by charlie.</p>
+
+<h2 id="7-shutdown-network">7. shutdown network</h2>
+
+<blockquote>
+<p>docker-compose -f docker-compose-simple.yaml down</p>
+</blockquote>
 
 
 <footer class=" footline" >
@@ -589,7 +669,6 @@
 </footer>
 
 
-</div> 
 
 </div> 
 
@@ -753,6 +832,7 @@
 
     
         
+        
     
     
 
@@ -776,6 +856,9 @@
 
 
     
+        
+            
+            
         
     
     
@@ -869,3 +952,4 @@ mermaid.initialize({ startOnLoad: true });
 
 </body>
 </html>
+
