@@ -12,15 +12,6 @@
     
     <item>
       <title></title>
-      <link>https://tibcosoftware.github.io/dovetail/labs/artifacts/composer-project-template/readme/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://tibcosoftware.github.io/dovetail/labs/artifacts/composer-project-template/readme/</guid>
-      <description>This is a template project for Project Dovetail™ asset modeling, it contains the required resource definitions in the system namespace.</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://tibcosoftware.github.io/dovetail/labs/corda_network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
