@@ -28,6 +28,12 @@ ext_docs() {
     rm -rf ./dovetail-contrib
 }
 
+#--- Add readme and license ---
+add_readme() {
+    echo "Adding readme and license files"
+    cp docs/content/README.md docs/public
+}
+
 update_page_cli() {
     echo "Getting the docs for the commandline tools"
     #curl -o docs/content/dovetail-cli/dovetail-cli.md https://raw.githubusercontent.com/TIBCOSoftware/dovetail-cli/master/docs/dovetail-cli.md
@@ -140,6 +146,7 @@ case "$1" in
     "magic")
         gitprep
         update_page $2
+        add_readme
         build
         gitupdate
         ;;
