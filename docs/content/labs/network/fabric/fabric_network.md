@@ -28,7 +28,7 @@ open a terminal window, run ```docker ps```, make sure container cli, chaincode,
 > peer chaincode instantiate -n iou -v 0 -c '{"Args":[]}' -C myc
 
 ## 4. from the third (cli) terminal,execute following commands to invoke IssueIOU and getIOU transactions
-> peer chaincode invoke -n iou -c '{"Args":["com.example.iou.IssueIOU","{\\"issuer\\":\\"charlie\\",\\"owner\":\\"alice\\",\\"amt\\":{\\"quantity\\":10000,\\"currency\\":\\"USD\\"},\\"linearId\\":\\"testiou\\"}"]}' -C myc
+> peer chaincode invoke -n iou -c '{"Args":["com.example.iou.IssueIOU","{\\"issuer\\":\\"charlie\\",\\"owner\\":\\"alice\\",\\"amt\\":{\\"quantity\\":10000,\\"currency\\":\\"USD\\"},\\"linearId\\":\\"testiou\\"}"]}' -C myc
 
 > peer chaincode query -n iou -c '{"Args":["com.example.iou.getIOU","testiou"]}' -C myc
 
