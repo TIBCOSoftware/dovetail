@@ -15,8 +15,11 @@ Don't forget to set your `GOPATH` variable and make sure that `$GOPATH/bin` is p
 
 ### Installing the cli tools
 
-Copy and paste the following commands to install Project Dovetail™ commandline tool, the binary dovetail will be in your $GOPATH/bin directory
+Copy and paste the following commands to install Project Dovetail™ commandline tool.
 
 ```
-mkdir dovetail-cli && cd dovetail-cli && export GOPATH=${PWD} && mkdir -p $GOPATH/src/github.com/TIBCOSoftware && cd $GOPATH/src/github.com/TIBCOSoftware && git clone https://github.com/TIBCOSoftware/dovetail-cli.git && cd dovetail-cli && GO111MODULE=on go install ./... && cd .. && git clone https://github.com/TIBCOSoftware/dovetail-contrib.git && git clone https://github.com/TIBCOSoftware/flogo-contrib.git && cd flogo-contrib && git checkout tags/v0.5.5 && cd .. && git clone https://github.com/TIBCOSoftware/flogo-lib.git && cd flogo-lib && git checkout tags/v0.5.5 && cd $GOPATH/bin && go get -u github.com/jteeuwen/go-bindata/... && go get -u github.com/kardianos/govendor
+mkdir dovetail-cli && cd dovetail-cli && export GOPATH=${PWD} && go get -u github.com/TIBCOSoftware/dovetail-cli/... && cd $GOPATH/src/github.com/TIBCOSoftware && cd dovetail-cli && go1MODULE=on go install ./... && cd .. && rm -rf flogo-lib/ && rm -rf flogo-contrib/ && git clone https://github.com/TIBCOSoftware/flogo-contrib.git && git clone https://github.com/TIBCOSoftware/flogo-lib.git && cd flogo-contrib && git checkout tags/v0.5.5 && cd .. && cd flogo-lib && git checkout tags/v0.5.5 && cd .. && git clone https://github.com/TIBCOSoftware/dovetail-contrib.git && cd $GOPATH/bin && go get -u github.com/jteeuwen/go-bindata/... && go get -u github.com/kardianos/govendor && go get -u github.com/Sirupsen/logrus && go get -u github.com/julienschmidt/httprouter 
+
 ```
+
+**The binary dovetail will be in the dovetail-cli/bin directory, please prepend the /path/to/dovetail-cli to your GOPATH environment variable, and prepend /path/to/dovetail-cli/bin to your PATH environment variable in your user profile**
