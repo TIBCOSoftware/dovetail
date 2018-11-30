@@ -12,19 +12,19 @@
     <title>Dovetail CLI :: Project Dovetail™ - Docs and Tutorials</title>
     
     
-    <link href="/dovetail/css/nucleus.css?1543525757" rel="stylesheet" type="text/css">
-    <link href="/dovetail/css/fontawesome-all.min.css?1543525757" rel="stylesheet" type="text/css">
-    <link href="/dovetail/css/hybrid.css?1543525757" rel="stylesheet" type="text/css">
-    <link href="/dovetail/css/featherlight.min.css?1543525757" rel="stylesheet" type="text/css">
-    <link href="/dovetail/css/perfect-scrollbar.min.css?1543525757" rel="stylesheet" type="text/css">
-    <link href="/dovetail/css/auto-complete.css?1543525757" rel="stylesheet" type="text/css">
-    <link href="/dovetail/css/theme.css?1543525757" rel="stylesheet" type="text/css">
-    <link href="/dovetail/css/hugo-theme.css?1543525757" rel="stylesheet" type="text/css">
+    <link href="/dovetail/css/nucleus.css?1543552950" rel="stylesheet" type="text/css">
+    <link href="/dovetail/css/fontawesome-all.min.css?1543552950" rel="stylesheet" type="text/css">
+    <link href="/dovetail/css/hybrid.css?1543552950" rel="stylesheet" type="text/css">
+    <link href="/dovetail/css/featherlight.min.css?1543552950" rel="stylesheet" type="text/css">
+    <link href="/dovetail/css/perfect-scrollbar.min.css?1543552950" rel="stylesheet" type="text/css">
+    <link href="/dovetail/css/auto-complete.css?1543552950" rel="stylesheet" type="text/css">
+    <link href="/dovetail/css/theme.css?1543552950" rel="stylesheet" type="text/css">
+    <link href="/dovetail/css/hugo-theme.css?1543552950" rel="stylesheet" type="text/css">
     
-      <link href="/dovetail/css/theme-blue.css?1543525757" rel="stylesheet" type="text/css">
+      <link href="/dovetail/css/theme-blue.css?1543552950" rel="stylesheet" type="text/css">
     
 
-    <script src="/dovetail/js/jquery-2.x.min.js?1543525757"></script>
+    <script src="/dovetail/js/jquery-2.x.min.js?1543552950"></script>
 
     
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -131,14 +131,14 @@
     <span data-search-clear=""><i class="fas fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/dovetail/js/lunr.min.js?1543525757"></script>
-<script type="text/javascript" src="/dovetail/js/auto-complete.js?1543525757"></script>
+<script type="text/javascript" src="/dovetail/js/lunr.min.js?1543552950"></script>
+<script type="text/javascript" src="/dovetail/js/auto-complete.js?1543552950"></script>
 <script type="text/javascript">
     
         var baseurl = '\/dovetail\/';
     
 </script>
-<script type="text/javascript" src="/dovetail/js/search.js?1543525757"></script>
+<script type="text/javascript" src="/dovetail/js/search.js?1543552950"></script>
 
     
   </div>
@@ -582,10 +582,12 @@
 
 <h3 id="installing-the-cli-tools">Installing the cli tools</h3>
 
-<p>Copy and paste the following commands to install Project Dovetail™ commandline tool, the binary dovetail will be in your $GOPATH/bin directory</p>
+<p>Copy and paste the following commands to install Project Dovetail™ commandline tool.</p>
 
-<pre><code>mkdir dovetail-cli &amp;&amp; cd dovetail-cli &amp;&amp; export GOPATH=${PWD} &amp;&amp; mkdir -p $GOPATH/src/github.com/TIBCOSoftware &amp;&amp; cd $GOPATH/src/github.com/TIBCOSoftware &amp;&amp; git clone https://github.com/TIBCOSoftware/dovetail-cli.git &amp;&amp; cd dovetail-cli &amp;&amp; GO111MODULE=on go install ./... &amp;&amp; cd .. &amp;&amp; git clone https://github.com/TIBCOSoftware/dovetail-contrib.git &amp;&amp; git clone https://github.com/TIBCOSoftware/flogo-contrib.git &amp;&amp; cd flogo-contrib &amp;&amp; git checkout tags/v0.5.5 &amp;&amp; cd .. &amp;&amp; git clone https://github.com/TIBCOSoftware/flogo-lib.git &amp;&amp; cd flogo-lib &amp;&amp; git checkout tags/v0.5.5 &amp;&amp; cd $GOPATH/bin &amp;&amp; go get -u github.com/jteeuwen/go-bindata/... &amp;&amp; go get -u github.com/kardianos/govendor
+<pre><code>curl -sSL https://github.com/TIBCOSoftware/dovetail-cli/releases/download/v0.1.2/dovetail-cli-install.sh &gt; install.sh &amp;&amp; source install.sh
 </code></pre>
+
+<p><strong>The binary dovetail will be in the dovetail-cli/bin directory, please prepend the /path/to/dovetail-cli to your GOPATH environment variable, and prepend /path/to/dovetail-cli/bin to your PATH environment variable in your user profile</strong></p>
 
 
 <footer class=" footline" >
@@ -840,19 +842,19 @@
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
 <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>
-<script src="/dovetail/js/clipboard.min.js?1543525757"></script>
-<script src="/dovetail/js/perfect-scrollbar.min.js?1543525757"></script>
-<script src="/dovetail/js/perfect-scrollbar.jquery.min.js?1543525757"></script>
-<script src="/dovetail/js/jquery.sticky.js?1543525757"></script>
-<script src="/dovetail/js/html5shiv-printshiv.min.js?1543525757"></script>
-<script src="/dovetail/js/highlight.pack.js?1543525757"></script>
+<script src="/dovetail/js/clipboard.min.js?1543552950"></script>
+<script src="/dovetail/js/perfect-scrollbar.min.js?1543552950"></script>
+<script src="/dovetail/js/perfect-scrollbar.jquery.min.js?1543552950"></script>
+<script src="/dovetail/js/jquery.sticky.js?1543552950"></script>
+<script src="/dovetail/js/html5shiv-printshiv.min.js?1543552950"></script>
+<script src="/dovetail/js/highlight.pack.js?1543552950"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<script src="/dovetail/js/modernizr.custom.71422.js?1543525757"></script>
-<script src="/dovetail/js/learn.js?1543525757"></script>
-<script src="/dovetail/js/hugo-learn.js?1543525757"></script>
+<script src="/dovetail/js/modernizr.custom.71422.js?1543552950"></script>
+<script src="/dovetail/js/learn.js?1543552950"></script>
+<script src="/dovetail/js/hugo-learn.js?1543552950"></script>
 
-<link href="/dovetail/mermaid/mermaid.css?1543525757" type="text/css" rel="stylesheet" />
-<script src="/dovetail/mermaid/mermaid.js?1543525757"></script>
+<link href="/dovetail/mermaid/mermaid.css?1543552950" type="text/css" rel="stylesheet" />
+<script src="/dovetail/mermaid/mermaid.js?1543552950"></script>
 <script>
 mermaid.initialize({ startOnLoad: true });
 </script>
