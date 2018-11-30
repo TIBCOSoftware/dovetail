@@ -83,6 +83,8 @@ transaction getIOUIssuedBy {
 <p><a target="_blank" rel="noopener noreferrer" href="../images/recordings/importbna.gif"><img src="../images/recordings/importbna.gif" alt="Import Model" style="max-width:100%;"></a></p>
 
 ## 3. Implement IOU Smart Contract
+In this step, we will implement the 4 transactions defined in the smart contract model in Project Dovetail™ Studio. A completed iou smart contract is also available to be imported into the Studio, see step 7 for details.
+
 ### *3.1 IssueIOU Transaction*
 
 * Go to Apps Tab > Create to create a new Application "IOU"
