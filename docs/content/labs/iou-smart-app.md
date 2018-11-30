@@ -70,7 +70,7 @@ transaction getIOUIssuedBy {
 
 > cd /path/to/iou
 
-> zip -r ../iou.bna
+> zip -r ../iou.bna *
 
 
 ## 2. Import IOU Smart Contract Model
