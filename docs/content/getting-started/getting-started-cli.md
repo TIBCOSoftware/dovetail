@@ -18,7 +18,7 @@ Don't forget to set your `GOPATH` variable and make sure that `$GOPATH/bin` is p
 Copy and paste the following commands to install Project Dovetail™ commandline tool.
 
 ```
-mkdir dovetail-cli && cd dovetail-cli && export GOPATH=${PWD} && go get -u github.com/TIBCOSoftware/dovetail-cli/... && cd $GOPATH/src/github.com/TIBCOSoftware && cd dovetail-cli && GO111MODULE=on go install ./... && cd .. && rm -rf flogo-lib/ && rm -rf flogo-contrib/ && git clone https://github.com/TIBCOSoftware/flogo-contrib.git && git clone https://github.com/TIBCOSoftware/flogo-lib.git && cd flogo-contrib && git checkout tags/v0.5.5 && cd .. && cd flogo-lib && git checkout tags/v0.5.5 && cd .. && git clone https://github.com/TIBCOSoftware/dovetail-contrib.git && cd ../hyperledger && git clone https://github.com/hyperledger/fabric && rm -rf fabric/core/container && go get github.com/julienschmidt/httprouter && go get -u github.com/jteeuwen/go-bindata/... && go get -u github.com/kardianos/govendor && cd $GOPATH/bin
+curl -sSL https://github.com/TIBCOSoftware/dovetail-cli/releases/download/v0.1.2/dovetail-cli-install.sh > install.sh && source install.sh
 ```
 
 **The binary dovetail will be in the dovetail-cli/bin directory, please prepend the /path/to/dovetail-cli to your GOPATH environment variable, and prepend /path/to/dovetail-cli/bin to your PATH environment variable in your user profile**
