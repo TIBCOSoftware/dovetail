@@ -9,8 +9,6 @@ pre: "<i class=\"fas fa-code\" aria-hidden=\"true\"></i> "
 Project Dovetail™ CLI is written in Go Programming Language, and it uses a few Go tools to package dependencies and resources
 
 * [Go](https://golang.org/doc/install) version 1.11.x is required
-* [go-bindata](https://github.com/jteeuwen/go-bindata)
-* [govendor](https://github.com/kardianos/govendor)
 
 
 ## Hyperledger Fabric SDK

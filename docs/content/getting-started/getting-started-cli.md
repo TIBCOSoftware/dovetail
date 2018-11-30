@@ -14,20 +14,9 @@ Don't forget to set your `GOPATH` variable and make sure that `$GOPATH/bin` is p
 {{% /notice %}}
 
 ### Installing the cli tools
-Follow these steps to install Project Dovetail™ commandline tool, the binary dovetail will be in your $GOPATH/bin directory
+
+Copy and paste the following commands to install Project Dovetail™ commandline tool, the binary dovetail will be in your $GOPATH/bin directory
 
 ```
-mkdir dovetail-cli
-
-export GOPATH=/path/to/new/dovetail-cli
-
-mkdir -p $GOPATH/src/github.com/TIBCOSoftware
-
-cd $GOPATH/src/github.com/TIBCOSoftware
-
-git clone https://github.com/TIBCOSoftware/dovetail-cli.git
-
-cd dovetail-cli
-
-GO111MODULE=on go install ./...
+mkdir dovetail-cli && cd dovetail-cli && export GOPATH=${PWD} && mkdir -p $GOPATH/src/github.com/TIBCOSoftware && cd $GOPATH/src/github.com/TIBCOSoftware && git clone https://github.com/TIBCOSoftware/dovetail-cli.git && cd dovetail-cli && GO111MODULE=on go install ./... && cd .. && git clone https://github.com/TIBCOSoftware/dovetail-contrib.git && git clone https://github.com/TIBCOSoftware/flogo-contrib.git && cd flogo-contrib && git checkout tags/v0.5.5 && cd .. && git clone https://github.com/TIBCOSoftware/flogo-lib.git && cd flogo-lib && git checkout tags/v0.5.5 && cd $GOPATH/bin && go get -u github.com/jteeuwen/go-bindata/... && go get -u github.com/kardianos/govendor
 ```
