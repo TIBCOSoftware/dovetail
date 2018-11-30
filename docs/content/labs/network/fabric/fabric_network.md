@@ -11,6 +11,7 @@ you should have the necessary Docker images installed locally.
 open a terminal window, run ```docker ps```, make sure container cli, chaincode, peer, orderer and couchdb are running
 
 ## 2. open another terminal, execute following commands to connect to chaincode container and compile/start chaincode
+
 > docker exec -it chaincode bash
 
 > cd iou
@@ -35,7 +36,7 @@ open a terminal window, run ```docker ps```, make sure container cli, chaincode,
 You should see the IOU returned.
 
 ## 5. from the cli terminal,execute following commands to invoke TransferIOU and getIOU transactions
-> peer chaincode invoke -n iou -c '{"Args":["com.example.iou.TransferIOU","{\"linearId\":\"testiou\"}", "bob"]}' -C myc
+> peer chaincode invoke -n iou -c '{"Args":["com.example.iou.TransferIOU","{\\"linearId\\":\\"testiou\\"}", "bob"]}' -C myc
 
 > peer chaincode query -n iou -c '{"Args":["com.example.iou.getIOU","testiou"]}' -C myc
 
