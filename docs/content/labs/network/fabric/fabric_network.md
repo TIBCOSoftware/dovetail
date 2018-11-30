@@ -28,7 +28,7 @@ open a terminal window, run ```docker ps```, make sure container cli, chaincode,
 > peer chaincode instantiate -n iou -v 0 -c '{"Args":[]}' -C myc
 
 ## 4. from the third (cli) terminal,execute following commands to invoke IssueIOU and getIOU transactions
-> peer chaincode invoke -n iou -c '{"Args":["com.example.iou.IssueIOU","{\"issuer\":\"charlie\",\"owner\":\"alice\",\"amt\":{\"quantity\":10000,\"currency\":\"USD\"},\"linearId\":\"testiou\"}"]}' -C myc
+> peer chaincode invoke -n iou -c '{"Args":["com.example.iou.IssueIOU","{\\"issuer\\":\\"charlie\\",\\"owner\":\\"alice\\",\\"amt\\":{\\"quantity\\":10000,\\"currency\\":\\"USD\\"},\\"linearId\\":\\"testiou\\"}"]}' -C myc
 
 > peer chaincode query -n iou -c '{"Args":["com.example.iou.getIOU","testiou"]}' -C myc
 
@@ -45,7 +45,7 @@ You should see the IOU now with new owner "bob" returned
 
 let's add another IOU issued by charlie
 
-> peer chaincode invoke -n iou -c '{"Args":["com.example.iou.IssueIOU","{\"issuer\":\"charlie\",\"owner\":\"john\",\"amt\":{\"quantity\":20000,\"currency\":\"USD\"},\"linearId\":\"testioujohn\"}"]}' -C myc
+> peer chaincode invoke -n iou -c '{"Args":["com.example.iou.IssueIOU","{\\"issuer\\":\\"charlie\\",\\"owner\\":\\"john\\",\\"amt\\":{\\"quantity\\":20000,\\"currency\\":\\"USD\\"},\\"linearId\\":\\"testioujohn\\"}"]}' -C myc
 
 > peer chaincode query -n iou -c '{"Args":["com.example.iou.getIOUIssuedBy", "charlie"]}' -C myc
 
