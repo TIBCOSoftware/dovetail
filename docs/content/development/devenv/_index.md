@@ -19,7 +19,7 @@ If you are developing for Hyperledger Fabric, below is a link to its installatio
 ### Java Programming Language and Tools
 Project Dovetail™ provides smart contract flow engine for distributed ledger platform that requires Java runtime, such as R3 Corda.
 
-* [Java SE Development Kit 8 and above](https://www.oracle.com/technetwork/java/javase/downloads/index.html) is required
+* IMPORTANT: [Java SE Development Kit 8](https://www.oracle.com/technetwork/java/javase/downloads/index.html) is required
 * [Maven](https://maven.apache.org/install.html)
 
 If you are developing for R3 Corda, following jars must be available in your local or public Maven Repository.
