@@ -29,7 +29,12 @@ To get started with your downloaded version of the Dovetail Studio in the previo
 ### Launching Dovetail Studio
 To launch Dovetail Studio simply open your favorite web browser, and navigate to http://localhost:8090. You'll see the initial page to create your first smart contract!
 
-![Web UI](../../images/labs/helloworld/step1b.png)
+
+### Installation Tutorial Video
+
+<video width="480" height="320" controls="controls">
+    <source src="../../labs/videos/dovetail_studio_install.mp4" type="video/mp4">
+</video>
 
 ### Hyperledger Composer
 Project Dovetail™ uses Hyperledger Composer Modeling Language to model assets, transactions and events, the resulted Business Network Archive(.bna) file is imported into Project Dovetail™ Studio to create common json schemas. 
