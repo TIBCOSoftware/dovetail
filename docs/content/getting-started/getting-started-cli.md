@@ -22,3 +22,10 @@ curl -sSL https://github.com/TIBCOSoftware/dovetail-cli/releases/download/v0.1.2
 ```
 
 **The binary dovetail will be in the dovetail-cli/bin directory, please prepend the /path/to/dovetail-cli to your GOPATH environment variable, and prepend /path/to/dovetail-cli/bin to your PATH environment variable in your user profile**
+
+
+### Installation Tutorial Video
+
+<video width="480" height="320" controls="controls">
+    <source src="../../labs/videos/dovetail_cli_install.mp4" type="video/mp4">
+</video>
