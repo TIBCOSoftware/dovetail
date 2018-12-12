@@ -20,7 +20,7 @@ open a terminal window, run ```docker ps```, make sure container cli, chaincode,
 
 > CORE_PEER_ADDRESS=peer:7052 CORE_CHAINCODE_ID_NAME=iou:0 ./iou
 
-## 3. open a third termial, execute following commands to install/instantiate chaincoce from cli 
+## 3. open a third terminal, execute following commands to install/instantiate chaincode from cli 
 
 > docker exec -it cli bash
 
