@@ -2,7 +2,7 @@
 
 We need four docker images in order for "dev mode" to run against the supplied
 docker compose script.  If you installed the ``fabric-samples`` repo clone and
-followed the instructions to [download-platform-specific-binaries](http://hyperledger-fabric.readthedocs.io/en/latest/samples.html#download-platform-specific-binaries), then
+followed the instructions to [install binaries](https://hyperledger-fabric.readthedocs.io/en/latest/install.html), then
 you should have the necessary Docker images installed locally.
 
 ## 1. open a terminal, and execute following command to start up the network
@@ -20,7 +20,7 @@ open a terminal window, run ```docker ps```, make sure container cli, chaincode,
 
 > CORE_PEER_ADDRESS=peer:7052 CORE_CHAINCODE_ID_NAME=iou:0 ./iou
 
-## 3. open a third termial, execute following commands to install/instantiate chaincoce from cli 
+## 3. open a third terminal, execute following commands to install/instantiate chaincode from cli 
 
 > docker exec -it cli bash
 
