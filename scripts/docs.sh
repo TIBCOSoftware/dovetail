@@ -92,7 +92,16 @@ build() {
 }
 
 
+workspaceprep() {
+    echo "Creating public folder"
+    mkdir public
+    cd ../
+    echo $PWD  
+}
+
+
 dobuild(){
+    workspaceprep
     prerequisites
     update_page $2
     add_readme
