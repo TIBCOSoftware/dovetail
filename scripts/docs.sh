@@ -93,10 +93,11 @@ build() {
 
 
 workspaceprep() {
+    cd docs
     echo "Creating public folder"
     mkdir public
     cd ../
-    echo $PWD  
+    echo $PWD 
 }
 
 
