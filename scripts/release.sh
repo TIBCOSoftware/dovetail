@@ -30,8 +30,8 @@ create_release() {
 
     CREATE_MESSAGE=$(cat create_release_output.txt | jq --raw-output '.message')
 
-    if [ "$CREATE_MESSAGE" ];then
-        echo "[Error] while creating"
+    if [ "$CREATE_MESSAGE" != null ];then
+        echo "[Error] while creating $CREATE_MESSAGE"
         cat create_release_output.txt
         echo "Cleaning up"
         cleanup_create
