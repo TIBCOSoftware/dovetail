@@ -26,7 +26,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://tibcosoftware.github.io/dovetail/labs/network/fabric/fabric_network/</guid>
-      <description>Test IOU chaincode in Hyperledger Fabric Network We need four docker images in order for &amp;ldquo;dev mode&amp;rdquo; to run against the supplied docker compose script. If you installed the fabric-samples repo clone and followed the instructions to download-platform-specific-binaries, then you should have the necessary Docker images installed locally.
+      <description>Test IOU chaincode in Hyperledger Fabric Network We need four docker images in order for &amp;ldquo;dev mode&amp;rdquo; to run against the supplied docker compose script. If you installed the fabric-samples repo clone and followed the instructions to install binaries, then you should have the necessary Docker images installed locally.
 1. open a terminal, and execute following command to start up the network  docker-compose -f docker-compose-simple.yaml up
  open a terminal window, run docker ps, make sure container cli, chaincode, peer, orderer and couchdb are running</description>
     </item>
