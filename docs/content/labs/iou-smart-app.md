@@ -131,7 +131,7 @@ In this step, we will implement the 4 transactions defined in the smart contract
 ## 5. Generate Blockchain Artifacts
 
 ### *5.1 Hyperledger Fabric*
-Run following command from tutorial directory Hyperledger Fabric chaincode is written to tutorial/artifacts/iou folder
+Run following command from tutorial directory Hyperledger Fabric chaincode is written to tutorial/artifacts/hlf folder
 
 For testing, transaction security support is not enabled.
 
