@@ -18,10 +18,11 @@ Don't forget to set your `GOPATH` variable and make sure that `$GOPATH/bin` is p
 Copy and paste the following commands to install Project Dovetail™ commandline tool.
 
 ```
-curl -sSL https://github.com/TIBCOSoftware/dovetail-cli/releases/download/v0.1.2/dovetail-cli-install.sh > install.sh && source install.sh
+cd $GOPATH
+curl https://github.com/TIBCOSoftware/dovetail-cli/releases/download/v0.1.3/dovetail-cli-install.sh -sSf | sh
 ```
 
-**The binary dovetail will be in the dovetail-cli/bin directory, please prepend the /path/to/dovetail-cli to your GOPATH environment variable, and prepend /path/to/dovetail-cli/bin to your PATH environment variable in your user profile**
+**The binary dovetail will be in the dovetail-cli/bin directory, please prepend the /path/to/dovetail to your GOPATH environment variable, and prepend /path/to/dovetail/bin to your PATH environment variable in your user profile**
 
 
 ### Installation Tutorial Video
