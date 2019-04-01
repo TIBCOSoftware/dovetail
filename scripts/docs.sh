@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # Description: Build script for Project Dovetail documentation
-# Author: retgits <https://github.com/retgits>
-# Mod: fcenedes@tibco.com
+# Author: torresashjian <https://github.com/torresashjian>
+# Mod: mtorres@tibco.com
 # Last Updated: 2018-11-11
 
 #--- Variables ---
@@ -86,72 +86,27 @@ update_page() {
 build() {
     echo "Build docs site..."
     cd docs && hugo
-    #cd ../showcases && hugo
-    #mv public ../docs/public/showcases
     cd public/
     ls -alh
     cd ../../
 }
 
-gitprep() {
-    if [ -d "dovetail" ]; then
-        echo "Your working directory is dirty, please run the script again after cleaning it up"
-        exit 1;
-    fi 
-    echo "cloning dovetail"
-    git clone https://github.com/TIBCOSoftware/dovetail.git
-    cd dovetail
-    echo "Deleting old publication"
+
+workspaceprep() {
     cd docs
-    rm -rf public
+    echo "Creating public folder"
     mkdir public
-    git worktree prune
-    rm -rf .git/worktrees/public/
-    echo "Checking out gh-pages branch into public"
-    git worktree add -B gh-pages public origin/gh-pages
-    echo "Removing existing files"
-    rm -rf public/*
     cd ../
-    echo $PWD  
-}
-
-gitupdate() {
-    echo "Updating gh-pages branch"
-    cd docs
-    git add -A .
-    cd public
-    git add -A .
-    git commit -a -m "Publishing to gh-pages (build-doc.sh)" 
-    if [[ $(git status -s) ]]
-        then
-        echo "The working directory is dirty. Please commit any pending changes."
-        exit 1;
-    fi 
-    git push origin gh-pages
+    echo $PWD 
 }
 
 
-case "$1" in 
-    "prerequisites")
-        prerequisites
-        ;;
-    "ext-docs")
-        ext_docs
-        ;;
-    "update-page")
-        update_page $2
-        ;;
-    "build")
-        build
-        ;;
-    "magic")
-        gitprep
-        update_page $2
-        add_readme
-        build
-        gitupdate
-        ;;
-        
-    *)
-        echo "The target {$1} you want to execute doesn't exist"
-esac
+dobuild(){
+    workspaceprep
+    prerequisites
+    update_page $2
+    add_readme
+    build
+}
+
+dobuild
