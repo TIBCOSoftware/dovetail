@@ -5,7 +5,7 @@ rust:
 branches:
   only:
   - master
-  #- issue-87/docs-book
+  - issue-87/docs-book
 addons:
   apt:
     packages:
