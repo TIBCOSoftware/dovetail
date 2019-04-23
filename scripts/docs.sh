@@ -7,8 +7,8 @@
 
 #--- Variables ---
 HUGO_VERSION=0.50
-GIT_ACCOUNT="TIBCOSoftware"
-GIT_REPO="dovetail"
+#GIT_ACCOUNT="TIBCOSoftware"
+#GIT_REPO="dovetail"
 
 #--- Download and install prerequisites ---
 prerequisites() {
@@ -84,6 +84,13 @@ update_page() {
 
 #--- Execute build ---
 build() {
+    echo "Build docs site..."
+    cd ../../
+    mdbook build
+}
+
+#--- Execute build ---
+build2() {
     echo "Build docs site..."
     cd docs && hugo
     cd public/

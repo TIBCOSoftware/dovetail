@@ -1,3 +1,3 @@
-# Summary
+# Project Dovetail, smart contracts modelling
 
-- [Chapter 1](./chapter_1.md)
+[Introduction](ch00-00-introduction.md)
