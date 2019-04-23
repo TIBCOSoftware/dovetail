@@ -86,6 +86,7 @@ update_page() {
 #--- Execute build ---
 build() {
     echo "Build docs site..."
+    ls
     mdbook build
 }
 
