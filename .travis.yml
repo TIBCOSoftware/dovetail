@@ -21,7 +21,7 @@ deploy:
   github-token: "$GITHUB_TOKEN"
   keep-history: true
   on:
-    branch: master
+    branch: issue-87/docs-book
   local-dir: "book"
 env:
   matrix:
