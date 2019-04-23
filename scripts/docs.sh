@@ -10,6 +10,10 @@ set -e
 
 export PATH=$PATH:/home/travis/.cargo/bin;
 
+workspaceprep() {
+    cd ..
+}
+
 #--- Download and install prerequisites ---
 prerequisites() {
     echo "Getting prerequisites"
@@ -86,13 +90,12 @@ update_page() {
 #--- Execute build ---
 build() {
     echo "Build docs site..."
-    ls
     mdbook build
 }
 
 
 dobuild(){
-    #workspaceprep
+    workspaceprep
     prerequisites
     update_page $2
     add_readme
