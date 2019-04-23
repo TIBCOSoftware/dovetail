@@ -6,7 +6,6 @@
 # Last Updated: 2018-11-11
 
 #--- Variables ---
-
 HUGO_VERSION=0.50
 GIT_ACCOUNT="TIBCOSoftware"
 GIT_REPO="dovetail"
