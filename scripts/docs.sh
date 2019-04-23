@@ -6,10 +6,13 @@
 # Last Updated: 2018-11-11
 
 #--- Variables ---
+set -e
 
+export PATH=$PATH:/home/travis/.cargo/bin;
 
 #--- Download and install prerequisites ---
 prerequisites() {
+    echo "Getting prerequisites"
     #wget -O hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
     #mkdir -p hugobin
     #tar -xzvf hugo.tar.gz -C ./hugobin
