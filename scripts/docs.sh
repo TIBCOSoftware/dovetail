@@ -86,31 +86,12 @@ update_page() {
 #--- Execute build ---
 build() {
     echo "Build docs site..."
-    cd ../../
     mdbook build
-}
-
-#--- Execute build ---
-build2() {
-    echo "Build docs site..."
-    cd docs && hugo
-    cd public/
-    ls -alh
-    cd ../../
-}
-
-
-workspaceprep() {
-    cd docs
-    echo "Creating public folder"
-    mkdir public
-    cd ../
-    echo $PWD 
 }
 
 
 dobuild(){
-    workspaceprep
+    #workspaceprep
     prerequisites
     update_page $2
     add_readme
