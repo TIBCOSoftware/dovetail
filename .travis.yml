@@ -1,13 +1,19 @@
+language: rust
+cache: cargo
+rust:
+  - 1.31.1
+branches:
+  only:
+  - master
+addons:
+  apt:
+    packages:
+      - aspell
+      - aspell-en
+before_script:
+  - (cargo install mdbook --vers 0.2.3 --force || true)
 script:
 - make
-notifications:
-  email:
-    recipients:
-      - mtorres@tibco.com
-      - yxu@tibco.com
-      - mwenyan@tibco.com
-    on_success: never # default: change
-    on_failure: always # default: always
 deploy:
   provider: pages
   skip-cleanup: true
