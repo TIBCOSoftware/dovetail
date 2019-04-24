@@ -96,6 +96,7 @@ build() {
 
 
 dobuild(){
+    echo $PWD
     workspaceprep
     prerequisites
     update_page $2
