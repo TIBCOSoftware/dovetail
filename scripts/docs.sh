@@ -11,12 +11,12 @@ set -e
 export PATH=$PATH:/home/travis/.cargo/bin;
 
 workspaceprep() {
-    cd ..
+    echo "Preparing workspace..."
 }
 
 #--- Download and install prerequisites ---
 prerequisites() {
-    echo "Getting prerequisites"
+    echo "Getting prerequisites..."
     #wget -O hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
     #mkdir -p hugobin
     #tar -xzvf hugo.tar.gz -C ./hugobin
@@ -26,7 +26,7 @@ prerequisites() {
 
 #--- Get external docs ---
 ext_docs() {
-    echo "cloning dovetail-contrib"
+    echo "cloning dovetail-contrib..."
     git clone https://github.com/TIBCOSoftware/dovetail-contrib.git 
     #for i in `find dovetail-contrib/activity -name \*.md` ; do filename=$(basename $(dirname $i)); cp $i docs/content/development/webui/activities/$filename.md; done;
     #for i in `find dovetail-contrib/trigger -name \*.md` ; do filename=$(basename $(dirname $i)); cp $i docs/content/development/webui/triggers/$filename.md; done;
@@ -90,6 +90,7 @@ update_page() {
 #--- Execute build ---
 build() {
     echo "Build docs site..."
+    ls
     mdbook build
 }
 
