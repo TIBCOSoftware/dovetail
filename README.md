@@ -79,14 +79,6 @@ Dovetail Flows provides smart contract logic design capabilities and includes th
 ⚙️ **Ultra-light process engine** for conditional flow control
 
 
-## Getting Started
-
-We've made getting started with Dovetail Flows as easy as possible. The current set of tooling is designed for:
-
-- Smart contract developers
-
-For step by step instructions on how to get started please go to the [“Getting Started”][Getting_Started] page
-
 ### Zero-code Developers
 
 If your background is in or you prefer to develop your smart contracts using zero-coding environments, then read on, because we’ve got something special for you.
@@ -109,12 +101,10 @@ Not sure where to start? No problem, here are a few suggestions:
 
 If you have any questions, feel free to post an issue and tag it as a question or email tibcolabs@tibco.com. 
 
-For additional details, refer to the [“Contribution Guidelines”][Contribution_Guidelines].
+For additional details, refer to the [“Contribution Guidelines”][CONTRIBUTING.md].
 
 # License 
 The top level flogo repo, consisting of flow samples & documentation, is licensed licensed under a BSD-style license. Refer to [LICENSE](https://github.com/TIBCOSoftware/dovetail/blob/master/LICENSE) for license text.
 
 Dovetail source code in [dovetail-cli](https://github.com/TIBCOSoftware/dovetail-cli), [dovetail-contrib](https://github.com/TIBCOSoftware/dovetail-contrib), [dovetail-java-lib](https://github.com/TIBCOSoftware/dovetail-java-lib) are all licensed under a BSD-style license, refer to [LICENSE](https://github.com/TIBCOSoftware/dovetail/blob/master/LICENSE) 
 
-[Getting_Started]: ch01-00-getting-started.md
-[Contribution_Guidelines]: ch05-00-contribute.md
