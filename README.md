@@ -6,11 +6,7 @@
   <b>Project Dovetail™ is an Open Source application for blockchain smart contracts</b>
 </p>
 
-<p align="center">
-  <b>Documentation Status :</b> <img src="https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiUjc3ZFJUN3NnRlkzaU5wVlM0M0lqdjFZMmVJWlFOZmxoWlVSd0R1dTc4SUFoSHBDTklhQ3NHM3BvZFVPeU9ScXBWcllRRDJ6bVJ1NGRSQ1dJZU8wMEE4PSIsIml2UGFyYW1ldGVyU3BlYyI6ImNURlRVRkNTd0pHY3ZZQngiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master"/>
-  <img src="https://img.shields.io/badge/license-BSD%20style-blue.svg"/>
-  </a>
-</p>
+[![Documentation Status](https://travis-ci.org/TIBCOSoftware/dovetail.svg?branch=master)](https://travis-ci.org/TIBCOSoftware/dovetail)
 
 
 <p align="center">
