@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  Documentation status: [![Documentation Status](https://travis-ci.org/TIBCOSoftware/dovetail.svg?branch=master)](https://travis-ci.org/TIBCOSoftware/dovetail)
+  <b>Documentation Status :</b> (https://travis-ci.org/TIBCOSoftware/dovetail.svg?branch=master)](https://travis-ci.org/TIBCOSoftware/dovetail)
 </p>
 
 

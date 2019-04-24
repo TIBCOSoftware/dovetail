@@ -1,8 +1,4 @@
----
-title: Dovetail Studio
-weight: 2020
-pre: "<i class=\"fas fa-desktop\" aria-hidden=\"true\"></i> "
----
+# Dovetail studio, modelling UI for smart contracts
 
 ### Installing the Project Dovetail Studio
 Installing the Project Dovetail Studio is quite simple just follow these steps:

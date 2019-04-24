@@ -1,10 +1,7 @@
----
-title: Getting started
-weight: 2000
-chapter: true
-pre: "<i class=\"fas fa-play-circle\" aria-hidden=\"true\"></i> "
----
+# Getting Started
 
-# Getting started
+Let’s start your Dovetail journey! There’s a lot to learn, but every journey starts
+somewhere. In this chapter, we’ll discuss:
 
-Getting started with Project Dovetail™!
+* Installing Dovetail Studio on Linux, macOS, and Windows
+* Installing Dovetail CLI
