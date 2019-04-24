@@ -59,7 +59,7 @@ update_page_introduction() {
 }
 
 #--- Update page ---
-update_page() {
+update_pages() {
     echo "Updating all pages"
     ext_docs
     update_page_cli
