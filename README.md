@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <b>Documentation Status :</b> (https://travis-ci.org/TIBCOSoftware/dovetail.svg?branch=master)](https://travis-ci.org/TIBCOSoftware/dovetail)
+  <b>Documentation Status :</b> [![Documentation Status](https://travis-ci.org/TIBCOSoftware/dovetail.svg?branch=master)](https://travis-ci.org/TIBCOSoftware/dovetail)
 </p>
 
 
@@ -18,6 +18,7 @@
 <br/>
 
 Developing blockchain solutions with today’s technology is challenging, given the lack of tooling and standardization. Project Dovetail™ by TIBCO LABS™ addresses these issues by providing a graphical interface for modeling smart contracts, making them easier to write, visualize, test, and audit, all without deep programming experience. 
+
 Logic is abstracted from low-level code, and contracts can be deployed into different blockchain stacks with little or no change. 
 On-chain and off-chain computation can become more seamless, time to market is improved, and the risk of technology lock-in is reduced. Project Dovetail makes your smart contracts smarter. 
 <br/>
@@ -28,7 +29,8 @@ On-chain and off-chain computation can become more seamless, time to market is i
 
 # What are Smart Contracts
 
-There are many definitions and descriptions of smart contracts, as each blockchain framework tends to implement this capability in its own way (if it does implement this feature at all). However, generally speaking, smart contracts (at least from an enterprise / permissioned perspective) may be thought of as application or business logic (defined in code) that runs within the context of a blockchain network itself.  
+There are many definitions and descriptions of smart contracts, as each blockchain framework tends to implement this capability in its own way (if it does implement this feature at all). However, generally speaking, smart contracts (at least from an enterprise / permissioned perspective) may be thought of as application or business logic (defined in code) that runs within the context of a blockchain network itself.
+
 The idea is to automate the processing of blockchain transactions across the network, use the logic to determine if a transaction will get written to the ledger, and to maintain accuracy, compliance, and trust.  In essence, smart contracts represent a method for controlling how changes are made to the underlying blockchain, in a non-centralized and (potentially) untrustworthy environment.  Supply chain transaction tracking, healthcare revenue cycle management, consumer contract execution, and government interactions are all areas in which smart contracts (business logic) may be applied.
 Remember, however, that "smart contracts" are not necessarily "smart" (depends on the code) nor "contracts" (as they may not be viewed as legal contracts).  Thus, the term can be a bit misleading :)
 
@@ -86,7 +88,7 @@ We've made getting started with Dovetail Flows as easy as possible. The current 
 
 - Smart contract developers
 
-For step by step instructions on how to get started please go to the [documentation page](https://tibcosoftware.github.io/dovetail/)
+For step by step instructions on how to get started please go to the [“Getting Started”][Getting_Started] page
 
 ### Zero-code Developers
 
@@ -110,9 +112,12 @@ Not sure where to start? No problem, here are a few suggestions:
 
 If you have any questions, feel free to post an issue and tag it as a question or email tibcolabs@tibco.com. 
 
-For additional details, refer to the [Contribution Guidelines](https://github.com/TIBCOSoftware/dovetail/blob/master/CONTRIBUTING.md).
+For additional details, refer to the [“Contribution Guidelines”][Contribution_Guidelines].
 
 # License 
 The top level flogo repo, consisting of flow samples & documentation, is licensed licensed under a BSD-style license. Refer to [LICENSE](https://github.com/TIBCOSoftware/dovetail/blob/master/LICENSE) for license text.
 
 Dovetail source code in [dovetail-cli](https://github.com/TIBCOSoftware/dovetail-cli), [dovetail-contrib](https://github.com/TIBCOSoftware/dovetail-contrib), [dovetail-java-lib](https://github.com/TIBCOSoftware/dovetail-java-lib) are all licensed under a BSD-style license, refer to [LICENSE](https://github.com/TIBCOSoftware/dovetail/blob/master/LICENSE) 
+
+[Getting_Started]: ch01-00-getting-started.md
+[Contribution_Guidelines]: ch05-00-contribute.md
