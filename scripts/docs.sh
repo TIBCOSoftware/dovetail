@@ -48,14 +48,14 @@ update_page_contrib() {
 #--- Update introduction page ---
 update_page_introduction() {
     cp README.md src/ch00-00-introduction.md
-    sed -i '1,4d' src/ch00-00-introduction.md
-    sed -i '5,17d' src/ch00-00-introduction.md
-    sed -i '1i ---' src/ch00-00-introduction.md
-    sed -i '1i pre: "<i class=\\"fas fa-home\\" aria-hidden=\\"true\\"></i> "' src/ch00-00-introduction.md
-    sed -i '1i weight: 1000' src/ch00-00-introduction.md
-    sed -i '1i title: Introduction' src/ch00-00-introduction.md
-    sed -i '1i ---' src/ch00-00-introduction.md
-    sed -i "s#images/eventhandlers.png#../images/eventhandlers.png#g" src/ch00-00-introduction.md
+    #sed -i '1,4d' src/ch00-00-introduction.md
+    #sed -i '5,17d' src/ch00-00-introduction.md
+    #sed -i '1i ---' src/ch00-00-introduction.md
+    #sed -i '1i pre: "<i class=\\"fas fa-home\\" aria-hidden=\\"true\\"></i> "' src/ch00-00-introduction.md
+    #sed -i '1i weight: 1000' src/ch00-00-introduction.md
+    #sed -i '1i title: Introduction' src/ch00-00-introduction.md
+    #sed -i '1i ---' src/ch00-00-introduction.md
+    #sed -i "s#images/eventhandlers.png#../images/eventhandlers.png#g" src/ch00-00-introduction.md
 }
 
 #--- Update page ---
