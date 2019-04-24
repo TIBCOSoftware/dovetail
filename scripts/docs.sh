@@ -17,11 +17,6 @@ workspaceprep() {
 #--- Download and install prerequisites ---
 prerequisites() {
     echo "Getting prerequisites..."
-    #wget -O hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
-    #mkdir -p hugobin
-    #tar -xzvf hugo.tar.gz -C ./hugobin
-    #mv ./hugobin/hugo $HOME/gopath/bin
-    #rm hugo.tar.gz && rm -rf ./hugobin
 }
 
 #--- Get external docs ---
@@ -33,12 +28,6 @@ ext_docs() {
     rm -rf ./dovetail-contrib
 }
 
-#--- Add readme and license ---
-add_readme() {
-    echo "Adding readme and license files"
-    cp docs/content/README.md book
-    cp docs/content/LICENSE book
-}
 
 update_page_cli() {
     echo "Getting the docs for the commandline tools"
@@ -71,36 +60,24 @@ update_page_introduction() {
 
 #--- Update page ---
 update_page() {
-    case "$1" in
-        "contributing")
-            update_page_contrib
-            ;;
-        "introduction")
-            update_page_introduction
-            ;;
-        *)
-            echo "Updating all pages"
-            ext_docs
-            update_page_cli
-            update_page_contrib
-            update_page_introduction
-    esac
+    echo "Updating all pages"
+    ext_docs
+    update_page_cli
+    update_page_contrib
+    update_page_introduction
 }
 
 #--- Execute build ---
 build() {
     echo "Build docs site..."
-    ls
     mdbook build
 }
 
 
 dobuild(){
-    echo $PWD
     workspaceprep
     prerequisites
-    update_page $2
-    add_readme
+    update_pages
     build
 }
 
