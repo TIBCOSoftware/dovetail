@@ -38,24 +38,11 @@ update_page_cli() {
 update_page_contrib() {
     echo "Update contributing page"
     cp CONTRIBUTING.md src/ch05-00-contribute.md
-    sed -i '1d' src/ch05-00-contribute.md
-    sed -i '1i ---' src/ch05-00-contribute.md
-    sed -i '1i weight: 9010' src/ch05-00-contribute.md
-    sed -i '1i title: Contributing to Project Dovetail' src/ch05-00-contribute.md
-    sed -i '1i ---' src/ch05-00-contribute.md
 }
 
 #--- Update introduction page ---
 update_page_introduction() {
     cp README.md src/ch00-00-introduction.md
-    #sed -i '1,4d' src/ch00-00-introduction.md
-    #sed -i '5,17d' src/ch00-00-introduction.md
-    #sed -i '1i ---' src/ch00-00-introduction.md
-    #sed -i '1i pre: "<i class=\\"fas fa-home\\" aria-hidden=\\"true\\"></i> "' src/ch00-00-introduction.md
-    #sed -i '1i weight: 1000' src/ch00-00-introduction.md
-    #sed -i '1i title: Introduction' src/ch00-00-introduction.md
-    #sed -i '1i ---' src/ch00-00-introduction.md
-    #sed -i "s#images/eventhandlers.png#../images/eventhandlers.png#g" src/ch00-00-introduction.md
 }
 
 #--- Update page ---
