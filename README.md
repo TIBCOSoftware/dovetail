@@ -6,7 +6,7 @@
   <b>Project Dovetail™ is an Open Source application for blockchain smart contracts</b>
 </p>
 
-[![Documentation Status](https://travis-ci.org/TIBCOSoftware/dovetail.svg?branch=master)](https://travis-ci.org/TIBCOSoftware/dovetail)
+[![Documentation Status](https://travis-ci.org/TIBCOSoftware/dovetail.svg?branch=master)](https://travis-ci.org/TIBCOSoftware/dovetail)<img src="https://img.shields.io/badge/license-BSD%20style-blue.svg"/>
 
 <p align="center">
   <a href="#project-dovetail">Dovetail™</a> | <a href="#dovetail-core">Architecture</a> | <a href="#what-are-smart-contracts">Blockchains smart contracts</a> | <a href="#contributing">Contributing</a> | <a href="#license">License</a>
