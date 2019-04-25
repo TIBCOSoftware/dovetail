@@ -101,7 +101,7 @@ Not sure where to start? No problem, here are a few suggestions:
 
 If you have any questions, feel free to post an issue and tag it as a question or email tibcolabs@tibco.com. 
 
-For additional details, refer to the [“Contribution Guidelines”](https://github.com/TIBCOSoftware/dovetail/blob/master/CONTRIBUTING).
+For additional details, refer to the [“Contribution Guidelines”](https://github.com/TIBCOSoftware/dovetail/blob/master/CONTRIBUTING.md).
 
 # License 
 The top level flogo repo, consisting of flow samples & documentation, is licensed licensed under a BSD-style license. Refer to [LICENSE](https://github.com/TIBCOSoftware/dovetail/blob/master/LICENSE) for license text.
