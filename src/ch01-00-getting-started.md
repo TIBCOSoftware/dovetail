@@ -5,3 +5,4 @@ somewhere. In this chapter, we’ll discuss:
 
 * Installing Dovetail Studio on Linux, macOS, and Windows
 * Installing Dovetail CLI
+* Development environment dependencies
