@@ -9,7 +9,7 @@ If you are developing for Hyperledger Fabric, below is a link to its installatio
 
 * [Hyperledger Fabric](https://hyperledger-fabric.readthedocs.io/en/release-1.3/install.html)
 
-### Java Programming Language and Tools
+## Java Programming Language and Tools
 If you are developing for R3 Corda you will need Java runtime.
 
 * IMPORTANT: [Java SE Development Kit 8](https://www.oracle.com/technetwork/java/javase/downloads/index.html) is required

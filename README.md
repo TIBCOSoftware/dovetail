@@ -99,7 +99,7 @@ Not sure where to start? No problem, here are a few suggestions:
 * [dovetail-contrib](https://github.com/TIBCOSoftware/dovetail-contrib): This repository contains all of the contributions, such as activities, triggers, etc. Perhaps there is something missing? Create a new activity or trigger or fix a bug in an existing activity or trigger.
 * Browse all of the Project Dovetail repositories and look for issues tagged `kind/help-wanted` or `good first issue`
 
-If you have any questions, feel free to post an issue and tag it as a question or email tibcolabs@tibco.com. 
+If you have any questions, feel free to post an issue and tag it as a question or email <tibcolabs@tibco.com>. 
 
 For additional details, refer to the [“Contribution Guidelines”](https://github.com/TIBCOSoftware/dovetail/blob/master/CONTRIBUTING.md).
 
