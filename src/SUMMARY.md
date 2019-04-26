@@ -24,8 +24,8 @@
 
 ## Contribute
 
-[Contribute](ch05-00-contribute.md)
+[Contribute](ch03-00-contribute.md)
 
-[Github repo](https://github.com/tibcosoftware/dovetail/)
+[Source Code](ch04-00-source.md)
 
-[Community](https://community.tibco.com/modules/project-dovetail/)
+[Community](ch05-00-community.md)

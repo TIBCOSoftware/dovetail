@@ -37,7 +37,7 @@ update_page_cli() {
 #--- Update contributions page ---
 update_page_contrib() {
     echo "Update contributing page"
-    cp CONTRIBUTING.md src/ch05-00-contribute.md
+    cp CONTRIBUTING.md src/ch03-00-contribute.md
 }
 
 #--- Update introduction page ---

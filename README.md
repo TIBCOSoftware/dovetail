@@ -3,7 +3,7 @@
 </p>
 
 <p align="center" >
-  <b>Project Dovetail™ is an Open Source application for blockchain smart contracts</b>
+  <b>Project Dovetail™ is an Open Source tool for modelling blockchain smart contracts</b>
 </p>
 
 [![Documentation Status](https://travis-ci.org/TIBCOSoftware/dovetail.svg?branch=master)](https://travis-ci.org/TIBCOSoftware/dovetail)<img src="https://img.shields.io/badge/license-BSD%20style-blue.svg"/>
@@ -14,7 +14,7 @@
 
 <br/>
 
-Developing blockchain solutions with today’s technology is challenging, given the lack of tooling and standardization. Project Dovetail™ by TIBCO LABS™ addresses these issues by providing a graphical interface for modeling smart contracts, making them easier to write, visualize, test, and audit, all without deep programming experience. 
+Developing blockchain solutions with today’s technology is challenging given the lack of tooling and standardization. Project Dovetail™ by TIBCO LABS™ addresses these issues by providing a graphical interface for modeling smart contracts, making them easier to write, visualize, test, and audit, all without deep programming experience. 
 
 Logic is abstracted from low-level code, and contracts can be deployed into different blockchain stacks with little or no change. 
 On-chain and off-chain computation can become more seamless, time to market is improved, and the risk of technology lock-in is reduced. Project Dovetail makes your smart contracts smarter. 
@@ -62,14 +62,6 @@ Dovetail™ Core exposes three principal contribution interfaces that enable dev
 * **Trigger Interface** a common interface for building event-consumers that dispatch events to one or more actions. The Smart Contract TXN Trigger is an example of a trigger.
 * **Activity Interface** a common interface for exposing common application logic in a reusable manner. Think of this as a function, such as write to ledger, publish events, etc that can be used by all Dovetail apps.
 
-# Repos
-
-Project Dovetail consists of the following sub-projects available as separate repos:
-
-* [dovetail-cli](https://github.com/TIBCOSoftware/dovetail-cli):  Command line tools for building Dovetail apps & extensions
-* [dovetail-contrib](https://github.com/TIBCOSoftware/dovetail-contrib): Dovetail contributions/extensions
-* [dovetail-java-lib](https://github.com/TIBCOSoftware/dovetail-java-lib): Dovetail 
-java runtime for smart contract flows
 
 # Dovetail Flows
 
