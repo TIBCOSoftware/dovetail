@@ -1,9 +1,22 @@
-## Hyperledger Fabric SDK
+## Dovetail Studio Requirements
+
+### Docker
+Docker is needed to run Dovetail Studio, you can find the installation details here:
+
+* [Docker](https://docs.docker.com/)
+* [Docker Compose](https://docs.docker.com/compose/install/)
+
+
+## Hyperledger Fabric Requirements
+
+### Hyperledger Fabric SDK
 If you are developing for Hyperledger Fabric, below is a link to its installation instructions.
 
 * [Hyperledger Fabric](https://hyperledger-fabric.readthedocs.io/en/release-1.3/install.html)
 
-## Java Programming Language and Tools
+## R3 Corda Requirements
+
+### Java Programming Language and Tools
 If you are developing for R3 Corda you will need Java runtime.
 
 * IMPORTANT: [Java SE Development Kit 8](https://www.oracle.com/technetwork/java/javase/downloads/index.html) is required
@@ -39,8 +52,3 @@ If you are developing for R3 Corda, following jars must be available in your loc
  ```
  mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -DgeneratePom=true -DgroupId=com.tibco.dovetail -DartifactId=dovetail-corda -Dversion=0.1.3 -Dfile=/path/to/dovetail_corda_v0.1.3.jar -Dpackaging=jar
  ```
-
-### Docker
-
-* [Docker](https://docs.docker.com/)
-* [Docker Compose](https://docs.docker.com/compose/install/)
