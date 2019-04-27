@@ -1,9 +1,3 @@
-## Go Programming Language and Tools
-Project Dovetail™ CLI is written in Go Programming Language, and it uses a few Go tools to package dependencies and resources
-
-* [Go](https://golang.org/doc/install) version 1.11.x is required
-
-
 ## Hyperledger Fabric SDK
 If you are developing for Hyperledger Fabric, below is a link to its installation instructions.
 
