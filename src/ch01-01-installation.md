@@ -13,7 +13,7 @@ cd dovetail_installation
 curl -OL https://github.com/TIBCOSoftware/dovetail/releases/download/v0.1.3/TIB_dovetail_0.1.3_macosx_x86_64.zip
 ```
 
-> Change the version or architecture of the url according to your environment TIB_dovetail_0.1.3_<arch>.zip
+> Change the version or architecture of the url according to your environment.
 
 
 2.- Unzip the downloaded release (for example on mac) (from dovetail_installation folder).

@@ -1,6 +1,6 @@
 ## 5. Generate Hyperledger Fabric Blockchain Artifacts
 
-Run following command from tutorial directory Hyperledger Fabric chaincode is written to tutorial/artifacts/hlf folder
+Run following command from iou_tutorial directory Hyperledger Fabric chaincode is written to artifacts/hlf folder
 
 For testing, transaction security support is not enabled.
 
