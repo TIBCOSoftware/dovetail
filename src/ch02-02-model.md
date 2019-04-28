@@ -13,26 +13,33 @@ We will use Visual Studio Code to create IOU smart contract model.
 
 >Create the top level folder called "iou"
 
-```
+```bash
 mkdir iou
 ```
 
 >Copy following package metadata and save it as package.json in your iou folder
 
-```
-{"engines":{"composer":"^0.19.0"},"name":"iou", "version":"0.0.1","description":"IOU network"}
+```json
+{
+  "engines": {
+    "composer": "^0.19.0"
+  },
+  "name": "iou",
+  "version": "0.0.1",
+  "description": "IOU network"
+}
 ```
 
 >Create a models folder called "models" inside the top level "iou" folder
 
-```
+```bash
 cd iou
 mkdir models
 ```
 
 >Copy following resource definitions and save it as iou.cto in your models folder
 
-```
+```json
 namespace com.example.iou
 
 import  com.tibco.dovetail.system.*
@@ -75,7 +82,7 @@ transaction getIOUIssuedBy {
 
 >Copy following resource definitions and save it as dovetail.system.cto in your models folder
 
-```
+```json
 namespace com.tibco.dovetail.system
 
 /*
@@ -127,6 +134,6 @@ concept IssueAmount {
 
 >Run zip command from iou directory to package the iou project, it will create a iou.bna file in the tutorial folder
 
-```
+```bash
 zip -r ../iou.bna *
 ```
