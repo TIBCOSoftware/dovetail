@@ -4,7 +4,7 @@
 
 In this section we will show step by step instructions to create the iou.bna that we will use in the next section of the tutorial.
 
-> You can skip the instructions and download the file [here](tutorials/iou/iou.bna).
+> You can skip the instructions and download the iou.bna file [here](tutorials/iou/iou.bna).
 
 Project Dovetail™ supports [Hyperledger Composer modeling language](https://hyperledger.github.io/composer/v0.19/reference/cto_language.html) to model smart contract assets and transactions, please refer to [Composer Connector](https://github.com/TIBCOSoftware/dovetail-contrib/tree/master/SmartContract/connector/composer) for for more detail.
 

@@ -1,7 +1,7 @@
 
 
 ## 3. Implement IOU Smart Contract
-In this step, we will implement the 4 transactions defined in the smart contract model in Project Dovetail™ Studio. A completed iou smart contract is also available to be imported into the Studio, see step [3.5](35-import-an-existing-application) for details.
+In this step, we will implement the 4 transactions defined in the smart contract model in Project Dovetail™ Studio. A completed iou smart contract is also available to be imported into the Studio, see step [3.5][import-an-existing-application] for details.
 
 ### 3.1 IssueIOU Transaction*
 
@@ -39,7 +39,7 @@ In this step, we will implement the 4 transactions defined in the smart contract
     <source src="videos/getiouissuedby.mp4" type="video/mp4">
 </video></p>
 
-### 3.5. Import an existing application
+### [import-an-existing-application]3.5. Import an existing application
 
 * You can also import an application into Project Dovetail™ Studio
    * Go to Project Dovetail™ Studio
