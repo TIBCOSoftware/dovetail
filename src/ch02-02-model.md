@@ -11,7 +11,7 @@ Project Dovetail™ supports [Hyperledger Composer modeling language](https://hy
 ### 1.2 IOU Smart Contract Data Model
 We will use Visual Studio Code to create IOU smart contract model.
 
-> * Go to the folder called "iou" in your iou_tutorial folder created in the [previous](ch02-01-iou-tutorial.md)page
+> * Go to the folder called "iou" in your iou_tutorial folder created in the [previous](ch02-01-iou-tutorial.md) page
 
 ```bash
 mkdir iou
@@ -39,7 +39,7 @@ mkdir models
 
 > * Copy following resource definitions and save it as iou.cto in your models folder
 
-```json
+```javascript
 namespace com.example.iou
 
 import  com.tibco.dovetail.system.*
@@ -82,7 +82,7 @@ transaction getIOUIssuedBy {
 
 > * Copy following resource definitions and save it as dovetail.system.cto in your models folder
 
-```json
+```javascript
 namespace com.tibco.dovetail.system
 
 /*
