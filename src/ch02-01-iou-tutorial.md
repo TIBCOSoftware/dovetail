@@ -13,12 +13,12 @@ Follow these steps to create the empty structure of the tutorial:
 
 > * create the tutorial initial structure
 
-> * iou_tutorials
-     > * artifacts
-     > * iou
-     > * network
-        > * fabric
-        > * corda
+ * iou_tutorials
+    * artifacts
+    * iou
+    * network
+        * fabric
+        * corda
 
 ```
 mkdir -p iou_tutorial/artifacts
