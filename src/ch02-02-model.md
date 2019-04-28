@@ -8,29 +8,29 @@ In this section we will show step by step instructions to create the iou.bna tha
 
 Project Dovetail™ supports [Hyperledger Composer modeling language](https://hyperledger.github.io/composer/v0.19/reference/cto_language.html) to model smart contract assets and transactions, please refer to [Composer Connector](https://github.com/TIBCOSoftware/dovetail-contrib/tree/master/SmartContract/connector/composer) for for more detail.
 
-### 1.2 IOU Smart Contract data model
+### 1.2 IOU Smart Contract Data Model
 We will use Visual Studio Code to create IOU smart contract model.
 
-> Create the top level folder called "iou"
+>Create the top level folder called "iou"
 
 ```
 mkdir iou
 ```
 
-> Copy following package metadata and save it as package.json in your iou folder
+>Copy following package metadata and save it as package.json in your iou folder
 
 ```
 {"engines":{"composer":"^0.19.0"},"name":"iou", "version":"0.0.1","description":"IOU network"}
 ```
 
-> Create a models folder called "models" inside the top level "iou" folder
+>Create a models folder called "models" inside the top level "iou" folder
 
 ```
 cd iou
 mkdir models
 ```
 
-> Copy following resource definitions and save it as iou.cto in your models folder
+>Copy following resource definitions and save it as iou.cto in your models folder
 
 ```
 namespace com.example.iou
@@ -73,7 +73,7 @@ transaction getIOUIssuedBy {
 }
 ```
 
-> Copy following resource definitions and save it as dovetail.system.cto in your models folder
+>Copy following resource definitions and save it as dovetail.system.cto in your models folder
 
 ```
 namespace com.tibco.dovetail.system
@@ -125,7 +125,7 @@ concept IssueAmount {
 }
 ```
 
-> Run zip command from iou directory to package the iou project, it will create a iou.bna file in the tutorial folder
+>Run zip command from iou directory to package the iou project, it will create a iou.bna file in the tutorial folder
 
 ```
 zip -r ../iou.bna *
