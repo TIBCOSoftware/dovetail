@@ -47,8 +47,11 @@ If you are developing for R3 Corda, following jars must be available in your loc
     </dependency>
 ```
 
- > Project Dovetail™ library for R3 Corda is available [here](https://github.com/TIBCOSoftware/dovetail-contrib/releases/download/v0.1.3/dovetail_corda_v0.1.3.jar), run following command to install it to your local Maven repository, replace /path/to/dovetail_corda_v0.1.3.jar with your own directory
+ > Project Dovetail™ library for R3 Corda is available [here](https://github.com/TIBCOSoftware/dovetail-contrib/releases/download/v0.1.3/dovetail_corda_v0.1.3.jar), run following command to install it to your local Maven repository
 
- ```
- mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -DgeneratePom=true -DgroupId=com.tibco.dovetail -DartifactId=dovetail-corda -Dversion=0.1.3 -Dfile=/path/to/dovetail_corda_v0.1.3.jar -Dpackaging=jar
- ```
+```
+mkdir dovetail_corda
+cd dovetail_corda
+curl -OL https://github.com/TIBCOSoftware/dovetail-contrib/releases/download/v0.1.3/dovetail_corda_v0.1.3.jar
+mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -DgeneratePom=true -DgroupId=com.tibco.dovetail -DartifactId=dovetail-corda -Dversion=0.1.3 -Dfile=dovetail_corda_v0.1.3.jar -Dpackaging=jar
+```

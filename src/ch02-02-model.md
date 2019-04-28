@@ -1,20 +1,35 @@
 ## 1. Model IOU Smart Contract
 
-### *1.1 Introduction to smart contract modeling*
-Project Dovetail™ supports [Hyperledger Composer modeling language](https://hyperledger.github.io/composer/v0.19/reference/cto_language.html) to model smart contract assets and transactions, please refer to [Composer Connector](https://github.com/TIBCOSoftware/dovetail-contrib/tree/master/SmartContract/connector/composer) for support detail
+### 1.1 Introduction to smart contract modelling
 
-### *1.2 IOU Smart Contract*
+In this section we will show step by step instructions to create the iou.bna that we will use in the next section of the tutorial.
+You can skip the instructions and download the file [here](tutorials/iou/iou.bna).
+
+Project Dovetail™ supports [Hyperledger Composer modeling language](https://hyperledger.github.io/composer/v0.19/reference/cto_language.html) to model smart contract assets and transactions, please refer to [Composer Connector](https://github.com/TIBCOSoftware/dovetail-contrib/tree/master/SmartContract/connector/composer) for for more detail.
+
+### 1.2 IOU Smart Contract data model
 We will use Visual Studio Code to create IOU smart contract model.
 
-* create a workspace folder, e.g. tutorial
-* create subfolders under tutorial
-     * artifacts
-     * network
-        * fabric
-        * corda
-* copy [template project](https://github.com/TIBCOSoftware/dovetail/tree/master/docs/content/labs/artifacts/composer-project-template) to the workspace, and rename the project as iou
-* under folder iou/model, create a file iou.cto
-* copy following resource definitions into iou.cto file
+> Create the top level folder called "iou"
+
+```
+mkdir iou
+```
+
+> Copy following package metadata and save it as package.json in your iou folder
+
+```
+{"engines":{"composer":"^0.19.0"},"name":"iou", "version":"0.0.1","description":"IOU network"}
+```
+
+> Create a models folder called "models" inside the top level "iou" folder
+
+```
+cd iou
+mkdir models
+```
+
+> Copy following resource definitions and save it as iou.cto in your models folder
 
 ```
 namespace com.example.iou
@@ -56,8 +71,63 @@ transaction getIOUIssuedBy {
   o String issuerPartyId
 }
 ```
+
+> Copy following resource definitions and save it as dovetail.system.cto in your models folder
+
+
+```
+namespace com.tibco.dovetail.system
+
+/*
+for Hyperledger Fabric, id is the member's mspId
+for Corda, id is the member's cert name
+*/
+participant Party identified by id {
+  o String id
+}
+
+/*
+All non-fungible asset should inherit from LinearState
+*/
+@CordaClass("net.corda.core.contracts.LinearState")
+abstract asset LinearState {
+  o String linearId
+}
+
+@CordaClass("net.corda.core.contracts.OwnableState")
+abstract asset OwnableState {
+  o String linearId
+  -->Party owner
+}
+
+@CordaClass("net.corda.core.contracts.FungibleAsset")
+abstract asset FungibleAsset {
+  -->Party owner
+  o Amount amt
+}
+
+@CordaClass("net.corda.finance.contracts.asset.Cash.State")
+asset Cash identified by assetId extends FungibleAsset {  
+  o String assetId
+}
+
+@CordaClass("net.corda.core.contracts.Amount<Currency>")
+concept Amount {
+  o String currency
+  o Long quantity default = 0
+}
+
+@CordaClass("net.corda.core.contracts.Amount<Issue<Currency>>")
+concept IssueAmount {
+  -->Party issuer
+  o String currency
+  o Long quantity default = 0
+}
+```
+
 * Run zip command from iou directory to package the iou project, it will create a iou.bna file in the tutorial folder
 
-> cd /path/to/iou
-
-> zip -r ../iou.bna *
+```
+cd ..
+zip -r ../iou.bna *
+```
