@@ -33,9 +33,10 @@ In this step, we will implement the 4 transactions defined in the smart contract
 
 > * Create a new flow to implement getIOUIssuedBy transaction
 > * We use "Custom Query" activity to query the ledger. This activity is **NOT blockchain agnostic**
-   > - define a input parameter "issuerId"
-   > - define blochchain specific query string, use _$paramName for input substitution, in this example, we use [Hyperledger Fabric CouchDB query syntax](https://hyperledger-fabric.readthedocs.io/en/release-1.3/couchdb_tutorial.html)
-   *** During the mapping of transaction response, you will notice tht "array." is underlined with a red line, it is a UI validation error because Project Dovetail™ Studio UI does not support function yet, the error has no impact to runtime. Function will be supported in the very near future.
+>    - define a input parameter "issuerId"
+>    - define blochchain specific query string, use _$paramName for input substitution, in this example, we use [Hyperledger Fabric CouchDB query syntax](https://hyperledger-fabric.readthedocs.io/en/release-1.3/couchdb_tutorial.html)
+   
+   --- During the mapping of transaction response, you will notice tht "array." is underlined with a red line, it is a UI validation error because Project Dovetail™ Studio UI does not support function yet, the error has no impact to runtime. Function will be supported in the very near future.---
 
 <p><video width="480" height="320" controls="controls">
     <source src="videos/getiouissuedby.mp4" type="video/mp4">

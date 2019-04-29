@@ -5,9 +5,20 @@ docker compose script.  If you installed the ``fabric-samples`` repo clone and
 followed the instructions to [install binaries](https://hyperledger-fabric.readthedocs.io/en/latest/install.html), then
 you should have the necessary Docker images installed locally.
 
+
+> If you have downloaded the full tutorial files, jump to step 2
+
 ## 1. Copy Hyperledger Fabric Network
 
-Copy [sample Hyperledger Fabric Network](https://github.com/TIBCOSoftware/dovetail/blob/master/docs/content/labs/network/fabric) to your network/fabric directory
+
+Copy sample Hyperledger Fabric Network to your network/fabric directory
+
+```
+cd iou_tutorial/network && \
+curl -OL https://TIBCOSoftware.github.io/dovetail/tutorials/iou/fabric.zip && \
+unzip fabric.zip && \
+rm fabric.zip
+```
 
 
 ## 2. open a terminal, and execute following command to start up the network

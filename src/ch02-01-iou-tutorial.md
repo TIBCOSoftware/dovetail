@@ -11,7 +11,7 @@ Before getting started, you should have [Project Dovetail™ Studio](ch01-01-ins
 
 Follow these steps to create the empty structure of the tutorial:
 
-> * create the tutorial initial structure
+> * Create the tutorial initial structure
 
  * iou_tutorials
     * artifacts
