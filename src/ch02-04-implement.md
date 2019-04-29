@@ -45,9 +45,9 @@ In this step, we will implement the 4 transactions defined in the smart contract
 ### 3.5. Import an existing application
 
 > * You can also import an application into Project Dovetail™ Studio
-    > * Go to Project Dovetail™ Studio
-    > * If you haven't import iou.bna file from Connections tab, you can do so now following [this step](ch02-03-import.md)
-    > * Create a new Application "IOUImport", click on "Import" button, use this [IOU.json](tutorials/IOU.json)
+>     * Go to Project Dovetail™ Studio
+>     * If you haven't import iou.bna file from Connections tab, you can do so now following [this step](ch02-03-import.md)
+>     * Create a new Application "IOUImport", click on "Import" button, use this [IOU.json](tutorials/IOU.json)
 
 <p><video width="480" height="320" controls="controls">
     <source src="videos/importiou.mp4" type="video/mp4">
