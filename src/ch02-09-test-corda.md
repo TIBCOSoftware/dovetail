@@ -2,9 +2,18 @@
 
 We will use [Corda Demo Bench](https://docs.corda.net/demobench.html), install it if you don't have it installed already.
 
+> If you have downloaded the full tutorial files, jump to step 2
+
 ## 1. Copy Sample CorDapp
 
-Copy [sample R3 CorDapp](https://github.com/TIBCOSoftware/dovetail/blob/master/docs/content/labs/network/corda) to network/corda directory
+Copy sample R3 CorDapp Network to your network/corda directory
+
+```
+cd iou_tutorial/network && \
+curl -OL https://TIBCOSoftware.github.io/dovetail/tutorials/iou/corda.zip && \
+unzip corda.zip && \
+rm corda.zip
+```
 
 ## 2. Start up Corda Demo Bench
    * Click on "+Add CorDapp" button then browse to corda directory, select a jar to add(you can only add one jar at a time). Repeat, until all jars are added. You can replace kotlin-IOU-1.0.0.jar with your own.

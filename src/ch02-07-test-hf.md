@@ -24,6 +24,7 @@ rm fabric.zip
 ## 2. open a terminal, and execute following command to start up the network
 
 ```
+cd fabric
 docker-compose -f docker-compose-simple.yaml up
 ```
 
@@ -33,11 +34,8 @@ open a terminal window, run ```docker ps```, make sure container cli, chaincode,
 
 ```
 docker exec -it chaincode bash
-
 cd iou
-
 go build
-
 CORE_PEER_ADDRESS=peer:7052 CORE_CHAINCODE_ID_NAME=iou:0 ./iou
 ```
 
@@ -45,9 +43,7 @@ CORE_PEER_ADDRESS=peer:7052 CORE_CHAINCODE_ID_NAME=iou:0 ./iou
 
 ```
 docker exec -it cli bash
-
 peer chaincode install -p chaincodedev/chaincode/iou -n iou -v 0
-
 peer chaincode instantiate -n iou -v 0 -c '{"Args":[]}' -C myc
 ```
 
@@ -55,7 +51,6 @@ peer chaincode instantiate -n iou -v 0 -c '{"Args":[]}' -C myc
 
 ```
 peer chaincode invoke -n iou -c '{"Args":["com.example.iou.IssueIOU","{\\"issuer\\":\\"charlie\\",\\"owner\\":\\"alice\\",\\"amt\\":{\\"quantity\\":10000,\\"currency\\":\\"USD\\"},\\"linearId\\":\\"testiou\\"}"]}' -C myc
-
 peer chaincode query -n iou -c '{"Args":["com.example.iou.getIOU","testiou"]}' -C myc
 ```
 
@@ -65,7 +60,6 @@ You should see the IOU returned.
 
 ```
 peer chaincode invoke -n iou -c '{"Args":["com.example.iou.TransferIOU","{\\"linearId\\":\\"testiou\\"}", "bob"]}' -C myc
-
 peer chaincode query -n iou -c '{"Args":["com.example.iou.getIOU","testiou"]}' -C myc
 ```
 
@@ -77,7 +71,6 @@ let's add another IOU issued by charlie
 
 ```
 peer chaincode invoke -n iou -c '{"Args":["com.example.iou.IssueIOU","{\\"issuer\\":\\"charlie\\",\\"owner\\":\\"john\\",\\"amt\\":{\\"quantity\\":20000,\\"currency\\":\\"USD\\"},\\"linearId\\":\\"testioujohn\\"}"]}' -C myc
-
 peer chaincode query -n iou -c '{"Args":["com.example.iou.getIOUIssuedBy", "charlie"]}' -C myc
 ```
 
