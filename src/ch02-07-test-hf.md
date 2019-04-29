@@ -66,7 +66,7 @@ You should see the IOU returned.
 ## 6. from the cli terminal,execute following commands to invoke TransferIOU and getIOU transactions
 
 ```
-peer chaincode invoke -n iou -c '{"Args":["com.example.iou.TransferIOU","{\"linearId\\":\"testiou\"}", "bob"]}' -C myc
+peer chaincode invoke -n iou -c '{"Args":["com.example.iou.TransferIOU","{\"linearId\":\"testiou\"}", "bob"]}' -C myc
 
 peer chaincode query -n iou -c '{"Args":["com.example.iou.getIOU","testiou"]}' -C myc
 ```
