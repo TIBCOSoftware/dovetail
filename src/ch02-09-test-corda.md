@@ -9,7 +9,10 @@ We will use [Corda Demo Bench](https://docs.corda.net/demobench.html), install i
 Copy sample R3 CorDapp Network to your network/corda directory
 
 ```
-cd iou_tutorial/network && \
+cd iou_tutorial/network
+```
+
+```
 curl -OL https://TIBCOSoftware.github.io/dovetail/tutorials/iou/corda.zip && \
 unzip corda.zip && \
 rm corda.zip
