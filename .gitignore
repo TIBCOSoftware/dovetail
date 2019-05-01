@@ -86,3 +86,4 @@ tags
 .build-cache
 submodules/flogo-cicd/.build-cache
 ./Dockerfile
+book

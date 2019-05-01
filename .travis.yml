@@ -1,0 +1,27 @@
+language: rust
+cache: cargo
+rust:
+  - 1.31.1
+branches:
+  only:
+  - master
+addons:
+  apt:
+    packages:
+      - aspell
+      - aspell-en
+before_script:
+  - (cargo install mdbook --vers 0.2.3 --force || true)
+script:
+- make
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: "$GITHUB_TOKEN"
+  keep-history: true
+  on:
+    branch: master
+  local-dir: "book"
+env:
+  matrix:
+    secure: SqvYIDuPL1Ntd5zTO/cS8sTVzCJhygeNF5xDsGFQAEIvgyeLFAybqV1AsgJlgdoajw0dK9Hm2mtOgugZWEDVs1NxLydtGXAoF3hGwKcZeOfrdBPMxC0tq7FnvB09ctpFWdQop36C0/svqMpzMtaHPlhGhpmmnE/JLg6wpW8FExUJ9hSanCqoMGWgxn031FOe5a9IU/Zpl3pzdRTIk0vUzLzRyo2ivm50mtqqt+xkjQP+YnJ9tgeG6a+3oGIY+gabhES6PN+humekTjKNglPvzuZAAxzyIM4eyNFo7UQ2jpNCM6sS4DA3B0kWsTasXaAuib10xSjh652x9pxEEPckBNo9AzrY7Nq1suigvvo1rxRSw1S2UXoCa8E0IrnyjmE9TLeEIa9YOFespstxC2LHLxjENh2+xT6kpaXv9o1yanNr2WwOfXRmTyhTvXXDoNerMXIrwP5YU6EbOm1BMen3KSv8F9h4l5TPWNXPXHHqugMacdIwTUgcwSGUKxotQqxfaVPzfTmGq3ct+e/CzIOAekcdHfu3wYOqEYSA35ixE7QoWMCvSInpmU9fMktN27cj1JM44YvCsF8t0M3fmy8ZF/P8k/AV/RuRIK8GkAMeMgCI4esgRJkgrCN9LcpYIqI4uP44LuNw7vDLB1LCcmoiSR0v+ztZ3iQJdWAgMMOR/IU=

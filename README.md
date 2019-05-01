@@ -3,15 +3,10 @@
 </p>
 
 <p align="center" >
-  <b>Project Dovetail™ is an Open Source application for blockchain smart contracts</b>
+  <b>Project Dovetail™ is an Open Source tool for modelling blockchain smart contracts</b>
 </p>
 
-<p align="center">
-  <b>Documentation Status :</b> <img src="https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiUjc3ZFJUN3NnRlkzaU5wVlM0M0lqdjFZMmVJWlFOZmxoWlVSd0R1dTc4SUFoSHBDTklhQ3NHM3BvZFVPeU9ScXBWcllRRDJ6bVJ1NGRSQ1dJZU8wMEE4PSIsIml2UGFyYW1ldGVyU3BlYyI6ImNURlRVRkNTd0pHY3ZZQngiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master"/>
-  <img src="https://img.shields.io/badge/license-BSD%20style-blue.svg"/>
-  </a>
-</p>
-
+[![Documentation Status](https://travis-ci.org/TIBCOSoftware/dovetail.svg?branch=master)](https://travis-ci.org/TIBCOSoftware/dovetail)<img src="https://img.shields.io/badge/license-BSD%20style-blue.svg"/>
 
 <p align="center">
   <a href="#project-dovetail">Dovetail™</a> | <a href="#dovetail-core">Architecture</a> | <a href="#what-are-smart-contracts">Blockchains smart contracts</a> | <a href="#contributing">Contributing</a> | <a href="#license">License</a>
@@ -19,7 +14,10 @@
 
 <br/>
 
-Developing blockchain solutions with today’s technology is challenging, given the lack of tooling and standardization. Project Dovetail™ by TIBCO LABS™ addresses these issues by providing a graphical interface for modeling smart contracts, making them easier to write, visualize, test, and audit, all without deep programming experience. Logic is abstracted from low-level code, and contracts can be deployed into different blockchain stacks with little or no change. On-chain and off-chain computation can become more seamless, time to market is improved, and the risk of technology lock-in is reduced. Project Dovetail makes your smart contracts smarter. 
+Developing blockchain solutions with today’s technology is challenging given the lack of tooling and standardization. Project Dovetail™ by TIBCO LABS™ addresses these issues by providing a graphical interface for modeling smart contracts, making them easier to write, visualize, test, and audit, all without deep programming experience. 
+
+Logic is abstracted from low-level code, and contracts can be deployed into different blockchain stacks with little or no change. 
+On-chain and off-chain computation can become more seamless, time to market is improved, and the risk of technology lock-in is reduced. Project Dovetail makes your smart contracts smarter. 
 <br/>
 
 <p align="center">
@@ -28,7 +26,10 @@ Developing blockchain solutions with today’s technology is challenging, given 
 
 # What are Smart Contracts
 
-There are many definitions and descriptions of smart contracts, as each blockchain framework tends to implement this capability in its own way (if it does implement this feature at all).  However, generally speaking, smart contracts (at least from an enterprise / permissioned perspective) may be thought of as application or business logic (defined in code) that runs within the context of a blockchain network itself.  The idea is to automate the processing of blockchain transactions across the network, use the logic to determine if a transaction will get written to the ledger, and to maintain accuracy, compliance, and trust.  In essence, smart contracts represent a method for controlling how changes are made to the underlying blockchain, in a non-centralized and (potentially) untrustworthy environment.  Supply chain transaction tracking, healthcare revenue cycle management, consumer contract execution, and government interactions are all areas in which smart contracts (business logic) may be applied.  Remember, however, that "smart contracts" are not necessarily "smart" (depends on the code) nor "contracts" (as they may not be viewed as legal contracts).  Thus, the term can be a bit misleading :)
+There are many definitions and descriptions of smart contracts, as each blockchain framework tends to implement this capability in its own way (if it does implement this feature at all). However, generally speaking, smart contracts (at least from an enterprise / permissioned perspective) may be thought of as application or business logic (defined in code) that runs within the context of a blockchain network itself.
+
+The idea is to automate the processing of blockchain transactions across the network, use the logic to determine if a transaction will get written to the ledger, and to maintain accuracy, compliance, and trust.  In essence, smart contracts represent a method for controlling how changes are made to the underlying blockchain, in a non-centralized and (potentially) untrustworthy environment.  Supply chain transaction tracking, healthcare revenue cycle management, consumer contract execution, and government interactions are all areas in which smart contracts (business logic) may be applied.
+Remember, however, that "smart contracts" are not necessarily "smart" (depends on the code) nor "contracts" (as they may not be viewed as legal contracts).  Thus, the term can be a bit misleading :)
 
 
 # Project Dovetail
@@ -61,14 +62,6 @@ Dovetail™ Core exposes three principal contribution interfaces that enable dev
 * **Trigger Interface** a common interface for building event-consumers that dispatch events to one or more actions. The Smart Contract TXN Trigger is an example of a trigger.
 * **Activity Interface** a common interface for exposing common application logic in a reusable manner. Think of this as a function, such as write to ledger, publish events, etc that can be used by all Dovetail apps.
 
-# Repos
-
-Project Dovetail consists of the following sub-projects available as separate repos:
-
-* [dovetail-cli](https://github.com/TIBCOSoftware/dovetail-cli):  Command line tools for building Dovetail apps & extensions
-* [dovetail-contrib](https://github.com/TIBCOSoftware/dovetail-contrib): Dovetail contributions/extensions
-* [dovetail-java-lib](https://github.com/TIBCOSoftware/dovetail-java-lib): Dovetail 
-java runtime for smart contract flows
 
 # Dovetail Flows
 
@@ -77,14 +70,6 @@ Dovetail Flows provides smart contract logic design capabilities and includes th
 🌈 **Painless development** Visual modeler with step-back debugging capabilities & elegant DSL<br/>
 ⚙️ **Ultra-light process engine** for conditional flow control
 
-
-## Getting Started
-
-We've made getting started with Dovetail Flows as easy as possible. The current set of tooling is designed for:
-
-- Smart contract developers
-
-For step by step instructions on how to get started please go to the [documentation page](https://tibcosoftware.github.io/dovetail/)
 
 ### Zero-code Developers
 
@@ -98,17 +83,6 @@ To report any issues with the Issue tracker on this project.
 
 Dovetail documentation can be found on the [documentation page](https://tibcosoftware.github.io/dovetail/) and the source code in the [github page](https://github.com/TIBCOSoftware/dovetail).
 
-In order to regenerate the docs you need to run:
-
-```
-> git clone https://github.com/TIBCOSoftware/dovetail
-> cd dovetail
-> docker build -t dovetail-docs . --build-arg git_user_email=<your git email> --build-arg git_user_name=<your git name>
-> docker run -it dovetail-docs
-```
-
-* (Note that you will be asked to enter your github credentials and will need write access to the github repo)
-
 # Contributing
 Want to contribute to Project Dovetail? We've made it easy, all you need to do is fork the repository you intend to contribute to, make your changes and create a Pull Request! Once the pull request has been created, you'll be prompted to sign the CLA (Contributor License Agreement) online.
 
@@ -117,11 +91,12 @@ Not sure where to start? No problem, here are a few suggestions:
 * [dovetail-contrib](https://github.com/TIBCOSoftware/dovetail-contrib): This repository contains all of the contributions, such as activities, triggers, etc. Perhaps there is something missing? Create a new activity or trigger or fix a bug in an existing activity or trigger.
 * Browse all of the Project Dovetail repositories and look for issues tagged `kind/help-wanted` or `good first issue`
 
-If you have any questions, feel free to post an issue and tag it as a question or email tibcolabs@tibco.com. 
+If you have any questions, feel free to post an issue and tag it as a question or email <tibcolabs@tibco.com>. 
 
-For additional details, refer to the [Contribution Guidelines](https://github.com/TIBCOSoftware/dovetail/blob/master/CONTRIBUTING.md).
+For additional details, refer to the [“Contribution Guidelines”](https://github.com/TIBCOSoftware/dovetail/blob/master/CONTRIBUTING.md).
 
 # License 
 The top level flogo repo, consisting of flow samples & documentation, is licensed licensed under a BSD-style license. Refer to [LICENSE](https://github.com/TIBCOSoftware/dovetail/blob/master/LICENSE) for license text.
 
 Dovetail source code in [dovetail-cli](https://github.com/TIBCOSoftware/dovetail-cli), [dovetail-contrib](https://github.com/TIBCOSoftware/dovetail-contrib), [dovetail-java-lib](https://github.com/TIBCOSoftware/dovetail-java-lib) are all licensed under a BSD-style license, refer to [LICENSE](https://github.com/TIBCOSoftware/dovetail/blob/master/LICENSE) 
+
