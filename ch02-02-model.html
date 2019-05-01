@@ -1,0 +1,345 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Model Smart Contract - Dovetail smart contracts modelling</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li class="affix"><a href="ch00-00-introduction.html">Introduction</a></li><li><a href="ch01-00-getting-started.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li><ol class="section"><li><a href="ch01-01-installation.html"><strong aria-hidden="true">1.1.</strong> Installation</a></li><li><a href="ch01-02-dovetail-cli.html"><strong aria-hidden="true">1.2.</strong> Dovetail CLI</a></li><li><a href="ch01-03-environment.html"><strong aria-hidden="true">1.3.</strong> Environment Prerequisites</a></li></ol></li><li><a href="ch02-00-labs.html"><strong aria-hidden="true">2.</strong> Labs</a></li><li><ol class="section"><li><a href="ch02-01-iou-tutorial.html"><strong aria-hidden="true">2.1.</strong> IoU Tutorial</a></li><li><ol class="section"><li><a href="ch02-02-model.html" class="active"><strong aria-hidden="true">2.1.1.</strong> Model Smart Contract</a></li><li><a href="ch02-03-import.html"><strong aria-hidden="true">2.1.2.</strong> Import Model</a></li><li><a href="ch02-04-implement.html"><strong aria-hidden="true">2.1.3.</strong> Implement Smart Contract</a></li><li><a href="ch02-05-export.html"><strong aria-hidden="true">2.1.4.</strong> Export Smart Contract</a></li><li><a href="ch02-06-generate-hf.html"><strong aria-hidden="true">2.1.5.</strong> Generate Fabric Artifacts</a></li><li><a href="ch02-07-test-hf.html"><strong aria-hidden="true">2.1.6.</strong> Test on Fabric</a></li><li><a href="ch02-08-generate-corda.html"><strong aria-hidden="true">2.1.7.</strong> Generate Corda Artifacts</a></li><li><a href="ch02-09-test-corda.html"><strong aria-hidden="true">2.1.8.</strong> Test on Corda</a></li></ol></li></ol></li><li><a href="ch03-00-contribute.html">Contribute</a></li><li class="affix"><a href="ch04-00-source.html">Source Code</a></li><li class="affix"><a href="ch05-00-community.html">Community</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Dovetail smart contracts modelling</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#1-model-iou-smart-contract" id="1-model-iou-smart-contract"><h2>1. Model IOU Smart Contract</h2></a>
+<a class="header" href="#11-introduction-to-smart-contract-modelling" id="11-introduction-to-smart-contract-modelling"><h3>1.1 Introduction to smart contract modelling</h3></a>
+<p>In this section we will show step by step instructions to create the iou.bna that we will use in the next section of the tutorial.</p>
+<blockquote>
+<p>You can skip the instructions and download the iou.bna file <a href="tutorials/iou/iou.bna">here</a>.</p>
+</blockquote>
+<p>Project Dovetail™ supports <a href="https://hyperledger.github.io/composer/v0.19/reference/cto_language.html">Hyperledger Composer modeling language</a> to model smart contract assets and transactions, please refer to <a href="https://github.com/TIBCOSoftware/dovetail-contrib/tree/master/SmartContract/connector/composer">Composer Connector</a> for for more detail.</p>
+<a class="header" href="#12-iou-smart-contract-data-model" id="12-iou-smart-contract-data-model"><h3>1.2 IOU Smart Contract Data Model</h3></a>
+<p>We will use Visual Studio Code to create IOU smart contract model.</p>
+<blockquote>
+<ul>
+<li>Go to the folder called &quot;iou&quot; in your iou_tutorial folder created in the <a href="ch02-01-iou-tutorial.html">previous</a> page</li>
+</ul>
+</blockquote>
+<pre><code class="language-bash">mkdir iou
+</code></pre>
+<blockquote>
+<ul>
+<li>Copy following package metadata and save it as package.json in your iou folder</li>
+</ul>
+</blockquote>
+<pre><code class="language-json">{
+  &quot;engines&quot;: {
+    &quot;composer&quot;: &quot;^0.19.0&quot;
+  },
+  &quot;name&quot;: &quot;iou&quot;,
+  &quot;version&quot;: &quot;0.0.1&quot;,
+  &quot;description&quot;: &quot;IOU network&quot;
+}
+</code></pre>
+<blockquote>
+<ul>
+<li>Create a models folder called &quot;models&quot; inside the top level &quot;iou&quot; folder</li>
+</ul>
+</blockquote>
+<pre><code class="language-bash">cd iou
+mkdir models
+</code></pre>
+<blockquote>
+<ul>
+<li>Copy following resource definitions and save it as iou.cto in your models folder</li>
+</ul>
+</blockquote>
+<pre><code class="language-javascript">namespace com.example.iou
+
+import  com.tibco.dovetail.system.*
+
+asset  IOU identified by linearId extends LinearState {
+  --&gt; Party issuer
+  --&gt; Party owner
+  o Amount amt
+}
+
+/*
+@InitiatedBy
+  - arg0: comma delimited list of authorized participants in the format of $tx.path.to.participant, or * for any participant
+  - arg1: optional, comma delimited list of required attributes that must exist in the initiator's certificate in the format of name=value.
+*/
+@InitiatedBy(&quot;$tx.iou.issuer&quot;)
+transaction IssueIOU {
+  o IOU iou
+}
+
+@InitiatedBy(&quot;$tx.iou.owner&quot;)
+transaction TransferIOU {
+  --&gt; IOU iou //by reference because the asset is already on the ledger
+  --&gt; Party newOwner
+}
+
+/* 
+@Query : mark transaction as query only
+*/
+@Query()
+transaction getIOU {
+  o String linearId
+}
+
+  @Query()
+transaction getIOUIssuedBy {
+  o String issuerPartyId
+}
+</code></pre>
+<blockquote>
+<ul>
+<li>Copy following resource definitions and save it as dovetail.system.cto in your models folder</li>
+</ul>
+</blockquote>
+<pre><code class="language-javascript">namespace com.tibco.dovetail.system
+
+/*
+for Hyperledger Fabric, id is the member's mspId
+for Corda, id is the member's cert name
+*/
+participant Party identified by id {
+  o String id
+}
+
+/*
+All non-fungible asset should inherit from LinearState
+*/
+@CordaClass(&quot;net.corda.core.contracts.LinearState&quot;)
+abstract asset LinearState {
+  o String linearId
+}
+
+@CordaClass(&quot;net.corda.core.contracts.OwnableState&quot;)
+abstract asset OwnableState {
+  o String linearId
+  --&gt;Party owner
+}
+
+@CordaClass(&quot;net.corda.core.contracts.FungibleAsset&quot;)
+abstract asset FungibleAsset {
+  --&gt;Party owner
+  o Amount amt
+}
+
+@CordaClass(&quot;net.corda.finance.contracts.asset.Cash.State&quot;)
+asset Cash identified by assetId extends FungibleAsset {  
+  o String assetId
+}
+
+@CordaClass(&quot;net.corda.core.contracts.Amount&lt;Currency&gt;&quot;)
+concept Amount {
+  o String currency
+  o Long quantity default = 0
+}
+
+@CordaClass(&quot;net.corda.core.contracts.Amount&lt;Issue&lt;Currency&gt;&gt;&quot;)
+concept IssueAmount {
+  --&gt;Party issuer
+  o String currency
+  o Long quantity default = 0
+}
+</code></pre>
+<blockquote>
+<ul>
+<li>Run zip command from iou directory to package the iou project, it will create a iou.bna file in the tutorial folder</li>
+</ul>
+</blockquote>
+<pre><code class="language-bash">zip -r ../iou.bna *
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="ch02-01-iou-tutorial.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="ch02-03-import.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="ch02-01-iou-tutorial.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="ch02-03-import.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
