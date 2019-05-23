@@ -24,12 +24,12 @@
          "input": [
           {
            "mapTo": "$INPUT['message']",
-           "type": "expression",
-           "value": "issue iou flow started"
+           "type": "literal",
+           "value": "flow issue iou started..."
           },
           {
            "mapTo": "$INPUT['containerServiceStub']",
-           "type": "expression",
+           "type": "assign",
            "value": "$flow.containerServiceStub"
           }
          ]
@@ -42,7 +42,7 @@
        "activity": {
         "ref": "github.com/TIBCOSoftware/dovetail-contrib/SmartContract/activity/ledger",
         "input": {
-         "model": "daaee9a0-ec38-11e8-8227-afbc072d2792",
+         "model": "9ae09eb0-565d-11e9-9fa5-53566968a608",
          "assetName": "com.example.iou.IOU",
          "operation": "PUT",
          "input": {
@@ -53,7 +53,7 @@
         },
         "output": {
          "output": {
-          "metadata": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"title\":\"IOU\",\"type\":\"object\",\"properties\":{\"issuer\":{\"type\":\"string\"},\"owner\":{\"type\":\"string\"},\"amt\":{\"type\":\"object\",\"properties\":{\"currency\":{\"type\":\"string\"},\"quantity\":{\"type\":\"integer\",\"default\":\"0\"}},\"required\":[\"currency\",\"quantity\"]},\"linearId\":{\"type\":\"string\"}},\"required\":[\"issuer\",\"owner\",\"amt\",\"linearId\"],\"description\":\"{\\\"metadata\\\":{\\\"type\\\":\\\"Asset\\\",\\\"parent\\\":\\\"com.tibco.dovetail.system.LinearState\\\",\\\"isAbstract\\\":false,\\\"identifiedBy\\\":\\\"linearId\\\",\\\"decorators\\\":[]},\\\"attributes\\\":[{\\\"name\\\":\\\"issuer\\\",\\\"type\\\":\\\"com.tibco.dovetail.system.Party\\\",\\\"isRef\\\":true},{\\\"name\\\":\\\"owner\\\",\\\"type\\\":\\\"com.tibco.dovetail.system.Party\\\",\\\"isRef\\\":true},{\\\"name\\\":\\\"amt\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"com.tibco.dovetail.system.Amount\\\"},{\\\"name\\\":\\\"linearId\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"String\\\"}]}\"}",
+          "metadata": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"title\":\"IOU\",\"type\":\"object\",\"properties\":{\"issuer\":{\"type\":\"string\"},\"owner\":{\"type\":\"string\"},\"amt\":{\"type\":\"object\",\"properties\":{\"currency\":{\"type\":\"string\"},\"quantity\":{\"type\":\"integer\",\"default\":\"0\"}},\"required\":[\"currency\",\"quantity\"]},\"paid\":{\"type\":\"object\",\"properties\":{\"currency\":{\"type\":\"string\"},\"quantity\":{\"type\":\"integer\",\"default\":\"0\"}},\"required\":[\"currency\",\"quantity\"]},\"linearId\":{\"type\":\"string\"}},\"required\":[\"issuer\",\"owner\",\"amt\",\"paid\",\"linearId\"],\"description\":\"{\\\"metadata\\\":{\\\"type\\\":\\\"Asset\\\",\\\"parent\\\":\\\"com.tibco.dovetail.system.LinearState\\\",\\\"isAbstract\\\":false,\\\"identifiedBy\\\":\\\"linearId\\\",\\\"decorators\\\":[]},\\\"attributes\\\":[{\\\"name\\\":\\\"issuer\\\",\\\"type\\\":\\\"com.tibco.dovetail.system.Party\\\",\\\"isRef\\\":true},{\\\"name\\\":\\\"owner\\\",\\\"type\\\":\\\"com.tibco.dovetail.system.Party\\\",\\\"isRef\\\":true},{\\\"name\\\":\\\"amt\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"com.tibco.dovetail.system.Amount\\\"},{\\\"name\\\":\\\"paid\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"com.tibco.dovetail.system.Amount\\\"},{\\\"name\\\":\\\"linearId\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"String\\\"}]}\"}",
           "value": ""
          }
         },
@@ -61,12 +61,12 @@
          "input": [
           {
            "mapTo": "$INPUT['input']",
-           "type": "expression",
+           "type": "assign",
            "value": "$flow.transactionInput.iou"
           },
           {
            "mapTo": "$INPUT['containerServiceStub']",
-           "type": "expression",
+           "type": "assign",
            "value": "$flow.containerServiceStub"
           }
          ]
@@ -74,10 +74,10 @@
        }
       },
       {
-       "id": "TransactionResponse",
-       "name": "TransactionResponse",
+       "id": "success",
+       "name": "success",
        "activity": {
-        "ref": "github.com/TIBCOSoftware/dovetail-contrib/SmartContract/activity/txnreply",
+        "ref": "github.com/TIBCOSoftware/dovetail-contrib/General/activity/txnreply",
         "input": {
          "status": "Success"
         },
@@ -85,10 +85,10 @@
        }
       },
       {
-       "id": "TransactionResponse1",
-       "name": "TransactionResponse1",
+       "id": "inputerr",
+       "name": "inputerr",
        "activity": {
-        "ref": "github.com/TIBCOSoftware/dovetail-contrib/SmartContract/activity/txnreply",
+        "ref": "github.com/TIBCOSoftware/dovetail-contrib/General/activity/txnreply",
         "input": {
          "status": "Error with Message"
         },
@@ -98,7 +98,7 @@
           {
            "mapTo": "$INPUT['message']",
            "type": "expression",
-           "value": "iou amount must be greater than 0"
+           "value": "string.concat(\"iou amout must be greater than 0 and paid amount must be 0, iou.amt= \", string.tostring($flow.transactionInput.iou.amt.quantity), \", paid.amt=\", string.tostring($flow.transactionInput.iou.paid.quantity))"
           }
          ]
         }
@@ -111,20 +111,20 @@
        "from": "Logger",
        "to": "LedgerOperation",
        "type": "expression",
-       "value": "$flow.transactionInput.iou.amt.quantity > 0"
+       "value": "$flow.transactionInput.iou.amt.quantity > 0 && $flow.transactionInput.iou.paid.quantity == 0"
       },
       {
        "id": 2,
        "from": "LedgerOperation",
-       "to": "TransactionResponse",
+       "to": "success",
        "type": "default"
       },
       {
        "id": 3,
        "from": "Logger",
-       "to": "TransactionResponse1",
+       "to": "inputerr",
        "type": "expression",
-       "value": "$flow.transactionInput.iou.amt.quantity <= 0"
+       "value": "$flow.transactionInput.iou.amt.quantity <= 0 || $flow.transactionInput.iou.paid.quantity != 0"
       }
      ],
      "metadata": {
@@ -134,43 +134,18 @@
     }
    },
    {
-    "id": "flow:transferIOU",
+    "id": "flow:TransferIOU",
     "data": {
-     "name": "transferIOU",
+     "name": "TransferIOU",
      "description": "",
      "tasks": [
-      {
-       "id": "Logger1",
-       "name": "Logger1",
-       "activity": {
-        "ref": "github.com/TIBCOSoftware/dovetail-contrib/SmartContract/activity/logger",
-        "input": {
-         "logLevel": "INFO"
-        },
-        "output": {},
-        "mappings": {
-         "input": [
-          {
-           "mapTo": "$INPUT['message']",
-           "type": "expression",
-           "value": "transfer iou flow started"
-          },
-          {
-           "mapTo": "$INPUT['containerServiceStub']",
-           "type": "expression",
-           "value": "$flow.containerServiceStub"
-          }
-         ]
-        }
-       }
-      },
       {
        "id": "LedgerOperation1",
        "name": "LedgerOperation1",
        "activity": {
         "ref": "github.com/TIBCOSoftware/dovetail-contrib/SmartContract/activity/ledger",
         "input": {
-         "model": "daaee9a0-ec38-11e8-8227-afbc072d2792",
+         "model": "9ae09eb0-565d-11e9-9fa5-53566968a608",
          "assetName": "com.example.iou.IOU",
          "operation": "PUT",
          "input": {
@@ -181,7 +156,7 @@
         },
         "output": {
          "output": {
-          "metadata": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"title\":\"IOU\",\"type\":\"object\",\"properties\":{\"issuer\":{\"type\":\"string\"},\"owner\":{\"type\":\"string\"},\"amt\":{\"type\":\"object\",\"properties\":{\"currency\":{\"type\":\"string\"},\"quantity\":{\"type\":\"integer\",\"default\":\"0\"}},\"required\":[\"currency\",\"quantity\"]},\"linearId\":{\"type\":\"string\"}},\"required\":[\"issuer\",\"owner\",\"amt\",\"linearId\"],\"description\":\"{\\\"metadata\\\":{\\\"type\\\":\\\"Asset\\\",\\\"parent\\\":\\\"com.tibco.dovetail.system.LinearState\\\",\\\"isAbstract\\\":false,\\\"identifiedBy\\\":\\\"linearId\\\",\\\"decorators\\\":[]},\\\"attributes\\\":[{\\\"name\\\":\\\"issuer\\\",\\\"type\\\":\\\"com.tibco.dovetail.system.Party\\\",\\\"isRef\\\":true},{\\\"name\\\":\\\"owner\\\",\\\"type\\\":\\\"com.tibco.dovetail.system.Party\\\",\\\"isRef\\\":true},{\\\"name\\\":\\\"amt\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"com.tibco.dovetail.system.Amount\\\"},{\\\"name\\\":\\\"linearId\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"String\\\"}]}\"}",
+          "metadata": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"title\":\"IOU\",\"type\":\"object\",\"properties\":{\"issuer\":{\"type\":\"string\"},\"owner\":{\"type\":\"string\"},\"amt\":{\"type\":\"object\",\"properties\":{\"currency\":{\"type\":\"string\"},\"quantity\":{\"type\":\"integer\",\"default\":\"0\"}},\"required\":[\"currency\",\"quantity\"]},\"paid\":{\"type\":\"object\",\"properties\":{\"currency\":{\"type\":\"string\"},\"quantity\":{\"type\":\"integer\",\"default\":\"0\"}},\"required\":[\"currency\",\"quantity\"]},\"linearId\":{\"type\":\"string\"}},\"required\":[\"issuer\",\"owner\",\"amt\",\"paid\",\"linearId\"],\"description\":\"{\\\"metadata\\\":{\\\"type\\\":\\\"Asset\\\",\\\"parent\\\":\\\"com.tibco.dovetail.system.LinearState\\\",\\\"isAbstract\\\":false,\\\"identifiedBy\\\":\\\"linearId\\\",\\\"decorators\\\":[]},\\\"attributes\\\":[{\\\"name\\\":\\\"issuer\\\",\\\"type\\\":\\\"com.tibco.dovetail.system.Party\\\",\\\"isRef\\\":true},{\\\"name\\\":\\\"owner\\\",\\\"type\\\":\\\"com.tibco.dovetail.system.Party\\\",\\\"isRef\\\":true},{\\\"name\\\":\\\"amt\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"com.tibco.dovetail.system.Amount\\\"},{\\\"name\\\":\\\"paid\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"com.tibco.dovetail.system.Amount\\\"},{\\\"name\\\":\\\"linearId\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"String\\\"}]}\"}",
           "value": ""
          }
         },
@@ -189,27 +164,32 @@
          "input": [
           {
            "mapTo": "$INPUT['input']['issuer']",
-           "type": "expression",
+           "type": "assign",
            "value": "$flow.transactionInput.iou.issuer"
           },
           {
            "mapTo": "$INPUT['input']['owner']",
-           "type": "expression",
+           "type": "assign",
            "value": "$flow.transactionInput.newOwner"
           },
           {
            "mapTo": "$INPUT['input']['amt']",
-           "type": "expression",
+           "type": "assign",
            "value": "$flow.transactionInput.iou.amt"
           },
           {
+           "mapTo": "$INPUT['input']['paid']",
+           "type": "assign",
+           "value": "$flow.transactionInput.iou.paid"
+          },
+          {
            "mapTo": "$INPUT['input']['linearId']",
-           "type": "expression",
+           "type": "assign",
            "value": "$flow.transactionInput.iou.linearId"
           },
           {
            "mapTo": "$INPUT['containerServiceStub']",
-           "type": "expression",
+           "type": "assign",
            "value": "$flow.containerServiceStub"
           }
          ]
@@ -217,10 +197,10 @@
        }
       },
       {
-       "id": "TransactionResponse",
-       "name": "TransactionResponse",
+       "id": "TransactionResponse1",
+       "name": "TransactionResponse1",
        "activity": {
-        "ref": "github.com/TIBCOSoftware/dovetail-contrib/SmartContract/activity/txnreply",
+        "ref": "github.com/TIBCOSoftware/dovetail-contrib/General/activity/txnreply",
         "input": {
          "status": "Success"
         },
@@ -231,14 +211,8 @@
      "links": [
       {
        "id": 1,
-       "from": "Logger1",
-       "to": "LedgerOperation1",
-       "type": "default"
-      },
-      {
-       "id": 2,
        "from": "LedgerOperation1",
-       "to": "TransactionResponse",
+       "to": "TransactionResponse1",
        "type": "default"
       }
      ],
@@ -249,45 +223,92 @@
     }
    },
    {
-    "id": "flow:getIOU",
+    "id": "flow:SettleIOU",
     "data": {
-     "name": "getIOU",
+     "name": "SettleIOU",
      "description": "",
      "tasks": [
       {
-       "id": "Logger2",
-       "name": "Logger2",
+       "id": "unpaidBal",
+       "name": "unpaidBal",
        "activity": {
-        "ref": "github.com/TIBCOSoftware/dovetail-contrib/SmartContract/activity/logger",
+        "ref": "github.com/TIBCOSoftware/dovetail-contrib/General/activity/mapper",
         "input": {
-         "logLevel": "INFO"
+         "model": "9ae09eb0-565d-11e9-9fa5-53566968a608",
+         "dataType": "Long",
+         "inputArrayType": "Object Array",
+         "outputArrayType": "Object Array",
+         "rounding": "HALF_EVEN",
+         "format": "yyyy-MM-dd HH:mm:ss ZZZ",
+         "input": {
+          "metadata": "{\"type\":\"object\",\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"required\":[\"field\"],\"properties\":{\"field\":{\"type\":\"number\"}}}",
+          "value": ""
+         }
         },
-        "output": {},
+        "output": {
+         "output": {
+          "metadata": "{\"type\":\"object\",\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"required\":[\"field\"],\"properties\":{\"field\":{\"type\":\"number\"}}}",
+          "value": ""
+         }
+        },
         "mappings": {
          "input": [
           {
-           "mapTo": "$INPUT['message']",
+           "mapTo": "$INPUT['input']['field']",
            "type": "expression",
-           "value": "get iou flow started"
-          },
-          {
-           "mapTo": "$INPUT['containerServiceStub']",
-           "type": "expression",
-           "value": "$flow.containerServiceStub"
+           "value": "math.subtractLong($flow.transactionInput.iou.amt.quantity, $flow.transactionInput.iou.paid.quantity)"
           }
          ]
         }
        }
       },
       {
-       "id": "LedgerOperation2",
-       "name": "LedgerOperation2",
+       "id": "PaymentProcessor",
+       "name": "PaymentProcessor",
+       "activity": {
+        "ref": "github.com/TIBCOSoftware/dovetail-contrib/SmartContract-Corda/activity/payment",
+        "input": {
+         "input": {
+          "metadata": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"funds\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"amt\":{\"type\":\"object\",\"properties\":{\"currency\":{\"type\":\"string\"},\"quantity\":{\"type\":\"number\"}}},\"issuer\":{\"type\":\"string\"},\"issuerRef\":{\"type\":\"string\"},\"owner\":{\"type\":\"string\"},\"assetId\":{\"type\":\"string\"}}}},\"paymentAmt\":{\"type\":\"object\",\"properties\":{\"currency\":{\"type\":\"string\"},\"quantity\":{\"type\":\"number\"}}},\"sendPaymentTo\":{\"type\":\"string\"},\"sendChangeTo\":{\"type\":\"string\"}}}",
+          "value": ""
+         }
+        },
+        "output": {},
+        "mappings": {
+         "input": [
+          {
+           "mapTo": "$INPUT['input']['funds']",
+           "type": "assign",
+           "value": "$flow.transactionInput.funds"
+          },
+          {
+           "mapTo": "$INPUT['input']['paymentAmt']",
+           "type": "assign",
+           "value": "$flow.transactionInput.payAmt"
+          },
+          {
+           "mapTo": "$INPUT['input']['sendPaymentTo']",
+           "type": "assign",
+           "value": "$flow.transactionInput.sendPaymentTo"
+          },
+          {
+           "mapTo": "$INPUT['input']['sendChangeTo']",
+           "type": "assign",
+           "value": "$flow.transactionInput.sendChangeTo"
+          }
+         ]
+        }
+       }
+      },
+      {
+       "id": "updateIou",
+       "name": "updateIou",
        "activity": {
         "ref": "github.com/TIBCOSoftware/dovetail-contrib/SmartContract/activity/ledger",
         "input": {
-         "model": "daaee9a0-ec38-11e8-8227-afbc072d2792",
+         "model": "9ae09eb0-565d-11e9-9fa5-53566968a608",
          "assetName": "com.example.iou.IOU",
-         "operation": "GET",
+         "operation": "PUT",
          "input": {
           "metadata": "",
           "value": ""
@@ -296,166 +317,72 @@
         },
         "output": {
          "output": {
-          "metadata": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"title\":\"IOU\",\"type\":\"object\",\"properties\":{\"issuer\":{\"type\":\"string\"},\"owner\":{\"type\":\"string\"},\"amt\":{\"type\":\"object\",\"properties\":{\"currency\":{\"type\":\"string\"},\"quantity\":{\"type\":\"integer\",\"default\":\"0\"}},\"required\":[\"currency\",\"quantity\"]},\"linearId\":{\"type\":\"string\"}},\"required\":[\"issuer\",\"owner\",\"amt\",\"linearId\"],\"description\":\"{\\\"metadata\\\":{\\\"type\\\":\\\"Asset\\\",\\\"parent\\\":\\\"com.tibco.dovetail.system.LinearState\\\",\\\"isAbstract\\\":false,\\\"identifiedBy\\\":\\\"linearId\\\",\\\"decorators\\\":[]},\\\"attributes\\\":[{\\\"name\\\":\\\"issuer\\\",\\\"type\\\":\\\"com.tibco.dovetail.system.Party\\\",\\\"isRef\\\":true},{\\\"name\\\":\\\"owner\\\",\\\"type\\\":\\\"com.tibco.dovetail.system.Party\\\",\\\"isRef\\\":true},{\\\"name\\\":\\\"amt\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"com.tibco.dovetail.system.Amount\\\"},{\\\"name\\\":\\\"linearId\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"String\\\"}]}\"}",
+          "metadata": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"title\":\"IOU\",\"type\":\"object\",\"properties\":{\"issuer\":{\"type\":\"string\"},\"owner\":{\"type\":\"string\"},\"amt\":{\"type\":\"object\",\"properties\":{\"currency\":{\"type\":\"string\"},\"quantity\":{\"type\":\"integer\",\"default\":\"0\"}},\"required\":[\"currency\",\"quantity\"]},\"paid\":{\"type\":\"object\",\"properties\":{\"currency\":{\"type\":\"string\"},\"quantity\":{\"type\":\"integer\",\"default\":\"0\"}},\"required\":[\"currency\",\"quantity\"]},\"linearId\":{\"type\":\"string\"}},\"required\":[\"issuer\",\"owner\",\"amt\",\"paid\",\"linearId\"],\"description\":\"{\\\"metadata\\\":{\\\"type\\\":\\\"Asset\\\",\\\"parent\\\":\\\"com.tibco.dovetail.system.LinearState\\\",\\\"isAbstract\\\":false,\\\"identifiedBy\\\":\\\"linearId\\\",\\\"decorators\\\":[]},\\\"attributes\\\":[{\\\"name\\\":\\\"issuer\\\",\\\"type\\\":\\\"com.tibco.dovetail.system.Party\\\",\\\"isRef\\\":true},{\\\"name\\\":\\\"owner\\\",\\\"type\\\":\\\"com.tibco.dovetail.system.Party\\\",\\\"isRef\\\":true},{\\\"name\\\":\\\"amt\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"com.tibco.dovetail.system.Amount\\\"},{\\\"name\\\":\\\"paid\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"com.tibco.dovetail.system.Amount\\\"},{\\\"name\\\":\\\"linearId\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"String\\\"}]}\"}",
           "value": ""
          }
         },
         "mappings": {
          "input": [
           {
-           "mapTo": "$INPUT['input']['linearId']",
-           "type": "expression",
-           "value": "$flow.transactionInput.linearId"
+           "mapTo": "$INPUT['input']['issuer']",
+           "type": "assign",
+           "value": "$flow.transactionInput.iou.issuer"
           },
           {
-           "mapTo": "$INPUT['containerServiceStub']",
-           "type": "expression",
-           "value": "$flow.containerServiceStub"
-          }
-         ]
-        }
-       }
-      },
-      {
-       "id": "TransactionResponse",
-       "name": "TransactionResponse",
-       "activity": {
-        "ref": "github.com/TIBCOSoftware/dovetail-contrib/SmartContract/activity/txnreply",
-        "input": {
-         "status": "Success with Data",
-         "model": "daaee9a0-ec38-11e8-8227-afbc072d2792",
-         "dataType": "com.example.iou.IOU",
-         "input": {
-          "metadata": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"title\":\"IOU\",\"type\":\"object\",\"properties\":{\"issuer\":{\"type\":\"string\"},\"owner\":{\"type\":\"string\"},\"amt\":{\"type\":\"object\",\"properties\":{\"currency\":{\"type\":\"string\"},\"quantity\":{\"type\":\"integer\",\"default\":\"0\"}},\"required\":[\"currency\",\"quantity\"]},\"linearId\":{\"type\":\"string\"}},\"required\":[\"issuer\",\"owner\",\"amt\",\"linearId\"],\"description\":\"{\\\"metadata\\\":{\\\"type\\\":\\\"Asset\\\",\\\"parent\\\":\\\"com.tibco.dovetail.system.LinearState\\\",\\\"isAbstract\\\":false,\\\"identifiedBy\\\":\\\"linearId\\\",\\\"decorators\\\":[]},\\\"attributes\\\":[{\\\"name\\\":\\\"issuer\\\",\\\"type\\\":\\\"com.tibco.dovetail.system.Party\\\",\\\"isRef\\\":true},{\\\"name\\\":\\\"owner\\\",\\\"type\\\":\\\"com.tibco.dovetail.system.Party\\\",\\\"isRef\\\":true},{\\\"name\\\":\\\"amt\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"com.tibco.dovetail.system.Amount\\\"},{\\\"name\\\":\\\"linearId\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"String\\\"}]}\"}",
-          "value": ""
-         }
-        },
-        "output": {},
-        "mappings": {
-         "input": [
+           "mapTo": "$INPUT['input']['owner']",
+           "type": "assign",
+           "value": "$flow.transactionInput.iou.owner"
+          },
           {
-           "mapTo": "$INPUT['input']",
+           "mapTo": "$INPUT['input']['amt']",
+           "type": "assign",
+           "value": "$flow.transactionInput.iou.amt"
+          },
+          {
+           "mapTo": "$INPUT['input']['paid']['currency']",
+           "type": "assign",
+           "value": "$flow.transactionInput.iou.amt.currency"
+          },
+          {
+           "mapTo": "$INPUT['input']['paid']['quantity']",
            "type": "expression",
-           "value": "$activity[LedgerOperation2].output"
+           "value": "math.sumLong($flow.transactionInput.iou.paid.quantity, $flow.transactionInput.payAmt.quantity)"
+          },
+          {
+           "mapTo": "$INPUT['input']['linearId']",
+           "type": "assign",
+           "value": "$flow.transactionInput.iou.linearId"
           }
          ]
         }
        }
-      }
-     ],
-     "links": [
-      {
-       "id": 1,
-       "from": "Logger2",
-       "to": "LedgerOperation2",
-       "type": "default"
       },
       {
-       "id": 2,
-       "from": "LedgerOperation2",
-       "to": "TransactionResponse",
-       "type": "default"
-      }
-     ],
-     "metadata": {
-      "input": [],
-      "output": []
-     }
-    }
-   },
-   {
-    "id": "flow:getIOUIssuedBy",
-    "data": {
-     "name": "getIOUIssuedBy",
-     "description": "",
-     "tasks": [
-      {
-       "id": "Logger3",
-       "name": "Logger3",
+       "id": "TransactionResponse2",
+       "name": "TransactionResponse2",
        "activity": {
-        "ref": "github.com/TIBCOSoftware/dovetail-contrib/SmartContract/activity/logger",
+        "ref": "github.com/TIBCOSoftware/dovetail-contrib/General/activity/txnreply",
         "input": {
-         "logLevel": "INFO"
+         "status": "Success"
+        },
+        "output": {}
+       }
+      },
+      {
+       "id": "payErr",
+       "name": "payErr",
+       "activity": {
+        "ref": "github.com/TIBCOSoftware/dovetail-contrib/General/activity/txnreply",
+        "input": {
+         "status": "Error with Message"
         },
         "output": {},
         "mappings": {
          "input": [
           {
            "mapTo": "$INPUT['message']",
-           "type": "expression",
-           "value": "get iou issued by flow started"
-          },
-          {
-           "mapTo": "$INPUT['containerServiceStub']",
-           "type": "expression",
-           "value": "$flow.containerServiceStub"
-          }
-         ]
-        }
-       }
-      },
-      {
-       "id": "CustomQuery",
-       "name": "CustomQuery",
-       "activity": {
-        "ref": "github.com/TIBCOSoftware/dovetail-contrib/SmartContract/activity/query",
-        "input": {
-         "model": "daaee9a0-ec38-11e8-8227-afbc072d2792",
-         "assetName": "com.example.iou.IOU",
-         "params": {
-          "metadata": "{\"type\":\"object\",\"properties\":{\"\":{\"type\":\"string\"}},\"required\":[]}",
-          "value": ""
-         },
-         "queryString": "{\n   \"selector\": {\n       \"issuer\": \"_$issuerId\"\n    }\n}",
-         "input": {
-          "metadata": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"issuerId\":{\"type\":\"string\"}}}",
-          "value": ""
-         }
-        },
-        "output": {
-         "output": {
-          "metadata": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"title\":\"IOU\",\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"issuer\":{\"type\":\"string\"},\"owner\":{\"type\":\"string\"},\"amt\":{\"type\":\"object\",\"properties\":{\"currency\":{\"type\":\"string\"},\"quantity\":{\"type\":\"integer\",\"default\":\"0\"}},\"required\":[\"currency\",\"quantity\"]},\"linearId\":{\"type\":\"string\"}}},\"description\":\"{\\\"metadata\\\":{\\\"type\\\":\\\"Asset\\\",\\\"parent\\\":\\\"com.tibco.dovetail.system.LinearState\\\",\\\"isAbstract\\\":false,\\\"identifiedBy\\\":\\\"linearId\\\",\\\"decorators\\\":[]},\\\"attributes\\\":[{\\\"name\\\":\\\"issuer\\\",\\\"type\\\":\\\"com.tibco.dovetail.system.Party\\\",\\\"isRef\\\":true},{\\\"name\\\":\\\"owner\\\",\\\"type\\\":\\\"com.tibco.dovetail.system.Party\\\",\\\"isRef\\\":true},{\\\"name\\\":\\\"amt\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"com.tibco.dovetail.system.Amount\\\"},{\\\"name\\\":\\\"linearId\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"String\\\"}]}\"}",
-          "value": ""
-         }
-        },
-        "mappings": {
-         "input": [
-          {
-           "mapTo": "$INPUT['input']['issuerId']",
-           "type": "expression",
-           "value": "$flow.transactionInput.issuerPartyId"
-          },
-          {
-           "mapTo": "$INPUT['containerServiceStub']",
-           "type": "expression",
-           "value": "$flow.containerServiceStub"
-          }
-         ]
-        }
-       }
-      },
-      {
-       "id": "TransactionResponse",
-       "name": "TransactionResponse",
-       "activity": {
-        "ref": "github.com/TIBCOSoftware/dovetail-contrib/SmartContract/activity/txnreply",
-        "input": {
-         "status": "Success with Data",
-         "model": "daaee9a0-ec38-11e8-8227-afbc072d2792",
-         "dataType": "com.example.iou.IOU",
-         "isArray": true,
-         "input": {
-          "metadata": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"title\":\"IOU\",\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"issuer\":{\"type\":\"string\"},\"owner\":{\"type\":\"string\"},\"amt\":{\"type\":\"object\",\"properties\":{\"currency\":{\"type\":\"string\"},\"quantity\":{\"type\":\"integer\",\"default\":\"0\"}},\"required\":[\"currency\",\"quantity\"]},\"linearId\":{\"type\":\"string\"}}},\"description\":\"{\\\"metadata\\\":{\\\"type\\\":\\\"Asset\\\",\\\"parent\\\":\\\"com.tibco.dovetail.system.LinearState\\\",\\\"isAbstract\\\":false,\\\"identifiedBy\\\":\\\"linearId\\\",\\\"decorators\\\":[]},\\\"attributes\\\":[{\\\"name\\\":\\\"issuer\\\",\\\"type\\\":\\\"com.tibco.dovetail.system.Party\\\",\\\"isRef\\\":true},{\\\"name\\\":\\\"owner\\\",\\\"type\\\":\\\"com.tibco.dovetail.system.Party\\\",\\\"isRef\\\":true},{\\\"name\\\":\\\"amt\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"com.tibco.dovetail.system.Amount\\\"},{\\\"name\\\":\\\"linearId\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"String\\\"}]}\"}",
-          "value": ""
-         }
-        },
-        "output": {},
-        "mappings": {
-         "input": [
-          {
-           "mapTo": "$INPUT['input']",
-           "type": "array",
-           "value": "{\"to\":\"$INPUT['input']\",\"from\":\"$activity[CustomQuery].output\",\"type\":\"foreach\",\"fields\":[]}"
+           "type": "literal",
+           "value": "the remaining balance is less than requested payment"
           }
          ]
         }
@@ -465,15 +392,29 @@
      "links": [
       {
        "id": 1,
-       "from": "Logger3",
-       "to": "CustomQuery",
-       "type": "default"
+       "from": "unpaidBal",
+       "to": "PaymentProcessor",
+       "type": "expression",
+       "value": "$activity[unpaidBal].output.field>= $flow.transactionInput.payAmt.quantity"
       },
       {
        "id": 2,
-       "from": "CustomQuery",
-       "to": "TransactionResponse",
+       "from": "PaymentProcessor",
+       "to": "updateIou",
        "type": "default"
+      },
+      {
+       "id": 3,
+       "from": "updateIou",
+       "to": "TransactionResponse2",
+       "type": "default"
+      },
+      {
+       "id": 4,
+       "from": "unpaidBal",
+       "to": "payErr",
+       "type": "expression",
+       "value": "$activity[unpaidBal].output.field < $flow.transactionInput.payAmt.quantity"
       }
      ],
      "metadata": {
@@ -489,12 +430,12 @@
     "name": "SmartContractTXNTrigger",
     "description": "",
     "settings": {
-     "model": "daaee9a0-ec38-11e8-8227-afbc072d2792",
+     "model": "9ae09eb0-565d-11e9-9fa5-53566968a608",
      "createAll": false,
      "assets": "[\"com.tibco.dovetail.system.Cash\",\"com.example.iou.IOU\"]",
-     "transactions": "[\"com.example.iou.IssueIOU\",\"com.example.iou.TransferIOU\",\"com.example.iou.getIOU\",\"com.example.iou.getIOUIssuedBy\"]",
-     "concepts": "[\"com.tibco.dovetail.system.Amount\",\"com.tibco.dovetail.system.IssueAmount\"]",
-     "schemas": "[[\"com.tibco.dovetail.system.LinearState\",\"{\\\"$schema\\\":\\\"http://json-schema.org/draft-04/schema#\\\",\\\"title\\\":\\\"LinearState\\\",\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"linearId\\\":{\\\"type\\\":\\\"string\\\"}},\\\"required\\\":[\\\"linearId\\\"],\\\"description\\\":\\\"{\\\\\\\"metadata\\\\\\\":{\\\\\\\"type\\\\\\\":\\\\\\\"Asset\\\\\\\",\\\\\\\"parent\\\\\\\":\\\\\\\"org.hyperledger.composer.system.Asset\\\\\\\",\\\\\\\"isAbstract\\\\\\\":true,\\\\\\\"decorators\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"CordaClass\\\\\\\",\\\\\\\"args\\\\\\\":[\\\\\\\"net.corda.core.contracts.LinearState\\\\\\\"]}],\\\\\\\"cordaClass\\\\\\\":\\\\\\\"net.corda.core.contracts.LinearState\\\\\\\"},\\\\\\\"attributes\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"linearId\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"String\\\\\\\"}]}\\\"}\"],[\"com.tibco.dovetail.system.OwnableState\",\"{\\\"$schema\\\":\\\"http://json-schema.org/draft-04/schema#\\\",\\\"title\\\":\\\"OwnableState\\\",\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"linearId\\\":{\\\"type\\\":\\\"string\\\"},\\\"owner\\\":{\\\"type\\\":\\\"string\\\"}},\\\"required\\\":[\\\"linearId\\\",\\\"owner\\\"],\\\"description\\\":\\\"{\\\\\\\"metadata\\\\\\\":{\\\\\\\"type\\\\\\\":\\\\\\\"Asset\\\\\\\",\\\\\\\"parent\\\\\\\":\\\\\\\"org.hyperledger.composer.system.Asset\\\\\\\",\\\\\\\"isAbstract\\\\\\\":true,\\\\\\\"decorators\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"CordaClass\\\\\\\",\\\\\\\"args\\\\\\\":[\\\\\\\"net.corda.core.contracts.OwnableState\\\\\\\"]}],\\\\\\\"cordaClass\\\\\\\":\\\\\\\"net.corda.core.contracts.OwnableState\\\\\\\"},\\\\\\\"attributes\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"linearId\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"String\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"owner\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"com.tibco.dovetail.system.Party\\\\\\\",\\\\\\\"isRef\\\\\\\":true}]}\\\"}\"],[\"com.tibco.dovetail.system.FungibleAsset\",\"{\\\"$schema\\\":\\\"http://json-schema.org/draft-04/schema#\\\",\\\"title\\\":\\\"FungibleAsset\\\",\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"owner\\\":{\\\"type\\\":\\\"string\\\"},\\\"amt\\\":{\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"currency\\\":{\\\"type\\\":\\\"string\\\"},\\\"quantity\\\":{\\\"type\\\":\\\"integer\\\",\\\"default\\\":\\\"0\\\"}},\\\"required\\\":[\\\"currency\\\",\\\"quantity\\\"]}},\\\"required\\\":[\\\"owner\\\",\\\"amt\\\"],\\\"description\\\":\\\"{\\\\\\\"metadata\\\\\\\":{\\\\\\\"type\\\\\\\":\\\\\\\"Asset\\\\\\\",\\\\\\\"parent\\\\\\\":\\\\\\\"org.hyperledger.composer.system.Asset\\\\\\\",\\\\\\\"isAbstract\\\\\\\":true,\\\\\\\"decorators\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"CordaClass\\\\\\\",\\\\\\\"args\\\\\\\":[\\\\\\\"net.corda.core.contracts.FungibleAsset\\\\\\\"]}],\\\\\\\"cordaClass\\\\\\\":\\\\\\\"net.corda.core.contracts.FungibleAsset\\\\\\\"},\\\\\\\"attributes\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"owner\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"com.tibco.dovetail.system.Party\\\\\\\",\\\\\\\"isRef\\\\\\\":true},{\\\\\\\"name\\\\\\\":\\\\\\\"amt\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"com.tibco.dovetail.system.Amount\\\\\\\"}]}\\\"}\"],[\"com.tibco.dovetail.system.Cash\",\"{\\\"$schema\\\":\\\"http://json-schema.org/draft-04/schema#\\\",\\\"title\\\":\\\"Cash\\\",\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"assetId\\\":{\\\"type\\\":\\\"string\\\"},\\\"owner\\\":{\\\"type\\\":\\\"string\\\"},\\\"amt\\\":{\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"currency\\\":{\\\"type\\\":\\\"string\\\"},\\\"quantity\\\":{\\\"type\\\":\\\"integer\\\",\\\"default\\\":\\\"0\\\"}},\\\"required\\\":[\\\"currency\\\",\\\"quantity\\\"]}},\\\"required\\\":[\\\"assetId\\\",\\\"owner\\\",\\\"amt\\\"],\\\"description\\\":\\\"{\\\\\\\"metadata\\\\\\\":{\\\\\\\"type\\\\\\\":\\\\\\\"Asset\\\\\\\",\\\\\\\"parent\\\\\\\":\\\\\\\"com.tibco.dovetail.system.FungibleAsset\\\\\\\",\\\\\\\"isAbstract\\\\\\\":false,\\\\\\\"identifiedBy\\\\\\\":\\\\\\\"assetId\\\\\\\",\\\\\\\"decorators\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"CordaClass\\\\\\\",\\\\\\\"args\\\\\\\":[\\\\\\\"net.corda.finance.contracts.asset.Cash.State\\\\\\\"]}],\\\\\\\"cordaClass\\\\\\\":\\\\\\\"net.corda.finance.contracts.asset.Cash.State\\\\\\\"},\\\\\\\"attributes\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"assetId\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"String\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"owner\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"com.tibco.dovetail.system.Party\\\\\\\",\\\\\\\"isRef\\\\\\\":true},{\\\\\\\"name\\\\\\\":\\\\\\\"amt\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"com.tibco.dovetail.system.Amount\\\\\\\"}]}\\\"}\"],[\"com.tibco.dovetail.system.Amount\",\"{\\\"$schema\\\":\\\"http://json-schema.org/draft-04/schema#\\\",\\\"title\\\":\\\"Amount\\\",\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"currency\\\":{\\\"type\\\":\\\"string\\\"},\\\"quantity\\\":{\\\"type\\\":\\\"integer\\\",\\\"default\\\":\\\"0\\\"}},\\\"required\\\":[\\\"currency\\\",\\\"quantity\\\"],\\\"description\\\":\\\"{\\\\\\\"metadata\\\\\\\":{\\\\\\\"type\\\\\\\":\\\\\\\"Concept\\\\\\\",\\\\\\\"isAbstract\\\\\\\":false,\\\\\\\"decorators\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"CordaClass\\\\\\\",\\\\\\\"args\\\\\\\":[\\\\\\\"net.corda.core.contracts.Amount<Currency>\\\\\\\"]}],\\\\\\\"cordaClass\\\\\\\":\\\\\\\"net.corda.core.contracts.Amount<Currency>\\\\\\\"},\\\\\\\"attributes\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"currency\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"String\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"quantity\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"Long\\\\\\\",\\\\\\\"defaultValue\\\\\\\":\\\\\\\"0\\\\\\\"}]}\\\"}\"],[\"com.tibco.dovetail.system.IssueAmount\",\"{\\\"$schema\\\":\\\"http://json-schema.org/draft-04/schema#\\\",\\\"title\\\":\\\"IssueAmount\\\",\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"issuer\\\":{\\\"type\\\":\\\"string\\\"},\\\"currency\\\":{\\\"type\\\":\\\"string\\\"},\\\"quantity\\\":{\\\"type\\\":\\\"integer\\\",\\\"default\\\":\\\"0\\\"}},\\\"required\\\":[\\\"issuer\\\",\\\"currency\\\",\\\"quantity\\\"],\\\"description\\\":\\\"{\\\\\\\"metadata\\\\\\\":{\\\\\\\"type\\\\\\\":\\\\\\\"Concept\\\\\\\",\\\\\\\"isAbstract\\\\\\\":false,\\\\\\\"decorators\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"CordaClass\\\\\\\",\\\\\\\"args\\\\\\\":[\\\\\\\"net.corda.core.contracts.Amount<Issue<Currency>>\\\\\\\"]}],\\\\\\\"cordaClass\\\\\\\":\\\\\\\"net.corda.core.contracts.Amount<Issue<Currency>>\\\\\\\"},\\\\\\\"attributes\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"issuer\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"com.tibco.dovetail.system.Party\\\\\\\",\\\\\\\"isRef\\\\\\\":true},{\\\\\\\"name\\\\\\\":\\\\\\\"currency\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"String\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"quantity\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"Long\\\\\\\",\\\\\\\"defaultValue\\\\\\\":\\\\\\\"0\\\\\\\"}]}\\\"}\"],[\"com.tibco.dovetail.system.Party\",\"{\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"id\\\":{\\\"type\\\":\\\"string\\\"}},\\\"required\\\":[\\\"id\\\"],\\\"description\\\":\\\"{\\\\\\\"metadata\\\\\\\":{\\\\\\\"type\\\\\\\":\\\\\\\"Participant\\\\\\\",\\\\\\\"parent\\\\\\\":\\\\\\\"org.hyperledger.composer.system.Participant\\\\\\\",\\\\\\\"isAbstract\\\\\\\":false,\\\\\\\"identifiedBy\\\\\\\":\\\\\\\"id\\\\\\\",\\\\\\\"decorators\\\\\\\":[]},\\\\\\\"attributes\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"id\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"String\\\\\\\"}]}\\\"}\"],[\"com.example.iou.IOU\",\"{\\\"$schema\\\":\\\"http://json-schema.org/draft-04/schema#\\\",\\\"title\\\":\\\"IOU\\\",\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"issuer\\\":{\\\"type\\\":\\\"string\\\"},\\\"owner\\\":{\\\"type\\\":\\\"string\\\"},\\\"amt\\\":{\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"currency\\\":{\\\"type\\\":\\\"string\\\"},\\\"quantity\\\":{\\\"type\\\":\\\"integer\\\",\\\"default\\\":\\\"0\\\"}},\\\"required\\\":[\\\"currency\\\",\\\"quantity\\\"]},\\\"linearId\\\":{\\\"type\\\":\\\"string\\\"}},\\\"required\\\":[\\\"issuer\\\",\\\"owner\\\",\\\"amt\\\",\\\"linearId\\\"],\\\"description\\\":\\\"{\\\\\\\"metadata\\\\\\\":{\\\\\\\"type\\\\\\\":\\\\\\\"Asset\\\\\\\",\\\\\\\"parent\\\\\\\":\\\\\\\"com.tibco.dovetail.system.LinearState\\\\\\\",\\\\\\\"isAbstract\\\\\\\":false,\\\\\\\"identifiedBy\\\\\\\":\\\\\\\"linearId\\\\\\\",\\\\\\\"decorators\\\\\\\":[]},\\\\\\\"attributes\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"issuer\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"com.tibco.dovetail.system.Party\\\\\\\",\\\\\\\"isRef\\\\\\\":true},{\\\\\\\"name\\\\\\\":\\\\\\\"owner\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"com.tibco.dovetail.system.Party\\\\\\\",\\\\\\\"isRef\\\\\\\":true},{\\\\\\\"name\\\\\\\":\\\\\\\"amt\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"com.tibco.dovetail.system.Amount\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"linearId\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"String\\\\\\\"}]}\\\"}\"],[\"com.example.iou.IssueIOU\",\"{\\\"$schema\\\":\\\"http://json-schema.org/draft-04/schema#\\\",\\\"title\\\":\\\"IssueIOU\\\",\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"iou\\\":{\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"issuer\\\":{\\\"type\\\":\\\"string\\\"},\\\"owner\\\":{\\\"type\\\":\\\"string\\\"},\\\"amt\\\":{\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"currency\\\":{\\\"type\\\":\\\"string\\\"},\\\"quantity\\\":{\\\"type\\\":\\\"integer\\\",\\\"default\\\":\\\"0\\\"}},\\\"required\\\":[\\\"currency\\\",\\\"quantity\\\"]},\\\"linearId\\\":{\\\"type\\\":\\\"string\\\"}},\\\"required\\\":[\\\"issuer\\\",\\\"owner\\\",\\\"amt\\\",\\\"linearId\\\"]},\\\"transactionId\\\":{\\\"type\\\":\\\"string\\\"},\\\"timestamp\\\":{\\\"format\\\":\\\"date-time\\\",\\\"type\\\":\\\"string\\\"}},\\\"required\\\":[\\\"iou\\\",\\\"transactionId\\\",\\\"timestamp\\\"],\\\"description\\\":\\\"{\\\\\\\"metadata\\\\\\\":{\\\\\\\"type\\\\\\\":\\\\\\\"Transaction\\\\\\\",\\\\\\\"parent\\\\\\\":\\\\\\\"org.hyperledger.composer.system.Transaction\\\\\\\",\\\\\\\"isAbstract\\\\\\\":false,\\\\\\\"identifiedBy\\\\\\\":\\\\\\\"transactionId\\\\\\\",\\\\\\\"decorators\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"InitiatedBy\\\\\\\",\\\\\\\"args\\\\\\\":[\\\\\\\"$tx.iou.issuer\\\\\\\"]}]},\\\\\\\"attributes\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"iou\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"com.example.iou.IOU\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"transactionId\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"String\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"timestamp\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"DateTime\\\\\\\"}]}\\\"}\"],[\"com.example.iou.TransferIOU\",\"{\\\"$schema\\\":\\\"http://json-schema.org/draft-04/schema#\\\",\\\"title\\\":\\\"TransferIOU\\\",\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"iou\\\":{\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"issuer\\\":{\\\"type\\\":\\\"string\\\"},\\\"owner\\\":{\\\"type\\\":\\\"string\\\"},\\\"amt\\\":{\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"currency\\\":{\\\"type\\\":\\\"string\\\"},\\\"quantity\\\":{\\\"type\\\":\\\"integer\\\",\\\"default\\\":\\\"0\\\"}},\\\"required\\\":[\\\"currency\\\",\\\"quantity\\\"]},\\\"linearId\\\":{\\\"type\\\":\\\"string\\\"}},\\\"required\\\":[\\\"issuer\\\",\\\"owner\\\",\\\"amt\\\",\\\"linearId\\\"]},\\\"newOwner\\\":{\\\"type\\\":\\\"string\\\"},\\\"transactionId\\\":{\\\"type\\\":\\\"string\\\"},\\\"timestamp\\\":{\\\"format\\\":\\\"date-time\\\",\\\"type\\\":\\\"string\\\"}},\\\"required\\\":[\\\"iou\\\",\\\"newOwner\\\",\\\"transactionId\\\",\\\"timestamp\\\"],\\\"description\\\":\\\"{\\\\\\\"metadata\\\\\\\":{\\\\\\\"type\\\\\\\":\\\\\\\"Transaction\\\\\\\",\\\\\\\"parent\\\\\\\":\\\\\\\"org.hyperledger.composer.system.Transaction\\\\\\\",\\\\\\\"isAbstract\\\\\\\":false,\\\\\\\"identifiedBy\\\\\\\":\\\\\\\"transactionId\\\\\\\",\\\\\\\"decorators\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"InitiatedBy\\\\\\\",\\\\\\\"args\\\\\\\":[\\\\\\\"$tx.iou.owner\\\\\\\"]}]},\\\\\\\"attributes\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"iou\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"com.example.iou.IOU\\\\\\\",\\\\\\\"isRef\\\\\\\":true},{\\\\\\\"name\\\\\\\":\\\\\\\"newOwner\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"com.tibco.dovetail.system.Party\\\\\\\",\\\\\\\"isRef\\\\\\\":true},{\\\\\\\"name\\\\\\\":\\\\\\\"transactionId\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"String\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"timestamp\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"DateTime\\\\\\\"}]}\\\"}\"],[\"com.example.iou.getIOU\",\"{\\\"$schema\\\":\\\"http://json-schema.org/draft-04/schema#\\\",\\\"title\\\":\\\"getIOU\\\",\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"linearId\\\":{\\\"type\\\":\\\"string\\\"},\\\"transactionId\\\":{\\\"type\\\":\\\"string\\\"},\\\"timestamp\\\":{\\\"format\\\":\\\"date-time\\\",\\\"type\\\":\\\"string\\\"}},\\\"required\\\":[\\\"linearId\\\",\\\"transactionId\\\",\\\"timestamp\\\"],\\\"description\\\":\\\"{\\\\\\\"metadata\\\\\\\":{\\\\\\\"type\\\\\\\":\\\\\\\"Transaction\\\\\\\",\\\\\\\"parent\\\\\\\":\\\\\\\"org.hyperledger.composer.system.Transaction\\\\\\\",\\\\\\\"isAbstract\\\\\\\":false,\\\\\\\"identifiedBy\\\\\\\":\\\\\\\"transactionId\\\\\\\",\\\\\\\"decorators\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"Query\\\\\\\",\\\\\\\"args\\\\\\\":[]}]},\\\\\\\"attributes\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"linearId\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"String\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"transactionId\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"String\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"timestamp\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"DateTime\\\\\\\"}]}\\\"}\"],[\"com.example.iou.getIOUIssuedBy\",\"{\\\"$schema\\\":\\\"http://json-schema.org/draft-04/schema#\\\",\\\"title\\\":\\\"getIOUIssuedBy\\\",\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"issuerPartyId\\\":{\\\"type\\\":\\\"string\\\"},\\\"transactionId\\\":{\\\"type\\\":\\\"string\\\"},\\\"timestamp\\\":{\\\"format\\\":\\\"date-time\\\",\\\"type\\\":\\\"string\\\"}},\\\"required\\\":[\\\"issuerPartyId\\\",\\\"transactionId\\\",\\\"timestamp\\\"],\\\"description\\\":\\\"{\\\\\\\"metadata\\\\\\\":{\\\\\\\"type\\\\\\\":\\\\\\\"Transaction\\\\\\\",\\\\\\\"parent\\\\\\\":\\\\\\\"org.hyperledger.composer.system.Transaction\\\\\\\",\\\\\\\"isAbstract\\\\\\\":false,\\\\\\\"identifiedBy\\\\\\\":\\\\\\\"transactionId\\\\\\\",\\\\\\\"decorators\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"Query\\\\\\\",\\\\\\\"args\\\\\\\":[]}]},\\\\\\\"attributes\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"issuerPartyId\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"String\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"transactionId\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"String\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"timestamp\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"DateTime\\\\\\\"}]}\\\"}\"]]"
+     "transactions": "[\"com.example.iou.IssueIOU\",\"com.example.iou.TransferIOU\",\"com.example.iou.SettleIOU\",\"com.example.iou.getIOU\",\"com.example.iou.getIOUIssuedBy\"]",
+     "concepts": "[\"com.tibco.dovetail.system.Amount\"]",
+     "schemas": "[[\"com.tibco.dovetail.system.State\",\"{\\\"$schema\\\":\\\"http://json-schema.org/draft-04/schema#\\\",\\\"title\\\":\\\"State\\\",\\\"type\\\":\\\"object\\\",\\\"properties\\\":{},\\\"required\\\":[],\\\"description\\\":\\\"{\\\\\\\"metadata\\\\\\\":{\\\\\\\"type\\\\\\\":\\\\\\\"Asset\\\\\\\",\\\\\\\"parent\\\\\\\":\\\\\\\"org.hyperledger.composer.system.Asset\\\\\\\",\\\\\\\"isAbstract\\\\\\\":true,\\\\\\\"decorators\\\\\\\":[]},\\\\\\\"attributes\\\\\\\":[]}\\\"}\"],[\"com.tibco.dovetail.system.LinearState\",\"{\\\"$schema\\\":\\\"http://json-schema.org/draft-04/schema#\\\",\\\"title\\\":\\\"LinearState\\\",\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"linearId\\\":{\\\"type\\\":\\\"string\\\"}},\\\"required\\\":[\\\"linearId\\\"],\\\"description\\\":\\\"{\\\\\\\"metadata\\\\\\\":{\\\\\\\"type\\\\\\\":\\\\\\\"Asset\\\\\\\",\\\\\\\"parent\\\\\\\":\\\\\\\"com.tibco.dovetail.system.State\\\\\\\",\\\\\\\"isAbstract\\\\\\\":true,\\\\\\\"decorators\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"CordaClass\\\\\\\",\\\\\\\"args\\\\\\\":[\\\\\\\"net.corda.core.contracts.LinearState\\\\\\\"]}],\\\\\\\"cordaClass\\\\\\\":\\\\\\\"net.corda.core.contracts.LinearState\\\\\\\"},\\\\\\\"attributes\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"linearId\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"String\\\\\\\"}]}\\\"}\"],[\"com.tibco.dovetail.system.FungibleAsset\",\"{\\\"$schema\\\":\\\"http://json-schema.org/draft-04/schema#\\\",\\\"title\\\":\\\"FungibleAsset\\\",\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"amt\\\":{\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"currency\\\":{\\\"type\\\":\\\"string\\\"},\\\"quantity\\\":{\\\"type\\\":\\\"integer\\\",\\\"default\\\":\\\"0\\\"}},\\\"required\\\":[\\\"currency\\\",\\\"quantity\\\"]},\\\"issuer\\\":{\\\"type\\\":\\\"string\\\"},\\\"issuerRef\\\":{\\\"type\\\":\\\"string\\\"},\\\"owner\\\":{\\\"type\\\":\\\"string\\\"}},\\\"required\\\":[\\\"amt\\\",\\\"issuer\\\",\\\"issuerRef\\\",\\\"owner\\\"],\\\"description\\\":\\\"{\\\\\\\"metadata\\\\\\\":{\\\\\\\"type\\\\\\\":\\\\\\\"Asset\\\\\\\",\\\\\\\"parent\\\\\\\":\\\\\\\"com.tibco.dovetail.system.State\\\\\\\",\\\\\\\"isAbstract\\\\\\\":true,\\\\\\\"decorators\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"CordaClass\\\\\\\",\\\\\\\"args\\\\\\\":[\\\\\\\"net.corda.core.contracts.FungibleAsset\\\\\\\"]}],\\\\\\\"cordaClass\\\\\\\":\\\\\\\"net.corda.core.contracts.FungibleAsset\\\\\\\"},\\\\\\\"attributes\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"amt\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"com.tibco.dovetail.system.Amount\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"issuer\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"com.tibco.dovetail.system.Party\\\\\\\",\\\\\\\"isRef\\\\\\\":true},{\\\\\\\"name\\\\\\\":\\\\\\\"issuerRef\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"String\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"owner\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"com.tibco.dovetail.system.Party\\\\\\\",\\\\\\\"isRef\\\\\\\":true}]}\\\"}\"],[\"com.tibco.dovetail.system.Cash\",\"{\\\"$schema\\\":\\\"http://json-schema.org/draft-04/schema#\\\",\\\"title\\\":\\\"Cash\\\",\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"assetId\\\":{\\\"type\\\":\\\"string\\\"},\\\"amt\\\":{\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"currency\\\":{\\\"type\\\":\\\"string\\\"},\\\"quantity\\\":{\\\"type\\\":\\\"integer\\\",\\\"default\\\":\\\"0\\\"}},\\\"required\\\":[\\\"currency\\\",\\\"quantity\\\"]},\\\"issuer\\\":{\\\"type\\\":\\\"string\\\"},\\\"issuerRef\\\":{\\\"type\\\":\\\"string\\\"},\\\"owner\\\":{\\\"type\\\":\\\"string\\\"}},\\\"required\\\":[\\\"assetId\\\",\\\"amt\\\",\\\"issuer\\\",\\\"issuerRef\\\",\\\"owner\\\"],\\\"description\\\":\\\"{\\\\\\\"metadata\\\\\\\":{\\\\\\\"type\\\\\\\":\\\\\\\"Asset\\\\\\\",\\\\\\\"parent\\\\\\\":\\\\\\\"com.tibco.dovetail.system.FungibleAsset\\\\\\\",\\\\\\\"isAbstract\\\\\\\":false,\\\\\\\"identifiedBy\\\\\\\":\\\\\\\"assetId\\\\\\\",\\\\\\\"decorators\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"CordaClass\\\\\\\",\\\\\\\"args\\\\\\\":[\\\\\\\"net.corda.finance.contracts.asset.Cash.State\\\\\\\"]}],\\\\\\\"cordaClass\\\\\\\":\\\\\\\"net.corda.finance.contracts.asset.Cash.State\\\\\\\"},\\\\\\\"attributes\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"assetId\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"String\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"amt\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"com.tibco.dovetail.system.Amount\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"issuer\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"com.tibco.dovetail.system.Party\\\\\\\",\\\\\\\"isRef\\\\\\\":true},{\\\\\\\"name\\\\\\\":\\\\\\\"issuerRef\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"String\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"owner\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"com.tibco.dovetail.system.Party\\\\\\\",\\\\\\\"isRef\\\\\\\":true}]}\\\"}\"],[\"com.tibco.dovetail.system.Amount\",\"{\\\"$schema\\\":\\\"http://json-schema.org/draft-04/schema#\\\",\\\"title\\\":\\\"Amount\\\",\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"currency\\\":{\\\"type\\\":\\\"string\\\"},\\\"quantity\\\":{\\\"type\\\":\\\"integer\\\",\\\"default\\\":\\\"0\\\"}},\\\"required\\\":[\\\"currency\\\",\\\"quantity\\\"],\\\"description\\\":\\\"{\\\\\\\"metadata\\\\\\\":{\\\\\\\"type\\\\\\\":\\\\\\\"Concept\\\\\\\",\\\\\\\"isAbstract\\\\\\\":false,\\\\\\\"decorators\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"CordaClass\\\\\\\",\\\\\\\"args\\\\\\\":[\\\\\\\"net.corda.core.contracts.Amount<Currency>\\\\\\\"]},{\\\\\\\"name\\\\\\\":\\\\\\\"Embeddable\\\\\\\",\\\\\\\"args\\\\\\\":[]}],\\\\\\\"cordaClass\\\\\\\":\\\\\\\"net.corda.core.contracts.Amount<Currency>\\\\\\\"},\\\\\\\"attributes\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"currency\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"String\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"quantity\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"Long\\\\\\\",\\\\\\\"defaultValue\\\\\\\":\\\\\\\"0\\\\\\\"}]}\\\"}\"],[\"com.tibco.dovetail.system.Party\",\"{\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"id\\\":{\\\"type\\\":\\\"string\\\"}},\\\"required\\\":[\\\"id\\\"],\\\"description\\\":\\\"{\\\\\\\"metadata\\\\\\\":{\\\\\\\"type\\\\\\\":\\\\\\\"Participant\\\\\\\",\\\\\\\"parent\\\\\\\":\\\\\\\"org.hyperledger.composer.system.Participant\\\\\\\",\\\\\\\"isAbstract\\\\\\\":false,\\\\\\\"identifiedBy\\\\\\\":\\\\\\\"id\\\\\\\",\\\\\\\"decorators\\\\\\\":[]},\\\\\\\"attributes\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"id\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"String\\\\\\\"}]}\\\"}\"],[\"com.example.iou.IOU\",\"{\\\"$schema\\\":\\\"http://json-schema.org/draft-04/schema#\\\",\\\"title\\\":\\\"IOU\\\",\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"issuer\\\":{\\\"type\\\":\\\"string\\\"},\\\"owner\\\":{\\\"type\\\":\\\"string\\\"},\\\"amt\\\":{\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"currency\\\":{\\\"type\\\":\\\"string\\\"},\\\"quantity\\\":{\\\"type\\\":\\\"integer\\\",\\\"default\\\":\\\"0\\\"}},\\\"required\\\":[\\\"currency\\\",\\\"quantity\\\"]},\\\"paid\\\":{\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"currency\\\":{\\\"type\\\":\\\"string\\\"},\\\"quantity\\\":{\\\"type\\\":\\\"integer\\\",\\\"default\\\":\\\"0\\\"}},\\\"required\\\":[\\\"currency\\\",\\\"quantity\\\"]},\\\"linearId\\\":{\\\"type\\\":\\\"string\\\"}},\\\"required\\\":[\\\"issuer\\\",\\\"owner\\\",\\\"amt\\\",\\\"paid\\\",\\\"linearId\\\"],\\\"description\\\":\\\"{\\\\\\\"metadata\\\\\\\":{\\\\\\\"type\\\\\\\":\\\\\\\"Asset\\\\\\\",\\\\\\\"parent\\\\\\\":\\\\\\\"com.tibco.dovetail.system.LinearState\\\\\\\",\\\\\\\"isAbstract\\\\\\\":false,\\\\\\\"identifiedBy\\\\\\\":\\\\\\\"linearId\\\\\\\",\\\\\\\"decorators\\\\\\\":[]},\\\\\\\"attributes\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"issuer\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"com.tibco.dovetail.system.Party\\\\\\\",\\\\\\\"isRef\\\\\\\":true},{\\\\\\\"name\\\\\\\":\\\\\\\"owner\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"com.tibco.dovetail.system.Party\\\\\\\",\\\\\\\"isRef\\\\\\\":true},{\\\\\\\"name\\\\\\\":\\\\\\\"amt\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"com.tibco.dovetail.system.Amount\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"paid\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"com.tibco.dovetail.system.Amount\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"linearId\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"String\\\\\\\"}]}\\\"}\"],[\"com.example.iou.IssueIOU\",\"{\\\"$schema\\\":\\\"http://json-schema.org/draft-04/schema#\\\",\\\"title\\\":\\\"IssueIOU\\\",\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"iou\\\":{\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"issuer\\\":{\\\"type\\\":\\\"string\\\"},\\\"owner\\\":{\\\"type\\\":\\\"string\\\"},\\\"amt\\\":{\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"currency\\\":{\\\"type\\\":\\\"string\\\"},\\\"quantity\\\":{\\\"type\\\":\\\"integer\\\",\\\"default\\\":\\\"0\\\"}},\\\"required\\\":[\\\"currency\\\",\\\"quantity\\\"]},\\\"paid\\\":{\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"currency\\\":{\\\"type\\\":\\\"string\\\"},\\\"quantity\\\":{\\\"type\\\":\\\"integer\\\",\\\"default\\\":\\\"0\\\"}},\\\"required\\\":[\\\"currency\\\",\\\"quantity\\\"]},\\\"linearId\\\":{\\\"type\\\":\\\"string\\\"}},\\\"required\\\":[\\\"issuer\\\",\\\"owner\\\",\\\"amt\\\",\\\"paid\\\",\\\"linearId\\\"]},\\\"transactionId\\\":{\\\"type\\\":\\\"string\\\"},\\\"timestamp\\\":{\\\"format\\\":\\\"date-time\\\",\\\"type\\\":\\\"string\\\"}},\\\"required\\\":[\\\"iou\\\",\\\"transactionId\\\",\\\"timestamp\\\"],\\\"description\\\":\\\"{\\\\\\\"metadata\\\\\\\":{\\\\\\\"type\\\\\\\":\\\\\\\"Transaction\\\\\\\",\\\\\\\"parent\\\\\\\":\\\\\\\"org.hyperledger.composer.system.Transaction\\\\\\\",\\\\\\\"isAbstract\\\\\\\":false,\\\\\\\"identifiedBy\\\\\\\":\\\\\\\"transactionId\\\\\\\",\\\\\\\"decorators\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"InitiatedBy\\\\\\\",\\\\\\\"args\\\\\\\":[\\\\\\\"$tx.iou.issuer\\\\\\\"]}]},\\\\\\\"attributes\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"iou\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"com.example.iou.IOU\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"transactionId\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"String\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"timestamp\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"DateTime\\\\\\\"}]}\\\"}\"],[\"com.example.iou.TransferIOU\",\"{\\\"$schema\\\":\\\"http://json-schema.org/draft-04/schema#\\\",\\\"title\\\":\\\"TransferIOU\\\",\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"iou\\\":{\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"issuer\\\":{\\\"type\\\":\\\"string\\\"},\\\"owner\\\":{\\\"type\\\":\\\"string\\\"},\\\"amt\\\":{\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"currency\\\":{\\\"type\\\":\\\"string\\\"},\\\"quantity\\\":{\\\"type\\\":\\\"integer\\\",\\\"default\\\":\\\"0\\\"}},\\\"required\\\":[\\\"currency\\\",\\\"quantity\\\"]},\\\"paid\\\":{\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"currency\\\":{\\\"type\\\":\\\"string\\\"},\\\"quantity\\\":{\\\"type\\\":\\\"integer\\\",\\\"default\\\":\\\"0\\\"}},\\\"required\\\":[\\\"currency\\\",\\\"quantity\\\"]},\\\"linearId\\\":{\\\"type\\\":\\\"string\\\"}},\\\"required\\\":[\\\"issuer\\\",\\\"owner\\\",\\\"amt\\\",\\\"paid\\\",\\\"linearId\\\"]},\\\"newOwner\\\":{\\\"type\\\":\\\"string\\\"},\\\"transactionId\\\":{\\\"type\\\":\\\"string\\\"},\\\"timestamp\\\":{\\\"format\\\":\\\"date-time\\\",\\\"type\\\":\\\"string\\\"}},\\\"required\\\":[\\\"iou\\\",\\\"newOwner\\\",\\\"transactionId\\\",\\\"timestamp\\\"],\\\"description\\\":\\\"{\\\\\\\"metadata\\\\\\\":{\\\\\\\"type\\\\\\\":\\\\\\\"Transaction\\\\\\\",\\\\\\\"parent\\\\\\\":\\\\\\\"org.hyperledger.composer.system.Transaction\\\\\\\",\\\\\\\"isAbstract\\\\\\\":false,\\\\\\\"identifiedBy\\\\\\\":\\\\\\\"transactionId\\\\\\\",\\\\\\\"decorators\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"InitiatedBy\\\\\\\",\\\\\\\"args\\\\\\\":[\\\\\\\"$tx.iou.owner\\\\\\\"]}]},\\\\\\\"attributes\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"iou\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"com.example.iou.IOU\\\\\\\",\\\\\\\"isRef\\\\\\\":true},{\\\\\\\"name\\\\\\\":\\\\\\\"newOwner\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"com.tibco.dovetail.system.Party\\\\\\\",\\\\\\\"isRef\\\\\\\":true},{\\\\\\\"name\\\\\\\":\\\\\\\"transactionId\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"String\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"timestamp\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"DateTime\\\\\\\"}]}\\\"}\"],[\"com.example.iou.SettleIOU\",\"{\\\"$schema\\\":\\\"http://json-schema.org/draft-04/schema#\\\",\\\"title\\\":\\\"SettleIOU\\\",\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"iou\\\":{\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"issuer\\\":{\\\"type\\\":\\\"string\\\"},\\\"owner\\\":{\\\"type\\\":\\\"string\\\"},\\\"amt\\\":{\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"currency\\\":{\\\"type\\\":\\\"string\\\"},\\\"quantity\\\":{\\\"type\\\":\\\"integer\\\",\\\"default\\\":\\\"0\\\"}},\\\"required\\\":[\\\"currency\\\",\\\"quantity\\\"]},\\\"paid\\\":{\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"currency\\\":{\\\"type\\\":\\\"string\\\"},\\\"quantity\\\":{\\\"type\\\":\\\"integer\\\",\\\"default\\\":\\\"0\\\"}},\\\"required\\\":[\\\"currency\\\",\\\"quantity\\\"]},\\\"linearId\\\":{\\\"type\\\":\\\"string\\\"}},\\\"required\\\":[\\\"issuer\\\",\\\"owner\\\",\\\"amt\\\",\\\"paid\\\",\\\"linearId\\\"]},\\\"funds\\\":{\\\"type\\\":\\\"array\\\",\\\"items\\\":{\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"assetId\\\":{\\\"type\\\":\\\"string\\\"},\\\"amt\\\":{\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"currency\\\":{\\\"type\\\":\\\"string\\\"},\\\"quantity\\\":{\\\"type\\\":\\\"integer\\\",\\\"default\\\":\\\"0\\\"}},\\\"required\\\":[\\\"currency\\\",\\\"quantity\\\"]},\\\"issuer\\\":{\\\"type\\\":\\\"string\\\"},\\\"issuerRef\\\":{\\\"type\\\":\\\"string\\\"},\\\"owner\\\":{\\\"type\\\":\\\"string\\\"}},\\\"required\\\":[\\\"assetId\\\",\\\"amt\\\",\\\"issuer\\\",\\\"issuerRef\\\",\\\"owner\\\"]}},\\\"payAmt\\\":{\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"currency\\\":{\\\"type\\\":\\\"string\\\"},\\\"quantity\\\":{\\\"type\\\":\\\"integer\\\",\\\"default\\\":\\\"0\\\"}},\\\"required\\\":[\\\"currency\\\",\\\"quantity\\\"]},\\\"sendChangeTo\\\":{\\\"type\\\":\\\"string\\\"},\\\"sendPaymentTo\\\":{\\\"type\\\":\\\"string\\\"},\\\"transactionId\\\":{\\\"type\\\":\\\"string\\\"},\\\"timestamp\\\":{\\\"format\\\":\\\"date-time\\\",\\\"type\\\":\\\"string\\\"}},\\\"required\\\":[\\\"iou\\\",\\\"funds\\\",\\\"payAmt\\\",\\\"sendChangeTo\\\",\\\"sendPaymentTo\\\",\\\"transactionId\\\",\\\"timestamp\\\"],\\\"description\\\":\\\"{\\\\\\\"metadata\\\\\\\":{\\\\\\\"type\\\\\\\":\\\\\\\"Transaction\\\\\\\",\\\\\\\"parent\\\\\\\":\\\\\\\"org.hyperledger.composer.system.Transaction\\\\\\\",\\\\\\\"isAbstract\\\\\\\":false,\\\\\\\"identifiedBy\\\\\\\":\\\\\\\"transactionId\\\\\\\",\\\\\\\"decorators\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"InitiatedBy\\\\\\\",\\\\\\\"args\\\\\\\":[\\\\\\\"$tx.iou.owner\\\\\\\"]}]},\\\\\\\"attributes\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"iou\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"com.example.iou.IOU\\\\\\\",\\\\\\\"isRef\\\\\\\":true},{\\\\\\\"name\\\\\\\":\\\\\\\"funds\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"com.tibco.dovetail.system.Cash\\\\\\\",\\\\\\\"isRef\\\\\\\":true,\\\\\\\"isArray\\\\\\\":true},{\\\\\\\"name\\\\\\\":\\\\\\\"payAmt\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"com.tibco.dovetail.system.Amount\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"sendChangeTo\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"com.tibco.dovetail.system.Party\\\\\\\",\\\\\\\"isRef\\\\\\\":true},{\\\\\\\"name\\\\\\\":\\\\\\\"sendPaymentTo\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"com.tibco.dovetail.system.Party\\\\\\\",\\\\\\\"isRef\\\\\\\":true},{\\\\\\\"name\\\\\\\":\\\\\\\"transactionId\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"String\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"timestamp\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"DateTime\\\\\\\"}]}\\\"}\"],[\"com.example.iou.getIOU\",\"{\\\"$schema\\\":\\\"http://json-schema.org/draft-04/schema#\\\",\\\"title\\\":\\\"getIOU\\\",\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"linearId\\\":{\\\"type\\\":\\\"string\\\"},\\\"transactionId\\\":{\\\"type\\\":\\\"string\\\"},\\\"timestamp\\\":{\\\"format\\\":\\\"date-time\\\",\\\"type\\\":\\\"string\\\"}},\\\"required\\\":[\\\"linearId\\\",\\\"transactionId\\\",\\\"timestamp\\\"],\\\"description\\\":\\\"{\\\\\\\"metadata\\\\\\\":{\\\\\\\"type\\\\\\\":\\\\\\\"Transaction\\\\\\\",\\\\\\\"parent\\\\\\\":\\\\\\\"org.hyperledger.composer.system.Transaction\\\\\\\",\\\\\\\"isAbstract\\\\\\\":false,\\\\\\\"identifiedBy\\\\\\\":\\\\\\\"transactionId\\\\\\\",\\\\\\\"decorators\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"Query\\\\\\\",\\\\\\\"args\\\\\\\":[]}]},\\\\\\\"attributes\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"linearId\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"String\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"transactionId\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"String\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"timestamp\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"DateTime\\\\\\\"}]}\\\"}\"],[\"com.example.iou.getIOUIssuedBy\",\"{\\\"$schema\\\":\\\"http://json-schema.org/draft-04/schema#\\\",\\\"title\\\":\\\"getIOUIssuedBy\\\",\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"issuerPartyId\\\":{\\\"type\\\":\\\"string\\\"},\\\"transactionId\\\":{\\\"type\\\":\\\"string\\\"},\\\"timestamp\\\":{\\\"format\\\":\\\"date-time\\\",\\\"type\\\":\\\"string\\\"}},\\\"required\\\":[\\\"issuerPartyId\\\",\\\"transactionId\\\",\\\"timestamp\\\"],\\\"description\\\":\\\"{\\\\\\\"metadata\\\\\\\":{\\\\\\\"type\\\\\\\":\\\\\\\"Transaction\\\\\\\",\\\\\\\"parent\\\\\\\":\\\\\\\"org.hyperledger.composer.system.Transaction\\\\\\\",\\\\\\\"isAbstract\\\\\\\":false,\\\\\\\"identifiedBy\\\\\\\":\\\\\\\"transactionId\\\\\\\",\\\\\\\"decorators\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"Query\\\\\\\",\\\\\\\"args\\\\\\\":[]}]},\\\\\\\"attributes\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"issuerPartyId\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"String\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"transactionId\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"String\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"timestamp\\\\\\\",\\\\\\\"isOptional\\\\\\\":false,\\\\\\\"type\\\\\\\":\\\\\\\"DateTime\\\\\\\"}]}\\\"}\"]]"
     },
     "id": "SmartContractTXNTrigger",
     "handlers": [
@@ -505,7 +446,7 @@
       },
       "outputs": {
        "transactionInput": {
-        "metadata": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"title\":\"IssueIOU\",\"type\":\"object\",\"properties\":{\"iou\":{\"type\":\"object\",\"properties\":{\"issuer\":{\"type\":\"string\"},\"owner\":{\"type\":\"string\"},\"amt\":{\"type\":\"object\",\"properties\":{\"currency\":{\"type\":\"string\"},\"quantity\":{\"type\":\"integer\",\"default\":\"0\"}},\"required\":[\"currency\",\"quantity\"]},\"linearId\":{\"type\":\"string\"}},\"required\":[\"issuer\",\"owner\",\"amt\",\"linearId\"]},\"transactionId\":{\"type\":\"string\"},\"timestamp\":{\"format\":\"date-time\",\"type\":\"string\"}},\"required\":[\"iou\",\"transactionId\",\"timestamp\"],\"description\":\"{\\\"metadata\\\":{\\\"type\\\":\\\"Transaction\\\",\\\"parent\\\":\\\"org.hyperledger.composer.system.Transaction\\\",\\\"isAbstract\\\":false,\\\"identifiedBy\\\":\\\"transactionId\\\",\\\"decorators\\\":[{\\\"name\\\":\\\"InitiatedBy\\\",\\\"args\\\":[\\\"$tx.iou.issuer\\\"]}]},\\\"attributes\\\":[{\\\"name\\\":\\\"iou\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"com.example.iou.IOU\\\"},{\\\"name\\\":\\\"transactionId\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"String\\\"},{\\\"name\\\":\\\"timestamp\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"DateTime\\\"}]}\"}",
+        "metadata": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"title\":\"IssueIOU\",\"type\":\"object\",\"properties\":{\"iou\":{\"type\":\"object\",\"properties\":{\"issuer\":{\"type\":\"string\"},\"owner\":{\"type\":\"string\"},\"amt\":{\"type\":\"object\",\"properties\":{\"currency\":{\"type\":\"string\"},\"quantity\":{\"type\":\"integer\",\"default\":\"0\"}},\"required\":[\"currency\",\"quantity\"]},\"paid\":{\"type\":\"object\",\"properties\":{\"currency\":{\"type\":\"string\"},\"quantity\":{\"type\":\"integer\",\"default\":\"0\"}},\"required\":[\"currency\",\"quantity\"]},\"linearId\":{\"type\":\"string\"}},\"required\":[\"issuer\",\"owner\",\"amt\",\"paid\",\"linearId\"]},\"transactionId\":{\"type\":\"string\"},\"timestamp\":{\"format\":\"date-time\",\"type\":\"string\"}},\"required\":[\"iou\",\"transactionId\",\"timestamp\"],\"description\":\"{\\\"metadata\\\":{\\\"type\\\":\\\"Transaction\\\",\\\"parent\\\":\\\"org.hyperledger.composer.system.Transaction\\\",\\\"isAbstract\\\":false,\\\"identifiedBy\\\":\\\"transactionId\\\",\\\"decorators\\\":[{\\\"name\\\":\\\"InitiatedBy\\\",\\\"args\\\":[\\\"$tx.iou.issuer\\\"]}]},\\\"attributes\\\":[{\\\"name\\\":\\\"iou\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"com.example.iou.IOU\\\"},{\\\"name\\\":\\\"transactionId\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"String\\\"},{\\\"name\\\":\\\"timestamp\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"DateTime\\\"}]}\"}",
         "value": ""
        }
       },
@@ -527,14 +468,14 @@
       },
       "outputs": {
        "transactionInput": {
-        "metadata": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"title\":\"TransferIOU\",\"type\":\"object\",\"properties\":{\"iou\":{\"type\":\"object\",\"properties\":{\"issuer\":{\"type\":\"string\"},\"owner\":{\"type\":\"string\"},\"amt\":{\"type\":\"object\",\"properties\":{\"currency\":{\"type\":\"string\"},\"quantity\":{\"type\":\"integer\",\"default\":\"0\"}},\"required\":[\"currency\",\"quantity\"]},\"linearId\":{\"type\":\"string\"}},\"required\":[\"issuer\",\"owner\",\"amt\",\"linearId\"]},\"newOwner\":{\"type\":\"string\"},\"transactionId\":{\"type\":\"string\"},\"timestamp\":{\"format\":\"date-time\",\"type\":\"string\"}},\"required\":[\"iou\",\"newOwner\",\"transactionId\",\"timestamp\"],\"description\":\"{\\\"metadata\\\":{\\\"type\\\":\\\"Transaction\\\",\\\"parent\\\":\\\"org.hyperledger.composer.system.Transaction\\\",\\\"isAbstract\\\":false,\\\"identifiedBy\\\":\\\"transactionId\\\",\\\"decorators\\\":[{\\\"name\\\":\\\"InitiatedBy\\\",\\\"args\\\":[\\\"$tx.iou.owner\\\"]}]},\\\"attributes\\\":[{\\\"name\\\":\\\"iou\\\",\\\"type\\\":\\\"com.example.iou.IOU\\\",\\\"isRef\\\":true},{\\\"name\\\":\\\"newOwner\\\",\\\"type\\\":\\\"com.tibco.dovetail.system.Party\\\",\\\"isRef\\\":true},{\\\"name\\\":\\\"transactionId\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"String\\\"},{\\\"name\\\":\\\"timestamp\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"DateTime\\\"}]}\"}",
+        "metadata": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"title\":\"TransferIOU\",\"type\":\"object\",\"properties\":{\"iou\":{\"type\":\"object\",\"properties\":{\"issuer\":{\"type\":\"string\"},\"owner\":{\"type\":\"string\"},\"amt\":{\"type\":\"object\",\"properties\":{\"currency\":{\"type\":\"string\"},\"quantity\":{\"type\":\"integer\",\"default\":\"0\"}},\"required\":[\"currency\",\"quantity\"]},\"paid\":{\"type\":\"object\",\"properties\":{\"currency\":{\"type\":\"string\"},\"quantity\":{\"type\":\"integer\",\"default\":\"0\"}},\"required\":[\"currency\",\"quantity\"]},\"linearId\":{\"type\":\"string\"}},\"required\":[\"issuer\",\"owner\",\"amt\",\"paid\",\"linearId\"]},\"newOwner\":{\"type\":\"string\"},\"transactionId\":{\"type\":\"string\"},\"timestamp\":{\"format\":\"date-time\",\"type\":\"string\"}},\"required\":[\"iou\",\"newOwner\",\"transactionId\",\"timestamp\"],\"description\":\"{\\\"metadata\\\":{\\\"type\\\":\\\"Transaction\\\",\\\"parent\\\":\\\"org.hyperledger.composer.system.Transaction\\\",\\\"isAbstract\\\":false,\\\"identifiedBy\\\":\\\"transactionId\\\",\\\"decorators\\\":[{\\\"name\\\":\\\"InitiatedBy\\\",\\\"args\\\":[\\\"$tx.iou.owner\\\"]}]},\\\"attributes\\\":[{\\\"name\\\":\\\"iou\\\",\\\"type\\\":\\\"com.example.iou.IOU\\\",\\\"isRef\\\":true},{\\\"name\\\":\\\"newOwner\\\",\\\"type\\\":\\\"com.tibco.dovetail.system.Party\\\",\\\"isRef\\\":true},{\\\"name\\\":\\\"transactionId\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"String\\\"},{\\\"name\\\":\\\"timestamp\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"DateTime\\\"}]}\"}",
         "value": ""
        }
       },
       "action": {
        "ref": "github.com/TIBCOSoftware/flogo-contrib/action/flow",
        "data": {
-        "flowURI": "res://flow:transferIOU"
+        "flowURI": "res://flow:TransferIOU"
        },
        "mappings": {
         "input": [],
@@ -545,40 +486,19 @@
      {
       "description": "",
       "settings": {
-       "transaction": "com.example.iou.getIOU"
+       "transaction": "com.example.iou.SettleIOU"
       },
       "outputs": {
        "transactionInput": {
-        "metadata": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"title\":\"getIOU\",\"type\":\"object\",\"properties\":{\"linearId\":{\"type\":\"string\"},\"transactionId\":{\"type\":\"string\"},\"timestamp\":{\"format\":\"date-time\",\"type\":\"string\"}},\"required\":[\"linearId\",\"transactionId\",\"timestamp\"],\"description\":\"{\\\"metadata\\\":{\\\"type\\\":\\\"Transaction\\\",\\\"parent\\\":\\\"org.hyperledger.composer.system.Transaction\\\",\\\"isAbstract\\\":false,\\\"identifiedBy\\\":\\\"transactionId\\\",\\\"decorators\\\":[{\\\"name\\\":\\\"Query\\\",\\\"args\\\":[]}]},\\\"attributes\\\":[{\\\"name\\\":\\\"linearId\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"String\\\"},{\\\"name\\\":\\\"transactionId\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"String\\\"},{\\\"name\\\":\\\"timestamp\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"DateTime\\\"}]}\"}",
+        "metadata": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"title\":\"SettleIOU\",\"type\":\"object\",\"properties\":{\"iou\":{\"type\":\"object\",\"properties\":{\"issuer\":{\"type\":\"string\"},\"owner\":{\"type\":\"string\"},\"amt\":{\"type\":\"object\",\"properties\":{\"currency\":{\"type\":\"string\"},\"quantity\":{\"type\":\"integer\",\"default\":\"0\"}},\"required\":[\"currency\",\"quantity\"]},\"paid\":{\"type\":\"object\",\"properties\":{\"currency\":{\"type\":\"string\"},\"quantity\":{\"type\":\"integer\",\"default\":\"0\"}},\"required\":[\"currency\",\"quantity\"]},\"linearId\":{\"type\":\"string\"}},\"required\":[\"issuer\",\"owner\",\"amt\",\"paid\",\"linearId\"]},\"funds\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"assetId\":{\"type\":\"string\"},\"amt\":{\"type\":\"object\",\"properties\":{\"currency\":{\"type\":\"string\"},\"quantity\":{\"type\":\"integer\",\"default\":\"0\"}},\"required\":[\"currency\",\"quantity\"]},\"issuer\":{\"type\":\"string\"},\"issuerRef\":{\"type\":\"string\"},\"owner\":{\"type\":\"string\"}},\"required\":[\"assetId\",\"amt\",\"issuer\",\"issuerRef\",\"owner\"]}},\"payAmt\":{\"type\":\"object\",\"properties\":{\"currency\":{\"type\":\"string\"},\"quantity\":{\"type\":\"integer\",\"default\":\"0\"}},\"required\":[\"currency\",\"quantity\"]},\"sendChangeTo\":{\"type\":\"string\"},\"sendPaymentTo\":{\"type\":\"string\"},\"transactionId\":{\"type\":\"string\"},\"timestamp\":{\"format\":\"date-time\",\"type\":\"string\"}},\"required\":[\"iou\",\"funds\",\"payAmt\",\"sendChangeTo\",\"sendPaymentTo\",\"transactionId\",\"timestamp\"],\"description\":\"{\\\"metadata\\\":{\\\"type\\\":\\\"Transaction\\\",\\\"parent\\\":\\\"org.hyperledger.composer.system.Transaction\\\",\\\"isAbstract\\\":false,\\\"identifiedBy\\\":\\\"transactionId\\\",\\\"decorators\\\":[{\\\"name\\\":\\\"InitiatedBy\\\",\\\"args\\\":[\\\"$tx.iou.owner\\\"]}]},\\\"attributes\\\":[{\\\"name\\\":\\\"iou\\\",\\\"type\\\":\\\"com.example.iou.IOU\\\",\\\"isRef\\\":true},{\\\"name\\\":\\\"funds\\\",\\\"type\\\":\\\"com.tibco.dovetail.system.Cash\\\",\\\"isRef\\\":true,\\\"isArray\\\":true},{\\\"name\\\":\\\"payAmt\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"com.tibco.dovetail.system.Amount\\\"},{\\\"name\\\":\\\"sendChangeTo\\\",\\\"type\\\":\\\"com.tibco.dovetail.system.Party\\\",\\\"isRef\\\":true},{\\\"name\\\":\\\"sendPaymentTo\\\",\\\"type\\\":\\\"com.tibco.dovetail.system.Party\\\",\\\"isRef\\\":true},{\\\"name\\\":\\\"transactionId\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"String\\\"},{\\\"name\\\":\\\"timestamp\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"DateTime\\\"}]}\"}",
         "value": ""
-       }
-      },
-      "action": {
-       "ref": "github.com/TIBCOSoftware/flogo-contrib/action/flow",
-       "data": {
-        "flowURI": "res://flow:getIOU"
        },
-       "mappings": {
-        "input": [],
-        "output": []
-       }
-      }
-     },
-     {
-      "description": "",
-      "settings": {
-       "transaction": "com.example.iou.getIOUIssuedBy"
-      },
-      "outputs": {
-       "transactionInput": {
-        "metadata": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"title\":\"getIOUIssuedBy\",\"type\":\"object\",\"properties\":{\"issuerPartyId\":{\"type\":\"string\"},\"transactionId\":{\"type\":\"string\"},\"timestamp\":{\"format\":\"date-time\",\"type\":\"string\"}},\"required\":[\"issuerPartyId\",\"transactionId\",\"timestamp\"],\"description\":\"{\\\"metadata\\\":{\\\"type\\\":\\\"Transaction\\\",\\\"parent\\\":\\\"org.hyperledger.composer.system.Transaction\\\",\\\"isAbstract\\\":false,\\\"identifiedBy\\\":\\\"transactionId\\\",\\\"decorators\\\":[{\\\"name\\\":\\\"Query\\\",\\\"args\\\":[]}]},\\\"attributes\\\":[{\\\"name\\\":\\\"issuerPartyId\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"String\\\"},{\\\"name\\\":\\\"transactionId\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"String\\\"},{\\\"name\\\":\\\"timestamp\\\",\\\"isOptional\\\":false,\\\"type\\\":\\\"DateTime\\\"}]}\"}",
-        "value": ""
-       }
+       "containerServiceStub": ""
       },
       "action": {
        "ref": "github.com/TIBCOSoftware/flogo-contrib/action/flow",
        "data": {
-        "flowURI": "res://flow:getIOUIssuedBy"
+        "flowURI": "res://flow:SettleIOU"
        },
        "mappings": {
         "input": [],
@@ -589,6 +509,7 @@
     ]
    }
   ],
-  "ui": "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",
-  "contrib": "W3sicmVmIjoiZ2l0aHViLmNvbS9USUJDT1NvZnR3YXJlL2RvdmV0YWlsLWNvbnRyaWIvU21hcnRDb250cmFjdCIsInMzbG9jYXRpb24iOiJ7VVNFUklEfS9TbWFydENvbnRyYWN0In1d"
+  "properties": [],
+  "ui": "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",
+  "contrib": "W3sicmVmIjoiZ2l0aHViLmNvbS9USUJDT1NvZnR3YXJlL2RvdmV0YWlsLWNvbnRyaWIvU21hcnRDb250cmFjdCIsInMzbG9jYXRpb24iOiJ7VVNFUklEfS9TbWFydENvbnRyYWN0In0seyJyZWYiOiJnaXRodWIuY29tL1RJQkNPU29mdHdhcmUvZG92ZXRhaWwtY29udHJpYi9HZW5lcmFsIiwiczNsb2NhdGlvbiI6IntVU0VSSUR9L0dlbmVyYWwifSx7InJlZiI6ImdpdGh1Yi5jb20vVElCQ09Tb2Z0d2FyZS9kb3ZldGFpbC1jb250cmliL1NtYXJ0Q29udHJhY3QtQ29yZGEiLCJzM2xvY2F0aW9uIjoie1VTRVJJRH0vU21hcnRDb250cmFjdC1Db3JkYSJ9XQ=="
  }
