@@ -48,6 +48,7 @@ asset  IOU identified by linearId extends LinearState {
   --> Party issuer
   --> Party owner
   o Amount amt
+  o Amount paid
 }
 
 /*
@@ -64,6 +65,15 @@ transaction IssueIOU {
 transaction TransferIOU {
   --> IOU iou //by reference because the asset is already on the ledger
   --> Party newOwner
+}
+
+@InitiatedBy("$tx.iou.owner")
+transaction SettleIOU {
+  --> IOU iou 
+  --> Cash[] funds
+  o Amount payAmt
+  --> Party sendChangeTo
+  --> Party sendPaymentTo
 }
 
 /* 
@@ -93,24 +103,22 @@ participant Party identified by id {
   o String id
 }
 
+abstract asset State {
+}
 /*
 All non-fungible asset should inherit from LinearState
 */
 @CordaClass("net.corda.core.contracts.LinearState")
-abstract asset LinearState {
+abstract asset LinearState extends State {
   o String linearId
-}
-
-@CordaClass("net.corda.core.contracts.OwnableState")
-abstract asset OwnableState {
-  o String linearId
-  -->Party owner
 }
 
 @CordaClass("net.corda.core.contracts.FungibleAsset")
-abstract asset FungibleAsset {
-  -->Party owner
+abstract asset FungibleAsset extends State{
   o Amount amt
+  --> Party issuer
+  o String issuerRef
+  --> Party owner
 }
 
 @CordaClass("net.corda.finance.contracts.asset.Cash.State")
@@ -120,13 +128,6 @@ asset Cash identified by assetId extends FungibleAsset {
 
 @CordaClass("net.corda.core.contracts.Amount<Currency>")
 concept Amount {
-  o String currency
-  o Long quantity default = 0
-}
-
-@CordaClass("net.corda.core.contracts.Amount<Issue<Currency>>")
-concept IssueAmount {
-  -->Party issuer
   o String currency
   o Long quantity default = 0
 }
