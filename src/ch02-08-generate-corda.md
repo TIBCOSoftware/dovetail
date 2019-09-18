@@ -4,5 +4,5 @@ Run following command from iou_tutorial directory, R3 Corda contract is written 
 
 ```
 cd iou_tutorial
-dovetail contract generate -b corda -m artifacts/IOU.json -v 1.0.0 -t artifacts/corda --namespace com.example.iou
+dovetail corda contract generate -m artifacts/IOU.json -v 1.0.0 -t artifacts/corda --namespace com.example.iou
 ```
