@@ -25,7 +25,7 @@
             - [Generate CorDapps](ch02-09-01-cordapp-gen.md)
             - [Start up nodes](ch02-09-02-start-nodes.md)
             - [Run test cases](ch02-09-03-test-cases.md)
-    - [Fabric Sample and Tutorials](ch02-02-fabric-samples.md)
+    - [Hyperledger Fabric Tutorials](ch02-02-fabric-samples.md)
 
 ## Contribute
 
