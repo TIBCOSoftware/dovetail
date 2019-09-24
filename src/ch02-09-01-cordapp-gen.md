@@ -14,9 +14,9 @@ CorDapp responder flows have compile and runtime dependency on their correspondi
 run following command from iou_tutorial folder
 
 ```bash
-dovetail dapp generate -b corda -m artifiacts/charlie.json -v 1.0.0 -t artifacts/corda/charlie --namespace com.charlie.iou.flows --api
+dovetail fabric dapp generate -m artifacts/charlie.json -v 1.0.0 -t artifacts/corda/charlie --namespace com.charlie.iou.flows --api
 
-dovetail dapp generate -b corda -m artifacts/alice.json -v 1.0.0 -t artifacts/corda/alice --namespace com.alice.iou.flows --api
+dovetail fabric dapp generate -m artifacts/alice.json -v 1.0.0 -t artifacts/corda/alice --namespace com.alice.iou.flows --api
 ```
 ### 6.4.3. Create dependency pom file for each organization
 
@@ -66,9 +66,9 @@ copy following to artifacts/bob.pom file
 run following command from iou_tutorial folder
 
 ```bash
-dovetail dapp generate -b corda -m artifacts/charlie.json -v 1.0.0 -t artifacts/corda/charlie --namespace com.charlie.iou.flows --dependency-file artifacts/charlie.pom
+dovetail fabric dapp generate -m artifacts/charlie.json -v 1.0.0 -t artifacts/corda/charlie --namespace com.charlie.iou.flows --dependency-file artifacts/charlie.pom
 
-dovetail dapp generate -b corda -m artifacts/alice.json -v 1.0.0 -t artifacts/corda/alice --namespace com.alice.iou.flows --dependency-file alice.pom
+dovetail fabric dapp generate -m artifacts/alice.json -v 1.0.0 -t artifacts/corda/alice --namespace com.alice.iou.flows --dependency-file alice.pom
 
-dovetail dapp generate -b corda -m artifacts/bob.json -v 1.0.0 -t corda/bob --namespace com.bob.iou.flows --dependency-file bob.pom
+dovetail fabric dapp generate -m artifacts/bob.json -v 1.0.0 -t corda/bob --namespace com.bob.iou.flows --dependency-file bob.pom
 ```
