@@ -1,7 +1,5 @@
 language: rust
 cache: cargo
-rust:
-  - 1.31.1
 branches:
   only:
   - master
@@ -11,7 +9,7 @@ addons:
       - aspell
       - aspell-en
 before_script:
-  - (cargo install mdbook --vers 0.2.3 --force || true)
+  - (cargo install mdbook || true)
 script:
 - make
 deploy:
