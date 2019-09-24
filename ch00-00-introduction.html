@@ -4,6 +4,8 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Introduction - Dovetail smart contracts modelling</title>
+        
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -56,7 +58,7 @@
         <!-- Set the theme before any content is loaded, prevents flash -->
         <script type="text/javascript">
             var theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             document.body.className = theme;
             document.querySelector('html').className = theme + ' js';
@@ -75,7 +77,10 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li class="affix"><a href="ch00-00-introduction.html" class="active">Introduction</a></li><li><a href="ch01-00-getting-started.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li><ol class="section"><li><a href="ch01-01-installation.html"><strong aria-hidden="true">1.1.</strong> Installation</a></li><li><a href="ch01-02-dovetail-cli.html"><strong aria-hidden="true">1.2.</strong> Dovetail CLI</a></li><li><a href="ch01-03-environment.html"><strong aria-hidden="true">1.3.</strong> Environment Prerequisites</a></li></ol></li><li><a href="ch02-00-labs.html"><strong aria-hidden="true">2.</strong> Labs</a></li><li><ol class="section"><li><a href="ch02-01-iou-tutorial.html"><strong aria-hidden="true">2.1.</strong> IoU Tutorial</a></li><li><ol class="section"><li><a href="ch02-02-model.html"><strong aria-hidden="true">2.1.1.</strong> Model Smart Contract</a></li><li><a href="ch02-03-import.html"><strong aria-hidden="true">2.1.2.</strong> Import Model</a></li><li><a href="ch02-04-implement.html"><strong aria-hidden="true">2.1.3.</strong> Implement Smart Contract</a></li><li><a href="ch02-05-export.html"><strong aria-hidden="true">2.1.4.</strong> Export Smart Contract</a></li><li><a href="ch02-06-generate-hf.html"><strong aria-hidden="true">2.1.5.</strong> Generate Fabric Artifacts</a></li><li><a href="ch02-07-test-hf.html"><strong aria-hidden="true">2.1.6.</strong> Test on Fabric</a></li><li><a href="ch02-08-generate-corda.html"><strong aria-hidden="true">2.1.7.</strong> Generate Corda Artifacts</a></li><li><a href="ch02-09-test-corda.html"><strong aria-hidden="true">2.1.8.</strong> Test on Corda</a></li></ol></li></ol></li><li><a href="ch03-00-contribute.html">Contribute</a></li><li class="affix"><a href="ch04-00-source.html">Source Code</a></li><li class="affix"><a href="ch05-00-community.html">Community</a></li></ol>
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="affix"><a href="ch00-00-introduction.html" class="active">Introduction</a></li><li><a href="ch01-00-getting-started.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li><ol class="section"><li><a href="ch01-01-installation.html"><strong aria-hidden="true">1.1.</strong> Installation</a></li><li><a href="ch01-02-dovetail-cli.html"><strong aria-hidden="true">1.2.</strong> Dovetail CLI</a></li><li><a href="ch01-03-environment.html"><strong aria-hidden="true">1.3.</strong> Environment Prerequisites</a></li></ol></li><li><a href="ch02-00-labs.html"><strong aria-hidden="true">2.</strong> Labs</a></li><li><ol class="section"><li><a href="ch02-01-iou-tutorial.html"><strong aria-hidden="true">2.1.</strong> Corda IoU Tutorial</a></li><li><ol class="section"><li><a href="ch02-08-generate-corda.html"><strong aria-hidden="true">2.1.1.</strong> Generate Corda Artifacts</a></li><li><a href="ch02-09-test-corda.html"><strong aria-hidden="true">2.1.2.</strong> Test on Corda</a></li><li><ol class="section"><li><a href="ch02-09-01-cordapp-impl.html"><strong aria-hidden="true">2.1.2.1.</strong> Implement CorDapps Flows</a></li><li><a href="ch02-09-01-cordapp-gen.html"><strong aria-hidden="true">2.1.2.2.</strong> Generate CorDapps</a></li><li><a href="ch02-09-02-start-nodes.html"><strong aria-hidden="true">2.1.2.3.</strong> Start up nodes</a></li><li><a href="ch02-09-03-test-cases.html"><strong aria-hidden="true">2.1.2.4.</strong> Run test cases</a></li></ol></li></ol></li><li><a href="ch02-02-fabric-samples.html"><strong aria-hidden="true">2.2.</strong> Fabric Sample and Tutorials</a></li></ol></li><li><a href="ch03-00-contribute.html">Contribute</a></li><li class="affix"><a href="ch04-00-source.html">Source Code</a></li><li class="affix"><a href="ch05-00-community.html">Community</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -105,7 +110,7 @@
                             
                         </div>
 
-                        <h1 class="menu-title">Dovetail smart contracts modelling</h1> 
+                        <h1 class="menu-title">Dovetail smart contracts modelling</h1>
 
                         <div class="right-buttons">
                             <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -150,19 +155,19 @@
 <p align="center">
   <a href="#project-dovetail">Dovetail™</a> | <a href="#dovetail-core">Architecture</a> | <a href="#what-are-smart-contracts">Blockchains smart contracts</a> | <a href="#contributing">Contributing</a> | <a href="#license">License</a>
 </p>
-<p><br/></p>
-<p>Developing blockchain solutions with today’s technology is challenging given the lack of tooling and standardization. Project Dovetail™ by TIBCO LABS™ addresses these issues by providing a graphical interface for modeling smart contracts, making them easier to write, visualize, test, and audit, all without deep programming experience.</p>
-<p>Logic is abstracted from low-level code, and contracts can be deployed into different blockchain stacks with little or no change.
-On-chain and off-chain computation can become more seamless, time to market is improved, and the risk of technology lock-in is reduced. Project Dovetail makes your smart contracts smarter.
+<br/>
+<p>Developing blockchain solutions with today’s technology is challenging given the lack of tooling and standardization. Project Dovetail™ by TIBCO LABS™ addresses these issues by providing a graphical interface for modeling smart contracts, making them easier to write, visualize, test, and audit, all without deep programming experience. </p>
+<p>Logic is abstracted from low-level code, and contracts can be developed for different blockchain stacks with little or no code. 
+On-chain and off-chain computation can become more seamless, time to market is improved, and the risk of technology lock-in is reduced. Project Dovetail makes your smart contracts smarter. 
 <br/></p>
 <p align="center">
   <img src ="images/eventhandlers.png" />
 </p>
-<a class="header" href="#what-are-smart-contracts" id="what-are-smart-contracts"><h1>What are Smart Contracts</h1></a>
+<h1><a class="header" href="#what-are-smart-contracts" id="what-are-smart-contracts">What are Smart Contracts</a></h1>
 <p>There are many definitions and descriptions of smart contracts, as each blockchain framework tends to implement this capability in its own way (if it does implement this feature at all). However, generally speaking, smart contracts (at least from an enterprise / permissioned perspective) may be thought of as application or business logic (defined in code) that runs within the context of a blockchain network itself.</p>
 <p>The idea is to automate the processing of blockchain transactions across the network, use the logic to determine if a transaction will get written to the ledger, and to maintain accuracy, compliance, and trust.  In essence, smart contracts represent a method for controlling how changes are made to the underlying blockchain, in a non-centralized and (potentially) untrustworthy environment.  Supply chain transaction tracking, healthcare revenue cycle management, consumer contract execution, and government interactions are all areas in which smart contracts (business logic) may be applied.
 Remember, however, that &quot;smart contracts&quot; are not necessarily &quot;smart&quot; (depends on the code) nor &quot;contracts&quot; (as they may not be viewed as legal contracts).  Thus, the term can be a bit misleading :)</p>
-<a class="header" href="#project-dovetail" id="project-dovetail"><h1>Project Dovetail</h1></a>
+<h1><a class="header" href="#project-dovetail" id="project-dovetail">Project Dovetail</a></h1>
 <p>Project Dovetail™ is a framework that allows for the end to end design, development, testing, and deployment of blockchain smart contracts.  Project Dovetail™ allows you to develop smart contracts based on a series of models, helping to:</p>
 <ul>
 <li><strong>Increase security</strong> since the modeling abstraction layer will allow for reusable and tested code derived from the model.</li>
@@ -173,41 +178,41 @@ Remember, however, that &quot;smart contracts&quot; are not necessarily &quot;sm
 <li><strong>Allow customizable modeling</strong> for your industry</li>
 <li><strong>Expose</strong> a better UI for the design of smart contracts</li>
 </ul>
-<a class="header" href="#dovetail-core" id="dovetail-core"><h1>Dovetail Core</h1></a>
+<h1><a class="header" href="#dovetail-core" id="dovetail-core">Dovetail Core</a></h1>
 <p>Dovetail is based on TIBCO FLOGO™, an event-driven app framework used to develop apps for the cloud &amp; IoT edge. It can also be thought of as a lightweight <em>app kernel</em> used by open source &amp; commercial solutions like Dovetail here. The trigger used is based on the cli to generate or transpile your smart contract logic into blockchain technologies languages : R3 Corda, HyperLedger Fabric...</p>
 <p>Dovetail Core provides the following key benefits:</p>
 <p>⛓ <strong>Action chaining</strong> enables communication between one or more capabilities in a single, sub 10MB binary!<br/>
 🏗 <strong>Common contribution model</strong> build activities and triggers that can be leveraged by all capabilities<br/>
 🔨 <strong>Extensible</strong> easily extend the capabilities available by building your own action using the common interfaces<br/></p>
-<a class="header" href="#dovetail-core-contribution-model" id="dovetail-core-contribution-model"><h2>Dovetail Core Contribution Model</h2></a>
+<h2><a class="header" href="#dovetail-core-contribution-model" id="dovetail-core-contribution-model">Dovetail Core Contribution Model</a></h2>
 <p>Dovetail™ Core exposes three principal contribution interfaces that enable developers to build common capabilities and functionality. These contribution interfaces include:</p>
 <ul>
 <li><strong>Connector Interface</strong> a common interface for importing predefined schemas into Dovetail, Hyperledger Composer Connector is an example.</li>
 <li><strong>Trigger Interface</strong> a common interface for building event-consumers that dispatch events to one or more actions. The Smart Contract TXN Trigger is an example of a trigger.</li>
 <li><strong>Activity Interface</strong> a common interface for exposing common application logic in a reusable manner. Think of this as a function, such as write to ledger, publish events, etc that can be used by all Dovetail apps.</li>
 </ul>
-<a class="header" href="#dovetail-flows" id="dovetail-flows"><h1>Dovetail Flows</h1></a>
+<h1><a class="header" href="#dovetail-flows" id="dovetail-flows">Dovetail Flows</a></h1>
 <p>Dovetail Flows provides smart contract logic design capabilities and includes the following key highlights.</p>
 <p>🌈 <strong>Painless development</strong> Visual modeler with step-back debugging capabilities &amp; elegant DSL<br/>
 ⚙️ <strong>Ultra-light process engine</strong> for conditional flow control</p>
-<a class="header" href="#zero-code-developers" id="zero-code-developers"><h3>Zero-code Developers</h3></a>
+<h3><a class="header" href="#zero-code-developers" id="zero-code-developers">Zero-code Developers</a></h3>
 <p>If your background is in or you prefer to develop your smart contracts using zero-coding environments, then read on, because we’ve got something special for you.</p>
 <p>Flows Web UI is available via <a href="https://github.com/TIBCOSoftware/dovetail/releases">Dovetail releases page</a>.</p>
 <p>To report any issues with the Issue tracker on this project.</p>
-<a class="header" href="#dovetail-documentation" id="dovetail-documentation"><h1>Dovetail Documentation</h1></a>
+<h1><a class="header" href="#dovetail-documentation" id="dovetail-documentation">Dovetail Documentation</a></h1>
 <p>Dovetail documentation can be found on the <a href="https://tibcosoftware.github.io/dovetail/">documentation page</a> and the source code in the <a href="https://github.com/TIBCOSoftware/dovetail">github page</a>.</p>
-<a class="header" href="#contributing" id="contributing"><h1>Contributing</h1></a>
+<h1><a class="header" href="#contributing" id="contributing">Contributing</a></h1>
 <p>Want to contribute to Project Dovetail? We've made it easy, all you need to do is fork the repository you intend to contribute to, make your changes and create a Pull Request! Once the pull request has been created, you'll be prompted to sign the CLA (Contributor License Agreement) online.</p>
 <p>Not sure where to start? No problem, here are a few suggestions:</p>
 <ul>
 <li><a href="https://github.com/TIBCOSoftware/dovetail-contrib">dovetail-contrib</a>: This repository contains all of the contributions, such as activities, triggers, etc. Perhaps there is something missing? Create a new activity or trigger or fix a bug in an existing activity or trigger.</li>
 <li>Browse all of the Project Dovetail repositories and look for issues tagged <code>kind/help-wanted</code> or <code>good first issue</code></li>
 </ul>
-<p>If you have any questions, feel free to post an issue and tag it as a question or email <a href="mailto:tibcolabs@tibco.com">tibcolabs@tibco.com</a>.</p>
+<p>If you have any questions, feel free to post an issue and tag it as a question or email <a href="mailto:tibcolabs@tibco.com">tibcolabs@tibco.com</a>. </p>
 <p>For additional details, refer to the <a href="https://github.com/TIBCOSoftware/dovetail/blob/master/CONTRIBUTING.md">“Contribution Guidelines”</a>.</p>
-<a class="header" href="#license" id="license"><h1>License</h1></a>
+<h1><a class="header" href="#license" id="license">License</a></h1>
 <p>The top level flogo repo, consisting of flow samples &amp; documentation, is licensed licensed under a BSD-style license. Refer to <a href="https://github.com/TIBCOSoftware/dovetail/blob/master/LICENSE">LICENSE</a> for license text.</p>
-<p>Dovetail source code in <a href="https://github.com/TIBCOSoftware/dovetail-cli">dovetail-cli</a>, <a href="https://github.com/TIBCOSoftware/dovetail-contrib">dovetail-contrib</a>, <a href="https://github.com/TIBCOSoftware/dovetail-java-lib">dovetail-java-lib</a> are all licensed under a BSD-style license, refer to <a href="https://github.com/TIBCOSoftware/dovetail/blob/master/LICENSE">LICENSE</a></p>
+<p>Dovetail source code in <a href="https://github.com/TIBCOSoftware/dovetail-cli">dovetail-cli</a>, <a href="https://github.com/TIBCOSoftware/dovetail-contrib">dovetail-contrib</a>, <a href="https://github.com/TIBCOSoftware/dovetail-java-lib">dovetail-java-lib</a> are all licensed under a BSD-style license, refer to <a href="https://github.com/TIBCOSoftware/dovetail/blob/master/LICENSE">LICENSE</a> </p>
 
                     </main>
 
