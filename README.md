@@ -16,7 +16,7 @@
 
 Developing blockchain solutions with today’s technology is challenging given the lack of tooling and standardization. Project Dovetail™ by TIBCO LABS™ addresses these issues by providing a graphical interface for modeling smart contracts, making them easier to write, visualize, test, and audit, all without deep programming experience. 
 
-Logic is abstracted from low-level code, and contracts can be deployed into different blockchain stacks with little or no change. 
+Logic is abstracted from low-level code, and contracts can be developed for different blockchain stacks with little or no code. 
 On-chain and off-chain computation can become more seamless, time to market is improved, and the risk of technology lock-in is reduced. Project Dovetail makes your smart contracts smarter. 
 <br/>
 

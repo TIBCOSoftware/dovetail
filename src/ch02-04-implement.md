@@ -42,7 +42,20 @@ In this step, we will implement the 4 transactions defined in the smart contract
     <source src="videos/getiouissuedby.mp4" type="video/mp4">
 </video></p>
 
-### 3.5. Import an existing application
+### 3.5 SettleIOU Transaction*
+
+> * Create a new flow to implement SettleIOU transaction
+> * Add General/Mapper activity to calculate remaining balance using math.subtractLong(), 
+Dovetail math functions are exact, exception will be raised if overflow or underflow is detected.
+> * If remaining balance is equal or greater than requested payment
+>    * Add SmartContract-Corda/Payment activity to handle Cash payment processing, this flow will only run on R3 Corda. 
+>    * Add SmartContract/Ledger activity to update IOU's paid amount
+> * Otherwise, return error  
+<p><video width="480" height="320" controls="controls">
+    <source src="videos/settleiou.mp4" type="video/mp4">
+</video></p>
+
+### 3.6. Import an existing application
 
 > * You can also import an application into Project Dovetail™ Studio
 >     * Go to Project Dovetail™ Studio

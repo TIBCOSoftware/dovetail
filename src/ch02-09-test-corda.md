@@ -1,55 +1,26 @@
 ## 6. Test IOU Smart Contract on Corda
 
-We will use [Corda Demo Bench](https://docs.corda.net/demobench.html), install it if you don't have it installed already.
+We will need to develop distributed applications(CorDapp) for each interested party to invoke the IOU smart contract. Let's assume following organizations are interested parties:
 
-> If you have downloaded the full tutorial files, jump to step 2
+> * Notary: to validate and notarize transactions
+>      * Corda platform implementation
+> * Bank : cash issuer
+>      * We will use Corda finance cash flows to issue and transfer cash
+> * Regulator : an observer that receives all IOU transactions
+>      * We will use com.tibco.dovetail.container.cordapp.flows.ObserverFlowReceiver to receive and record transactions
+> * charlie: issuer of an IOU
+>      * We will implement IssueIOU initiator flow to issue an IOU to alice
+>      * We will implement TransferIOU receiver flow to sign and record TransferIOU transaction
+>      * We will implment SettleIOU initiator flow to pay IOU with Cash to bob
+>      * We will use com.tibco.dovetail.container.cordapp.flows.ObserverFlowInitiator to send IssueIOU and SettleIOU transactions to Regulator
+> * alice: original owner of charlie's IOU
+>      * We will implement IssueIOU receiver flow to sign and record IssueIOU transaction
+>      * We will implement TransferIOU initiator flow to transfer the IOU bob
+>      * We will use com.tibco.dovetail.container.cordapp.flows.ObserverFlowInitiator to send TransferIOU transaction to Regulator
+> * bob : new owner of charlie's IOU
+>      * We will implement TransferIOU receiver flow to sign and record TransferIOU transaction
+>      * We will implement SettleIOU receiver flow to sign and record SettleIOU transaction
 
-## 1. Copy Sample CorDapp
+We will also use confidential identity in all transactions to protect IOU smart contract participants (charlie, alice and bob).
 
-Copy sample R3 CorDapp Network to your network/corda directory
-
-```
-cd iou_tutorial/network
-```
-
-```
-curl -OL https://TIBCOSoftware.github.io/dovetail/tutorials/iou/corda.zip && \
-unzip corda.zip && \
-rm corda.zip
-```
-
-## 2. Start up Corda Demo Bench
-   * Click on "+Add CorDapp" button then browse to corda directory, select a jar to add(you can only add one jar at a time). Repeat, until all jars are added. You can replace kotlin-IOU-1.0.0.jar with your own.
-   * Start up 3 nodes: Notary, charlie, alice, and bob
-   * Make sure they are all running before continuing. 
-   * You can watch the video for step by step instructions.
-
-<p><a target="_blank" rel="noopener noreferrer" href="videos/corddemo.gif"><img src="videos/corddemo.gif" alt="Corda Demo Bench" style="max-width:75%;"></a></p>
-
-## 2. Issue an IOU
-
-At charlie's terminal, issue an IOU
-
-```
-flow start com.example.iou.IOUIssueInitiatorFlow iouValue: $100, owner: "O=alice,L=New York,C=US", externalId: charlie100
-```
-
-Now run following command from charlie, alice and bob's terminals, you should see the IOU is now on both charlie and alice's ledgers, but not on bob's
-
-```
-run vaultQuery contractStateType: com.example.iou.IOU
-```
-
-## 3. Transfer the IOU
-
-At alice's terminal, transfer IOU to bob
-
-```
-flow start com.example.iou.IOUTransferInitiatorFlow iouId: charlie100, newOwner: "C=FR,L=Paris,O=bob"
-```
-
-Now run following command from charlie, alice and bob's terminals, you should see the IOU is now on both charlie and bob's ledgers, but no longer on charlie's
-
-```
-run vaultQuery contractStateType: com.example.iou.IOU
-```
+OK, let's get started.
