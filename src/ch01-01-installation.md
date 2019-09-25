@@ -13,7 +13,7 @@ Or you can just execute this commands
 ```
 mkdir dovetail_installation
 cd dovetail_installation
-curl -OL https://github.com/TIBCOSoftware/dovetail/releases/download/v0.2.0/TIB_dovetail-fabric_0.2.0_macosx_x86_64.zip.zip
+curl -OL https://github.com/TIBCOSoftware/dovetail/releases/download/v0.2.0/TIB_dovetail-fabric_0.2.0_macosx_x86_64.zip
 ```
 
 > For R3 Corda development:
@@ -21,7 +21,7 @@ curl -OL https://github.com/TIBCOSoftware/dovetail/releases/download/v0.2.0/TIB_
 ```
 mkdir dovetail_installation
 cd dovetail_installation
-curl -OL https://github.com/TIBCOSoftware/dovetail/releases/download/v0.2.0/TIB_dovetail-corda_0.2.0_macosx_x86_64.zip.zip
+curl -OL https://github.com/TIBCOSoftware/dovetail/releases/download/v0.2.0/TIB_dovetail-corda_0.2.0_macosx_x86_64.zip
 ```
 
 > For Multitarget development:
@@ -29,7 +29,7 @@ curl -OL https://github.com/TIBCOSoftware/dovetail/releases/download/v0.2.0/TIB_
 ```
 mkdir dovetail_installation
 cd dovetail_installation
-curl -OL https://github.com/TIBCOSoftware/dovetail/releases/download/v0.2.0/TIB_dovetail-multitarget_0.2.0_macosx_x86_64.zip.zip
+curl -OL https://github.com/TIBCOSoftware/dovetail/releases/download/v0.2.0/TIB_dovetail-multitarget_0.2.0_macosx_x86_64.zip
 ```
 
 
