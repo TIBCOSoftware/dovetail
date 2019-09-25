@@ -1,8 +1,6 @@
-## IOU Smart Contract Tutorial
+## Corda IOU Smart Contract Tutorial
 
-In this tutorial, we will walk you through the steps to model, implement and test smart contracts on distributed ledger technology platform of your choice.
-
-If you want to skip the step by step tutorial you can find all the needed artifacts [here](tutorials/iou/iou_tutorial.zip) and jump to start testing the smart contract for [Hyperledger Fabric](ch02-07-test-hf.md) or [R3 Corda](ch02-09-test-corda.md).
+In this tutorial, we will walk you through the steps to model, implement and test smart contracts on R3 Corda.
 
 The example is a simple "I owe you" use case, the issuer of an IOU is obligated to pay the owner of the IOU amount issued, the ownership of the IOU can be transferred by current owner, and all transactions will be recorded on the ledger.
 
@@ -17,13 +15,11 @@ Follow these steps to create the empty structure of the tutorial:
     * artifacts
     * iou
     * network
-        * fabric
         * corda
 
 ```
 mkdir -p iou_tutorial/artifacts
 mkdir -p iou_tutorial/iou
-mkdir -p iou_tutorial/network/fabric
 mkdir -p iou_tutorial/network/corda
 ```
 
