@@ -78,7 +78,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="affix"><a href="ch00-00-introduction.html">Introduction</a></li><li><a href="ch01-00-getting-started.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li><ol class="section"><li><a href="ch01-01-installation.html"><strong aria-hidden="true">1.1.</strong> Installation</a></li><li><a href="ch01-02-dovetail-cli.html"><strong aria-hidden="true">1.2.</strong> Dovetail CLI</a></li><li><a href="ch01-03-environment.html"><strong aria-hidden="true">1.3.</strong> Environment Prerequisites</a></li></ol></li><li><a href="ch02-00-labs.html"><strong aria-hidden="true">2.</strong> Labs</a></li><li><ol class="section"><li><a href="ch02-01-iou-tutorial.html"><strong aria-hidden="true">2.1.</strong> Corda IoU Tutorial</a></li><li><ol class="section"><li><a href="ch02-08-generate-corda.html" class="active"><strong aria-hidden="true">2.1.1.</strong> Generate Corda Artifacts</a></li><li><a href="ch02-09-test-corda.html"><strong aria-hidden="true">2.1.2.</strong> Test on Corda</a></li><li><ol class="section"><li><a href="ch02-09-01-cordapp-impl.html"><strong aria-hidden="true">2.1.2.1.</strong> Implement CorDapps Flows</a></li><li><a href="ch02-09-01-cordapp-gen.html"><strong aria-hidden="true">2.1.2.2.</strong> Generate CorDapps</a></li><li><a href="ch02-09-02-start-nodes.html"><strong aria-hidden="true">2.1.2.3.</strong> Start up nodes</a></li><li><a href="ch02-09-03-test-cases.html"><strong aria-hidden="true">2.1.2.4.</strong> Run test cases</a></li></ol></li></ol></li><li><a href="ch02-02-fabric-samples.html"><strong aria-hidden="true">2.2.</strong> Fabric Sample and Tutorials</a></li></ol></li><li><a href="ch03-00-contribute.html">Contribute</a></li><li class="affix"><a href="ch04-00-source.html">Source Code</a></li><li class="affix"><a href="ch05-00-community.html">Community</a></li></ol>
+                <ol class="chapter"><li class="affix"><a href="ch00-00-introduction.html">Introduction</a></li><li><a href="ch01-00-getting-started.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li><ol class="section"><li><a href="ch01-01-installation.html"><strong aria-hidden="true">1.1.</strong> Installation</a></li><li><a href="ch01-02-dovetail-cli.html"><strong aria-hidden="true">1.2.</strong> Dovetail CLI</a></li><li><a href="ch01-03-environment.html"><strong aria-hidden="true">1.3.</strong> Environment Prerequisites</a></li></ol></li><li><a href="ch02-00-labs.html"><strong aria-hidden="true">2.</strong> Labs</a></li><li><ol class="section"><li><a href="ch02-01-iou-tutorial.html"><strong aria-hidden="true">2.1.</strong> Corda IoU Tutorial</a></li><li><ol class="section"><li><a href="ch02-02-model.html"><strong aria-hidden="true">2.1.1.</strong> Model Smart Contract</a></li><li><a href="ch02-03-import.html"><strong aria-hidden="true">2.1.2.</strong> Import Model</a></li><li><a href="ch02-04-implement.html"><strong aria-hidden="true">2.1.3.</strong> Implement Smart Contract</a></li><li><a href="ch02-05-export.html"><strong aria-hidden="true">2.1.4.</strong> Export Smart Contract</a></li><li><a href="ch02-08-generate-corda.html" class="active"><strong aria-hidden="true">2.1.5.</strong> Generate Corda Artifacts</a></li><li><a href="ch02-09-test-corda.html"><strong aria-hidden="true">2.1.6.</strong> Test on Corda</a></li><li><ol class="section"><li><a href="ch02-09-01-cordapp-impl.html"><strong aria-hidden="true">2.1.6.1.</strong> Implement CorDapps Flows</a></li><li><a href="ch02-09-01-cordapp-gen.html"><strong aria-hidden="true">2.1.6.2.</strong> Generate CorDapps</a></li><li><a href="ch02-09-02-start-nodes.html"><strong aria-hidden="true">2.1.6.3.</strong> Start up nodes</a></li><li><a href="ch02-09-03-test-cases.html"><strong aria-hidden="true">2.1.6.4.</strong> Run test cases</a></li></ol></li></ol></li><li><a href="ch02-02-fabric-samples.html"><strong aria-hidden="true">2.2.</strong> Hyperledger Fabric Tutorials</a></li></ol></li><li><a href="ch03-00-contribute.html">Contribute</a></li><li class="affix"><a href="ch04-00-source.html">Source Code</a></li><li class="affix"><a href="ch05-00-community.html">Community</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -146,7 +146,7 @@
                 <div id="content" class="content">
                     <main>
                         <h2><a class="header" href="#5-generate-corda-artifacts" id="5-generate-corda-artifacts">5. Generate Corda Artifacts</a></h2>
-<p>Run following command from iou_tutorial directory, R3 Corda contract is written to artifacts/corda folder, put kotlin-IOU-1.0.0.jar on your classpath to develop your CorDapp. A sample IOUApp has been created and available <a href="tutorials/iou/iou_tutorial.zip">here</a> inside iou_tutorial/network/corda folder</p>
+<p>Run following command from iou_tutorial directory, R3 Corda contract is written to artifacts/corda folder, put kotlin-IOU-1.0.0.jar on your classpath to develop your CorDapp. A sample IOUApp has been created and available <a href="tutorials/iou/corda.zip">here</a> inside iou_tutorial/network/corda folder</p>
 <pre><code>cd iou_tutorial
 dovetail corda contract generate -m artifacts/IOU.json -v 1.0.0 -t artifacts/corda --namespace com.example.iou
 </code></pre>
@@ -156,7 +156,7 @@ dovetail corda contract generate -m artifacts/IOU.json -v 1.0.0 -t artifacts/cor
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="ch02-01-iou-tutorial.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="ch02-05-export.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
@@ -174,7 +174,7 @@ dovetail corda contract generate -m artifacts/IOU.json -v 1.0.0 -t artifacts/cor
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a href="ch02-01-iou-tutorial.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a href="ch02-05-export.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 

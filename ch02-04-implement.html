@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Corda IoU Tutorial - Dovetail smart contracts modelling</title>
+        <title>Implement Smart Contract - Dovetail smart contracts modelling</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -78,7 +78,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="affix"><a href="ch00-00-introduction.html">Introduction</a></li><li><a href="ch01-00-getting-started.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li><ol class="section"><li><a href="ch01-01-installation.html"><strong aria-hidden="true">1.1.</strong> Installation</a></li><li><a href="ch01-02-dovetail-cli.html"><strong aria-hidden="true">1.2.</strong> Dovetail CLI</a></li><li><a href="ch01-03-environment.html"><strong aria-hidden="true">1.3.</strong> Environment Prerequisites</a></li></ol></li><li><a href="ch02-00-labs.html"><strong aria-hidden="true">2.</strong> Labs</a></li><li><ol class="section"><li><a href="ch02-01-iou-tutorial.html" class="active"><strong aria-hidden="true">2.1.</strong> Corda IoU Tutorial</a></li><li><ol class="section"><li><a href="ch02-02-model.html"><strong aria-hidden="true">2.1.1.</strong> Model Smart Contract</a></li><li><a href="ch02-03-import.html"><strong aria-hidden="true">2.1.2.</strong> Import Model</a></li><li><a href="ch02-04-implement.html"><strong aria-hidden="true">2.1.3.</strong> Implement Smart Contract</a></li><li><a href="ch02-05-export.html"><strong aria-hidden="true">2.1.4.</strong> Export Smart Contract</a></li><li><a href="ch02-08-generate-corda.html"><strong aria-hidden="true">2.1.5.</strong> Generate Corda Artifacts</a></li><li><a href="ch02-09-test-corda.html"><strong aria-hidden="true">2.1.6.</strong> Test on Corda</a></li><li><ol class="section"><li><a href="ch02-09-01-cordapp-impl.html"><strong aria-hidden="true">2.1.6.1.</strong> Implement CorDapps Flows</a></li><li><a href="ch02-09-01-cordapp-gen.html"><strong aria-hidden="true">2.1.6.2.</strong> Generate CorDapps</a></li><li><a href="ch02-09-02-start-nodes.html"><strong aria-hidden="true">2.1.6.3.</strong> Start up nodes</a></li><li><a href="ch02-09-03-test-cases.html"><strong aria-hidden="true">2.1.6.4.</strong> Run test cases</a></li></ol></li></ol></li><li><a href="ch02-02-fabric-samples.html"><strong aria-hidden="true">2.2.</strong> Hyperledger Fabric Tutorials</a></li></ol></li><li><a href="ch03-00-contribute.html">Contribute</a></li><li class="affix"><a href="ch04-00-source.html">Source Code</a></li><li class="affix"><a href="ch05-00-community.html">Community</a></li></ol>
+                <ol class="chapter"><li class="affix"><a href="ch00-00-introduction.html">Introduction</a></li><li><a href="ch01-00-getting-started.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li><ol class="section"><li><a href="ch01-01-installation.html"><strong aria-hidden="true">1.1.</strong> Installation</a></li><li><a href="ch01-02-dovetail-cli.html"><strong aria-hidden="true">1.2.</strong> Dovetail CLI</a></li><li><a href="ch01-03-environment.html"><strong aria-hidden="true">1.3.</strong> Environment Prerequisites</a></li></ol></li><li><a href="ch02-00-labs.html"><strong aria-hidden="true">2.</strong> Labs</a></li><li><ol class="section"><li><a href="ch02-01-iou-tutorial.html"><strong aria-hidden="true">2.1.</strong> Corda IoU Tutorial</a></li><li><ol class="section"><li><a href="ch02-02-model.html"><strong aria-hidden="true">2.1.1.</strong> Model Smart Contract</a></li><li><a href="ch02-03-import.html"><strong aria-hidden="true">2.1.2.</strong> Import Model</a></li><li><a href="ch02-04-implement.html" class="active"><strong aria-hidden="true">2.1.3.</strong> Implement Smart Contract</a></li><li><a href="ch02-05-export.html"><strong aria-hidden="true">2.1.4.</strong> Export Smart Contract</a></li><li><a href="ch02-08-generate-corda.html"><strong aria-hidden="true">2.1.5.</strong> Generate Corda Artifacts</a></li><li><a href="ch02-09-test-corda.html"><strong aria-hidden="true">2.1.6.</strong> Test on Corda</a></li><li><ol class="section"><li><a href="ch02-09-01-cordapp-impl.html"><strong aria-hidden="true">2.1.6.1.</strong> Implement CorDapps Flows</a></li><li><a href="ch02-09-01-cordapp-gen.html"><strong aria-hidden="true">2.1.6.2.</strong> Generate CorDapps</a></li><li><a href="ch02-09-02-start-nodes.html"><strong aria-hidden="true">2.1.6.3.</strong> Start up nodes</a></li><li><a href="ch02-09-03-test-cases.html"><strong aria-hidden="true">2.1.6.4.</strong> Run test cases</a></li></ol></li></ol></li><li><a href="ch02-02-fabric-samples.html"><strong aria-hidden="true">2.2.</strong> Hyperledger Fabric Tutorials</a></li></ol></li><li><a href="ch03-00-contribute.html">Contribute</a></li><li class="affix"><a href="ch04-00-source.html">Source Code</a></li><li class="affix"><a href="ch05-00-community.html">Community</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -145,46 +145,108 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h2><a class="header" href="#corda-iou-smart-contract-tutorial" id="corda-iou-smart-contract-tutorial">Corda IOU Smart Contract Tutorial</a></h2>
-<p>In this tutorial, we will walk you through the steps to model, implement and test smart contracts on R3 Corda.</p>
-<p>The example is a simple &quot;I owe you&quot; use case, the issuer of an IOU is obligated to pay the owner of the IOU amount issued, the ownership of the IOU can be transferred by current owner, and all transactions will be recorded on the ledger.</p>
-<p>Before getting started, you should have <a href="ch01-01-installation.html">Project Dovetail™ Studio</a> and <a href="ch01-02-dovetail-cli.html">Project Dovetail™ CLI</a> installed, and your <a href="ch01-03-environment.html">development environment setup</a>.</p>
-<p>Follow these steps to create the empty structure of the tutorial:</p>
+                        <h2><a class="header" href="#3-implement-iou-smart-contract" id="3-implement-iou-smart-contract">3. Implement IOU Smart Contract</a></h2>
+<p>In this step, we will implement the 4 transactions defined in the smart contract model in Project Dovetail™ Studio. A completed iou smart contract is also available to be imported into the Studio, see step <a href="ch02-04-implement.html#36-import-an-existing-application">3.6</a> for details.</p>
+<h3><a class="header" href="#31-issueiou-transaction" id="31-issueiou-transaction">3.1 IssueIOU Transaction*</a></h3>
 <blockquote>
 <ul>
-<li>Create the tutorial initial structure</li>
+<li>Go to Apps Tab &gt; Create to create a new Application &quot;IOU&quot;</li>
 </ul>
 </blockquote>
+<blockquote>
 <ul>
-<li>iou_tutorials
+<li>Create a flow &gt; flow name &quot;IssueIOU&quot; &gt; Select &quot;SmartContract TXN Trigger&quot; &gt; Select &quot;IOU&quot; from model dropdown &gt; Select &quot;com.example.iou.IssueIOU&quot; from transaction dropdown &gt; Click &quot;Done&quot; button</li>
+</ul>
+</blockquote>
+<blockquote>
 <ul>
-<li>artifacts</li>
-<li>iou</li>
-<li>network
+<li>We will add a logger activity, ledger activity and response activity. We will also validate input before writing to ledger. </li>
+</ul>
+</blockquote>
+<p><video width="480" height="320" controls="controls">
+    <source src="videos/issueiou.mp4" type="video/mp4">
+</video></p>
+<h3><a class="header" href="#32-transferiou-transaction" id="32-transferiou-transaction">3.2 TransferIOU Transaction*</a></h3>
+<blockquote>
 <ul>
-<li>corda</li>
+<li>Create a new flow to implement TransferIOU transaction</li>
+</ul>
+</blockquote>
+<p><video width="480" height="320" controls="controls">
+    <source src="videos/transferiou.mp4" type="video/mp4">
+</video></p>
+<h3><a class="header" href="#33-getiou-transaction" id="33-getiou-transaction">3.3 getIOU Transaction*</a></h3>
+<blockquote>
+<ul>
+<li>Create a new flow to implement getIOU transaction</li>
+</ul>
+</blockquote>
+<p><video width="480" height="320" controls="controls">
+    <source src="videos/getiou.mp4" type="video/mp4">
+</video></p>
+<h3><a class="header" href="#34-getiouissuedby-transaction" id="34-getiouissuedby-transaction">3.4 getIOUIssuedBy Transaction*</a></h3>
+<blockquote>
+<ul>
+<li>Create a new flow to implement getIOUIssuedBy transaction</li>
+<li>We use &quot;Custom Query&quot; activity to query the ledger. This activity is <strong>NOT blockchain agnostic</strong>
+<ul>
+<li>define a input parameter &quot;issuerId&quot;</li>
+<li>define blochchain specific query string, use _$paramName for input substitution, in this example, we use <a href="https://hyperledger-fabric.readthedocs.io/en/release-1.3/couchdb_tutorial.html">Hyperledger Fabric CouchDB query syntax</a></li>
 </ul>
 </li>
 </ul>
+</blockquote>
+<blockquote>
+<p>During the mapping of transaction response, you will notice tht &quot;array.&quot; is underlined with a red line, it is a UI validation error because Project Dovetail™ Studio UI does not support function yet, the error has no impact to runtime. Function will be supported in the very near future.</p>
+</blockquote>
+<p><video width="480" height="320" controls="controls">
+    <source src="videos/getiouissuedby.mp4" type="video/mp4">
+</video></p>
+<h3><a class="header" href="#35-settleiou-transaction" id="35-settleiou-transaction">3.5 SettleIOU Transaction*</a></h3>
+<blockquote>
+<ul>
+<li>Create a new flow to implement SettleIOU transaction</li>
+<li>Add General/Mapper activity to calculate remaining balance using math.subtractLong(), 
+Dovetail math functions are exact, exception will be raised if overflow or underflow is detected.</li>
+<li>If remaining balance is equal or greater than requested payment
+<ul>
+<li>Add SmartContract-Corda/Payment activity to handle Cash payment processing, this flow will only run on R3 Corda. </li>
+<li>Add SmartContract/Ledger activity to update IOU's paid amount</li>
+</ul>
+</li>
+<li>Otherwise, return error</li>
+</ul>
+</blockquote>
+<p><video width="480" height="320" controls="controls">
+    <source src="videos/settleiou.mp4" type="video/mp4">
+</video></p>
+<h3><a class="header" href="#36-import-an-existing-application" id="36-import-an-existing-application">3.6. Import an existing application</a></h3>
+<blockquote>
+<ul>
+<li>You can also import an application into Project Dovetail™ Studio
+<ul>
+<li>Go to Project Dovetail™ Studio</li>
+<li>If you haven't import iou.bna file from Connections tab, you can do so now following <a href="ch02-03-import.html">this step</a></li>
+<li>Create a new Application &quot;IOUImport&quot;, click on &quot;Import&quot; button, use this <a href="tutorials/iou/IOU.json">IOU.json</a></li>
+</ul>
 </li>
 </ul>
-<pre><code>mkdir -p iou_tutorial/artifacts
-mkdir -p iou_tutorial/iou
-mkdir -p iou_tutorial/network/corda
-</code></pre>
-
+</blockquote>
+<p><video width="480" height="320" controls="controls">
+    <source src="videos/importiou.mp4" type="video/mp4">
+</video></p>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="ch02-00-labs.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="ch02-03-import.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="ch02-02-model.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="ch02-05-export.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -196,13 +258,13 @@ mkdir -p iou_tutorial/network/corda
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a href="ch02-00-labs.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a href="ch02-03-import.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a href="ch02-02-model.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a href="ch02-05-export.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
