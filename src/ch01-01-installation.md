@@ -1,26 +1,43 @@
 ## Installing the Project Dovetail Studio
 Installing the Project Dovetail Studio is quite simple just follow these steps:
 
-1.- Download the latest version for your os architecture.
+1.- Download the latest version for your os architecture and your blockchain target.
 
-> You can find the latest release [here](https://github.com/TIBCOSoftware/dovetail/releases/tag/v0.1.3)
+> You can find the latest release [here](https://github.com/TIBCOSoftware/dovetail/releases/latest)
 
 Or you can just execute this commands
+
+
+> For Hyperledger fabric development:
 
 ```
 mkdir dovetail_installation
 cd dovetail_installation
-curl -OL https://github.com/TIBCOSoftware/dovetail/releases/download/v0.1.3/TIB_dovetail_0.1.3_macosx_x86_64.zip
+curl -OL https://github.com/TIBCOSoftware/dovetail/releases/download/v0.2.0/TIB_dovetail-fabric_0.2.0_macosx_x86_64.zip
 ```
 
-> Change the version or architecture of the url according to your environment.
+> For R3 Corda development:
+
+```
+mkdir dovetail_installation
+cd dovetail_installation
+curl -OL https://github.com/TIBCOSoftware/dovetail/releases/download/v0.2.0/TIB_dovetail-corda_0.2.0_macosx_x86_64.zip
+```
+
+> For Multitarget development:
+
+```
+mkdir dovetail_installation
+cd dovetail_installation
+curl -OL https://github.com/TIBCOSoftware/dovetail/releases/download/v0.2.0/TIB_dovetail-multitarget_0.2.0_macosx_x86_64.zip
+```
+
 
 
 2.- Unzip the downloaded release (for example on mac) (from dovetail_installation folder).
 
-
 ```
-unzip TIB_dovetail_0.1.3_macosx_x86_64.zip
+unzip TIB_dovetail-fabric_0.2.0_macosx_x86_64.zip
 ```
 
 ## Starting Dovetail Studio
@@ -29,7 +46,7 @@ To get started with your downloaded version of the Dovetail Studio in the previo
 1.- Run studio
 
 ```
-dovetail/0.1/bin/run-studio.sh eula-accept
+dovetail/0.2/bin/run-studio.sh eula-accept
 ```
 
 ## Launching Dovetail Studio

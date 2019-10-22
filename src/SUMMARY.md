@@ -12,19 +12,18 @@
 ## Labs
 
 - [Labs](ch02-00-labs.md)
-    - [IoU Tutorial](ch02-01-iou-tutorial.md)
+    - [Corda IoU Tutorial](ch02-01-iou-tutorial.md)
         - [Model Smart Contract](ch02-02-model.md)
         - [Import Model](ch02-03-import.md)
         - [Implement Smart Contract](ch02-04-implement.md)
         - [Export Smart Contract](ch02-05-export.md)
-        - [Generate Fabric Artifacts](ch02-06-generate-hf.md)
-        - [Test on Fabric](ch02-07-test-hf.md)
         - [Generate Corda Artifacts](ch02-08-generate-corda.md)
         - [Test on Corda](ch02-09-test-corda.md)
             - [Implement CorDapps Flows](ch02-09-01-cordapp-impl.md)
             - [Generate CorDapps](ch02-09-01-cordapp-gen.md)
             - [Start up nodes](ch02-09-02-start-nodes.md)
             - [Run test cases](ch02-09-03-test-cases.md)
+    - [Hyperledger Fabric Tutorials](ch02-02-fabric-samples.md)
 
 ## Contribute
 
