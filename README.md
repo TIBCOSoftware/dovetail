@@ -3,7 +3,7 @@
 </p>
 
 <p align="center" >
-  <b>Project Dovetail™ is an Open Source tool for modelling blockchain smart contracts</b>
+  <b>Project Dovetail™ is a complete set of tools for modelling blockchain decentralized apps</b>
 </p>
 
 [![Documentation Status](https://travis-ci.org/TIBCOSoftware/dovetail.svg?branch=master)](https://travis-ci.org/TIBCOSoftware/dovetail)<img src="https://img.shields.io/badge/license-BSD%20style-blue.svg"/>
