@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js">
+<html lang="en" class="sidebar-visible no-js light">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -32,11 +32,11 @@
 
         
     </head>
-    <body class="light">
+    <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "";
-            var default_theme = "light";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -60,8 +60,11 @@
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            document.body.className = theme;
-            document.querySelector('html').className = theme + ' js';
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
@@ -77,8 +80,8 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="affix"><a href="ch00-00-introduction.html">Introduction</a></li><li><a href="ch01-00-getting-started.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li><ol class="section"><li><a href="ch01-01-installation.html"><strong aria-hidden="true">1.1.</strong> Installation</a></li><li><a href="ch01-02-dovetail-cli.html"><strong aria-hidden="true">1.2.</strong> Dovetail CLI</a></li><li><a href="ch01-03-environment.html"><strong aria-hidden="true">1.3.</strong> Environment Prerequisites</a></li></ol></li><li><a href="ch02-00-labs.html"><strong aria-hidden="true">2.</strong> Labs</a></li><li><ol class="section"><li><a href="ch02-01-iou-tutorial.html" class="active"><strong aria-hidden="true">2.1.</strong> Corda IoU Tutorial</a></li><li><ol class="section"><li><a href="ch02-02-model.html"><strong aria-hidden="true">2.1.1.</strong> Model Smart Contract</a></li><li><a href="ch02-03-import.html"><strong aria-hidden="true">2.1.2.</strong> Import Model</a></li><li><a href="ch02-04-implement.html"><strong aria-hidden="true">2.1.3.</strong> Implement Smart Contract</a></li><li><a href="ch02-05-export.html"><strong aria-hidden="true">2.1.4.</strong> Export Smart Contract</a></li><li><a href="ch02-08-generate-corda.html"><strong aria-hidden="true">2.1.5.</strong> Generate Corda Artifacts</a></li><li><a href="ch02-09-test-corda.html"><strong aria-hidden="true">2.1.6.</strong> Test on Corda</a></li><li><ol class="section"><li><a href="ch02-09-01-cordapp-impl.html"><strong aria-hidden="true">2.1.6.1.</strong> Implement CorDapps Flows</a></li><li><a href="ch02-09-01-cordapp-gen.html"><strong aria-hidden="true">2.1.6.2.</strong> Generate CorDapps</a></li><li><a href="ch02-09-02-start-nodes.html"><strong aria-hidden="true">2.1.6.3.</strong> Start up nodes</a></li><li><a href="ch02-09-03-test-cases.html"><strong aria-hidden="true">2.1.6.4.</strong> Run test cases</a></li></ol></li></ol></li><li><a href="ch02-02-fabric-samples.html"><strong aria-hidden="true">2.2.</strong> Hyperledger Fabric Tutorials</a></li></ol></li><li><a href="ch03-00-contribute.html">Contribute</a></li><li class="affix"><a href="ch04-00-source.html">Source Code</a></li><li class="affix"><a href="ch05-00-community.html">Community</a></li></ol>
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="expanded affix "><a href="ch00-00-introduction.html">Introduction</a></li><li class="expanded "><a href="ch01-00-getting-started.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li><ol class="section"><li class="expanded "><a href="ch01-01-installation.html"><strong aria-hidden="true">1.1.</strong> Installation</a></li><li class="expanded "><a href="ch01-02-dovetail-cli.html"><strong aria-hidden="true">1.2.</strong> Dovetail CLI</a></li><li class="expanded "><a href="ch01-03-environment.html"><strong aria-hidden="true">1.3.</strong> Environment Prerequisites</a></li></ol></li><li class="expanded "><a href="ch02-00-labs.html"><strong aria-hidden="true">2.</strong> Labs</a></li><li><ol class="section"><li class="expanded "><a href="ch02-01-iou-tutorial.html" class="active"><strong aria-hidden="true">2.1.</strong> Corda IoU Tutorial</a></li><li><ol class="section"><li class="expanded "><a href="ch02-01-01-smart-contract.html"><strong aria-hidden="true">2.1.1.</strong> Smart Contract</a></li><li><ol class="section"><li class="expanded "><a href="ch02-01-01-01-model.html"><strong aria-hidden="true">2.1.1.1.</strong> Model Ledger Asset</a></li><li class="expanded "><a href="ch02-01-01-02-implement.html"><strong aria-hidden="true">2.1.1.2.</strong> Implement Smart Contract</a></li><li class="expanded "><a href="ch02-01-01-03-export.html"><strong aria-hidden="true">2.1.1.3.</strong> Export Smart Contract</a></li><li class="expanded "><a href="ch02-01-01-04-generate-corda.html"><strong aria-hidden="true">2.1.1.4.</strong> Generate Corda Artifacts</a></li></ol></li><li class="expanded "><a href="ch02-01-02-cordapp.html"><strong aria-hidden="true">2.1.2.</strong> Corda Distributed Application</a></li><li><ol class="section"><li class="expanded "><a href="ch02-01-02-01-charlie.html"><strong aria-hidden="true">2.1.2.1.</strong> Flows for charlie</a></li><li class="expanded "><a href="ch02-01-02-02-alice.html"><strong aria-hidden="true">2.1.2.2.</strong> Flows for alice</a></li><li class="expanded "><a href="ch02-01-02-03-bob.html"><strong aria-hidden="true">2.1.2.3.</strong> Flows for bob</a></li><li class="expanded "><a href="ch02-01-02-04-cordapp-gen.html"><strong aria-hidden="true">2.1.2.4.</strong> Generate Corda Artifacts</a></li></ol></li><li class="expanded "><a href="ch02-01-03-corda-client.html"><strong aria-hidden="true">2.1.3.</strong> Corda Client</a></li><li class="expanded "><a href="ch02-01-04-test-corda.html"><strong aria-hidden="true">2.1.4.</strong> Test on Corda</a></li><li><ol class="section"><li class="expanded "><a href="ch02-01-04-01-start-nodes.html"><strong aria-hidden="true">2.1.4.1.</strong> Start up nodes</a></li><li class="expanded "><a href="ch02-01-04-02-test-cases.html"><strong aria-hidden="true">2.1.4.2.</strong> Run test cases</a></li></ol></li></ol></li><li class="expanded "><a href="ch02-02-fabric-samples.html"><strong aria-hidden="true">2.2.</strong> Hyperledger Fabric Tutorials</a></li></ol></li><li class="expanded "><a href="ch03-00-contribute.html">Contribute</a></li><li class="expanded affix "><a href="ch04-00-source.html">Source Code</a></li><li class="expanded affix "><a href="ch05-00-community.html">Community</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -146,9 +149,10 @@
                 <div id="content" class="content">
                     <main>
                         <h2><a class="header" href="#corda-iou-smart-contract-tutorial" id="corda-iou-smart-contract-tutorial">Corda IOU Smart Contract Tutorial</a></h2>
-<p>In this tutorial, we will walk you through the steps to model, implement and test smart contracts on R3 Corda.</p>
+<p>In this tutorial, we will walk you through the steps to model and implement smart contracts and dapps for R3 Corda using Dovetail Studio, then we will use Dovetail CLI to generate runtime artifacts, and also generate RPC client with REST API interfaces for external integration, finally we will use Swagger UI to run some test cases.</p>
 <p>The example is a simple &quot;I owe you&quot; use case, the issuer of an IOU is obligated to pay the owner of the IOU amount issued, the ownership of the IOU can be transferred by current owner, and all transactions will be recorded on the ledger.</p>
 <p>Before getting started, you should have <a href="ch01-01-installation.html">Project Dovetail™ Studio</a> and <a href="ch01-02-dovetail-cli.html">Project Dovetail™ CLI</a> installed, and your <a href="ch01-03-environment.html">development environment setup</a>.</p>
+<p>If you have Tibco Cloud subscription or Enterprise Flogo studio, you can also upload Dovetail extentions to start smart contract and dapp development. the extensions are included in the corda.zip (see below) under artifacts/studio folder.</p>
 <p>Follow these steps to create the empty structure of the tutorial:</p>
 <blockquote>
 <ul>
@@ -159,7 +163,7 @@
 <li>iou_tutorials
 <ul>
 <li>artifacts</li>
-<li>iou</li>
+<li>cli</li>
 <li>network
 <ul>
 <li>corda</li>
@@ -169,9 +173,19 @@
 </li>
 </ul>
 <pre><code>mkdir -p iou_tutorial/artifacts
-mkdir -p iou_tutorial/iou
+mkdir -p iou_tutorial/cli
 mkdir -p iou_tutorial/network/corda
 </code></pre>
+<h2><a class="header" href="#copy-iou-network-nodes-and-scripts" id="copy-iou-network-nodes-and-scripts">Copy IOU network nodes and scripts</a></h2>
+<p>corda.zip has pre-implemented and generated artifacts, nodes and scripts that will help you to get the corda network up and running.</p>
+<pre><code>curl -OL https://TIBCOSoftware.github.io/dovetail/tutorials/iou/corda.zip &amp;&amp; \
+unzip corda.zip &amp;&amp; \
+rm corda.zip
+</code></pre>
+<ul>
+<li>copy extracted network/corda/* to your network/corda folder</li>
+<li>copy extracted cli/* to your cli folder</li>
+</ul>
 
                     </main>
 
@@ -184,7 +198,7 @@ mkdir -p iou_tutorial/network/corda
                         
 
                         
-                            <a rel="next" href="ch02-02-model.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="ch02-01-01-smart-contract.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -202,7 +216,7 @@ mkdir -p iou_tutorial/network/corda
                 
 
                 
-                    <a href="ch02-02-model.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a href="ch02-01-01-smart-contract.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
@@ -212,6 +226,14 @@ mkdir -p iou_tutorial/network/corda
 
         
 
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
         
 
         

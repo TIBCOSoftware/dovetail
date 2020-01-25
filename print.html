@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js">
+<html lang="en" class="sidebar-visible no-js light">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -34,11 +34,11 @@
 
         
     </head>
-    <body class="light">
+    <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "";
-            var default_theme = "light";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -62,8 +62,11 @@
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            document.body.className = theme;
-            document.querySelector('html').className = theme + ' js';
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
@@ -79,8 +82,8 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="affix"><a href="ch00-00-introduction.html">Introduction</a></li><li><a href="ch01-00-getting-started.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li><ol class="section"><li><a href="ch01-01-installation.html"><strong aria-hidden="true">1.1.</strong> Installation</a></li><li><a href="ch01-02-dovetail-cli.html"><strong aria-hidden="true">1.2.</strong> Dovetail CLI</a></li><li><a href="ch01-03-environment.html"><strong aria-hidden="true">1.3.</strong> Environment Prerequisites</a></li></ol></li><li><a href="ch02-00-labs.html"><strong aria-hidden="true">2.</strong> Labs</a></li><li><ol class="section"><li><a href="ch02-01-iou-tutorial.html"><strong aria-hidden="true">2.1.</strong> Corda IoU Tutorial</a></li><li><ol class="section"><li><a href="ch02-02-model.html"><strong aria-hidden="true">2.1.1.</strong> Model Smart Contract</a></li><li><a href="ch02-03-import.html"><strong aria-hidden="true">2.1.2.</strong> Import Model</a></li><li><a href="ch02-04-implement.html"><strong aria-hidden="true">2.1.3.</strong> Implement Smart Contract</a></li><li><a href="ch02-05-export.html"><strong aria-hidden="true">2.1.4.</strong> Export Smart Contract</a></li><li><a href="ch02-08-generate-corda.html"><strong aria-hidden="true">2.1.5.</strong> Generate Corda Artifacts</a></li><li><a href="ch02-09-test-corda.html"><strong aria-hidden="true">2.1.6.</strong> Test on Corda</a></li><li><ol class="section"><li><a href="ch02-09-01-cordapp-impl.html"><strong aria-hidden="true">2.1.6.1.</strong> Implement CorDapps Flows</a></li><li><a href="ch02-09-01-cordapp-gen.html"><strong aria-hidden="true">2.1.6.2.</strong> Generate CorDapps</a></li><li><a href="ch02-09-02-start-nodes.html"><strong aria-hidden="true">2.1.6.3.</strong> Start up nodes</a></li><li><a href="ch02-09-03-test-cases.html"><strong aria-hidden="true">2.1.6.4.</strong> Run test cases</a></li></ol></li></ol></li><li><a href="ch02-02-fabric-samples.html"><strong aria-hidden="true">2.2.</strong> Hyperledger Fabric Tutorials</a></li></ol></li><li><a href="ch03-00-contribute.html">Contribute</a></li><li class="affix"><a href="ch04-00-source.html">Source Code</a></li><li class="affix"><a href="ch05-00-community.html">Community</a></li></ol>
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="expanded affix "><a href="ch00-00-introduction.html">Introduction</a></li><li class="expanded "><a href="ch01-00-getting-started.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li><ol class="section"><li class="expanded "><a href="ch01-01-installation.html"><strong aria-hidden="true">1.1.</strong> Installation</a></li><li class="expanded "><a href="ch01-02-dovetail-cli.html"><strong aria-hidden="true">1.2.</strong> Dovetail CLI</a></li><li class="expanded "><a href="ch01-03-environment.html"><strong aria-hidden="true">1.3.</strong> Environment Prerequisites</a></li></ol></li><li class="expanded "><a href="ch02-00-labs.html"><strong aria-hidden="true">2.</strong> Labs</a></li><li><ol class="section"><li class="expanded "><a href="ch02-01-iou-tutorial.html"><strong aria-hidden="true">2.1.</strong> Corda IoU Tutorial</a></li><li><ol class="section"><li class="expanded "><a href="ch02-01-01-smart-contract.html"><strong aria-hidden="true">2.1.1.</strong> Smart Contract</a></li><li><ol class="section"><li class="expanded "><a href="ch02-01-01-01-model.html"><strong aria-hidden="true">2.1.1.1.</strong> Model Ledger Asset</a></li><li class="expanded "><a href="ch02-01-01-02-implement.html"><strong aria-hidden="true">2.1.1.2.</strong> Implement Smart Contract</a></li><li class="expanded "><a href="ch02-01-01-03-export.html"><strong aria-hidden="true">2.1.1.3.</strong> Export Smart Contract</a></li><li class="expanded "><a href="ch02-01-01-04-generate-corda.html"><strong aria-hidden="true">2.1.1.4.</strong> Generate Corda Artifacts</a></li></ol></li><li class="expanded "><a href="ch02-01-02-cordapp.html"><strong aria-hidden="true">2.1.2.</strong> Corda Distributed Application</a></li><li><ol class="section"><li class="expanded "><a href="ch02-01-02-01-charlie.html"><strong aria-hidden="true">2.1.2.1.</strong> Flows for charlie</a></li><li class="expanded "><a href="ch02-01-02-02-alice.html"><strong aria-hidden="true">2.1.2.2.</strong> Flows for alice</a></li><li class="expanded "><a href="ch02-01-02-03-bob.html"><strong aria-hidden="true">2.1.2.3.</strong> Flows for bob</a></li><li class="expanded "><a href="ch02-01-02-04-cordapp-gen.html"><strong aria-hidden="true">2.1.2.4.</strong> Generate Corda Artifacts</a></li></ol></li><li class="expanded "><a href="ch02-01-03-corda-client.html"><strong aria-hidden="true">2.1.3.</strong> Corda Client</a></li><li class="expanded "><a href="ch02-01-04-test-corda.html"><strong aria-hidden="true">2.1.4.</strong> Test on Corda</a></li><li><ol class="section"><li class="expanded "><a href="ch02-01-04-01-start-nodes.html"><strong aria-hidden="true">2.1.4.1.</strong> Start up nodes</a></li><li class="expanded "><a href="ch02-01-04-02-test-cases.html"><strong aria-hidden="true">2.1.4.2.</strong> Run test cases</a></li></ol></li></ol></li><li class="expanded "><a href="ch02-02-fabric-samples.html"><strong aria-hidden="true">2.2.</strong> Hyperledger Fabric Tutorials</a></li></ol></li><li class="expanded "><a href="ch03-00-contribute.html">Contribute</a></li><li class="expanded affix "><a href="ch04-00-source.html">Source Code</a></li><li class="expanded affix "><a href="ch05-00-community.html">Community</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -337,9 +340,10 @@ mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -DgenerateP
 <h2><a class="header" href="#labs" id="labs">Labs</a></h2>
 <p>These labs provide you with guides, tutorials and code samples and will help you work through building and deploying Dovetail smart contracts.</p>
 <h2><a class="header" href="#corda-iou-smart-contract-tutorial" id="corda-iou-smart-contract-tutorial">Corda IOU Smart Contract Tutorial</a></h2>
-<p>In this tutorial, we will walk you through the steps to model, implement and test smart contracts on R3 Corda.</p>
+<p>In this tutorial, we will walk you through the steps to model and implement smart contracts and dapps for R3 Corda using Dovetail Studio, then we will use Dovetail CLI to generate runtime artifacts, and also generate RPC client with REST API interfaces for external integration, finally we will use Swagger UI to run some test cases.</p>
 <p>The example is a simple &quot;I owe you&quot; use case, the issuer of an IOU is obligated to pay the owner of the IOU amount issued, the ownership of the IOU can be transferred by current owner, and all transactions will be recorded on the ledger.</p>
 <p>Before getting started, you should have <a href="ch01-01-installation.html">Project Dovetail™ Studio</a> and <a href="ch01-02-dovetail-cli.html">Project Dovetail™ CLI</a> installed, and your <a href="ch01-03-environment.html">development environment setup</a>.</p>
+<p>If you have Tibco Cloud subscription or Enterprise Flogo studio, you can also upload Dovetail extentions to start smart contract and dapp development. the extensions are included in the corda.zip (see below) under artifacts/studio folder.</p>
 <p>Follow these steps to create the empty structure of the tutorial:</p>
 <blockquote>
 <ul>
@@ -350,7 +354,7 @@ mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -DgenerateP
 <li>iou_tutorials
 <ul>
 <li>artifacts</li>
-<li>iou</li>
+<li>cli</li>
 <li>network
 <ul>
 <li>corda</li>
@@ -360,491 +364,463 @@ mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -DgenerateP
 </li>
 </ul>
 <pre><code>mkdir -p iou_tutorial/artifacts
-mkdir -p iou_tutorial/iou
+mkdir -p iou_tutorial/cli
 mkdir -p iou_tutorial/network/corda
 </code></pre>
-<h2><a class="header" href="#1-model-iou-smart-contract" id="1-model-iou-smart-contract">1. Model IOU Smart Contract</a></h2>
-<h3><a class="header" href="#11-introduction-to-smart-contract-modelling" id="11-introduction-to-smart-contract-modelling">1.1 Introduction to smart contract modelling</a></h3>
-<p>In this section we will show step by step instructions to create the iou.bna that we will use in the next section of the tutorial.</p>
-<blockquote>
-<p>You can skip the instructions and download the iou.bna file <a href="tutorials/iou/iou.bna">here</a>.</p>
-</blockquote>
-<p>Project Dovetail™ supports <a href="https://hyperledger.github.io/composer/v0.19/reference/cto_language.html">Hyperledger Composer modeling language</a> to model smart contract assets and transactions, please refer to <a href="https://github.com/TIBCOSoftware/dovetail-contrib/tree/master/SmartContract/connector/composer">Composer Connector</a> for for more detail.</p>
-<h3><a class="header" href="#12-iou-smart-contract-data-model" id="12-iou-smart-contract-data-model">1.2 IOU Smart Contract Data Model</a></h3>
-<p>We will use Visual Studio Code to create IOU smart contract model.</p>
-<blockquote>
-<ul>
-<li>Go to the folder called &quot;iou&quot; in your iou_tutorial folder created in the <a href="ch02-01-iou-tutorial.html">previous</a> page</li>
-</ul>
-</blockquote>
-<pre><code class="language-bash">mkdir iou
+<h2><a class="header" href="#copy-iou-network-nodes-and-scripts" id="copy-iou-network-nodes-and-scripts">Copy IOU network nodes and scripts</a></h2>
+<p>corda.zip has pre-implemented and generated artifacts, nodes and scripts that will help you to get the corda network up and running.</p>
+<pre><code>curl -OL https://TIBCOSoftware.github.io/dovetail/tutorials/iou/corda.zip &amp;&amp; \
+unzip corda.zip &amp;&amp; \
+rm corda.zip
 </code></pre>
-<blockquote>
 <ul>
-<li>Copy following package metadata and save it as package.json in your iou folder</li>
+<li>copy extracted network/corda/* to your network/corda folder</li>
+<li>copy extracted cli/* to your cli folder</li>
 </ul>
-</blockquote>
-<pre><code class="language-json">{
-  &quot;engines&quot;: {
-    &quot;composer&quot;: &quot;^0.19.0&quot;
-  },
-  &quot;name&quot;: &quot;iou&quot;,
-  &quot;version&quot;: &quot;0.0.1&quot;,
-  &quot;description&quot;: &quot;IOU network&quot;
-}
-</code></pre>
-<blockquote>
-<ul>
-<li>Create a models folder called &quot;models&quot; inside the top level &quot;iou&quot; folder</li>
-</ul>
-</blockquote>
-<pre><code class="language-bash">cd iou
-mkdir models
-</code></pre>
-<blockquote>
-<ul>
-<li>Copy following resource definitions and save it as iou.cto in your models folder</li>
-</ul>
-</blockquote>
-<pre><code class="language-javascript">namespace com.example.iou
-
-import  com.tibco.dovetail.system.*
-
-asset  IOU identified by linearId extends LinearState {
-  --&gt; Party issuer
-  --&gt; Party owner
-  o Amount amt
-  o Amount paid
-}
-
-/*
-@InitiatedBy
-  - arg0: comma delimited list of authorized participants in the format of $tx.path.to.participant, or * for any participant
-  - arg1: optional, comma delimited list of required attributes that must exist in the initiator's certificate in the format of name=value.
-*/
-@InitiatedBy(&quot;$tx.iou.issuer&quot;)
-transaction IssueIOU {
-  o IOU iou
-}
-
-@InitiatedBy(&quot;$tx.iou.owner&quot;)
-transaction TransferIOU {
-  --&gt; IOU iou //by reference because the asset is already on the ledger
-  --&gt; Party newOwner
-}
-
-@InitiatedBy(&quot;$tx.iou.owner&quot;)
-transaction SettleIOU {
-  --&gt; IOU iou 
-  --&gt; Cash[] funds
-  o Amount payAmt
-  --&gt; Party sendChangeTo
-  --&gt; Party sendPaymentTo
-}
-
-/* 
-@Query : mark transaction as query only
-*/
-@Query()
-transaction getIOU {
-  o String linearId
-}
-
-  @Query()
-transaction getIOUIssuedBy {
-  o String issuerPartyId
-}
-</code></pre>
-<blockquote>
-<ul>
-<li>Copy following resource definitions and save it as dovetail.system.cto in your models folder</li>
-</ul>
-</blockquote>
-<pre><code class="language-javascript">namespace com.tibco.dovetail.system
-
-/*
-for Hyperledger Fabric, id is the member's mspId
-for Corda, id is the member's cert name
-*/
-participant Party identified by id {
-  o String id
-}
-
-abstract asset State {
-}
-/*
-All non-fungible asset should inherit from LinearState
-*/
-@CordaClass(&quot;net.corda.core.contracts.LinearState&quot;)
-abstract asset LinearState extends State {
-  o String linearId
-}
-
-@CordaClass(&quot;net.corda.core.contracts.FungibleAsset&quot;)
-abstract asset FungibleAsset extends State{
-  o Amount amt
-  --&gt; Party issuer
-  o String issuerRef
-  --&gt; Party owner
-}
-
-@CordaClass(&quot;net.corda.finance.contracts.asset.Cash.State&quot;)
-asset Cash identified by assetId extends FungibleAsset {  
-  o String assetId
-}
-
-@CordaClass(&quot;net.corda.core.contracts.Amount&lt;Currency&gt;&quot;)
-concept Amount {
-  o String currency
-  o Long quantity default = 0
-}
-</code></pre>
-<blockquote>
-<ul>
-<li>Run zip command from iou directory to package the iou project, it will create a iou.bna file in the tutorial folder</li>
-</ul>
-</blockquote>
-<pre><code class="language-bash">zip -r ../iou.bna *
-</code></pre>
-<h2><a class="header" href="#2-import-iou-smart-contract-data-model" id="2-import-iou-smart-contract-data-model">2. Import IOU Smart Contract Data Model</a></h2>
-<blockquote>
-<ul>
-<li>Start up Project Dovetail™ Studio, it will display web URL to use</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>Go to a browser and open the Web Studio</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>Go to Connections Tab &gt; Add Connection &gt; Select Composer Connector</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>Give the connection a name, then &quot;Browse&quot; to find the iou.bna file, click &quot;Save Model&quot; button. </li>
-</ul>
-</blockquote>
+<h2><a class="header" href="#1-iou-smart-contract" id="1-iou-smart-contract">1. IOU Smart Contract</a></h2>
+<p>In this section we will show step by step instructions to model and implement IOU smart contract: IOU can be issued, transferred and then settled.</p>
+<h2><a class="header" href="#iou-smart-contract-data-model" id="iou-smart-contract-data-model">IOU Smart Contract Data Model</a></h2>
+<p>Define contract state data schema that should be stored on the ledger</p>
 <p><video width="480" height="320" controls="controls">
-    <source src="videos/importbna.mp4" type="video/mp4">
-</video></p><h2><a class="header" href="#3-implement-iou-smart-contract" id="3-implement-iou-smart-contract">3. Implement IOU Smart Contract</a></h2>
-<p>In this step, we will implement the 4 transactions defined in the smart contract model in Project Dovetail™ Studio. A completed iou smart contract is also available to be imported into the Studio, see step <a href="ch02-04-implement.html#36-import-an-existing-application">3.6</a> for details.</p>
-<h3><a class="header" href="#31-issueiou-transaction" id="31-issueiou-transaction">3.1 IssueIOU Transaction*</a></h3>
-<blockquote>
-<ul>
-<li>Go to Apps Tab &gt; Create to create a new Application &quot;IOU&quot;</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>Create a flow &gt; flow name &quot;IssueIOU&quot; &gt; Select &quot;SmartContract TXN Trigger&quot; &gt; Select &quot;IOU&quot; from model dropdown &gt; Select &quot;com.example.iou.IssueIOU&quot; from transaction dropdown &gt; Click &quot;Done&quot; button</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>We will add a logger activity, ledger activity and response activity. We will also validate input before writing to ledger. </li>
-</ul>
-</blockquote>
-<p><video width="480" height="320" controls="controls">
-    <source src="videos/issueiou.mp4" type="video/mp4">
+    <source src="videos/iou_asset_schema.mp4" type="video/mp4">
 </video></p>
-<h3><a class="header" href="#32-transferiou-transaction" id="32-transferiou-transaction">3.2 TransferIOU Transaction*</a></h3>
-<blockquote>
 <ul>
-<li>Create a new flow to implement TransferIOU transaction</li>
+<li>Start up and open Dovetail Studio WebUI</li>
+<li>Go to Connection tab</li>
+<li>Click &quot;Add Connection&quot;
+<ul>
+<li>Choose &quot;Define Ledger Asset Schema&quot; from the list</li>
+<li>Enter display name, e.g. &quot;my first IOU&quot;</li>
+<li>Enter asset name &quot;IOU&quot;</li>
+<li>Enter module name &quot;com.example.iou&quot;</li>
+<li>Select asset type &quot;Linear State&quot;
+<ul>
+<li>LinearId attribute will be automatically added to the pre-defined fields</li>
 </ul>
-</blockquote>
-<p><video width="480" height="320" controls="controls">
-    <source src="videos/transferiou.mp4" type="video/mp4">
-</video></p>
-<h3><a class="header" href="#33-getiou-transaction" id="33-getiou-transaction">3.3 getIOU Transaction*</a></h3>
-<blockquote>
+</li>
+<li>Enter addition fields
 <ul>
-<li>Create a new flow to implement getIOU transaction</li>
+<li>issuer, select &quot;Party&quot; from the type dropdown menu</li>
+<li>holder, select &quot;Party&quot; from the type dropdown menu</li>
+<li>amt, select &quot;Amount<Courrency>&quot; from the type dropdown menu</li>
 </ul>
-</blockquote>
-<p><video width="480" height="320" controls="controls">
-    <source src="videos/getiou.mp4" type="video/mp4">
-</video></p>
-<h3><a class="header" href="#34-getiouissuedby-transaction" id="34-getiouissuedby-transaction">3.4 getIOUIssuedBy Transaction*</a></h3>
-<blockquote>
+</li>
+<li>Define party roles
 <ul>
-<li>Create a new flow to implement getIOUIssuedBy transaction</li>
-<li>We use &quot;Custom Query&quot; activity to query the ledger. This activity is <strong>NOT blockchain agnostic</strong>
-<ul>
-<li>define a input parameter &quot;issuerId&quot;</li>
-<li>define blochchain specific query string, use _$paramName for input substitution, in this example, we use <a href="https://hyperledger-fabric.readthedocs.io/en/release-1.3/couchdb_tutorial.html">Hyperledger Fabric CouchDB query syntax</a></li>
+<li>add &quot;issuer&quot;, leave other fields as default</li>
+<li>add &quot;holder&quot;, leave other fields as default</li>
+</ul>
+</li>
+<li>Click &quot;Donee&quot; button</li>
 </ul>
 </li>
 </ul>
-</blockquote>
-<blockquote>
-<p>During the mapping of transaction response, you will notice tht &quot;array.&quot; is underlined with a red line, it is a UI validation error because Project Dovetail™ Studio UI does not support function yet, the error has no impact to runtime. Function will be supported in the very near future.</p>
-</blockquote>
+<h2><a class="header" href="#implement-iou-smart-contract" id="implement-iou-smart-contract">Implement IOU Smart Contract</a></h2>
+<p>In this step, we will walk you through step by step the implementation of IOU smart contract transactions: IssueIOU, TransferIOU and SettleIOU.</p>
 <p><video width="480" height="320" controls="controls">
-    <source src="videos/getiouissuedby.mp4" type="video/mp4">
+    <source src="videos/iou_smart_contract_impl.mp4" type="video/mp4">
 </video></p>
-<h3><a class="header" href="#35-settleiou-transaction" id="35-settleiou-transaction">3.5 SettleIOU Transaction*</a></h3>
-<blockquote>
+<h3><a class="header" href="#1-issueiou-transaction" id="1-issueiou-transaction">1 IssueIOU Transaction*</a></h3>
 <ul>
-<li>Create a new flow to implement SettleIOU transaction</li>
-<li>Add General/Mapper activity to calculate remaining balance using math.subtractLong(), 
-Dovetail math functions are exact, exception will be raised if overflow or underflow is detected.</li>
-<li>If remaining balance is equal or greater than requested payment
+<li>
+<p>Go to Apps Tab &gt; Create to create a new Application &quot;IOU&quot;</p>
+</li>
+<li>
+<p>Create a flow </p>
 <ul>
-<li>Add SmartContract-Corda/Payment activity to handle Cash payment processing, this flow will only run on R3 Corda. </li>
-<li>Add SmartContract/Ledger activity to update IOU's paid amount</li>
+<li>flow name &quot;IssueIOU&quot; &gt;</li>
+<li>Add a trigger, select &quot;SmartContract Action Trigger&quot; from the list
+<ul>
+<li>Select &quot;IOU&quot; from the dropdown menu</li>
+<li>Click &quot;Next&quot; and &quot;Next&quot; to get to &quot;Define Transaction Input&quot; section, security and time window are not supported for Corda smart contract</li>
+<li>Add input fields
+<ul>
+<li>linearId, select &quot;LinearId&quot; from type dropdown menu</li>
+<li>issuer, select &quot;Party&quot; from type dropdown menu</li>
+<li>holder, select &quot;Party&quot; from type dropdown menu</li>
+<li>amt, select &quot;Amount<Currency>&quot; from type dropdown menu</li>
+<li>click &quot;Next&quot;</li>
 </ul>
 </li>
-<li>Otherwise, return error</li>
+<li>Add output fields, leave this blank, click &quot;Continue&quot;</li>
+<li>Select &quot;Copy Schema&quot;</li>
 </ul>
-</blockquote>
-<p><video width="480" height="320" controls="controls">
-    <source src="videos/settleiou.mp4" type="video/mp4">
-</video></p>
-<h3><a class="header" href="#36-import-an-existing-application" id="36-import-an-existing-application">3.6. Import an existing application</a></h3>
-<blockquote>
+</li>
+<li>Select the trigger
 <ul>
-<li>You can also import an application into Project Dovetail™ Studio
+<li>Map to flow inputs</li>
+</ul>
+</li>
+<li>Now we will implement the flow
 <ul>
-<li>Go to Project Dovetail™ Studio</li>
-<li>If you haven't import iou.bna file from Connections tab, you can do so now following <a href="ch02-03-import.html">this step</a></li>
-<li>Create a new Application &quot;IOUImport&quot;, click on &quot;Import&quot; button, use this <a href="tutorials/iou/IOU.json">IOU.json</a></li>
+<li>Add &quot;Ledger Operation&quot; activity from Dovetail-Ledger category</li>
+<li>Map input</li>
 </ul>
 </li>
 </ul>
-</blockquote>
-<p><video width="480" height="320" controls="controls">
-    <source src="videos/importiou.mp4" type="video/mp4">
-</video></p><h2><a class="header" href="#4-export-iou-smart-contract-application" id="4-export-iou-smart-contract-application">4. Export IOU Smart Contract Application</a></h2>
+</li>
+</ul>
+<h3><a class="header" href="#2-transferiou-transaction" id="2-transferiou-transaction">2 TransferIOU Transaction*</a></h3>
+<ul>
+<li>Create a new flow to implement TransferIOU transaction
+<ul>
+<li>Add a trigger, select &quot;SmartContract Action Trigger&quot; from the list
+<ul>
+<li>Select &quot;IOU&quot; from the dropdown menu</li>
+<li>Click &quot;Next&quot; and &quot;Next&quot; to get to &quot;Define Transaction Input&quot; section, security and time window are not supported for Corda smart contract</li>
+<li>Add input fields
+<ul>
+<li>iou, select &quot;AssetRef&quot; from Type dropdown menu, enter &quot;com.example.iou.IOU&quot; in the RecordType field, select &quot;True&quot; from Consuming dropdown menu</li>
+<li>newHolder, select &quot;Party&quot; from type dropdown menu</li>
+<li>click &quot;Next&quot;</li>
+</ul>
+</li>
+<li>Add output fields, leave this blank, click &quot;Continue&quot;</li>
+<li>Select &quot;Copy Schema&quot;</li>
+</ul>
+</li>
+<li>Select the trigger
+<ul>
+<li>Map to flow inputs</li>
+</ul>
+</li>
+<li>Now we will implement the flow
+<ul>
+<li>Add &quot;Ledger Operation&quot; activity from Dovetail-Ledger category</li>
+<li>Map input</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3><a class="header" href="#3-settleiou-transaction" id="3-settleiou-transaction">3 SettleIOU Transaction*</a></h3>
+<ul>
+<li>Create a new flow to implement SettleIOU transaction
+<ul>
+<li>Add a trigger, select &quot;SmartContract Action Trigger&quot; from the list
+* Select &quot;IOU&quot; from the dropdown menu
+* Click &quot;Next&quot; and &quot;Next&quot; to get to &quot;Define Transaction Input&quot; section, security and time window are not supported for Corda smart contract
+* Add input fields
+* iou, select &quot;AssetRef&quot; from Type dropdown menu, enter &quot;com.example.iou.IOU&quot; in the RecordType field, select &quot;True&quot; from Consuming dropdown menu
+* funds, select &quot;AssetRef<Cash>&quot; from Type dropdown menu, select &quot;True&quot; from Consuming dropdown menu, select &quot;True&quot; from Repeating dropdown menu
+* click &quot;Next&quot;
+* Add output fields, leave this blank, click &quot;Continue&quot;
+* Select &quot;Copy Schema&quot;
+<ul>
+<li>Select the trigger
+<ul>
+<li>Map to flow inputs</li>
+</ul>
+</li>
+<li>Now we will implement the flow
+<ul>
+<li>Add &quot;Payment Processor&quot; activity from Dovetail-Ledger category</li>
+<li>Map input</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2><a class="header" href="#export-iou-smart-contract-application" id="export-iou-smart-contract-application">Export IOU Smart Contract Application</a></h2>
 <blockquote>
 <ul>
 <li>Go to IOU application</li>
 <li>Click on &quot;Export app&quot; button, save the file IOU.json to the artifacts folder inside iou_tutorial</li>
 </ul>
 </blockquote>
-<h2><a class="header" href="#5-generate-corda-artifacts" id="5-generate-corda-artifacts">5. Generate Corda Artifacts</a></h2>
-<p>Run following command from iou_tutorial directory, R3 Corda contract is written to artifacts/corda folder, put kotlin-IOU-1.0.0.jar on your classpath to develop your CorDapp. A sample IOUApp has been created and available <a href="tutorials/iou/corda.zip">here</a> inside iou_tutorial/network/corda folder</p>
+<p>The exported json file will be used to generate Corda ContractState and Contract, and it is also used to facilitate the implementation of CorDapp flows.</p>
+<h2><a class="header" href="#generate-corda-artifacts" id="generate-corda-artifacts">Generate Corda Artifacts</a></h2>
+<blockquote>
+<ul>
+<li>Maven should be installed on your system, and mvn is in your PATH</li>
+<li>Dovetail CLI should installed and in your PATH, it is also included in the cli folder in the corda.zip file (for mac only)</li>
+<li>Latest relese of dovetail-corda-x.x.x.jar should be installed to your local maven repo, it is also included in corda.zip, you can run cli/mvninstall.sh to install the jar file</li>
+</ul>
+</blockquote>
+<p>Run following command from iou_tutorial directory, R3 Corda contract  kotlin-IOUContract-1.0.0.jar is generated and written to artifacts/corda/iou folder, and installed in your local maven repository.</p>
 <pre><code>cd iou_tutorial
 dovetail corda contract generate -m artifacts/IOU.json -v 1.0.0 -t artifacts/corda --namespace com.example.iou
 </code></pre>
-<h2><a class="header" href="#6-test-iou-smart-contract-on-corda" id="6-test-iou-smart-contract-on-corda">6. Test IOU Smart Contract on Corda</a></h2>
-<p>We will need to develop distributed applications(CorDapp) for each interested party to invoke the IOU smart contract. Let's assume following organizations are interested parties:</p>
-<blockquote>
+<h2><a class="header" href="#develop-corda-distributed-application" id="develop-corda-distributed-application">Develop Corda Distributed Application</a></h2>
+<h3><a class="header" href="#1-parties-and-roles-for-the-network" id="1-parties-and-roles-for-the-network">1 Parties and Roles for the network</a></h3>
+<p>For this tutorial, the story line is party &quot;charlie&quot; issues an IOU to party &quot;alice&quot;, party &quot;alice&quot; then transfers the IOU to party &quot;bob&quot;, finally party &quot;charlie&quot; settles the IOU with party &quot;bob&quot;. party &quot;bank&quot; is the cash issuer.</p>
+<p>Below the are the dapp flows each party should implement:</p>
 <ul>
-<li>Notary: to validate and notarize transactions
+<li>charlie is the IOU issuer
 <ul>
-<li>Corda platform implementation</li>
+<li>Implement IssueIOU initiating flow</li>
+<li>Implememt TransferIOU receiving flow</li>
+<li>Implement SettleIOU initiating flow</li>
 </ul>
 </li>
-<li>Bank : cash issuer
+<li>alice is the original IOU holder, and will transfer the IOU to bob
 <ul>
-<li>We will use Corda finance cash flows to issue and transfer cash</li>
+<li>Implement IssueIOU receiving flow</li>
+<li>Implement TransferIOU initiating flow</li>
 </ul>
 </li>
-<li>Regulator : an observer that receives all IOU transactions
+<li>bob is the new IOU holder
 <ul>
-<li>We will use com.tibco.dovetail.container.cordapp.flows.ObserverFlowReceiver to receive and record transactions</li>
+<li>Implement TransferIOU receiving flow</li>
+<li>Implement SettleIOU receiving flow</li>
 </ul>
 </li>
-<li>charlie: issuer of an IOU
+<li>bank is the cash issuer
 <ul>
-<li>We will implement IssueIOU initiator flow to issue an IOU to alice</li>
-<li>We will implement TransferIOU receiver flow to sign and record TransferIOU transaction</li>
-<li>We will implment SettleIOU initiator flow to pay IOU with Cash to bob</li>
-<li>We will use com.tibco.dovetail.container.cordapp.flows.ObserverFlowInitiator to send IssueIOU and SettleIOU transactions to Regulator</li>
-</ul>
-</li>
-<li>alice: original owner of charlie's IOU
-<ul>
-<li>We will implement IssueIOU receiver flow to sign and record IssueIOU transaction</li>
-<li>We will implement TransferIOU initiator flow to transfer the IOU bob</li>
-<li>We will use com.tibco.dovetail.container.cordapp.flows.ObserverFlowInitiator to send TransferIOU transaction to Regulator</li>
-</ul>
-</li>
-<li>bob : new owner of charlie's IOU
-<ul>
-<li>We will implement TransferIOU receiver flow to sign and record TransferIOU transaction</li>
-<li>We will implement SettleIOU receiver flow to sign and record SettleIOU transaction</li>
+<li>Will use Corda CashIssueAndPayment flow to issue cash to charlie</li>
 </ul>
 </li>
 </ul>
-</blockquote>
-<p>We will also use confidential identity in all transactions to protect IOU smart contract participants (charlie, alice and bob).</p>
-<p>OK, let's get started.</p>
-<h2><a class="header" href="#6-test-iou-smart-contract-on-corda-1" id="6-test-iou-smart-contract-on-corda-1">6. Test IOU Smart Contract on Corda</a></h2>
-<h2><a class="header" href="#61-cordapp-for-charlie" id="61-cordapp-for-charlie">6.1. CorDapp for charlie</a></h2>
-<blockquote>
+<h3><a class="header" href="#2-import-smart-contract" id="2-import-smart-contract">2. Import Smart Contract</a></h3>
+<p>Before we start implementing the flows, Dovetail needs to know the smart contract transactions and the input parameters of each transaction.</p>
 <ul>
-<li>Create an App &quot;charlie&quot;</li>
+<li>Go to Connection tab 
+<ul>
+<li>Add Connection </li>
+<li>Select &quot;Import Dovetail Contract&quot;</li>
+<li>Enter name &quot;IOUContract&quot;</li>
+<li>Browse and select artifacts/iou.json file</li>
+<li>Click &quot;Done&quot;</li>
 </ul>
-</blockquote>
-<h3><a class="header" href="#611-issueiou-initiator-flow" id="611-issueiou-initiator-flow">6.1.1. IssueIOU initiator flow</a></h3>
-<blockquote>
+</li>
+</ul>
+<h2><a class="header" href="#cordapp-for-charlie" id="cordapp-for-charlie">CorDapp for charlie</a></h2>
+<p>Step by step instructions to create distributed application &quot;charlie&quot; for party charlie.</p>
+<p><video width="480" height="320" controls="controls">
+    <source src="videos/charlie.mp4" type="video/mp4">
+</video></p>
+<h3><a class="header" href="#1-issueiou-initiator-flow" id="1-issueiou-initiator-flow">1. IssueIOU initiator flow</a></h3>
 <ul>
 <li>Create a flow 
 <ul>
 <li>flow name: IssueIOUInitiator</li>
-<li>select trigger : CorDApp Flow Initiator
+<li>add a trigger : select &quot;Dovetail CorDApp Flow Initiator&quot; from the list
 <ul>
-<li>select true for &quot;Use confidential identities for this transaction?&quot;</li>
-<li>select true for &quot;Send transactions to observers?&quot;</li>
-<li>select true for &quot;Send signed transactions to observers in a separate flow?&quot;</li>
+<li>select false for &quot;Use confidential identities for this transaction?&quot;</li>
+<li>select false for &quot;Send transactions to observers?&quot;</li>
 <li>click &quot;Next&quot; button</li>
 <li>add following flow input parameters
 <ul>
-<li>owner :    Type = Party, PartyType = Participant</li>
-<li>amt:       Type = Amount<Currency> </li>
-<li>extId:     Type = String</li>
-<li>regulator: Type = Party, PartyType = Observer</li>
+<li>holder :    Type = Party, PartyRole = Participant</li>
+<li>amt:        Type = Amount<Currency> </li>
+<li>extId:      Type = String</li>
 </ul>
 </li>
-<li>click &quot;Finish&quot; button</li>
+<li>click &quot;Continue&quot; button</li>
+<li>select &quot;Copy Schema&quot;</li>
+<li>select the trigger, and map flow input</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Open IssueIOUInitiator flow
+<li>implement IssueIOUInitiator flow
 <ul>
-<li>select BuildTransactoinProposal activity
-<ul>
-<li>select IOU from contract model file dropdown</li>
-<li>contract class : com.example.iou.IOUContract </li>
-<li>select IssueIOU from transaction dropdown</li>
+<li>select BuildTransactoinProposal activity from Dovetail-CorDApp category</li>
+<li>select &quot;IOUContract:&quot; from contract dropdown</li>
+<li>select com.example.iou.IssueIOU from transaction dropdown</li>
 <li>map the activity input
 <ul>
 <li>use cordapp.createLinearIdFromExternalId($flow.transactionInput.extId) to map iou.linearId</li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
+<blockquote>
+<ul>
+<li>You will see an error at design time for this function, ignore the error for now, it is supported at runtime</li>
 </ul>
 </blockquote>
-<p><video width="480" height="320" controls="controls">
-    <source src="videos/iouissueinitiator.mp4" type="video/mp4">
-</video></p>
-<h3><a class="header" href="#612-transferiou-receiver-flow" id="612-transferiou-receiver-flow">6.1.2. TransferIOU receiver flow</a></h3>
-<blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3><a class="header" href="#2-transferiou-receiver-flow" id="2-transferiou-receiver-flow">2. TransferIOU receiver flow</a></h3>
 <ul>
 <li>Create a flow 
 <ul>
 <li>flow name: TransferIOUResponder</li>
-<li>select trigger : CorDApp Flow Receiver
+<li>select trigger : Dovetail CorDApp Flow Receiver
 <ul>
 <li>select receiver from flow type dropdown</li>
-<li>select true for &quot;Use confidential identities for this transaction?&quot;</li>
+<li>select false for &quot;Use confidential identities for this transaction?&quot;</li>
 <li>initiator flow name: com.alice.iou.flows.TransferIOUInitiator</li>
-<li>click &quot;Finish&quot; button</li>
+<li>click &quot;Continue&quot; button</li>
+<li>select &quot;Copy Schema&quot;</li>
+<li>select the trigger, and map flow input</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-</blockquote>
-<p><video width="480" height="320" controls="controls">
-    <source src="videos/ioutransferresponder.mp4" type="video/mp4">
-</video></p>
-<h3><a class="header" href="#613-issueiou-initiator-flow" id="613-issueiou-initiator-flow">6.1.3. IssueIOU initiator flow</a></h3>
-<blockquote>
+<h3><a class="header" href="#3-settleiou-initiator-flow" id="3-settleiou-initiator-flow">3. SettleIOU initiator flow</a></h3>
 <ul>
 <li>Create a flow 
 <ul>
 <li>flow name: SettleIOUInitiator</li>
-<li>select trigger : CorDApp Flow Initiator
+<li>select trigger : Dovetail CorDApp Flow Initiator
 <ul>
-<li>select true for &quot;Use confidential identities for this transaction?&quot;</li>
-<li>select true for &quot;Send transactions to observers?&quot;</li>
-<li>select true for &quot;Send signed transactions to observers in a separate flow?&quot;</li>
+<li>select false for &quot;Use confidential identities for this transaction?&quot;</li>
+<li>select false for &quot;Send transactions to observers?&quot;</li>
 <li>click &quot;Next&quot; button</li>
 <li>add following flow input parameters
 <ul>
-<li>linearId : Type = LinearId</li>
-<li>amt:       Type = Amount<Currency> </li>
-<li>regulator: Type = Party, PartyType = Observer</li>
+<li>iouId : Type = LinearId</li>
 </ul>
 </li>
-<li>click &quot;Finish&quot; button</li>
+<li>click &quot;Continue&quot; button</li>
+<li>select &quot;Copy Schema&quot;</li>
+<li>select the trigger, and map flow input</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Open SettleIOUInitiator flow
+<li>Implement SettleIOUInitiator flow
 <ul>
-<li>add SmartContract-Corda/SimpleVaultQuery activity
+<li>add SimpleVaultQuery activity from Dovetail-CorDApp category
 <ul>
 <li>Configuration screen
 <ul>
-<li>select IOU contract</li>
-<li>select com.example.iou.IOU asset</li>
-<li>leave default for other properties</li>
+<li>select IOU from asset dropdow</li>
+<li>Map input</li>
 </ul>
 </li>
+</ul>
+</li>
+<li>if IOU is found
+* add CashWallet activity from Dovetail-CorDApp category
+* Select &quot;Retrieve Funds&quot; from dropdown
+* Map input
+* add BuildTransactoinProposal Dovetail-CorDApp category
+* select IOU from contract dropdown
+* select com.example.iou.SettleIOU from transaction dropdown
+* map the activity input</li>
+<li>otherwise throw error</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3><a class="header" href="#4-export-the-charlie-applicatio" id="4-export-the-charlie-applicatio">4. Export the &quot;charlie&quot; applicatio</a></h3>
+<p>export the application to artifiacts/charlie.json</p>
+<h2><a class="header" href="#cordapp-for-alice" id="cordapp-for-alice">CorDapp for alice</a></h2>
+<p>Step by step instructions to create distributed application &quot;alice&quot; for party alice.</p>
+<p><video width="480" height="320" controls="controls">
+    <source src="videos/alice.mp4" type="video/mp4">
+</video></p>
+<h3><a class="header" href="#1-issueiou-receiver-flow" id="1-issueiou-receiver-flow">1. IssueIOU receiver flow</a></h3>
+<ul>
+<li>Create a flow 
+<ul>
+<li>Create a flow </li>
+<li>flow name: IssueIOUResponder</li>
+<li>select trigger : Dovetail CorDApp Flow Receiver
+<ul>
+<li>select receiver from flow type dropdown</li>
+<li>select false for &quot;Use confidential identities for this transaction?&quot;</li>
+<li>initiator flow name: com.charlie.iou.flows.IssueIOUInitiator</li>
+<li>click &quot;Continue&quot; button</li>
+<li>select &quot;Copy Schema&quot;</li>
+<li>select the trigger, and map flow input</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3><a class="header" href="#2-transferiou-initiator-flow" id="2-transferiou-initiator-flow">2. TransferIOU initiator flow</a></h3>
+<ul>
+<li>flow name: TransferIOUInitiator
+<ul>
+<li>add a trigger : select &quot;Dovetail CorDApp Flow Initiator&quot; from the list
+<ul>
+<li>select false for &quot;Use confidential identities for this transaction?&quot;</li>
+<li>select false for &quot;Send transactions to observers?&quot;</li>
+<li>click &quot;Next&quot; button</li>
+<li>add following flow input parameters
+<ul>
+<li>iouId :    Type = LinearId</li>
+<li>newHolder: Type = Party, PartyRole = Participant</li>
+</ul>
+</li>
+<li>click &quot;Continue&quot; button</li>
+<li>select &quot;Copy Schema&quot;</li>
+<li>select the trigger, and map flow input</li>
+</ul>
+</li>
+<li>implement TransferIOUInitiator flow
+<ul>
+<li>add SimpleVaultQuery activity from Dovetail-CorDApp category
+<ul>
+<li>Configuration screen
+<ul>
+<li>select IOU from asset dropdow</li>
 <li>Map input</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>if IOU is found
 <ul>
-<li>add SmartContract-Corda/CashWallet activity to retrieve cash</li>
-<li>add General/Mapper activity to convert wallet output to primitive array of refs</li>
-<li>move BuildTransactoinProposal activity from main branch to here</li>
-<li>select IOU from contract model file dropdown</li>
-<li>contract class : com.example.iou.IOUContract </li>
-<li>select SettleIOU from transaction dropdown</li>
+<li>add BuildTransactoinProposal activity from Dovetail-CorDApp category
+<ul>
+<li>select &quot;IOUContract:&quot; from contract dropdown</li>
+<li>select com.example.iou.TransferIOU from transaction dropdown</li>
 <li>map the activity input</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>otherwise throw error</li>
 </ul>
 </li>
 </ul>
-</blockquote>
+</li>
+</ul>
+<h3><a class="header" href="#3-export-the-alice-applicatio" id="3-export-the-alice-applicatio">3. Export the &quot;alice&quot; applicatio</a></h3>
+<p>export the application to artifiacts/alice.json</p>
+<h2><a class="header" href="#cordapp-for-bob" id="cordapp-for-bob">CorDapp for bob</a></h2>
+<p>Step by step instructions to create distributed application &quot;bob&quot; for party bob.</p>
 <p><video width="480" height="320" controls="controls">
-    <source src="videos/iousettleinitiator.mp4" type="video/mp4">
+    <source src="videos/bob.mp4" type="video/mp4">
 </video></p>
-<h2><a class="header" href="#62-cordapp-for-alice" id="62-cordapp-for-alice">6.2. CorDapp for alice</a></h2>
-<blockquote>
+<h3><a class="header" href="#1-transferiou-receiver-flow" id="1-transferiou-receiver-flow">1. TransferIOU receiver flow</a></h3>
 <ul>
-<li>Create an App &quot;alice&quot;</li>
-</ul>
-</blockquote>
-<h3><a class="header" href="#621-issueiou-receiver-flow" id="621-issueiou-receiver-flow">6.2.1. IssueIOU receiver flow</a></h3>
-<p>Create IssueIOUResponder flow, instructions are same as #6.1.2</p>
-<blockquote>
+<li>Create a flow 
 <ul>
-<li>initiator flow name: com.charlie.iou.flows.IssueIOUInitiator</li>
-</ul>
-</blockquote>
-<h3><a class="header" href="#621-transferiou-initiator-flow" id="621-transferiou-initiator-flow">6.2.1. TransferIOU initiator flow</a></h3>
-<p><video width="480" height="320" controls="controls">
-    <source src="videos/ioutransferinitiator.mp4" type="video/mp4">
-</video></p>
-<h2><a class="header" href="#63-cordapp-for-bob" id="63-cordapp-for-bob">6.3. CorDapp for bob</a></h2>
-<blockquote>
+<li>Create a flow </li>
+<li>flow name: TransferIOUResponder</li>
+<li>select trigger : Dovetail CorDApp Flow Receiver
 <ul>
-<li>Create an App &quot;bob&quot;</li>
-</ul>
-</blockquote>
-<h3><a class="header" href="#631-transferiou-receiver-flow" id="631-transferiou-receiver-flow">6.3.1. TransferIOU receiver flow</a></h3>
-<p>Create TransferIOUResponder flow, instructions are same as #6.1.2</p>
-<blockquote>
-<ul>
+<li>select receiver from flow type dropdown</li>
+<li>select false for &quot;Use confidential identities for this transaction?&quot;</li>
 <li>initiator flow name: com.alice.iou.flows.TransferIOUInitiator</li>
+<li>click &quot;Continue&quot; button</li>
+<li>select &quot;Copy Schema&quot;</li>
+<li>select the trigger, and map flow input</li>
 </ul>
-</blockquote>
-<h3><a class="header" href="#632-settleiou-receiver-flow" id="632-settleiou-receiver-flow">6.3.2. SettleIOU receiver flow</a></h3>
-<p>Create SettleIOUResponder flow, instructions are same as #6.1.2</p>
-<blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h3><a class="header" href="#2-settleiou-receiver-flow" id="2-settleiou-receiver-flow">2. SettleIOU receiver flow</a></h3>
 <ul>
+<li>Create a flow 
+<ul>
+<li>Create a flow </li>
+<li>flow name: SettleIOUResponder</li>
+<li>select trigger : Dovetail CorDApp Flow Receiver
+<ul>
+<li>select receiver from flow type dropdown</li>
+<li>select false for &quot;Use confidential identities for this transaction?&quot;</li>
 <li>initiator flow name: com.charlie.iou.flows.SettleIOUInitiator</li>
+<li>click &quot;Continue&quot; button</li>
+<li>select &quot;Copy Schema&quot;</li>
+<li>select the trigger, and map flow input</li>
 </ul>
-</blockquote>
-<h2><a class="header" href="#6-test-iou-smart-contract-on-corda-2" id="6-test-iou-smart-contract-on-corda-2">6. Test IOU Smart Contract on Corda</a></h2>
-<h2><a class="header" href="#64-generate-cordapp-artifacts" id="64-generate-cordapp-artifacts">6.4. Generate CorDapp artifacts</a></h2>
-<h3><a class="header" href="#641-export-cordapp-flows" id="641-export-cordapp-flows">6.4.1. Export CorDapp flows</a></h3>
+</li>
+</ul>
+</li>
+</ul>
+<h3><a class="header" href="#3-export-the-bob-applicatio" id="3-export-the-bob-applicatio">3. Export the &quot;bob&quot; applicatio</a></h3>
+<p>export the application to artifiacts/bob.json</p>
+<h2><a class="header" href="#generate-cordapp-artifacts" id="generate-cordapp-artifacts">Generate CorDapp artifacts</a></h2>
+<h3><a class="header" href="#1-export-cordapp-flows" id="1-export-cordapp-flows">1. Export CorDapp flows</a></h3>
 <blockquote>
 <ul>
 <li>Export charlie application as charlie.json to artifacts/ folder</li>
@@ -852,104 +828,296 @@ dovetail corda contract generate -m artifacts/IOU.json -v 1.0.0 -t artifacts/cor
 <li>Export bob application as bob.json to artifacts/ folder</li>
 </ul>
 </blockquote>
-<h3><a class="header" href="#642-generate-cordapp-dependencies" id="642-generate-cordapp-dependencies">6.4.2. Generate CorDapp dependencies</a></h3>
-<p>CorDapp responder flows have compile and runtime dependency on their corresponding initiator flows, however since flows are private to each organization, Tibco Dovetail generates a base initator class without implementation details and can be shared with business partners.</p>
+<h3><a class="header" href="#2-generate-cordapp-dependencies" id="2-generate-cordapp-dependencies">2. Generate CorDapp dependencies</a></h3>
+<p>CorDapp responder flows have compile time and runtime dependency on their corresponding initiator flows, however since flows are private to each organization, Tibco Dovetail generates a base initator class without implementation details and can be shared with business partners.</p>
 <p>run following command from iou_tutorial folder</p>
-<pre><code class="language-bash">dovetail fabric dapp generate -m artifacts/charlie.json -v 1.0.0 -t artifacts/corda/charlie --namespace com.charlie.iou.flows --api
-
-dovetail fabric dapp generate -m artifacts/alice.json -v 1.0.0 -t artifacts/corda/alice --namespace com.alice.iou.flows --api
+<h4><a class="header" href="#21-charlie" id="21-charlie">2.1 charlie</a></h4>
+<pre><code class="language-bash">dovetail corda dapp generate -m artifacts/charlie.json -v 1.0.0 -t artifacts/corda --namespace com.charlie.iou.flows --api
 </code></pre>
-<h3><a class="header" href="#643-create-dependency-pom-file-for-each-organization" id="643-create-dependency-pom-file-for-each-organization">6.4.3. Create dependency pom file for each organization</a></h3>
-<h4><a class="header" href="#6431-charlie" id="6431-charlie">6.4.3.1 charlie</a></h4>
+<h4><a class="header" href="#22-alice" id="22-alice">2.2 alice</a></h4>
+<pre><code class="language-bash">dovetail corda dapp generate -m artifacts/alice.json -v 1.0.0 -t artifacts/corda --namespace com.alice.iou.flows --api
+</code></pre>
+<h3><a class="header" href="#3-create-dependency-pom-file-for-each-organization" id="3-create-dependency-pom-file-for-each-organization">3. Create dependency pom file for each organization</a></h3>
+<h4><a class="header" href="#31-charlie" id="31-charlie">3.1 charlie</a></h4>
 <p>copy following to artifacts/charlie.pom file</p>
 <pre><code class="language-javascript">&lt;dependency&gt;
     &lt;groupId&gt;com.alice.iou.flows&lt;/groupId&gt;
-    &lt;artifactId&gt;alice_iou-api&lt;/artifactId&gt;
-    &lt;version&gt;[1.0.0, )&lt;/version&gt;
+    &lt;artifactId&gt;alice-api&lt;/artifactId&gt;
+    &lt;version&gt;1.0.0&lt;/version&gt;
 &lt;/dependency&gt;
 </code></pre>
-<h4><a class="header" href="#6432-alice" id="6432-alice">6.4.3.2 alice</a></h4>
+<h4><a class="header" href="#32-alice" id="32-alice">3.2 alice</a></h4>
 <p>copy following to artifacts/alice.pom file</p>
 <pre><code class="language-javascript">&lt;dependency&gt;
     &lt;groupId&gt;com.charlie.iou.flows&lt;/groupId&gt;
-    &lt;artifactId&gt;charlie_iou-api&lt;/artifactId&gt;
-    &lt;version&gt;[1.0.0, )&lt;/version&gt;
+    &lt;artifactId&gt;charlie-api&lt;/artifactId&gt;
+    &lt;version&gt;1.0.0&lt;/version&gt;
 &lt;/dependency&gt;
 </code></pre>
-<h4><a class="header" href="#6432-bob" id="6432-bob">6.4.3.2 bob</a></h4>
+<h4><a class="header" href="#32-bob" id="32-bob">3.2 bob</a></h4>
 <p>copy following to artifacts/bob.pom file</p>
 <pre><code class="language-javascript">&lt;dependency&gt;
     &lt;groupId&gt;com.charlie.iou.flows&lt;/groupId&gt;
-    &lt;artifactId&gt;charlie_iou-api&lt;/artifactId&gt;
-    &lt;version&gt;[1.0.0, )&lt;/version&gt;
+    &lt;artifactId&gt;charlie-api&lt;/artifactId&gt;
+    &lt;version&gt;1.0.0&lt;/version&gt;
 &lt;/dependency&gt;
 &lt;dependency&gt;
     &lt;groupId&gt;com.alice.iou.flows&lt;/groupId&gt;
-    &lt;artifactId&gt;alice_iou-api&lt;/artifactId&gt;
-    &lt;version&gt;[1.0.0, )&lt;/version&gt;
+    &lt;artifactId&gt;alice-api&lt;/artifactId&gt;
+    &lt;version&gt;1.0.0&lt;/version&gt;
 &lt;/dependency&gt;
 </code></pre>
-<h3><a class="header" href="#643-generate-cordapps" id="643-generate-cordapps">6.4.3. Generate CorDapps</a></h3>
+<h3><a class="header" href="#4-generate-cordapps" id="4-generate-cordapps">4. Generate CorDapps</a></h3>
 <p>run following command from iou_tutorial folder</p>
-<pre><code class="language-bash">dovetail fabric dapp generate -m artifacts/charlie.json -v 1.0.0 -t artifacts/corda/charlie --namespace com.charlie.iou.flows --dependency-file artifacts/charlie.pom
-
-dovetail fabric dapp generate -m artifacts/alice.json -v 1.0.0 -t artifacts/corda/alice --namespace com.alice.iou.flows --dependency-file alice.pom
-
-dovetail fabric dapp generate -m artifacts/bob.json -v 1.0.0 -t corda/bob --namespace com.bob.iou.flows --dependency-file bob.pom
+<h3><a class="header" href="#41-charlie" id="41-charlie">4.1 charlie</a></h3>
+<pre><code class="language-bash">dovetail corda dapp generate -m artifacts/charlie.json -v 1.0.0 -t artifacts/corda --namespace com.charlie.iou.flows --dependency-file artifacts/charlie.pom
 </code></pre>
-<h2><a class="header" href="#6-test-iou-smart-contract-on-corda-3" id="6-test-iou-smart-contract-on-corda-3">6. Test IOU Smart Contract on Corda</a></h2>
-<h2><a class="header" href="#64-generate-deploy-cordapps" id="64-generate-deploy-cordapps">6.4. Generate Deploy CorDapps</a></h2>
-<h3><a class="header" href="#641-copy-iou-cordapp-deployment-script" id="641-copy-iou-cordapp-deployment-script">6.4.1 Copy IOU CorDapp deployment script</a></h3>
-<p>Copy deployment script to your network/corda directory</p>
-<pre><code>cd iou_tutorial/network/corda
+<h3><a class="header" href="#42-alice" id="42-alice">4.2 alice</a></h3>
+<pre><code class="language-bash">dovetail corda dapp generate -m artifacts/alice.json -v 1.0.0 -t artifacts/corda --namespace com.alice.iou.flows --dependency-file alice.pom
 </code></pre>
-<pre><code>curl -OL https://TIBCOSoftware.github.io/dovetail/tutorials/iou/corda.zip &amp;&amp; \
-unzip corda.zip &amp;&amp; \
-rm corda.zip
+<h3><a class="header" href="#43-bob" id="43-bob">4.3 bob</a></h3>
+<pre><code class="language-bash">dovetail corda dapp generate -m artifacts/bob.json -v 1.0.0 -t artifacts/corda --namespace com.bob.iou.flows --dependency-file bob.pom
 </code></pre>
-<h3><a class="header" href="#642-deploy-nodes" id="642-deploy-nodes">6.4.2 Deploy nodes</a></h3>
-<p>From the network/corda directory, run following command, it will take a few minutes.</p>
-<pre><code class="language-bash">./gradlew clean deployNodes
+<h2><a class="header" href="#generate-corda-client" id="generate-corda-client">Generate Corda Client</a></h2>
+<p>Dovetail ClI generates RPC client from CorDApp flows and Smart contract metadata, the generated client is a standalone springboot web server that exposes REST APIs to allow applications to invoke CorDapp flows.</p>
+<p>The generated client also contains an embedded event streaming service to pulish vault state changes to specified messaging service, at present, only TIBCO Cloud Messaging is supported, use commandline --streaming eftl to enable streaming service. </p>
+<h3><a class="header" href="#1-create-dependency-pom-file" id="1-create-dependency-pom-file">1 Create dependency pom file</a></h3>
+<p>copy following to artifacts/iou.pom file</p>
+<pre><code class="language-javascript">&lt;dependency&gt;
+    &lt;groupId&gt;com.example.iou&lt;/groupId&gt;
+    &lt;artifactId&gt;IOU&lt;/artifactId&gt;
+    &lt;version&gt;1.0.0&lt;/version&gt;
+&lt;/dependency&gt;
 </code></pre>
-<h3><a class="header" href="#642-run-nodes" id="642-run-nodes">6.4.2 Run nodes</a></h3>
-<p>Run following command to start up all nodes, it will take a few minutes.</p>
-<pre><code class="language-bash">cd build/nodes
-./runnodes
+<h3><a class="header" href="#2-generate-corda-client" id="2-generate-corda-client">2. Generate Corda Client</a></h3>
+<p>run following command from iou_tutorial folder, a web client is generated for charlie, alice and bob. The last command is to generate a generic web client than will be used for party 'bank' to issue and transfer cash.</p>
+<h3><a class="header" href="#21-charlie-1" id="21-charlie-1">2.1. charlie</a></h3>
+<pre><code class="language-bash">dovetail corda client generate --cordapp-json artifacts/charlie.json --smartcontract-json artifacts/IOU.json -v 1.0.0 -t artifacts/corda --cordapp-ns com.charlie.iou.flows --dependency-file artifacts/iou.pom --streaming none
 </code></pre>
-<h2><a class="header" href="#6-test-iou-smart-contract-on-corda-4" id="6-test-iou-smart-contract-on-corda-4">6. Test IOU Smart Contract on Corda</a></h2>
-<h3><a class="header" href="#65-run-test-cases" id="65-run-test-cases">6.5 Run test cases</a></h3>
-<h4><a class="header" href="#651-issue-an-iou" id="651-issue-an-iou">6.5.1 Issue an IOU</a></h4>
-<p>At charlie's terminal, issue an IOU</p>
-<pre><code>flow start com.charlie.iou.flows.IssueIOUInitiatorImpl owner: &quot;O=alice,L=New York,C=US&quot;, amt: $100, extId: charlie100, regulator: &quot;O=regulator,L=New York,C=US&quot;
+<h3><a class="header" href="#22-alice-1" id="22-alice-1">2.2. alice</a></h3>
+<pre><code class="language-bash">dovetail corda client generate --cordapp-json artifacts/alice.json --smartcontract-json artifacts/IOU.json -v 1.0.0 -t artifacts/corda --cordapp-ns com.alice.iou.flows --dependency-file artifacts/iou.pom --streaming none
 </code></pre>
-<p>Now run following command from charlie, alice and bob's terminals, you should see the IOU is now on both charlie and alice's ledgers, but not on bob's</p>
-<pre><code>run vaultQuery contractStateType: com.example.iou.IOU
+<h3><a class="header" href="#23-bob" id="23-bob">2.3. bob</a></h3>
+<pre><code class="language-bash">dovetail corda client generate --cordapp-json artifacts/bob.json --smartcontract-json artifacts/IOU.json -v 1.0.0 -t artifacts/corda --cordapp-ns com.bob.iou.flows --dependency-file artifacts/iou.pom --streaming none
 </code></pre>
-<p>select and copy the uuid of the IOU from the output</p>
-<h4><a class="header" href="#652-transfer-the-iou" id="652-transfer-the-iou">6.5.2 Transfer the IOU</a></h4>
-<p>At alice's terminal, transfer IOU to bob. </p>
-<p>Before running the command, replace [YOUR_IOU_UUID] with uuid you just copied</p>
-<pre><code>flow start com.alice.iou.flows.TransferIOUInitiatorImpl linearId: charlie100_[YOUR_IOU_UUID], newOwner: &quot;O=bob,L=New York,C=US&quot;, regulator: &quot;O=regulator,L=New York,C=US&quot;
+<h3><a class="header" href="#24-bank" id="24-bank">2.4. bank</a></h3>
+<pre><code class="language-bash">dovetail corda client generate -v 1.0.0 -t artifacts/corda
 </code></pre>
-<p>Now run following command from charlie, alice and bob's terminals, you should see the IOU is now on both charlie and bob's ledgers, but no longer on charlie's</p>
-<pre><code>run vaultQuery contractStateType: com.example.iou.IOU
+<h2><a class="header" href="#test-iou-smart-contract-and-dapp-flows-on-corda" id="test-iou-smart-contract-and-dapp-flows-on-corda">Test IOU Smart Contract and dapp flows on Corda</a></h2>
+<h2><a class="header" href="#start-up-corda-network" id="start-up-corda-network">Start up corda network</a></h2>
+<h3><a class="header" href="#1-run-code-nodes" id="1-run-code-nodes">1 Run code nodes</a></h3>
+<p>from your cli folder, run following commands, check logs under network/corda/nodes/*/log to verify that each node has been started</p>
+<blockquote>
+<ul>
+<li>./network_clean.sh to clean up logs and vault database</li>
+<li>./network_start.sh to start up nodes</li>
+</ul>
+</blockquote>
+<p>to stop all nodes, run following command</p>
+<blockquote>
+<ul>
+<li>./network_stop.sh to shutdown all nodes</li>
+</ul>
+</blockquote>
+<h3><a class="header" href="#2-start-up-web-clients" id="2-start-up-web-clients">2 Start up web clients</a></h3>
+<p>from your cli folder, run following command to start up all web servers, check cli/log to verify web servers are started.</p>
+<blockquote>
+<ul>
+<li>./start_webservers.sh</li>
+</ul>
+</blockquote>
+<p>from your cli folder, run following command to stop all web servers</p>
+<blockquote>
+<ul>
+<li>./stop_webservers.sh</li>
+</ul>
+</blockquote>
+<h3><a class="header" href="#3-open-swagger-ui" id="3-open-swagger-ui">3 Open swagger UI</a></h3>
+<ul>
+<li>alice: http://localhost:9000/swagger-ui.html</li>
+<li>charlie : http://localhost:9001/swagger-ui.html</li>
+<li>bob: http://localhost:9002/swagger-ui.html</li>
+<li>bank: http://localhost:9004/swagger-ui.html</li>
+</ul>
+<h2><a class="header" href="#test-iou-smart-contract-and-dapp-on-corda" id="test-iou-smart-contract-and-dapp-on-corda">Test IOU Smart Contract and dapp on Corda</a></h2>
+<h3><a class="header" href="#1-issue-cash" id="1-issue-cash">1 Issue cash</a></h3>
+<p>Use bank's swagger UI to issue and transfer cash to charlie. </p>
+<ul>
+<li>
+<p>go to security-controller section</p>
+<ul>
+<li>login method
+<ul>
+<li>username = user1, password = test</li>
+</ul>
+</li>
+<li>execute</li>
+</ul>
+</li>
+<li>
+<p>go to cash-controller section</p>
+<ul>
+<li>/cash/flow/issue-payment method
+<ul>
+<li>Authorizarion: copy the token value from login output, without the quotes</li>
+<li>Input:
+<pre><code>{
+    &quot;amount&quot;: {
+        &quot;quantity&quot;: 100000,
+        &quot;currency&quot;: &quot;USD&quot;
+    },
+    &quot;issuerRef&quot;: &quot;00&quot;,
+    &quot;recipient&quot;: &quot;O=charlie,L=New York,C=US&quot;,
+    &quot;anonymous&quot;: false,
+    &quot;notary&quot;: &quot;O=Notary,L=London,C=GB&quot;
+}  
 </code></pre>
-<h4><a class="header" href="#653-issue-cash" id="653-issue-cash">6.5.3 Issue cash</a></h4>
-<p>At bank's terminal, issue and transfer cash to charlie. </p>
-<pre><code>flow start net.corda.finance.flows.CashIssueFlow amount: $200, issuerBankPartyRef: 00, notary: &quot;C=GB,L=London,O=Notary&quot;
-
-flow start net.corda.finance.flows.CashPaymentFlow amount: $200, recipient: &quot;O=charlie,L=New York,C=US&quot;, anonymous: true
+</li>
+<li>execute, if successful, you should see output similar to following</li>
+</ul>
+<pre><code>{
+    &quot;transactionId&quot;: &quot;FC85B7E74E8D9A4BDD39A2D83FA2C41C4CB57A296E43A3B5D9AF08FC7CF06E1B&quot;
+}  
 </code></pre>
-<h4><a class="header" href="#654-settle-the-iou" id="654-settle-the-iou">6.5.4 Settle the IOU</a></h4>
-<p>At charlie's terminal, settle the IOU with cash</p>
-<p>Before running the command, replace [YOUR_IOU_UUID] with uuid you copied</p>
-<pre><code>flow start com.charlie.iou.flows.SettleIOUInitiatorImpl linearId: charlie100_[YOUR_IOU_UUID], amt: $50, regulator: &quot;O=regulator,L=New York,C=US&quot;
+</li>
+</ul>
+</li>
+</ul>
+<h3><a class="header" href="#2-issue-an-iou" id="2-issue-an-iou">2 Issue an IOU</a></h3>
+<p>Use charlie's swagger UI to issue an IOU</p>
+<ul>
+<li>
+<p>go to security-controller section</p>
+<ul>
+<li>login method
+<ul>
+<li>username = user1, password = test</li>
+</ul>
+</li>
+<li>execute</li>
+</ul>
+</li>
+<li>
+<p>go to query-controller section</p>
+<ul>
+<li>/query/states</li>
+<li>Authorizarion: copy the token value from login output, without the quotes</li>
+<li>execute, you should see cash is in the vault</li>
+</ul>
+</li>
+<li>
+<p>go to main-controller section</p>
+<ul>
+<li>/api/issueiouinitiatort method
+<ul>
+<li>Authorizarion: copy the token value from login output, without the quotes</li>
+<li>Input:</li>
+</ul>
+<pre><code>{
+    &quot;holder&quot;: &quot;O=alice,L=New York,C=US&quot;,
+    &quot;amt&quot;: {
+        &quot;quantity&quot;: 10000,
+        &quot;currency&quot;: &quot;USD&quot;
+    },
+    &quot;extId&quot;: &quot;iou1&quot;
+}
 </code></pre>
-<h4><a class="header" href="#655-check-iou-and-cash-status" id="655-check-iou-and-cash-status">6.5.5 Check IOU and Cash status</a></h4>
-<p>At charlie's terminal, run following commands, you should see now IOU's paid amount is $50, and there is $150 left on charlie's account.</p>
-<pre><code>run vaultQuery contractStateType: net.corda.finance.contracts.asset.Cash$State
-run vaultQuery contractStateType: com.example.iou.IOU
+<ul>
+<li>execute</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>go to query-controller section</p>
+<ul>
+<li>/query/states</li>
+<li>Authorizarion: copy the token value from login output, without the quotes</li>
+<li>execute, you should see com.example.iou.IOU is now in the vault</li>
+</ul>
+</li>
+</ul>
+<h3><a class="header" href="#3-transfer-the-iou" id="3-transfer-the-iou">3 Transfer the IOU</a></h3>
+<p>Use alice's swagger to transfer IOU to bob. </p>
+<ul>
+<li>
+<p>go to security-controller section</p>
+<ul>
+<li>login method
+<ul>
+<li>username = user1, password = test</li>
+</ul>
+</li>
+<li>execute</li>
+</ul>
+</li>
+<li>
+<p>go to query-controller section</p>
+<ul>
+<li>/query/states</li>
+<li>Authorizarion: copy the token value from login output, without the quotes</li>
+<li>execute, you should see com.example.iou.IOU in the output, copy the linearId.id value</li>
+</ul>
+</li>
+<li>
+<p>go to main-controller section</p>
+<ul>
+<li>/api/transferiouinitiator
+<ul>
+<li>Authorizarion: copy the token value from login output, without the quotes</li>
+<li>Input</li>
+</ul>
+<pre><code>{
+    &quot;iouId&quot;: {
+        &quot;externalId&quot;: &quot;iou1&quot;,
+        &quot;id&quot;: &quot;paste the linearId.id value here&quot;
+    },
+    &quot;newHoder&quot;: &quot;O=bob,L=New York,C=US&quot;
+}
 </code></pre>
+<ul>
+<li>execute</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>go to query-controller section</p>
+<ul>
+<li>/query/states</li>
+<li>Authorizarion: copy the token value from login output, without the quotes</li>
+<li>execute, com.example.iou.IOU is no longer in the vault</li>
+</ul>
+</li>
+</ul>
+<h3><a class="header" href="#4-settle-the-iou" id="4-settle-the-iou">4 Settle the IOU</a></h3>
+<p>Use charlie's swagger UI to settle the IOU with cash</p>
+<ul>
+<li>go to main-controller section
+<ul>
+<li>/api/settleiouinitiator method
+<ul>
+<li>Authorizarion: copy the token value from login output, without the quotes</li>
+<li>Input:</li>
+</ul>
+<pre><code>{
+    &quot;iouId&quot;: {
+        &quot;externalId&quot;: &quot;iou1&quot;,
+        &quot;id&quot;: &quot;copy iou linearId.id value here&quot;
+    }
+}
+</code></pre>
+</li>
+<li>go to query-controller section
+<ul>
+<li>/query/states</li>
+<li>Authorizarion: copy the token value from login output, without the quotes</li>
+<li>execute, com.example.iou.IOU is no longer in the vault, and cash amount is reduced by $100</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h2><a class="header" href="#fabric-samples-and-tutorials" id="fabric-samples-and-tutorials">Fabric Samples and Tutorials</a></h2>
 <p>You can follow Hyperledger Fabric samples and tutorials in our <a href="https://github.com/TIBCOSoftware/dovetail-contrib/tree/develop/hyperledger-fabric#getting-started">Dovetail Contrib</a> repository.</p>
 <h1><a class="header" href="#contributing-to-project-dovetail" id="contributing-to-project-dovetail">Contributing to Project Dovetail</a></h1>
@@ -991,6 +1159,14 @@ run vaultQuery contractStateType: com.example.iou.IOU
 
         
 
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
         
 
         
