@@ -1,5 +1,5 @@
 <p align="center">
-  <img src ="images/TIBCO Labs final with TM2-08_email.png" />
+  <img src ="images/TIBCO Labs final with TM2-08_email.png" width="600" height="210"/>
 </p>
 
 <p align="center" >
