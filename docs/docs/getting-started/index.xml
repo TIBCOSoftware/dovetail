@@ -1,0 +1,159 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project Dovetail™ – Getting Started</title>
+    <link>https://tibcosoftware.github.io/dovetail/docs/getting-started/</link>
+    <description>Recent content in Getting Started on Project Dovetail™</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://tibcosoftware.github.io/dovetail/docs/getting-started/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Installation</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/getting-started/installation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/getting-started/installation/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;installing-the-project-dovetail-studio&#34;&gt;Installing the Project Dovetail Studio&lt;/h2&gt;
+&lt;p&gt;just follow these steps:&lt;/p&gt;
+&lt;p&gt;1.- Download the latest version for your os architecture and your blockchain target.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You can find the latest release &lt;a href=&#34;https://github.com/TIBCOSoftware/dovetail/releases/latest&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Or you can just execute this commands&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;For Hyperledger fabric development:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;mkdir dovetail_installation
+cd dovetail_installation
+curl -OL https://github.com/TIBCOSoftware/dovetail/releases/download/v0.2.0/TIB_dovetail-fabric_0.2.0_macosx_x86_64.zip
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;For R3 Corda development:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;mkdir dovetail_installation
+cd dovetail_installation
+curl -OL https://github.com/TIBCOSoftware/dovetail/releases/download/v0.2.0/TIB_dovetail-corda_0.2.0_macosx_x86_64.zip
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;For Multitarget development:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;mkdir dovetail_installation
+cd dovetail_installation
+curl -OL https://github.com/TIBCOSoftware/dovetail/releases/download/v0.2.0/TIB_dovetail-multitarget_0.2.0_macosx_x86_64.zip
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;2.- Unzip the downloaded release (for example on mac) (from dovetail_installation folder).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;unzip TIB_dovetail-fabric_0.2.0_macosx_x86_64.zip
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;starting-dovetail-studio&#34;&gt;Starting Dovetail Studio&lt;/h2&gt;
+&lt;p&gt;To get started with your downloaded version of the Dovetail Studio in the previous step just do the following:&lt;/p&gt;
+&lt;p&gt;1.- Run studio&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dovetail/0.2/bin/run-studio.sh eula-accept
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;launching-dovetail-studio&#34;&gt;Launching Dovetail Studio&lt;/h2&gt;
+&lt;p&gt;To launch Dovetail Studio simply open your favorite web browser, and navigate to http://localhost:8090. You&#39;ll see the initial page to create your first smart contract!&lt;/p&gt;
+&lt;h2 id=&#34;installation-tutorial-video&#34;&gt;Installation Tutorial Video&lt;/h2&gt;
+&lt;video width=&#34;480&#34; height=&#34;320&#34; controls=&#34;controls&#34;&gt;
+    &lt;source src=&#34;videos/dovetail_studio_install.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Dovetail CLI</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/getting-started/dovetail-cli/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/getting-started/dovetail-cli/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The dovetail cli is a tool to mainly generate smart contracts for a given model built using ui tool &lt;a href=&#34;ch01-01-installation.md&#34;&gt;Dovetail Studio&lt;/a&gt;, so we recommend you to learn how to do that first.&lt;/p&gt;
+&lt;h2 id=&#34;before-you-get-started&#34;&gt;Before you get started&lt;/h2&gt;
+&lt;p&gt;Before you can get started with the cli tools you need to make sure you have the &lt;a href=&#34;https://golang.org/doc/install&#34;&gt;Go programming language&lt;/a&gt; and &lt;a href=&#34;https://git-scm.com/book/en/v2/Getting-Started-Installing-Git&#34;&gt;git&lt;/a&gt; installed. Go v1.13.x is required.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Don&#39;t forget to set your &lt;code&gt;GOPATH&lt;/code&gt; variable and make sure that &lt;code&gt;$GOPATH/bin&lt;/code&gt; is part of your &lt;code&gt;PATH&lt;/code&gt;
+(see &lt;a href=&#34;https://golang.org/doc/code.html#GOPATH&#34;&gt;here&lt;/a&gt; or &lt;a href=&#34;https://github.com/golang/go/wiki/SettingGOPATH&#34;&gt;here&lt;/a&gt; for more details)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;installing-the-cli-tools&#34;&gt;Installing the cli tools&lt;/h2&gt;
+&lt;p&gt;Copy and paste the following commands to install Project Dovetail™ commandline tool.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;curl https://github.com/TIBCOSoftware/dovetail-cli/releases/download/v0.2.0/dovetail-cli-install.sh -sSfL v0.2.0 | sh
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;The binary dovetail will be in your dovetail-cli/bin directory.
+You can add /path/to/dovetail-cli/bin/dovetail to your PATH env variable for easier access.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;installation-tutorial-video&#34;&gt;Installation Tutorial Video&lt;/h2&gt;
+&lt;video width=&#34;480&#34; height=&#34;320&#34; controls=&#34;controls&#34;&gt;
+    &lt;source src=&#34;videos/dovetail_cli_install.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Environment Prerequisites</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/getting-started/environment-prerequisites/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/getting-started/environment-prerequisites/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;dovetail-studio-requirements&#34;&gt;Dovetail Studio Requirements&lt;/h2&gt;
+&lt;h3 id=&#34;docker&#34;&gt;Docker&lt;/h3&gt;
+&lt;p&gt;Docker is needed to run Dovetail Studio, you can find the installation details here:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.docker.com/&#34;&gt;Docker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.docker.com/compose/install/&#34;&gt;Docker Compose&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;hyperledger-fabric-requirements&#34;&gt;Hyperledger Fabric Requirements&lt;/h2&gt;
+&lt;h3 id=&#34;hyperledger-fabric-sdk&#34;&gt;Hyperledger Fabric SDK&lt;/h3&gt;
+&lt;p&gt;If you are developing for Hyperledger Fabric, below is a link to its installation instructions.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://hyperledger-fabric.readthedocs.io/en/release-1.3/install.html&#34;&gt;Hyperledger Fabric&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;r3-corda-requirements&#34;&gt;R3 Corda Requirements&lt;/h2&gt;
+&lt;h3 id=&#34;java-programming-language-and-tools&#34;&gt;Java Programming Language and Tools&lt;/h3&gt;
+&lt;p&gt;If you are developing for R3 Corda you will need Java runtime.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IMPORTANT: &lt;a href=&#34;https://www.oracle.com/technetwork/java/javase/downloads/index.html&#34;&gt;Java SE Development Kit 8&lt;/a&gt; is required&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://maven.apache.org/install.html&#34;&gt;Maven&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you are developing for R3 Corda, following jars must be available in your local or public Maven Repository.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    &amp;lt;dependency&amp;gt;
+        &amp;lt;groupId&amp;gt;org.jetbrains.kotlin&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;kotlin-stdlib-jre8&amp;lt;/artifactId&amp;gt;
+        &amp;lt;version&amp;gt;1.1.60&amp;lt;/version&amp;gt;
+    &amp;lt;/dependency&amp;gt;
+    &amp;lt;dependency&amp;gt;
+        &amp;lt;groupId&amp;gt;net.corda&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;corda-core&amp;lt;/artifactId&amp;gt;
+        &amp;lt;version&amp;gt;[2.0.0,)&amp;lt;/version&amp;gt;
+    &amp;lt;/dependency&amp;gt;
+    &amp;lt;dependency&amp;gt;
+        &amp;lt;groupId&amp;gt;net.corda&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;corda-finance&amp;lt;/artifactId&amp;gt;
+        &amp;lt;version&amp;gt;[2.0.0,)&amp;lt;/version&amp;gt;
+    &amp;lt;/dependency&amp;gt;
+    &amp;lt;dependency&amp;gt;
+        &amp;lt;groupId&amp;gt;com.tibco.dovetail&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;dovetail-corda&amp;lt;/artifactId&amp;gt;
+        &amp;lt;version&amp;gt;[0.2.0, )&amp;lt;/version&amp;gt;
+    &amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;Project Dovetail™ library for R3 Corda is available &lt;a href=&#34;https://github.com/TIBCOSoftware/dovetail-contrib/releases/download/v0.2.0/dovetail-corda-0.2.0.jar&#34;&gt;here&lt;/a&gt;, run following command to install it to your local Maven repository&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;mkdir dovetail_corda
+cd dovetail_corda
+curl -OL https://github.com/TIBCOSoftware/dovetail-contrib/releases/download/v0.2.0/dovetail-corda-0.2.0.jar
+mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -DgeneratePom=true -DgroupId=com.tibco.dovetail -DartifactId=dovetail-corda -Dversion=0.2.0 -Dfile=dovetail_corda_v0.2.0.jar -Dpackaging=jar
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

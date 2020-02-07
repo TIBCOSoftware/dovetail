@@ -1,0 +1,346 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project Dovetail™ – Corda Distributed Application</title>
+    <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-dist/</link>
+    <description>Recent content in Corda Distributed Application on Project Dovetail™</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-dist/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: CorDapp for charlie</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-dist/charlie/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-dist/charlie/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;video width=&#34;480&#34; height=&#34;320&#34; controls=&#34;controls&#34;&gt;
+    &lt;source src=&#34;videos/charlie.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;&lt;/p&gt;
+&lt;h3 id=&#34;1-issueiou-initiator-flow&#34;&gt;1. IssueIOU initiator flow&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a flow
+&lt;ul&gt;
+&lt;li&gt;flow name: IssueIOUInitiator&lt;/li&gt;
+&lt;li&gt;add a trigger : select &amp;ldquo;Dovetail CorDApp Flow Initiator&amp;rdquo; from the list
+&lt;ul&gt;
+&lt;li&gt;select false for &amp;ldquo;Use confidential identities for this transaction?&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;select false for &amp;ldquo;Send transactions to observers?&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;click &amp;ldquo;Next&amp;rdquo; button&lt;/li&gt;
+&lt;li&gt;add following flow input parameters
+&lt;ul&gt;
+&lt;li&gt;holder :    Type = Party, PartyRole = Participant&lt;/li&gt;
+&lt;li&gt;amt:        Type = Amount&lt;Currency&gt;&lt;/li&gt;
+&lt;li&gt;extId:      Type = String&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;click &amp;ldquo;Continue&amp;rdquo; button&lt;/li&gt;
+&lt;li&gt;select &amp;ldquo;Copy Schema&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;select the trigger, and map flow input&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;implement IssueIOUInitiator flow
+&lt;ul&gt;
+&lt;li&gt;select BuildTransactoinProposal activity from Dovetail-CorDApp category&lt;/li&gt;
+&lt;li&gt;select &amp;ldquo;IOUContract:&amp;rdquo; from contract dropdown&lt;/li&gt;
+&lt;li&gt;select com.example.iou.IssueIOU from transaction dropdown&lt;/li&gt;
+&lt;li&gt;map the activity input
+&lt;ul&gt;
+&lt;li&gt;use cordapp.createLinearIdFromExternalId($flow.transactionInput.extId) to map iou.linearId&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;You will see an error at design time for this function, ignore the error for now, it is supported at runtime&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-transferiou-receiver-flow&#34;&gt;2. TransferIOU receiver flow&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a flow
+&lt;ul&gt;
+&lt;li&gt;flow name: TransferIOUResponder&lt;/li&gt;
+&lt;li&gt;select trigger : Dovetail CorDApp Flow Receiver
+&lt;ul&gt;
+&lt;li&gt;select receiver from flow type dropdown&lt;/li&gt;
+&lt;li&gt;select false for &amp;ldquo;Use confidential identities for this transaction?&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;initiator flow name: com.alice.iou.flows.TransferIOUInitiator&lt;/li&gt;
+&lt;li&gt;click &amp;ldquo;Continue&amp;rdquo; button&lt;/li&gt;
+&lt;li&gt;select &amp;ldquo;Copy Schema&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;select the trigger, and map flow input&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-settleiou-initiator-flow&#34;&gt;3. SettleIOU initiator flow&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a flow
+&lt;ul&gt;
+&lt;li&gt;flow name: SettleIOUInitiator&lt;/li&gt;
+&lt;li&gt;select trigger : Dovetail CorDApp Flow Initiator
+&lt;ul&gt;
+&lt;li&gt;select false for &amp;ldquo;Use confidential identities for this transaction?&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;select false for &amp;ldquo;Send transactions to observers?&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;click &amp;ldquo;Next&amp;rdquo; button&lt;/li&gt;
+&lt;li&gt;add following flow input parameters
+&lt;ul&gt;
+&lt;li&gt;iouId : Type = LinearId&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;click &amp;ldquo;Continue&amp;rdquo; button&lt;/li&gt;
+&lt;li&gt;select &amp;ldquo;Copy Schema&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;select the trigger, and map flow input&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Implement SettleIOUInitiator flow
+&lt;ul&gt;
+&lt;li&gt;add SimpleVaultQuery activity from Dovetail-CorDApp category
+&lt;ul&gt;
+&lt;li&gt;Configuration screen
+&lt;ul&gt;
+&lt;li&gt;select IOU from asset dropdow&lt;/li&gt;
+&lt;li&gt;Map input&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;if IOU is found
+* add CashWallet activity from Dovetail-CorDApp category
+* Select &amp;ldquo;Retrieve Funds&amp;rdquo; from dropdown
+* Map input
+* add BuildTransactoinProposal Dovetail-CorDApp category
+* select IOU from contract dropdown
+* select com.example.iou.SettleIOU from transaction dropdown
+* map the activity input&lt;/li&gt;
+&lt;li&gt;otherwise throw error&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-export-the-charlie-applicatio&#34;&gt;4. Export the &amp;ldquo;charlie&amp;rdquo; applicatio&lt;/h3&gt;
+&lt;p&gt;export the application to artifiacts/charlie.json&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: CorDapp for alice</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-dist/alice/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-dist/alice/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;video width=&#34;480&#34; height=&#34;320&#34; controls=&#34;controls&#34;&gt;
+    &lt;source src=&#34;videos/alice.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;&lt;/p&gt;
+&lt;h3 id=&#34;1-issueiou-receiver-flow&#34;&gt;1. IssueIOU receiver flow&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a flow
+&lt;ul&gt;
+&lt;li&gt;Create a flow&lt;/li&gt;
+&lt;li&gt;flow name: IssueIOUResponder&lt;/li&gt;
+&lt;li&gt;select trigger : Dovetail CorDApp Flow Receiver
+&lt;ul&gt;
+&lt;li&gt;select receiver from flow type dropdown&lt;/li&gt;
+&lt;li&gt;select false for &amp;ldquo;Use confidential identities for this transaction?&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;initiator flow name: com.charlie.iou.flows.IssueIOUInitiator&lt;/li&gt;
+&lt;li&gt;click &amp;ldquo;Continue&amp;rdquo; button&lt;/li&gt;
+&lt;li&gt;select &amp;ldquo;Copy Schema&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;select the trigger, and map flow input&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-transferiou-initiator-flow&#34;&gt;2. TransferIOU initiator flow&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;flow name: TransferIOUInitiator
+&lt;ul&gt;
+&lt;li&gt;add a trigger : select &amp;ldquo;Dovetail CorDApp Flow Initiator&amp;rdquo; from the list
+&lt;ul&gt;
+&lt;li&gt;select false for &amp;ldquo;Use confidential identities for this transaction?&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;select false for &amp;ldquo;Send transactions to observers?&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;click &amp;ldquo;Next&amp;rdquo; button&lt;/li&gt;
+&lt;li&gt;add following flow input parameters
+&lt;ul&gt;
+&lt;li&gt;iouId :    Type = LinearId&lt;/li&gt;
+&lt;li&gt;newHolder: Type = Party, PartyRole = Participant&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;click &amp;ldquo;Continue&amp;rdquo; button&lt;/li&gt;
+&lt;li&gt;select &amp;ldquo;Copy Schema&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;select the trigger, and map flow input&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;implement TransferIOUInitiator flow
+&lt;ul&gt;
+&lt;li&gt;add SimpleVaultQuery activity from Dovetail-CorDApp category
+&lt;ul&gt;
+&lt;li&gt;Configuration screen
+&lt;ul&gt;
+&lt;li&gt;select IOU from asset dropdow&lt;/li&gt;
+&lt;li&gt;Map input&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;if IOU is found
+&lt;ul&gt;
+&lt;li&gt;add BuildTransactoinProposal activity from Dovetail-CorDApp category
+&lt;ul&gt;
+&lt;li&gt;select &amp;ldquo;IOUContract:&amp;rdquo; from contract dropdown&lt;/li&gt;
+&lt;li&gt;select com.example.iou.TransferIOU from transaction dropdown&lt;/li&gt;
+&lt;li&gt;map the activity input&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;otherwise throw error&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-export-the-alice-applicatio&#34;&gt;3. Export the &amp;ldquo;alice&amp;rdquo; applicatio&lt;/h3&gt;
+&lt;p&gt;export the application to artifiacts/alice.json&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: CorDapp for bob</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-dist/bob/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-dist/bob/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;video width=&#34;480&#34; height=&#34;320&#34; controls=&#34;controls&#34;&gt;
+    &lt;source src=&#34;videos/bob.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;&lt;/p&gt;
+&lt;h3 id=&#34;1-transferiou-receiver-flow&#34;&gt;1. TransferIOU receiver flow&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a flow
+&lt;ul&gt;
+&lt;li&gt;Create a flow&lt;/li&gt;
+&lt;li&gt;flow name: TransferIOUResponder&lt;/li&gt;
+&lt;li&gt;select trigger : Dovetail CorDApp Flow Receiver
+&lt;ul&gt;
+&lt;li&gt;select receiver from flow type dropdown&lt;/li&gt;
+&lt;li&gt;select false for &amp;ldquo;Use confidential identities for this transaction?&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;initiator flow name: com.alice.iou.flows.TransferIOUInitiator&lt;/li&gt;
+&lt;li&gt;click &amp;ldquo;Continue&amp;rdquo; button&lt;/li&gt;
+&lt;li&gt;select &amp;ldquo;Copy Schema&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;select the trigger, and map flow input&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-settleiou-receiver-flow&#34;&gt;2. SettleIOU receiver flow&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a flow
+&lt;ul&gt;
+&lt;li&gt;Create a flow&lt;/li&gt;
+&lt;li&gt;flow name: SettleIOUResponder&lt;/li&gt;
+&lt;li&gt;select trigger : Dovetail CorDApp Flow Receiver
+&lt;ul&gt;
+&lt;li&gt;select receiver from flow type dropdown&lt;/li&gt;
+&lt;li&gt;select false for &amp;ldquo;Use confidential identities for this transaction?&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;initiator flow name: com.charlie.iou.flows.SettleIOUInitiator&lt;/li&gt;
+&lt;li&gt;click &amp;ldquo;Continue&amp;rdquo; button&lt;/li&gt;
+&lt;li&gt;select &amp;ldquo;Copy Schema&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;select the trigger, and map flow input&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-export-the-bob-applicatio&#34;&gt;3. Export the &amp;ldquo;bob&amp;rdquo; applicatio&lt;/h3&gt;
+&lt;p&gt;export the application to artifiacts/bob.json&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Generate CorDapp artifacts</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-dist/cord-app-gen/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-dist/cord-app-gen/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;1-export-cordapp-flows&#34;&gt;1. Export CorDapp flows&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Export charlie application as charlie.json to artifacts/ folder&lt;/li&gt;
+&lt;li&gt;Export alice application as alice.json to artifacts/ folder&lt;/li&gt;
+&lt;li&gt;Export bob application as bob.json to artifacts/ folder&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;2-generate-cordapp-dependencies&#34;&gt;2. Generate CorDapp dependencies&lt;/h3&gt;
+&lt;p&gt;CorDapp responder flows have compile time and runtime dependency on their corresponding initiator flows, however since flows are private to each organization, Tibco Dovetail generates a base initator class without implementation details and can be shared with business partners.&lt;/p&gt;
+&lt;p&gt;run following command from iou_tutorial folder&lt;/p&gt;
+&lt;h4 id=&#34;21-charlie&#34;&gt;2.1 charlie&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dovetail corda dapp generate -m artifacts/charlie.json -v 1.0.0 -t artifacts/corda --namespace com.charlie.iou.flows --api
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;22-alice&#34;&gt;2.2 alice&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dovetail corda dapp generate -m artifacts/alice.json -v 1.0.0 -t artifacts/corda --namespace com.alice.iou.flows --api
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;3-create-dependency-pom-file-for-each-organization&#34;&gt;3. Create dependency pom file for each organization&lt;/h3&gt;
+&lt;h4 id=&#34;31-charlie&#34;&gt;3.1 charlie&lt;/h4&gt;
+&lt;p&gt;copy following to artifacts/charlie.pom file&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;com.alice.iou.flows&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;alice-api&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;1.0.0&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;32-alice&#34;&gt;3.2 alice&lt;/h4&gt;
+&lt;p&gt;copy following to artifacts/alice.pom file&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;com.charlie.iou.flows&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;charlie-api&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;1.0.0&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;32-bob&#34;&gt;3.2 bob&lt;/h4&gt;
+&lt;p&gt;copy following to artifacts/bob.pom file&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;com.charlie.iou.flows&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;charlie-api&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;1.0.0&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;com.alice.iou.flows&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;alice-api&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;1.0.0&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;4-generate-cordapps&#34;&gt;4. Generate CorDapps&lt;/h3&gt;
+&lt;p&gt;run following command from iou_tutorial folder&lt;/p&gt;
+&lt;h3 id=&#34;41-charlie&#34;&gt;4.1 charlie&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dovetail corda dapp generate -m artifacts/charlie.json -v 1.0.0 -t artifacts/corda --namespace com.charlie.iou.flows --dependency-file artifacts/charlie.pom
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;42-alice&#34;&gt;4.2 alice&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dovetail corda dapp generate -m artifacts/alice.json -v 1.0.0 -t artifacts/corda --namespace com.alice.iou.flows --dependency-file alice.pom
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;43-bob&#34;&gt;4.3 bob&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dovetail corda dapp generate -m artifacts/bob.json -v 1.0.0 -t artifacts/corda --namespace com.bob.iou.flows --dependency-file bob.pom
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

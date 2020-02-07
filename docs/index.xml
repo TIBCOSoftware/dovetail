@@ -1,0 +1,51 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project Dovetail™ – Project Dovetail™</title>
+    <link>https://tibcosoftware.github.io/dovetail/</link>
+    <description>Recent content on Project Dovetail™</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 10 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="https://tibcosoftware.github.io/dovetail/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+      
+    
+    
+    <item>
+      <title>Blog: Release V.0.1.3</title>
+      <link>https://tibcosoftware.github.io/dovetail/blog/2019/05/10/release-v.0.1.3/</link>
+      <pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/blog/2019/05/10/release-v.0.1.3/</guid>
+      <description>
+        
+        
+        &lt;p&gt;second public Implementation Release of the TIBCO LABS™ Project Dovetail™, containing new Features.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;please have a look back soon here.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Blog: Initial Release</title>
+      <link>https://tibcosoftware.github.io/dovetail/blog/2018/11/30/initial-release/</link>
+      <pubDate>Fri, 30 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/blog/2018/11/30/initial-release/</guid>
+      <description>
+        
+        
+        &lt;p&gt;first public Implementation Release of the TIBCO LABS™ Project Dovetail™.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;please have a look back soon here.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

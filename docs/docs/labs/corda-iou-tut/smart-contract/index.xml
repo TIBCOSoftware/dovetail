@@ -1,0 +1,226 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project Dovetail™ – IOU Smart Contract</title>
+    <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/</link>
+    <description>Recent content in IOU Smart Contract on Project Dovetail™</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: IOU Smart Contract Data Model</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/model/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;video width=&#34;480&#34; height=&#34;320&#34; controls=&#34;controls&#34;&gt;
+    &lt;source src=&#34;videos/iou_asset_schema.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Start up and open Dovetail Studio WebUI&lt;/li&gt;
+&lt;li&gt;Go to Connection tab&lt;/li&gt;
+&lt;li&gt;Click &amp;ldquo;Add Connection&amp;rdquo;
+&lt;ul&gt;
+&lt;li&gt;Choose &amp;ldquo;Define Ledger Asset Schema&amp;rdquo; from the list&lt;/li&gt;
+&lt;li&gt;Enter display name, e.g. &amp;ldquo;my first IOU&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Enter asset name &amp;ldquo;IOU&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Enter module name &amp;ldquo;com.example.iou&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Select asset type &amp;ldquo;Linear State&amp;rdquo;
+&lt;ul&gt;
+&lt;li&gt;LinearId attribute will be automatically added to the pre-defined fields&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Enter addition fields
+&lt;ul&gt;
+&lt;li&gt;issuer, select &amp;ldquo;Party&amp;rdquo; from the type dropdown menu&lt;/li&gt;
+&lt;li&gt;holder, select &amp;ldquo;Party&amp;rdquo; from the type dropdown menu&lt;/li&gt;
+&lt;li&gt;amt, select &amp;ldquo;Amount&lt;Courrency&gt;&amp;rdquo; from the type dropdown menu&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Define party roles
+&lt;ul&gt;
+&lt;li&gt;add &amp;ldquo;issuer&amp;rdquo;, leave other fields as default&lt;/li&gt;
+&lt;li&gt;add &amp;ldquo;holder&amp;rdquo;, leave other fields as default&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Click &amp;ldquo;Donee&amp;rdquo; button&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Implement IOU Smart Contract</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/implement/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/implement/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;video width=&#34;480&#34; height=&#34;320&#34; controls=&#34;controls&#34;&gt;
+    &lt;source src=&#34;videos/iou_smart_contract_impl.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;&lt;/p&gt;
+&lt;h3 id=&#34;1-issueiou-transaction&#34;&gt;1 IssueIOU Transaction&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Go to Apps Tab &amp;gt; Create to create a new Application &amp;ldquo;IOU&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create a flow&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;flow name &amp;ldquo;IssueIOU&amp;rdquo; &amp;gt;&lt;/li&gt;
+&lt;li&gt;Add a trigger, select &amp;ldquo;SmartContract Action Trigger&amp;rdquo; from the list
+&lt;ul&gt;
+&lt;li&gt;Select &amp;ldquo;IOU&amp;rdquo; from the dropdown menu&lt;/li&gt;
+&lt;li&gt;Click &amp;ldquo;Next&amp;rdquo; and &amp;ldquo;Next&amp;rdquo; to get to &amp;ldquo;Define Transaction Input&amp;rdquo; section, security and time window are not supported for Corda smart contract&lt;/li&gt;
+&lt;li&gt;Add input fields
+&lt;ul&gt;
+&lt;li&gt;linearId, select &amp;ldquo;LinearId&amp;rdquo; from type dropdown menu&lt;/li&gt;
+&lt;li&gt;issuer, select &amp;ldquo;Party&amp;rdquo; from type dropdown menu&lt;/li&gt;
+&lt;li&gt;holder, select &amp;ldquo;Party&amp;rdquo; from type dropdown menu&lt;/li&gt;
+&lt;li&gt;amt, select &amp;ldquo;Amount&lt;Currency&gt;&amp;rdquo; from type dropdown menu&lt;/li&gt;
+&lt;li&gt;click &amp;ldquo;Next&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add output fields, leave this blank, click &amp;ldquo;Continue&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Select &amp;ldquo;Copy Schema&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Select the trigger
+&lt;ul&gt;
+&lt;li&gt;Map to flow inputs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Now we will implement the flow
+&lt;ul&gt;
+&lt;li&gt;Add &amp;ldquo;Ledger Operation&amp;rdquo; activity from Dovetail-Ledger category&lt;/li&gt;
+&lt;li&gt;Map input&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-transferiou-transaction&#34;&gt;2 TransferIOU Transaction&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a new flow to implement TransferIOU transaction
+&lt;ul&gt;
+&lt;li&gt;Add a trigger, select &amp;ldquo;SmartContract Action Trigger&amp;rdquo; from the list
+&lt;ul&gt;
+&lt;li&gt;Select &amp;ldquo;IOU&amp;rdquo; from the dropdown menu&lt;/li&gt;
+&lt;li&gt;Click &amp;ldquo;Next&amp;rdquo; and &amp;ldquo;Next&amp;rdquo; to get to &amp;ldquo;Define Transaction Input&amp;rdquo; section, security and time window are not supported for Corda smart contract&lt;/li&gt;
+&lt;li&gt;Add input fields
+&lt;ul&gt;
+&lt;li&gt;iou, select &amp;ldquo;AssetRef&amp;rdquo; from Type dropdown menu, enter &amp;ldquo;com.example.iou.IOU&amp;rdquo; in the RecordType field, select &amp;ldquo;True&amp;rdquo; from Consuming dropdown menu&lt;/li&gt;
+&lt;li&gt;newHolder, select &amp;ldquo;Party&amp;rdquo; from type dropdown menu&lt;/li&gt;
+&lt;li&gt;click &amp;ldquo;Next&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add output fields, leave this blank, click &amp;ldquo;Continue&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Select &amp;ldquo;Copy Schema&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Select the trigger
+&lt;ul&gt;
+&lt;li&gt;Map to flow inputs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Now we will implement the flow
+&lt;ul&gt;
+&lt;li&gt;Add &amp;ldquo;Ledger Operation&amp;rdquo; activity from Dovetail-Ledger category&lt;/li&gt;
+&lt;li&gt;Map input&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-settleiou-transaction&#34;&gt;3 SettleIOU Transaction&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a new flow to implement SettleIOU transaction
+&lt;ul&gt;
+&lt;li&gt;Add a trigger, select &amp;ldquo;SmartContract Action Trigger&amp;rdquo; from the list
+* Select &amp;ldquo;IOU&amp;rdquo; from the dropdown menu
+* Click &amp;ldquo;Next&amp;rdquo; and &amp;ldquo;Next&amp;rdquo; to get to &amp;ldquo;Define Transaction Input&amp;rdquo; section, security and time window are not supported for Corda smart contract
+* Add input fields
+* iou, select &amp;ldquo;AssetRef&amp;rdquo; from Type dropdown menu, enter &amp;ldquo;com.example.iou.IOU&amp;rdquo; in the RecordType field, select &amp;ldquo;True&amp;rdquo; from Consuming dropdown menu
+* funds, select &amp;ldquo;AssetRef&lt;Cash&gt;&amp;rdquo; from Type dropdown menu, select &amp;ldquo;True&amp;rdquo; from Consuming dropdown menu, select &amp;ldquo;True&amp;rdquo; from Repeating dropdown menu
+* click &amp;ldquo;Next&amp;rdquo;
+* Add output fields, leave this blank, click &amp;ldquo;Continue&amp;rdquo;
+* Select &amp;ldquo;Copy Schema&amp;rdquo;
+&lt;ul&gt;
+&lt;li&gt;Select the trigger
+&lt;ul&gt;
+&lt;li&gt;Map to flow inputs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Now we will implement the flow
+&lt;ul&gt;
+&lt;li&gt;Add &amp;ldquo;Payment Processor&amp;rdquo; activity from Dovetail-Ledger category&lt;/li&gt;
+&lt;li&gt;Map input&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Export IOU Smart Contract Application</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/export/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/export/</guid>
+      <description>
+        
+        
+        &lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Go to IOU application&lt;/li&gt;
+&lt;li&gt;Click on &amp;ldquo;Export app&amp;rdquo; button, save the file IOU.json to the artifacts folder inside iou_tutorial&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The exported json file will be used to generate Corda Contract State and Contract, and it is also used to facilitate the implementation of CorDapp flows.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Generate Corda Artifacts</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/generate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/generate/</guid>
+      <description>
+        
+        
+        &lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Maven should be installed on your system, and mvn is in your PATH&lt;/li&gt;
+&lt;li&gt;Dovetail CLI should installed and in your PATH, it is also included in the cli folder in the corda.zip file (for mac only)&lt;/li&gt;
+&lt;li&gt;Latest relese of dovetail-corda-x.x.x.jar should be installed to your local maven repo, it is also included in corda.zip, you can run cli/mvninstall.sh to install the jar file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Run following command from iou_tutorial directory, R3 Corda contract  kotlin-IOUContract-1.0.0.jar is generated and written to artifacts/corda/iou folder, and installed in your local maven repository.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd iou_tutorial
+dovetail corda contract generate -m artifacts/IOU.json -v 1.0.0 -t artifacts/corda --namespace com.example.iou
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,80 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project Dovetail™ – Labs</title>
+    <link>https://tibcosoftware.github.io/dovetail/docs/labs/</link>
+    <description>Recent content in Labs on Project Dovetail™</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://tibcosoftware.github.io/dovetail/docs/labs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Corda IOU Smart Contract Tutorial</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;corda-iou-smart-contract-tutorial&#34;&gt;Corda IOU Smart Contract Tutorial&lt;/h2&gt;
+&lt;p&gt;In this tutorial, we will walk you through the steps to model and implement smart contracts and dapps for R3 Corda using Dovetail Studio, then we will use Dovetail CLI to generate runtime artifacts, and also generate RPC client with REST API interfaces for external integration, finally we will use Swagger UI to run some test cases.&lt;/p&gt;
+&lt;p&gt;The example is a simple &amp;ldquo;I owe you&amp;rdquo; use case, the issuer of an IOU is obligated to pay the owner of the IOU amount issued, the ownership of the IOU can be transferred by current owner, and all transactions will be recorded on the ledger.&lt;/p&gt;
+&lt;p&gt;Before getting started, you should have &lt;a href=&#34;../../getting-started/installation/&#34;&gt;Project Dovetail™ Studio&lt;/a&gt; and &lt;a href=&#34;../../getting-started/dovetail-cli/&#34;&gt;Project Dovetail™ CLI&lt;/a&gt; installed, and your &lt;a href=&#34;../../getting-started/environment-prerequisites/&#34;&gt;development environment setup&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you have Tibco Cloud subscription or Enterprise Flogo studio, you can also upload Dovetail extentions to start smart contract and dapp development. the extensions are included in the corda.zip (see below) under artifacts/studio folder.&lt;/p&gt;
+&lt;p&gt;Follow these steps to create the empty structure of the tutorial:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Create the tutorial initial structure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;iou_tutorials
+&lt;ul&gt;
+&lt;li&gt;artifacts&lt;/li&gt;
+&lt;li&gt;cli&lt;/li&gt;
+&lt;li&gt;network
+&lt;ul&gt;
+&lt;li&gt;corda&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;mkdir -p iou_tutorial/artifacts
+mkdir -p iou_tutorial/cli
+mkdir -p iou_tutorial/network/corda
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;copy-iou-network-nodes-and-scripts&#34;&gt;Copy IOU network nodes and scripts&lt;/h2&gt;
+&lt;p&gt;corda.zip has pre-implemented and generated artifacts, nodes and scripts that will help you to get the corda network up and running.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;curl -OL https://TIBCOSoftware.github.io/dovetail/tutorials/iou/corda.zip &amp;amp;&amp;amp; \
+unzip corda.zip &amp;amp;&amp;amp; \
+rm corda.zip
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;copy extracted network/corda/* to your network/corda folder&lt;/li&gt;
+&lt;li&gt;copy extracted cli/* to your cli folder&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Fabric Samples and Tutorials</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/fabic-sample/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/fabic-sample/</guid>
+      <description>
+        
+        
+        &lt;p&gt;You can follow Hyperledger Fabric samples and tutorials in our &lt;a href=&#34;https://github.com/TIBCOSoftware/dovetail-contrib/tree/develop/hyperledger-fabric#getting-started&#34;&gt;Dovetail Contrib&lt;/a&gt; repository.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

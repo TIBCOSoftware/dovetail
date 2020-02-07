@@ -1,0 +1,130 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project Dovetail™ – Corda IOU Smart Contract Tutorial</title>
+    <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/</link>
+    <description>Recent content in Corda IOU Smart Contract Tutorial on Project Dovetail™</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: IOU Smart Contract</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Corda Distributed Application</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-dist/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-dist/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;1-parties-and-roles-for-the-network&#34;&gt;1 Parties and Roles for the network&lt;/h3&gt;
+&lt;p&gt;For this tutorial, the story line is party &amp;ldquo;charlie&amp;rdquo; issues an IOU to party &amp;ldquo;alice&amp;rdquo;, party &amp;ldquo;alice&amp;rdquo; then transfers the IOU to party &amp;ldquo;bob&amp;rdquo;, finally party &amp;ldquo;charlie&amp;rdquo; settles the IOU with party &amp;ldquo;bob&amp;rdquo;. party &amp;ldquo;bank&amp;rdquo; is the cash issuer.&lt;/p&gt;
+&lt;p&gt;Below the are the dapp flows each party should implement:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;charlie is the IOU issuer
+&lt;ul&gt;
+&lt;li&gt;Implement IssueIOU initiating flow&lt;/li&gt;
+&lt;li&gt;Implememt TransferIOU receiving flow&lt;/li&gt;
+&lt;li&gt;Implement SettleIOU initiating flow&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;alice is the original IOU holder, and will transfer the IOU to bob
+&lt;ul&gt;
+&lt;li&gt;Implement IssueIOU receiving flow&lt;/li&gt;
+&lt;li&gt;Implement TransferIOU initiating flow&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;bob is the new IOU holder
+&lt;ul&gt;
+&lt;li&gt;Implement TransferIOU receiving flow&lt;/li&gt;
+&lt;li&gt;Implement SettleIOU receiving flow&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;bank is the cash issuer
+&lt;ul&gt;
+&lt;li&gt;Will use Corda CashIssueAndPayment flow to issue cash to charlie&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-import-smart-contract&#34;&gt;2. Import Smart Contract&lt;/h3&gt;
+&lt;p&gt;Before we start implementing the flows, Dovetail needs to know the smart contract transactions and the input parameters of each transaction.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Go to Connection tab
+&lt;ul&gt;
+&lt;li&gt;Add Connection&lt;/li&gt;
+&lt;li&gt;Select &amp;ldquo;Import Dovetail Contract&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Enter name &amp;ldquo;IOUContract&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Browse and select artifacts/iou.json file&lt;/li&gt;
+&lt;li&gt;Click &amp;ldquo;Done&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Generate Corda Client</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-client/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-client/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Dovetail CLI generates RPC client from CorDApp flows and Smart contract metadata, the generated client is a standalone springboot web server that exposes REST APIs to allow applications to invoke CorDapp flows.&lt;/p&gt;
+&lt;p&gt;The generated client also contains an embedded event streaming service to pulish vault state changes to specified messaging service, at present, only TIBCO Cloud Messaging is supported, use commandline &amp;ndash;streaming eftl to enable streaming service.&lt;/p&gt;
+&lt;h3 id=&#34;1-create-dependency-pom-file&#34;&gt;1 Create dependency pom file&lt;/h3&gt;
+&lt;p&gt;copy following to artifacts/iou.pom file&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;com.example.iou&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;IOU&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;1.0.0&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-generate-corda-client&#34;&gt;2. Generate Corda Client&lt;/h3&gt;
+&lt;p&gt;run following command from iou_tutorial folder, a web client is generated for charlie, alice and bob. The last command is to generate a generic web client than will be used for party &amp;lsquo;bank&amp;rsquo; to issue and transfer cash.&lt;/p&gt;
+&lt;h3 id=&#34;21-charlie&#34;&gt;2.1. charlie&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dovetail corda client generate --cordapp-json artifacts/charlie.json --smartcontract-json artifacts/IOU.json -v 1.0.0 -t artifacts/corda --cordapp-ns com.charlie.iou.flows --dependency-file artifacts/iou.pom --streaming none
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;22-alice&#34;&gt;2.2. alice&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dovetail corda client generate --cordapp-json artifacts/alice.json --smartcontract-json artifacts/IOU.json -v 1.0.0 -t artifacts/corda --cordapp-ns com.alice.iou.flows --dependency-file artifacts/iou.pom --streaming none
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;23-bob&#34;&gt;2.3. bob&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dovetail corda client generate --cordapp-json artifacts/bob.json --smartcontract-json artifacts/IOU.json -v 1.0.0 -t artifacts/corda --cordapp-ns com.bob.iou.flows --dependency-file artifacts/iou.pom --streaming none
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;24-bank&#34;&gt;2.4. bank&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dovetail corda client generate -v 1.0.0 -t artifacts/corda
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Test on Corda</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-test/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
