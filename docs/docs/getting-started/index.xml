@@ -88,7 +88,7 @@ You can add /path/to/dovetail-cli/bin/dovetail to your PATH env variable for eas
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;installation-tutorial-video&#34;&gt;Installation Tutorial Video&lt;/h2&gt;
 &lt;video width=&#34;480&#34; height=&#34;320&#34; controls=&#34;controls&#34;&gt;
-    &lt;source src=&#34;https://tibcosoftware.github.io/dovetail/dovetail/videos/dovetail_cli_install.mp4&#34; type=&#34;video/mp4&#34;&gt;
+    &lt;source src=&#34;https://tibcosoftware.github.io/dovetail/dovetail/tree/master/src/videos/dovetail_cli_install.mp4&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;
 
       </description>
