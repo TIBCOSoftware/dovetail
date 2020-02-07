@@ -23,7 +23,7 @@
         
         
         &lt;p&gt;&lt;video width=&#34;480&#34; height=&#34;320&#34; controls=&#34;controls&#34;&gt;
-    &lt;source src=&#34;https://tibcosoftware.github.io/dovetail/dovetail/videos/iou_asset_schema.mp4&#34; type=&#34;video/mp4&#34;&gt;
+    &lt;source src=&#34;https://github.com/TIBCOSoftware/dovetail/blob/master/src/videos/iou_asset_schema.mp4?raw=true&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Start up and open Dovetail Studio WebUI&lt;/li&gt;
@@ -70,7 +70,7 @@
         
         
         &lt;p&gt;&lt;video width=&#34;480&#34; height=&#34;320&#34; controls=&#34;controls&#34;&gt;
-    &lt;source src=&#34;https://tibcosoftware.github.io/dovetail/dovetail/videos/iou_smart_contract_impl.mp4&#34; type=&#34;video/mp4&#34;&gt;
+    &lt;source src=&#34;https://github.com/TIBCOSoftware/dovetail/blob/master/src/videos/iou_smart_contract_impl.mp4?raw=true&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;&lt;/p&gt;
 &lt;h3 id=&#34;1-issueiou-transaction&#34;&gt;1 IssueIOU Transaction&lt;/h3&gt;
 &lt;ul&gt;

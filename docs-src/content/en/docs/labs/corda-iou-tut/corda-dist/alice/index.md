@@ -7,7 +7,7 @@ description: >
 ---
 
 <p><video width="480" height="320" controls="controls">
-    <source src="/dovetail/videos/alice.mp4" type="video/mp4">
+    <source src="https://github.com/TIBCOSoftware/dovetail/blob/master/src/videos/alice.mp4?raw=true" type="video/mp4">
 </video></p>
 
 ### 1. IssueIOU receiver flow

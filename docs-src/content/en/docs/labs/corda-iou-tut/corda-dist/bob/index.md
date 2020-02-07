@@ -7,7 +7,7 @@ description: >
 ---
 
 <p><video width="480" height="320" controls="controls">
-    <source src="/dovetail/videos/bob.mp4" type="video/mp4">
+    <source src="https://github.com/TIBCOSoftware/dovetail/blob/master/src/videos/bob.mp4?raw=true" type="video/mp4">
 </video></p>
 
 ### 1. TransferIOU receiver flow

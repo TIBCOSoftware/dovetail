@@ -7,7 +7,7 @@ description: >
 ---
 
 <p><video width="480" height="320" controls="controls">
-    <source src="/dovetail/videos/iou_asset_schema.mp4" type="video/mp4">
+    <source src="https://github.com/TIBCOSoftware/dovetail/blob/master/src/videos/iou_asset_schema.mp4?raw=true" type="video/mp4">
 </video></p>
 
 * Start up and open Dovetail Studio WebUI

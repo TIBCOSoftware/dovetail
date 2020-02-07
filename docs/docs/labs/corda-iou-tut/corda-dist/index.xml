@@ -23,7 +23,7 @@
         
         
         &lt;p&gt;&lt;video width=&#34;480&#34; height=&#34;320&#34; controls=&#34;controls&#34;&gt;
-    &lt;source src=&#34;https://tibcosoftware.github.io/dovetail/dovetail/videos/charlie.mp4&#34; type=&#34;video/mp4&#34;&gt;
+    &lt;source src=&#34;https://github.com/TIBCOSoftware/dovetail/blob/master/src/videos/charlie.mp4?raw=true&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;&lt;/p&gt;
 &lt;h3 id=&#34;1-issueiou-initiator-flow&#34;&gt;1. IssueIOU initiator flow&lt;/h3&gt;
 &lt;ul&gt;
@@ -147,7 +147,7 @@
         
         
         &lt;p&gt;&lt;video width=&#34;480&#34; height=&#34;320&#34; controls=&#34;controls&#34;&gt;
-    &lt;source src=&#34;https://tibcosoftware.github.io/dovetail/dovetail/videos/alice.mp4&#34; type=&#34;video/mp4&#34;&gt;
+    &lt;source src=&#34;https://github.com/TIBCOSoftware/dovetail/blob/master/src/videos/alice.mp4?raw=true&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;&lt;/p&gt;
 &lt;h3 id=&#34;1-issueiou-receiver-flow&#34;&gt;1. IssueIOU receiver flow&lt;/h3&gt;
 &lt;ul&gt;
@@ -233,7 +233,7 @@
         
         
         &lt;p&gt;&lt;video width=&#34;480&#34; height=&#34;320&#34; controls=&#34;controls&#34;&gt;
-    &lt;source src=&#34;https://tibcosoftware.github.io/dovetail/dovetail/videos/bob.mp4&#34; type=&#34;video/mp4&#34;&gt;
+    &lt;source src=&#34;https://github.com/TIBCOSoftware/dovetail/blob/master/src/videos/bob.mp4?raw=true&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;&lt;/p&gt;
 &lt;h3 id=&#34;1-transferiou-receiver-flow&#34;&gt;1. TransferIOU receiver flow&lt;/h3&gt;
 &lt;ul&gt;
