@@ -30,5 +30,5 @@ curl https://github.com/TIBCOSoftware/dovetail-cli/releases/download/v0.2.0/dove
 ## Installation Tutorial Video
 
 <video width="480" height="320" controls="controls">
-    <source src="/videos/dovetail_cli_install.mp4" type="video/mp4">
+    <source src="/dovetail/videos/dovetail_cli_install.mp4" type="video/mp4">
 </video>

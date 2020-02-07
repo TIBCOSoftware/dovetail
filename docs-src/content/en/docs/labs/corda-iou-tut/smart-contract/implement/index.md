@@ -7,7 +7,7 @@ description: >
 ---
 
 <p><video width="480" height="320" controls="controls">
-    <source src="videos/iou_smart_contract_impl.mp4" type="video/mp4">
+    <source src="/dovetail/videos/iou_smart_contract_impl.mp4" type="video/mp4">
 </video></p>
 
 ### 1 IssueIOU Transaction

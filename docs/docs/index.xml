@@ -23,7 +23,7 @@
         
         
         &lt;p&gt;&lt;video width=&#34;480&#34; height=&#34;320&#34; controls=&#34;controls&#34;&gt;
-    &lt;source src=&#34;videos/charlie.mp4&#34; type=&#34;video/mp4&#34;&gt;
+    &lt;source src=&#34;https://tibcosoftware.github.io/dovetail/dovetail/videos/charlie.mp4&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;&lt;/p&gt;
 &lt;h3 id=&#34;1-issueiou-initiator-flow&#34;&gt;1. IssueIOU initiator flow&lt;/h3&gt;
 &lt;ul&gt;
@@ -181,7 +181,7 @@ curl -OL https://github.com/TIBCOSoftware/dovetail/releases/download/v0.2.0/TIB_
 &lt;p&gt;To launch Dovetail Studio simply open your favorite web browser, and navigate to http://localhost:8090. You&#39;ll see the initial page to create your first smart contract!&lt;/p&gt;
 &lt;h2 id=&#34;installation-tutorial-video&#34;&gt;Installation Tutorial Video&lt;/h2&gt;
 &lt;video width=&#34;480&#34; height=&#34;320&#34; controls=&#34;controls&#34;&gt;
-    &lt;source src=&#34;videos/dovetail_studio_install.mp4&#34; type=&#34;video/mp4&#34;&gt;
+    &lt;source src=&#34;https://tibcosoftware.github.io/dovetail/dovetail/videos/dovetail_studio_install.mp4&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;
       </description>
     </item>
@@ -196,7 +196,7 @@ curl -OL https://github.com/TIBCOSoftware/dovetail/releases/download/v0.2.0/TIB_
         
         
         &lt;p&gt;&lt;video width=&#34;480&#34; height=&#34;320&#34; controls=&#34;controls&#34;&gt;
-    &lt;source src=&#34;videos/iou_asset_schema.mp4&#34; type=&#34;video/mp4&#34;&gt;
+    &lt;source src=&#34;https://tibcosoftware.github.io/dovetail/dovetail/videos/iou_asset_schema.mp4&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Start up and open Dovetail Studio WebUI&lt;/li&gt;
@@ -306,7 +306,7 @@ You can add /path/to/dovetail-cli/bin/dovetail to your PATH env variable for eas
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;installation-tutorial-video&#34;&gt;Installation Tutorial Video&lt;/h2&gt;
 &lt;video width=&#34;480&#34; height=&#34;320&#34; controls=&#34;controls&#34;&gt;
-    &lt;source src=&#34;https://tibcosoftware.github.io/dovetail/videos/dovetail_cli_install.mp4&#34; type=&#34;video/mp4&#34;&gt;
+    &lt;source src=&#34;https://tibcosoftware.github.io/dovetail/dovetail/videos/dovetail_cli_install.mp4&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;
 
       </description>
@@ -322,7 +322,7 @@ You can add /path/to/dovetail-cli/bin/dovetail to your PATH env variable for eas
         
         
         &lt;p&gt;&lt;video width=&#34;480&#34; height=&#34;320&#34; controls=&#34;controls&#34;&gt;
-    &lt;source src=&#34;videos/alice.mp4&#34; type=&#34;video/mp4&#34;&gt;
+    &lt;source src=&#34;https://tibcosoftware.github.io/dovetail/dovetail/videos/alice.mp4&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;&lt;/p&gt;
 &lt;h3 id=&#34;1-issueiou-receiver-flow&#34;&gt;1. IssueIOU receiver flow&lt;/h3&gt;
 &lt;ul&gt;
@@ -408,7 +408,7 @@ You can add /path/to/dovetail-cli/bin/dovetail to your PATH env variable for eas
         
         
         &lt;p&gt;&lt;video width=&#34;480&#34; height=&#34;320&#34; controls=&#34;controls&#34;&gt;
-    &lt;source src=&#34;videos/iou_smart_contract_impl.mp4&#34; type=&#34;video/mp4&#34;&gt;
+    &lt;source src=&#34;https://tibcosoftware.github.io/dovetail/dovetail/videos/iou_smart_contract_impl.mp4&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;&lt;/p&gt;
 &lt;h3 id=&#34;1-issueiou-transaction&#34;&gt;1 IssueIOU Transaction&lt;/h3&gt;
 &lt;ul&gt;
@@ -795,7 +795,7 @@ mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -DgenerateP
         
         
         &lt;p&gt;&lt;video width=&#34;480&#34; height=&#34;320&#34; controls=&#34;controls&#34;&gt;
-    &lt;source src=&#34;videos/bob.mp4&#34; type=&#34;video/mp4&#34;&gt;
+    &lt;source src=&#34;https://tibcosoftware.github.io/dovetail/dovetail/videos/bob.mp4&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;&lt;/p&gt;
 &lt;h3 id=&#34;1-transferiou-receiver-flow&#34;&gt;1. TransferIOU receiver flow&lt;/h3&gt;
 &lt;ul&gt;

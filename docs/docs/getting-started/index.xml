@@ -57,7 +57,7 @@ curl -OL https://github.com/TIBCOSoftware/dovetail/releases/download/v0.2.0/TIB_
 &lt;p&gt;To launch Dovetail Studio simply open your favorite web browser, and navigate to http://localhost:8090. You&#39;ll see the initial page to create your first smart contract!&lt;/p&gt;
 &lt;h2 id=&#34;installation-tutorial-video&#34;&gt;Installation Tutorial Video&lt;/h2&gt;
 &lt;video width=&#34;480&#34; height=&#34;320&#34; controls=&#34;controls&#34;&gt;
-    &lt;source src=&#34;videos/dovetail_studio_install.mp4&#34; type=&#34;video/mp4&#34;&gt;
+    &lt;source src=&#34;https://tibcosoftware.github.io/dovetail/dovetail/videos/dovetail_studio_install.mp4&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;
       </description>
     </item>
@@ -88,7 +88,7 @@ You can add /path/to/dovetail-cli/bin/dovetail to your PATH env variable for eas
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;installation-tutorial-video&#34;&gt;Installation Tutorial Video&lt;/h2&gt;
 &lt;video width=&#34;480&#34; height=&#34;320&#34; controls=&#34;controls&#34;&gt;
-    &lt;source src=&#34;https://tibcosoftware.github.io/dovetail/videos/dovetail_cli_install.mp4&#34; type=&#34;video/mp4&#34;&gt;
+    &lt;source src=&#34;https://tibcosoftware.github.io/dovetail/dovetail/videos/dovetail_cli_install.mp4&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;
 
       </description>

@@ -64,5 +64,5 @@ To launch Dovetail Studio simply open your favorite web browser, and navigate to
 ## Installation Tutorial Video
 
 <video width="480" height="320" controls="controls">
-    <source src="videos/dovetail_studio_install.mp4" type="video/mp4">
+    <source src="/dovetail/videos/dovetail_studio_install.mp4" type="video/mp4">
 </video>

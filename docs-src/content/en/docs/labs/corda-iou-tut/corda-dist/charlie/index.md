@@ -7,7 +7,7 @@ description: >
 ---
 
 <p><video width="480" height="320" controls="controls">
-    <source src="videos/charlie.mp4" type="video/mp4">
+    <source src="/dovetail/videos/charlie.mp4" type="video/mp4">
 </video></p>
 
 ### 1. IssueIOU initiator flow
