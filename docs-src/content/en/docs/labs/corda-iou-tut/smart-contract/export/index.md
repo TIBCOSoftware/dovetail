@@ -1,7 +1,7 @@
 ---
 title: "Export IOU Smart Contract Application"
 linkTitle: "Export S-Contract"
-weight: 3
+weight: 7
 description: >
     export to generate Corda Contract State and Contract
 ---

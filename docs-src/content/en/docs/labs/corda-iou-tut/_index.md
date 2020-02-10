@@ -1,7 +1,7 @@
 ---
 title: "Corda IOU Smart Contract Tutorial"
 linkTitle: "Corda IOU Tutorial"
-weight: 5
+weight: 4
 description: >
   model and implement smart contracts and dapps for R3 Corda using Dovetail Studio
 ---

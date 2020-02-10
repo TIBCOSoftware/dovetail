@@ -6,21 +6,31 @@ description: >
   all Dovetail Environment Requirements
 ---
 
-## Dovetail Studio Requirements
-
-### Docker
-Docker is needed to run Dovetail Studio, you can find the installation details here:
-
-* [Docker](https://docs.docker.com/)
-* [Docker Compose](https://docs.docker.com/compose/install/)
-
 
 ## Hyperledger Fabric Requirements
 
 ### Hyperledger Fabric SDK
 If you are developing for Hyperledger Fabric, below is a link to its installation instructions.
 
-* [Hyperledger Fabric](https://hyperledger-fabric.readthedocs.io/en/release-1.3/install.html)
+* [Hyperledger Fabric](https://hyperledger-fabric.readthedocs.io/en/release-1.4/install.html)
+
+
+### Golang
+Golang is needed to create and build the chaincode, you can find the installation details here:
+
+* [Golang](https://golang.org/)
+
+Setup GOPATH environment variable
+
+```bash
+export GOPATH=${HOME}/go
+```
+
+
+### Flogo CLI
+Flogo is needed to create and build the chaincode, you can find the installation details here:
+
+* [Flogo](https://github.com/project-flogo/cli)
 
 
 ## R3 Corda Requirements
