@@ -7,6 +7,7 @@
 
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
+<link rel="alternate" type="application/rss&#43;xml" href="https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/index.xml">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -20,23 +21,17 @@
 <link rel="icon" type="image/png" href="/dovetail/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/dovetail/favicons/android-192x192.png" sizes="192x192">
 
-<title>Generate Corda Client | Project Dovetail™</title><meta property="og:title" content="Generate Corda Client" />
-<meta property="og:description" content="generates RPC client from CorDApp flows and Smart contract metadata
+<title>Fabric Hello World Tutorial | Project Dovetail™</title><meta property="og:title" content="Fabric Hello World Tutorial" />
+<meta property="og:description" content="Hyperledger Fabric hello world tutorial
 " />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-client/" />
-<meta property="article:modified_time" content="2020-02-10T14:58:45-08:00" /><meta property="og:site_name" content="Project Dovetail™" />
-<meta itemprop="name" content="Generate Corda Client">
-<meta itemprop="description" content="generates RPC client from CorDApp flows and Smart contract metadata
-">
-<meta itemprop="dateModified" content="2020-02-10T14:58:45-08:00" />
-<meta itemprop="wordCount" content="194">
-
-
-
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Generate Corda Client"/>
-<meta name="twitter:description" content="generates RPC client from CorDApp flows and Smart contract metadata
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/" />
+<meta property="og:site_name" content="Project Dovetail™" />
+<meta itemprop="name" content="Fabric Hello World Tutorial">
+<meta itemprop="description" content="Hyperledger Fabric hello world tutorial
+"><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Fabric Hello World Tutorial"/>
+<meta name="twitter:description" content="Hyperledger Fabric hello world tutorial
 "/>
 
 
@@ -58,9 +53,9 @@
 <script src="/js/offline-search.js"></script>
 
 
-    <title>Generate Corda Client | Project Dovetail™</title>
+    <title>Fabric Hello World Tutorial | Project Dovetail™</title>
   </head>
-  <body class="td-page">
+  <body class="td-section">
     <header>
       
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
@@ -232,10 +227,10 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/dovetail/docs/labs/fabric-sample/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Fabric Samples and Tutorials</a>
+    <a  href="/dovetail/docs/labs/fabric-sample/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Fabric Samples and Tutorials</a>
   </li>
   <ul>
-    <li class="collapse " id="dovetaildocslabsfabric-sample">
+    <li class="collapse show" id="dovetaildocslabsfabric-sample">
       
       
       
@@ -249,10 +244,10 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/dovetail/docs/labs/fabric-sample/hello-world/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Fabric Hello World Tutorial</a>
+    <a  href="/dovetail/docs/labs/fabric-sample/hello-world/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Fabric Hello World Tutorial</a>
   </li>
   <ul>
-    <li class="collapse " id="dovetaildocslabsfabric-samplehello-world">
+    <li class="collapse show" id="dovetaildocslabsfabric-samplehello-world">
       
       
       
@@ -302,10 +297,10 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/dovetail/docs/labs/corda-iou-tut/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Corda IOU Tutorial</a>
+    <a  href="/dovetail/docs/labs/corda-iou-tut/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Corda IOU Tutorial</a>
   </li>
   <ul>
-    <li class="collapse show" id="dovetaildocslabscorda-iou-tut">
+    <li class="collapse " id="dovetaildocslabscorda-iou-tut">
       
       
       
@@ -319,10 +314,10 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/dovetail/docs/labs/corda-iou-tut/corda-dist/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Corda Application</a>
+    <a  href="/dovetail/docs/labs/corda-iou-tut/corda-dist/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Corda Application</a>
   </li>
   <ul>
-    <li class="collapse show" id="dovetaildocslabscorda-iou-tutcorda-dist">
+    <li class="collapse " id="dovetaildocslabscorda-iou-tutcorda-dist">
       
       
       
@@ -359,7 +354,7 @@
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page  active" id="m-dovetaildocslabscorda-iou-tutcorda-client" href="/dovetail/docs/labs/corda-iou-tut/corda-client/">Generate Corda Client</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-dovetaildocslabscorda-iou-tutcorda-client" href="/dovetail/docs/labs/corda-iou-tut/corda-client/">Generate Corda Client</a>
       
       
       
@@ -372,10 +367,10 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/dovetail/docs/labs/corda-iou-tut/smart-contract/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Smart Contract</a>
+    <a  href="/dovetail/docs/labs/corda-iou-tut/smart-contract/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Smart Contract</a>
   </li>
   <ul>
-    <li class="collapse show" id="dovetaildocslabscorda-iou-tutsmart-contract">
+    <li class="collapse " id="dovetaildocslabscorda-iou-tutsmart-contract">
       
       
       
@@ -419,10 +414,10 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/dovetail/docs/labs/corda-iou-tut/corda-test/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Test on Corda</a>
+    <a  href="/dovetail/docs/labs/corda-iou-tut/corda-test/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Test on Corda</a>
   </li>
   <ul>
-    <li class="collapse show" id="dovetaildocslabscorda-iou-tutcorda-test">
+    <li class="collapse " id="dovetaildocslabscorda-iou-tutcorda-test">
       
       
       
@@ -503,7 +498,7 @@
 
 
 
-<a href="https://github.com/TIBCOSoftware/dovetail//issues/new?title=Generate%20Corda%20Client" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+<a href="https://github.com/TIBCOSoftware/dovetail//issues/new?title=Fabric%20Hello%20World%20Tutorial" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
 
 
 <a href="https://github.com/TIBCOSoftware/dovetail//issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
@@ -514,21 +509,6 @@
 
 
 
-
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#1-create-dependency-pom-file">1 Create dependency pom file</a></li>
-        <li><a href="#2-generate-corda-client">2. Generate Corda Client</a></li>
-        <li><a href="#21-charlie">2.1. charlie</a></li>
-        <li><a href="#22-alice">2.2. alice</a></li>
-        <li><a href="#23-bob">2.3. bob</a></li>
-        <li><a href="#24-bank">2.4. bank</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
 
 
 
@@ -565,48 +545,120 @@
 
 
 <li class="breadcrumb-item" >
-	<a href="https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/">Corda IOU Tutorial</a>
+	<a href="https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/">Fabric Samples and Tutorials</a>
 </li>
 
 
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-client/">Generate Corda Client</a>
+	<a href="https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/">Fabric Hello World Tutorial</a>
 </li>
 
 	</ol>
 </nav	>
 
             
-
-
-
-<p class="-text-primary pt-3 h6" >Reading time: 0 minutes and 52 seconds.</p>
-<p>
 <div class="td-content">
-	<h1>Generate Corda Client</h1>
-	<div class="lead">generates RPC client from CorDApp flows and Smart contract metadata</div>
-	<p>Dovetail CLI generates RPC client from CorDApp flows and Smart contract metadata, the generated client is a standalone springboot web server that exposes REST APIs to allow applications to invoke CorDapp flows.</p>
-<p>The generated client also contains an embedded event streaming service to pulish vault state changes to specified messaging service, at present, only TIBCO Cloud Messaging is supported, use commandline &ndash;streaming eftl to enable streaming service.</p>
-<h3 id="1-create-dependency-pom-file">1 Create dependency pom file</h3>
-<p>copy following to artifacts/iou.pom file</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#204a87;font-weight:bold">&lt;dependency</span><span style="color:#204a87;font-weight:bold">&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;groupId</span><span style="color:#204a87;font-weight:bold">&gt;</span>com.example.iou<span style="color:#204a87;font-weight:bold">&lt;/groupId&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;artifactId</span><span style="color:#204a87;font-weight:bold">&gt;</span>IOU<span style="color:#204a87;font-weight:bold">&lt;/artifactId&gt;</span>
-    <span style="color:#204a87;font-weight:bold">&lt;version</span><span style="color:#204a87;font-weight:bold">&gt;</span>1.0.0<span style="color:#204a87;font-weight:bold">&lt;/version&gt;</span>
-<span style="color:#204a87;font-weight:bold">&lt;/dependency&gt;</span>
-</code></pre></div><h3 id="2-generate-corda-client">2. Generate Corda Client</h3>
-<p>run following command from iou_tutorial folder, a web client is generated for charlie, alice and bob. The last command is to generate a generic web client than will be used for party &lsquo;bank&rsquo; to issue and transfer cash.</p>
-<h3 id="21-charlie">2.1. charlie</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dovetail corda client generate --cordapp-json artifacts/charlie.json --smartcontract-json artifacts/IOU.json -v 1.0.0 -t artifacts/corda --cordapp-ns com.charlie.iou.flows --dependency-file artifacts/iou.pom --streaming none
-</code></pre></div><h3 id="22-alice">2.2. alice</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dovetail corda client generate --cordapp-json artifacts/alice.json --smartcontract-json artifacts/IOU.json -v 1.0.0 -t artifacts/corda --cordapp-ns com.alice.iou.flows --dependency-file artifacts/iou.pom --streaming none
-</code></pre></div><h3 id="23-bob">2.3. bob</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dovetail corda client generate --cordapp-json artifacts/bob.json --smartcontract-json artifacts/IOU.json -v 1.0.0 -t artifacts/corda --cordapp-ns com.bob.iou.flows --dependency-file artifacts/iou.pom --streaming none
-</code></pre></div><h3 id="24-bank">2.4. bank</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dovetail corda client generate -v 1.0.0 -t artifacts/corda
-</code></pre></div>
+	
+	
+	
+	<p class="-text-secondary pt-3 h6" >Reading time: 0 minutes and 14 seconds.</p>
+	<h1>Fabric Hello World Tutorial</h1>
+	<div class="lead">Hyperledger Fabric hello world tutorial</div>
+	<p>During this tutorial we will use Dovetail to create a hyperledger fabric Smart Contract and a client application that exposes the smart contract as a rest API all using Project Dovetail.</p>
+<p>This is a very simple smart contract and rest API that mocks a key value store as defined in the following diagram</p>
+<div>
+  <img src="../Fabric_HW_tutorial.png" width="900px"></img>
+</div>
+
+        <div class="section-index">
+    
+    
+    
+    
+    <hr class="panel-line">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <div class="entry">
+                    <h5>
+                        <a href="/dovetail/docs/labs/fabric-sample/hello-world/extensions/">Load fabric extensions</a>
+                    </h5>
+                    <p>Instructions on how to load hyperledger fabric extensions into TCI</p>
+                </div>
+            
+        
+            
+        
+            
+        
+            
+                <div class="entry">
+                    <h5>
+                        <a href="/dovetail/docs/labs/fabric-sample/hello-world/create-smart-contract/">Create smart contract</a>
+                    </h5>
+                    <p>Instructions on how to create a hyperledger smart contract into TCI (TIBCO Cloud Integration)</p>
+                </div>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <div class="entry">
+                    <h5>
+                        <a href="/dovetail/docs/labs/fabric-sample/hello-world/build-smart-contract/">Build smart contract</a>
+                    </h5>
+                    <p>Instructions on how to build a hyperledger smart contract built in TCI (TIBCO Cloud Integration)</p>
+                </div>
+            
+        
+            
+        
+    
+</div>
+
 	
 		<style>
   .feedback--answer {
@@ -672,7 +724,6 @@
 	<div class="text-muted mt-5 pt-3 border-top">Last modified February 10, 2020: <a  href="https://github.com/TIBCOSoftware/dovetail//commit/843c31c8eb4313ba7d7e5ef0e1fdef35920363a1">New docs with TCI (843c31c)</a>
 </div>
 </div>
-
 
           </main>
         </div>

@@ -14,6 +14,23 @@
     
     
     <item>
+      <title>Docs: Dovetail UI</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/getting-started/dovetail-ui/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/getting-started/dovetail-ui/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;setting-up-dovetail-ui&#34;&gt;Setting up Dovetail UI&lt;/h2&gt;
+&lt;p&gt;Dovetail makes use of &lt;a href=&#34;https://www.tibco.com/products/cloud-integration&#34;&gt;TIBCO Cloud Integration&lt;/a&gt; as UI.&lt;/p&gt;
+&lt;p&gt;Just sign in, or apply for a free trial to start modelling.&lt;/p&gt;
+&lt;p&gt;Once you have access to TIBCO Cloud Integration go to our &lt;a href=&#34;../../labs&#34;&gt;labs&lt;/a&gt; page to get more detail information.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: CorDapp for charlie</title>
       <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-dist/charlie/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -138,102 +155,6 @@
     </item>
     
     <item>
-      <title>Docs: Installation</title>
-      <link>https://tibcosoftware.github.io/dovetail/docs/getting-started/installation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://tibcosoftware.github.io/dovetail/docs/getting-started/installation/</guid>
-      <description>
-        
-        
-        &lt;h2 id=&#34;installing-the-project-dovetail-studio&#34;&gt;Installing the Project Dovetail Studio&lt;/h2&gt;
-&lt;p&gt;just follow these steps:&lt;/p&gt;
-&lt;p&gt;1.- Download the latest version for your os architecture and your blockchain target.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;You can find the latest release &lt;a href=&#34;https://github.com/TIBCOSoftware/dovetail/releases/latest&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Or you can just execute this commands&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;For Hyperledger fabric development:&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;pre&gt;&lt;code&gt;mkdir dovetail_installation
-cd dovetail_installation
-curl -OL https://github.com/TIBCOSoftware/dovetail/releases/download/v0.2.0/TIB_dovetail-fabric_0.2.0_macosx_x86_64.zip
-&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
-&lt;p&gt;For R3 Corda development:&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;pre&gt;&lt;code&gt;mkdir dovetail_installation
-cd dovetail_installation
-curl -OL https://github.com/TIBCOSoftware/dovetail/releases/download/v0.2.0/TIB_dovetail-corda_0.2.0_macosx_x86_64.zip
-&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
-&lt;p&gt;For Multitarget development:&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;pre&gt;&lt;code&gt;mkdir dovetail_installation
-cd dovetail_installation
-curl -OL https://github.com/TIBCOSoftware/dovetail/releases/download/v0.2.0/TIB_dovetail-multitarget_0.2.0_macosx_x86_64.zip
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;2.- Unzip the downloaded release (for example on mac) (from dovetail_installation folder).&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;unzip TIB_dovetail-fabric_0.2.0_macosx_x86_64.zip
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;starting-dovetail-studio&#34;&gt;Starting Dovetail Studio&lt;/h2&gt;
-&lt;p&gt;To get started with your downloaded version of the Dovetail Studio in the previous step just do the following:&lt;/p&gt;
-&lt;p&gt;1.- Run studio&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;dovetail/0.2/bin/run-studio.sh eula-accept
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;launching-dovetail-studio&#34;&gt;Launching Dovetail Studio&lt;/h2&gt;
-&lt;p&gt;To launch Dovetail Studio simply open your favorite web browser, and navigate to http://localhost:8090. You&#39;ll see the initial page to create your first smart contract!&lt;/p&gt;
-&lt;h2 id=&#34;installation-tutorial-video&#34;&gt;Installation Tutorial Video&lt;/h2&gt;
-&lt;video width=&#34;480&#34; height=&#34;320&#34; controls=&#34;controls&#34;&gt;
-    &lt;source src=&#34;https://github.com/TIBCOSoftware/dovetail/blob/master/src/videos/dovetail_studio_install.mp4?raw=true&#34; type=&#34;video/mp4&#34;&gt;
-&lt;/video&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: IOU Smart Contract Data Model</title>
-      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/model/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/model/</guid>
-      <description>
-        
-        
-        &lt;p&gt;&lt;video width=&#34;480&#34; height=&#34;320&#34; controls=&#34;controls&#34;&gt;
-    &lt;source src=&#34;https://github.com/TIBCOSoftware/dovetail/blob/master/src/videos/iou_asset_schema.mp4?raw=true&#34; type=&#34;video/mp4&#34;&gt;
-&lt;/video&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Start up and open Dovetail Studio WebUI&lt;/li&gt;
-&lt;li&gt;Go to Connection tab&lt;/li&gt;
-&lt;li&gt;Click &amp;ldquo;Add Connection&amp;rdquo;
-&lt;ul&gt;
-&lt;li&gt;Choose &amp;ldquo;Define Ledger Asset Schema&amp;rdquo; from the list&lt;/li&gt;
-&lt;li&gt;Enter display name, e.g. &amp;ldquo;my first IOU&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;Enter asset name &amp;ldquo;IOU&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;Enter module name &amp;ldquo;com.example.iou&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;Select asset type &amp;ldquo;Linear State&amp;rdquo;
-&lt;ul&gt;
-&lt;li&gt;LinearId attribute will be automatically added to the pre-defined fields&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Enter addition fields
-&lt;ul&gt;
-&lt;li&gt;issuer, select &amp;ldquo;Party&amp;rdquo; from the type dropdown menu&lt;/li&gt;
-&lt;li&gt;holder, select &amp;ldquo;Party&amp;rdquo; from the type dropdown menu&lt;/li&gt;
-&lt;li&gt;amt, select &amp;ldquo;Amount&lt;Courrency&gt;&amp;rdquo; from the type dropdown menu&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Define party roles
-&lt;ul&gt;
-&lt;li&gt;add &amp;ldquo;issuer&amp;rdquo;, leave other fields as default&lt;/li&gt;
-&lt;li&gt;add &amp;ldquo;holder&amp;rdquo;, leave other fields as default&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Click &amp;ldquo;Donee&amp;rdquo; button&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
       <title>Docs: Start up nodes</title>
       <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-test/start-nodes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -290,11 +211,11 @@ curl -OL https://github.com/TIBCOSoftware/dovetail/releases/download/v0.2.0/TIB_
         
         
         &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;The dovetail cli is a tool to mainly generate smart contracts for a given model built using ui tool &lt;a href=&#34;ch01-01-installation.md&#34;&gt;Dovetail Studio&lt;/a&gt;, so we recommend you to learn how to do that first.&lt;/p&gt;
+&lt;p&gt;The dovetail cli is a tool to mainly generate smart contracts for a given model built using ui tool &lt;a href=&#34;../dovetail-ui&#34;&gt;Dovetail UI&lt;/a&gt;, so we recommend you to learn how to do that first.&lt;/p&gt;
 &lt;h2 id=&#34;before-you-get-started&#34;&gt;Before you get started&lt;/h2&gt;
 &lt;p&gt;Before you can get started with the cli tools you need to make sure you have the &lt;a href=&#34;https://golang.org/doc/install&#34;&gt;Go programming language&lt;/a&gt; and &lt;a href=&#34;https://git-scm.com/book/en/v2/Getting-Started-Installing-Git&#34;&gt;git&lt;/a&gt; installed. Go v1.13.x is required.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Don&#39;t forget to set your &lt;code&gt;GOPATH&lt;/code&gt; variable and make sure that &lt;code&gt;$GOPATH/bin&lt;/code&gt; is part of your &lt;code&gt;PATH&lt;/code&gt;
+&lt;p&gt;Don&amp;rsquo;t forget to set your &lt;code&gt;GOPATH&lt;/code&gt; variable and make sure that &lt;code&gt;$GOPATH/bin&lt;/code&gt; is part of your &lt;code&gt;PATH&lt;/code&gt;
 (see &lt;a href=&#34;https://golang.org/doc/code.html#GOPATH&#34;&gt;here&lt;/a&gt; or &lt;a href=&#34;https://github.com/golang/go/wiki/SettingGOPATH&#34;&gt;here&lt;/a&gt; for more details)&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;installing-the-cli-tools&#34;&gt;Installing the cli tools&lt;/h2&gt;
@@ -395,6 +316,528 @@ You can add /path/to/dovetail-cli/bin/dovetail to your PATH env variable for eas
 &lt;h3 id=&#34;3-export-the-alice-applicatio&#34;&gt;3. Export the &amp;ldquo;alice&amp;rdquo; applicatio&lt;/h3&gt;
 &lt;p&gt;export the application to artifiacts/alice.json&lt;/p&gt;
 
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Run test cases</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-test/test-cases/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-test/test-cases/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;1-issue-cash&#34;&gt;1 Issue cash&lt;/h3&gt;
+&lt;p&gt;Use bank&amp;rsquo;s swagger UI to issue and transfer cash to charlie.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;go to security-controller section&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;login method
+&lt;ul&gt;
+&lt;li&gt;username = user1, password = test&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;execute&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;go to cash-controller section&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;/cash/flow/issue-payment method
+&lt;ul&gt;
+&lt;li&gt;Authorizarion: copy the token value from login output, without the quotes&lt;/li&gt;
+&lt;li&gt;Input:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;quantity&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;100000&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;currency&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;USD&amp;#34;&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;issuerRef&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;00&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;recipient&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;O=charlie,L=New York,C=US&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;anonymous&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;notary&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;O=Notary,L=London,C=GB&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;execute, if successful, you should see output similar to following
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;transactionId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;FC85B7E74E8D9A4BDD39A2D83FA2C41C4CB57A296E43A3B5D9AF08FC7CF06E1B&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-issue-an-iou&#34;&gt;2 Issue an IOU&lt;/h3&gt;
+&lt;p&gt;Use charlie&amp;rsquo;s swagger UI to issue an IOU&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;go to security-controller section&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;login method
+&lt;ul&gt;
+&lt;li&gt;username = user1, password = test&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;execute&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;go to query-controller section&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;/query/states&lt;/li&gt;
+&lt;li&gt;Authorizarion: copy the token value from login output, without the quotes&lt;/li&gt;
+&lt;li&gt;execute, you should see cash is in the vault&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;go to main-controller section&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;/api/issueiouinitiatort method
+&lt;ul&gt;
+&lt;li&gt;Authorizarion: copy the token value from login output, without the quotes&lt;/li&gt;
+&lt;li&gt;Input:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;holder&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;O=alice,L=New York,C=US&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;amt&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;quantity&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;10000&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;currency&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;USD&amp;#34;&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;extId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;iou1&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;execute&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;go to query-controller section&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;/query/states&lt;/li&gt;
+&lt;li&gt;Authorizarion: copy the token value from login output, without the quotes&lt;/li&gt;
+&lt;li&gt;execute, you should see com.example.iou.IOU is now in the vault&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-transfer-the-iou&#34;&gt;3 Transfer the IOU&lt;/h3&gt;
+&lt;p&gt;Use alice&amp;rsquo;s swagger to transfer IOU to bob.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;go to security-controller section&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;login method
+&lt;ul&gt;
+&lt;li&gt;username = user1, password = test&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;execute&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;go to query-controller section&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;/query/states&lt;/li&gt;
+&lt;li&gt;Authorizarion: copy the token value from login output, without the quotes&lt;/li&gt;
+&lt;li&gt;execute, you should see com.example.iou.IOU in the output, copy the linearId.id value&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;go to main-controller section&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;/api/transferiouinitiator
+&lt;ul&gt;
+&lt;li&gt;Authorizarion: copy the token value from login output, without the quotes&lt;/li&gt;
+&lt;li&gt;Input&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;iouId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;externalId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;iou1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;paste the linearId.id value here&amp;#34;&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;newHoder&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;O=bob,L=New York,C=US&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;execute&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;go to query-controller section&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;/query/states&lt;/li&gt;
+&lt;li&gt;Authorizarion: copy the token value from login output, without the quotes&lt;/li&gt;
+&lt;li&gt;execute, com.example.iou.IOU is no longer in the vault&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-settle-the-iou&#34;&gt;4 Settle the IOU&lt;/h3&gt;
+&lt;p&gt;Use charlie&amp;rsquo;s swagger UI to settle the IOU with cash&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;go to main-controller section
+&lt;ul&gt;
+&lt;li&gt;/api/settleiouinitiator method
+&lt;ul&gt;
+&lt;li&gt;Authorizarion: copy the token value from login output, without the quotes&lt;/li&gt;
+&lt;li&gt;Input:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;iouId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;externalId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;iou1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;copy iou linearId.id value here&amp;#34;&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;go to query-controller section
+&lt;ul&gt;
+&lt;li&gt;/query/states&lt;/li&gt;
+&lt;li&gt;Authorizarion: copy the token value from login output, without the quotes&lt;/li&gt;
+&lt;li&gt;execute, com.example.iou.IOU is no longer in the vault, and cash amount is reduced by $100&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Environment Prerequisites</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/getting-started/environment-prerequisites/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/getting-started/environment-prerequisites/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;hyperledger-fabric-requirements&#34;&gt;Hyperledger Fabric Requirements&lt;/h2&gt;
+&lt;h3 id=&#34;hyperledger-fabric-sdk&#34;&gt;Hyperledger Fabric SDK&lt;/h3&gt;
+&lt;p&gt;If you are developing for Hyperledger Fabric, below is a link to its installation instructions.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://hyperledger-fabric.readthedocs.io/en/release-1.4/install.html&#34;&gt;Hyperledger Fabric&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;golang&#34;&gt;Golang&lt;/h3&gt;
+&lt;p&gt;Golang is needed to create and build the chaincode, you can find the installation details here:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://golang.org/&#34;&gt;Golang&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Setup GOPATH environment variable&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#204a87&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;GOPATH&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;HOME&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt;/go
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;flogo-cli&#34;&gt;Flogo CLI&lt;/h3&gt;
+&lt;p&gt;Flogo is needed to create and build the chaincode, you can find the installation details here:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/project-flogo/cli&#34;&gt;Flogo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;r3-corda-requirements&#34;&gt;R3 Corda Requirements&lt;/h2&gt;
+&lt;h3 id=&#34;java-programming-language-and-tools&#34;&gt;Java Programming Language and Tools&lt;/h3&gt;
+&lt;p&gt;If you are developing for R3 Corda you will need Java runtime.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IMPORTANT: &lt;a href=&#34;https://www.oracle.com/technetwork/java/javase/downloads/index.html&#34;&gt;Java SE Development Kit 8&lt;/a&gt; is required&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://maven.apache.org/install.html&#34;&gt;Maven&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you are developing for R3 Corda, following jars must be available in your local or public Maven Repository.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    &amp;lt;dependency&amp;gt;
+        &amp;lt;groupId&amp;gt;org.jetbrains.kotlin&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;kotlin-stdlib-jre8&amp;lt;/artifactId&amp;gt;
+        &amp;lt;version&amp;gt;1.1.60&amp;lt;/version&amp;gt;
+    &amp;lt;/dependency&amp;gt;
+    &amp;lt;dependency&amp;gt;
+        &amp;lt;groupId&amp;gt;net.corda&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;corda-core&amp;lt;/artifactId&amp;gt;
+        &amp;lt;version&amp;gt;[2.0.0,)&amp;lt;/version&amp;gt;
+    &amp;lt;/dependency&amp;gt;
+    &amp;lt;dependency&amp;gt;
+        &amp;lt;groupId&amp;gt;net.corda&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;corda-finance&amp;lt;/artifactId&amp;gt;
+        &amp;lt;version&amp;gt;[2.0.0,)&amp;lt;/version&amp;gt;
+    &amp;lt;/dependency&amp;gt;
+    &amp;lt;dependency&amp;gt;
+        &amp;lt;groupId&amp;gt;com.tibco.dovetail&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;dovetail-corda&amp;lt;/artifactId&amp;gt;
+        &amp;lt;version&amp;gt;[0.2.0, )&amp;lt;/version&amp;gt;
+    &amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;Project Dovetail™ library for R3 Corda is available &lt;a href=&#34;https://github.com/TIBCOSoftware/dovetail-contrib/releases/download/v0.2.0/dovetail-corda-0.2.0.jar&#34;&gt;here&lt;/a&gt;, run following command to install it to your local Maven repository&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;mkdir dovetail_corda
+cd dovetail_corda
+curl -OL https://github.com/TIBCOSoftware/dovetail-contrib/releases/download/v0.2.0/dovetail-corda-0.2.0.jar
+mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -DgeneratePom=true -DgroupId=com.tibco.dovetail -DartifactId=dovetail-corda -Dversion=0.2.0 -Dfile=dovetail_corda_v0.2.0.jar -Dpackaging=jar
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: CorDapp for bob</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-dist/bob/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-dist/bob/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;video width=&#34;480&#34; height=&#34;320&#34; controls=&#34;controls&#34;&gt;
+    &lt;source src=&#34;https://github.com/TIBCOSoftware/dovetail/blob/master/src/videos/bob.mp4?raw=true&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;&lt;/p&gt;
+&lt;h3 id=&#34;1-transferiou-receiver-flow&#34;&gt;1. TransferIOU receiver flow&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a flow
+&lt;ul&gt;
+&lt;li&gt;Create a flow&lt;/li&gt;
+&lt;li&gt;flow name: TransferIOUResponder&lt;/li&gt;
+&lt;li&gt;select trigger : Dovetail CorDApp Flow Receiver
+&lt;ul&gt;
+&lt;li&gt;select receiver from flow type dropdown&lt;/li&gt;
+&lt;li&gt;select false for &amp;ldquo;Use confidential identities for this transaction?&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;initiator flow name: com.alice.iou.flows.TransferIOUInitiator&lt;/li&gt;
+&lt;li&gt;click &amp;ldquo;Continue&amp;rdquo; button&lt;/li&gt;
+&lt;li&gt;select &amp;ldquo;Copy Schema&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;select the trigger, and map flow input&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-settleiou-receiver-flow&#34;&gt;2. SettleIOU receiver flow&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a flow
+&lt;ul&gt;
+&lt;li&gt;Create a flow&lt;/li&gt;
+&lt;li&gt;flow name: SettleIOUResponder&lt;/li&gt;
+&lt;li&gt;select trigger : Dovetail CorDApp Flow Receiver
+&lt;ul&gt;
+&lt;li&gt;select receiver from flow type dropdown&lt;/li&gt;
+&lt;li&gt;select false for &amp;ldquo;Use confidential identities for this transaction?&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;initiator flow name: com.charlie.iou.flows.SettleIOUInitiator&lt;/li&gt;
+&lt;li&gt;click &amp;ldquo;Continue&amp;rdquo; button&lt;/li&gt;
+&lt;li&gt;select &amp;ldquo;Copy Schema&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;select the trigger, and map flow input&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-export-the-bob-applicatio&#34;&gt;3. Export the &amp;ldquo;bob&amp;rdquo; applicatio&lt;/h3&gt;
+&lt;p&gt;export the application to artifiacts/bob.json&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Generate CorDapp artifacts</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-dist/cord-app-gen/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-dist/cord-app-gen/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;1-export-cordapp-flows&#34;&gt;1. Export CorDapp flows&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Export charlie application as charlie.json to artifacts/ folder&lt;/li&gt;
+&lt;li&gt;Export alice application as alice.json to artifacts/ folder&lt;/li&gt;
+&lt;li&gt;Export bob application as bob.json to artifacts/ folder&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;2-generate-cordapp-dependencies&#34;&gt;2. Generate CorDapp dependencies&lt;/h3&gt;
+&lt;p&gt;CorDapp responder flows have compile time and runtime dependency on their corresponding initiator flows, however since flows are private to each organization, Tibco Dovetail generates a base initator class without implementation details and can be shared with business partners.&lt;/p&gt;
+&lt;p&gt;run following command from iou_tutorial folder&lt;/p&gt;
+&lt;h4 id=&#34;21-charlie&#34;&gt;2.1 charlie&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dovetail corda dapp generate -m artifacts/charlie.json -v 1.0.0 -t artifacts/corda --namespace com.charlie.iou.flows --api
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;22-alice&#34;&gt;2.2 alice&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dovetail corda dapp generate -m artifacts/alice.json -v 1.0.0 -t artifacts/corda --namespace com.alice.iou.flows --api
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;3-create-dependency-pom-file-for-each-organization&#34;&gt;3. Create dependency pom file for each organization&lt;/h3&gt;
+&lt;h4 id=&#34;31-charlie&#34;&gt;3.1 charlie&lt;/h4&gt;
+&lt;p&gt;copy following to artifacts/charlie.pom file&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;com.alice.iou.flows&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;alice-api&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;1.0.0&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;32-alice&#34;&gt;3.2 alice&lt;/h4&gt;
+&lt;p&gt;copy following to artifacts/alice.pom file&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;com.charlie.iou.flows&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;charlie-api&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;1.0.0&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;32-bob&#34;&gt;3.2 bob&lt;/h4&gt;
+&lt;p&gt;copy following to artifacts/bob.pom file&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;com.charlie.iou.flows&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;charlie-api&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;1.0.0&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;com.alice.iou.flows&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;alice-api&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;1.0.0&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;4-generate-cordapps&#34;&gt;4. Generate CorDapps&lt;/h3&gt;
+&lt;p&gt;run following command from iou_tutorial folder&lt;/p&gt;
+&lt;h3 id=&#34;41-charlie&#34;&gt;4.1 charlie&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dovetail corda dapp generate -m artifacts/charlie.json -v 1.0.0 -t artifacts/corda --namespace com.charlie.iou.flows --dependency-file artifacts/charlie.pom
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;42-alice&#34;&gt;4.2 alice&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dovetail corda dapp generate -m artifacts/alice.json -v 1.0.0 -t artifacts/corda --namespace com.alice.iou.flows --dependency-file alice.pom
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;43-bob&#34;&gt;4.3 bob&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dovetail corda dapp generate -m artifacts/bob.json -v 1.0.0 -t artifacts/corda --namespace com.bob.iou.flows --dependency-file bob.pom
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Advanced Samples and Tutorials</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/advanced/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/advanced/</guid>
+      <description>
+        
+        
+        &lt;p&gt;For more Hyperledger Fabric samples and tutorials go to our &lt;a href=&#34;https://github.com/TIBCOSoftware/dovetail-contrib/tree/develop/hyperledger-fabric#getting-started&#34;&gt;Dovetail Contrib&lt;/a&gt; repository.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Generate Corda Client</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-client/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-client/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Dovetail CLI generates RPC client from CorDApp flows and Smart contract metadata, the generated client is a standalone springboot web server that exposes REST APIs to allow applications to invoke CorDapp flows.&lt;/p&gt;
+&lt;p&gt;The generated client also contains an embedded event streaming service to pulish vault state changes to specified messaging service, at present, only TIBCO Cloud Messaging is supported, use commandline &amp;ndash;streaming eftl to enable streaming service.&lt;/p&gt;
+&lt;h3 id=&#34;1-create-dependency-pom-file&#34;&gt;1 Create dependency pom file&lt;/h3&gt;
+&lt;p&gt;copy following to artifacts/iou.pom file&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;com.example.iou&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;IOU&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;1.0.0&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-generate-corda-client&#34;&gt;2. Generate Corda Client&lt;/h3&gt;
+&lt;p&gt;run following command from iou_tutorial folder, a web client is generated for charlie, alice and bob. The last command is to generate a generic web client than will be used for party &amp;lsquo;bank&amp;rsquo; to issue and transfer cash.&lt;/p&gt;
+&lt;h3 id=&#34;21-charlie&#34;&gt;2.1. charlie&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dovetail corda client generate --cordapp-json artifacts/charlie.json --smartcontract-json artifacts/IOU.json -v 1.0.0 -t artifacts/corda --cordapp-ns com.charlie.iou.flows --dependency-file artifacts/iou.pom --streaming none
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;22-alice&#34;&gt;2.2. alice&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dovetail corda client generate --cordapp-json artifacts/alice.json --smartcontract-json artifacts/IOU.json -v 1.0.0 -t artifacts/corda --cordapp-ns com.alice.iou.flows --dependency-file artifacts/iou.pom --streaming none
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;23-bob&#34;&gt;2.3. bob&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dovetail corda client generate --cordapp-json artifacts/bob.json --smartcontract-json artifacts/IOU.json -v 1.0.0 -t artifacts/corda --cordapp-ns com.bob.iou.flows --dependency-file artifacts/iou.pom --streaming none
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;24-bank&#34;&gt;2.4. bank&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dovetail corda client generate -v 1.0.0 -t artifacts/corda
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Load fabric extensions</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/extensions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/extensions/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Before we start modelling our fabric application, we need to load the fabric extensions into flogo TCI.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;First log into TIBCO Cloud Integration as indicated in our &lt;a href=&#34;../../../../getting-started/dovetail-ui&#34;&gt;Dovetail UI&lt;/a&gt; section.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Open &amp;ldquo;Develop Flogo&amp;rdquo; environment.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select the &amp;ldquo;extensions&amp;rdquo; tab and upload the fabric extensions found at our &lt;a href=&#34;https://github.com/TIBCOSoftware/dovetail-contrib/releases&#34;&gt;releases&lt;/a&gt; repository (NOTE: You will need to download and then upload the fabric-extension.zip and fabric-client-extension.zip files).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;IMPORTANT: For smart contract modelling only Open Source extensions can be used, for this hello world tutorial we will use the following extensions&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;fabric-extension.zip from &lt;a href=&#34;https://github.com/TIBCOSoftware/dovetail-contrib&#34;&gt;dovetail-contrib&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/project-flogo/contrib/tree/master/activity/log&#34;&gt;Flogo log&lt;/a&gt; activity.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/project-flogo/contrib/tree/master/activity/actreturn&#34;&gt;Flogo return&lt;/a&gt; activity.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For more detail information go to our &lt;a href=&#34;https://github.com/TIBCOSoftware/dovetail-contrib/tree/master/hyperledger-fabric/tci&#34;&gt;dovetail-contrib&lt;/a&gt; page.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Create smart contract</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/create-smart-contract/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/create-smart-contract/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Before anything download the &lt;a href=&#34;../../fabric_hw.json&#34;&gt;fabric_hw.json&lt;/a&gt; and &lt;a href=&#34;../../fabric_hw_client.json&#34;&gt;fabric_hw_client.json&lt;/a&gt; model example from our latest release.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Inside your Develop Flogo environment on TCI select &amp;ldquo;Create&amp;rdquo; button to create a new app.&lt;/li&gt;
+&lt;li&gt;Enter &amp;ldquo;fabric_hw&amp;rdquo; and select &amp;ldquo;create&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Select &amp;ldquo;create a TIBCO Flogo App&amp;rdquo; option.&lt;/li&gt;
+&lt;li&gt;Click on &amp;ldquo;Import App&amp;rdquo; option.&lt;/li&gt;
+&lt;li&gt;Upload fabric_hw.json selecting &amp;ldquo;import all&amp;rdquo; option.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After you import fabric_hw.json you can see a very simple smart contract with 2 transactions &amp;ldquo;get_value&amp;rdquo; and &amp;ldquo;set_value&amp;rdquo;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;set_value: Logs a message &amp;ldquo;Inside get_value&amp;rdquo; and then sets a value for a given key.&lt;/li&gt;
+&lt;li&gt;get_value: Logs a message &amp;ldquo;Setting value&amp;rdquo; and then returns the value of a given key.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For more detail information on how to create apps and model apps to our &lt;a href=&#34;https://integration.cloud.tibco.com/docs/index.html&#34;&gt;TCI docs&lt;/a&gt; page.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Export IOU Smart Contract Application</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/export/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/export/</guid>
+      <description>
+        
+        
+        &lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Go to IOU application&lt;/li&gt;
+&lt;li&gt;Click on &amp;ldquo;Export app&amp;rdquo; button, save the file IOU.json to the artifacts folder inside iou_tutorial&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The exported json file will be used to generate Corda Contract State and Contract, and it is also used to facilitate the implementation of CorDapp flows.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Generate Corda Artifacts</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/generate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/generate/</guid>
+      <description>
+        
+        
+        &lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Maven should be installed on your system, and mvn is in your PATH&lt;/li&gt;
+&lt;li&gt;Dovetail CLI should installed and in your PATH, it is also included in the cli folder in the corda.zip file (for mac only)&lt;/li&gt;
+&lt;li&gt;Latest relese of dovetail-corda-x.x.x.jar should be installed to your local maven repo, it is also included in corda.zip, you can run cli/mvninstall.sh to install the jar file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Run following command from iou_tutorial directory, R3 Corda contract  kotlin-IOUContract-1.0.0.jar is generated and written to artifacts/corda/iou folder, and installed in your local maven repository.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd iou_tutorial
+dovetail corda contract generate -m artifacts/IOU.json -v 1.0.0 -t artifacts/corda --namespace com.example.iou
+&lt;/code&gt;&lt;/pre&gt;
       </description>
     </item>
     
@@ -518,457 +961,71 @@ You can add /path/to/dovetail-cli/bin/dovetail to your PATH env variable for eas
     </item>
     
     <item>
-      <title>Docs: Run test cases</title>
-      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-test/test-cases/</link>
+      <title>Docs: IOU Smart Contract Data Model</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/model/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-test/test-cases/</guid>
-      <description>
-        
-        
-        &lt;h3 id=&#34;1-issue-cash&#34;&gt;1 Issue cash&lt;/h3&gt;
-&lt;p&gt;Use bank&#39;s swagger UI to issue and transfer cash to charlie.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;go to security-controller section&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;login method
-&lt;ul&gt;
-&lt;li&gt;username = user1, password = test&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;execute&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;go to cash-controller section&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;/cash/flow/issue-payment method
-&lt;ul&gt;
-&lt;li&gt;Authorizarion: copy the token value from login output, without the quotes&lt;/li&gt;
-&lt;li&gt;Input:
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;quantity&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;100000&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;currency&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;USD&amp;#34;&lt;/span&gt;
-    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;issuerRef&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;00&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;recipient&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;O=charlie,L=New York,C=US&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;anonymous&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;notary&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;O=Notary,L=London,C=GB&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;execute, if successful, you should see output similar to following
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;transactionId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;FC85B7E74E8D9A4BDD39A2D83FA2C41C4CB57A296E43A3B5D9AF08FC7CF06E1B&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;2-issue-an-iou&#34;&gt;2 Issue an IOU&lt;/h3&gt;
-&lt;p&gt;Use charlie&#39;s swagger UI to issue an IOU&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;go to security-controller section&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;login method
-&lt;ul&gt;
-&lt;li&gt;username = user1, password = test&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;execute&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;go to query-controller section&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;/query/states&lt;/li&gt;
-&lt;li&gt;Authorizarion: copy the token value from login output, without the quotes&lt;/li&gt;
-&lt;li&gt;execute, you should see cash is in the vault&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;go to main-controller section&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;/api/issueiouinitiatort method
-&lt;ul&gt;
-&lt;li&gt;Authorizarion: copy the token value from login output, without the quotes&lt;/li&gt;
-&lt;li&gt;Input:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;holder&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;O=alice,L=New York,C=US&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;amt&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;quantity&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;10000&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;currency&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;USD&amp;#34;&lt;/span&gt;
-    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;extId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;iou1&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;execute&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;go to query-controller section&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;/query/states&lt;/li&gt;
-&lt;li&gt;Authorizarion: copy the token value from login output, without the quotes&lt;/li&gt;
-&lt;li&gt;execute, you should see com.example.iou.IOU is now in the vault&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;3-transfer-the-iou&#34;&gt;3 Transfer the IOU&lt;/h3&gt;
-&lt;p&gt;Use alice&#39;s swagger to transfer IOU to bob.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;go to security-controller section&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;login method
-&lt;ul&gt;
-&lt;li&gt;username = user1, password = test&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;execute&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;go to query-controller section&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;/query/states&lt;/li&gt;
-&lt;li&gt;Authorizarion: copy the token value from login output, without the quotes&lt;/li&gt;
-&lt;li&gt;execute, you should see com.example.iou.IOU in the output, copy the linearId.id value&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;go to main-controller section&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;/api/transferiouinitiator
-&lt;ul&gt;
-&lt;li&gt;Authorizarion: copy the token value from login output, without the quotes&lt;/li&gt;
-&lt;li&gt;Input&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;iouId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;externalId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;iou1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;paste the linearId.id value here&amp;#34;&lt;/span&gt;
-    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;newHoder&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;O=bob,L=New York,C=US&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;execute&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;go to query-controller section&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;/query/states&lt;/li&gt;
-&lt;li&gt;Authorizarion: copy the token value from login output, without the quotes&lt;/li&gt;
-&lt;li&gt;execute, com.example.iou.IOU is no longer in the vault&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;4-settle-the-iou&#34;&gt;4 Settle the IOU&lt;/h3&gt;
-&lt;p&gt;Use charlie&#39;s swagger UI to settle the IOU with cash&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;go to main-controller section
-&lt;ul&gt;
-&lt;li&gt;/api/settleiouinitiator method
-&lt;ul&gt;
-&lt;li&gt;Authorizarion: copy the token value from login output, without the quotes&lt;/li&gt;
-&lt;li&gt;Input:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;iouId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;externalId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;iou1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;copy iou linearId.id value here&amp;#34;&lt;/span&gt;
-    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;go to query-controller section
-&lt;ul&gt;
-&lt;li&gt;/query/states&lt;/li&gt;
-&lt;li&gt;Authorizarion: copy the token value from login output, without the quotes&lt;/li&gt;
-&lt;li&gt;execute, com.example.iou.IOU is no longer in the vault, and cash amount is reduced by $100&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Environment Prerequisites</title>
-      <link>https://tibcosoftware.github.io/dovetail/docs/getting-started/environment-prerequisites/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://tibcosoftware.github.io/dovetail/docs/getting-started/environment-prerequisites/</guid>
-      <description>
-        
-        
-        &lt;h2 id=&#34;dovetail-studio-requirements&#34;&gt;Dovetail Studio Requirements&lt;/h2&gt;
-&lt;h3 id=&#34;docker&#34;&gt;Docker&lt;/h3&gt;
-&lt;p&gt;Docker is needed to run Dovetail Studio, you can find the installation details here:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.docker.com/&#34;&gt;Docker&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.docker.com/compose/install/&#34;&gt;Docker Compose&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;hyperledger-fabric-requirements&#34;&gt;Hyperledger Fabric Requirements&lt;/h2&gt;
-&lt;h3 id=&#34;hyperledger-fabric-sdk&#34;&gt;Hyperledger Fabric SDK&lt;/h3&gt;
-&lt;p&gt;If you are developing for Hyperledger Fabric, below is a link to its installation instructions.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://hyperledger-fabric.readthedocs.io/en/release-1.3/install.html&#34;&gt;Hyperledger Fabric&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;r3-corda-requirements&#34;&gt;R3 Corda Requirements&lt;/h2&gt;
-&lt;h3 id=&#34;java-programming-language-and-tools&#34;&gt;Java Programming Language and Tools&lt;/h3&gt;
-&lt;p&gt;If you are developing for R3 Corda you will need Java runtime.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;IMPORTANT: &lt;a href=&#34;https://www.oracle.com/technetwork/java/javase/downloads/index.html&#34;&gt;Java SE Development Kit 8&lt;/a&gt; is required&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://maven.apache.org/install.html&#34;&gt;Maven&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;If you are developing for R3 Corda, following jars must be available in your local or public Maven Repository.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;    &amp;lt;dependency&amp;gt;
-        &amp;lt;groupId&amp;gt;org.jetbrains.kotlin&amp;lt;/groupId&amp;gt;
-        &amp;lt;artifactId&amp;gt;kotlin-stdlib-jre8&amp;lt;/artifactId&amp;gt;
-        &amp;lt;version&amp;gt;1.1.60&amp;lt;/version&amp;gt;
-    &amp;lt;/dependency&amp;gt;
-    &amp;lt;dependency&amp;gt;
-        &amp;lt;groupId&amp;gt;net.corda&amp;lt;/groupId&amp;gt;
-        &amp;lt;artifactId&amp;gt;corda-core&amp;lt;/artifactId&amp;gt;
-        &amp;lt;version&amp;gt;[2.0.0,)&amp;lt;/version&amp;gt;
-    &amp;lt;/dependency&amp;gt;
-    &amp;lt;dependency&amp;gt;
-        &amp;lt;groupId&amp;gt;net.corda&amp;lt;/groupId&amp;gt;
-        &amp;lt;artifactId&amp;gt;corda-finance&amp;lt;/artifactId&amp;gt;
-        &amp;lt;version&amp;gt;[2.0.0,)&amp;lt;/version&amp;gt;
-    &amp;lt;/dependency&amp;gt;
-    &amp;lt;dependency&amp;gt;
-        &amp;lt;groupId&amp;gt;com.tibco.dovetail&amp;lt;/groupId&amp;gt;
-        &amp;lt;artifactId&amp;gt;dovetail-corda&amp;lt;/artifactId&amp;gt;
-        &amp;lt;version&amp;gt;[0.2.0, )&amp;lt;/version&amp;gt;
-    &amp;lt;/dependency&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
-&lt;p&gt;Project Dovetail™ library for R3 Corda is available &lt;a href=&#34;https://github.com/TIBCOSoftware/dovetail-contrib/releases/download/v0.2.0/dovetail-corda-0.2.0.jar&#34;&gt;here&lt;/a&gt;, run following command to install it to your local Maven repository&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;pre&gt;&lt;code&gt;mkdir dovetail_corda
-cd dovetail_corda
-curl -OL https://github.com/TIBCOSoftware/dovetail-contrib/releases/download/v0.2.0/dovetail-corda-0.2.0.jar
-mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -DgeneratePom=true -DgroupId=com.tibco.dovetail -DartifactId=dovetail-corda -Dversion=0.2.0 -Dfile=dovetail_corda_v0.2.0.jar -Dpackaging=jar
-&lt;/code&gt;&lt;/pre&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Export IOU Smart Contract Application</title>
-      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/export/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/export/</guid>
-      <description>
-        
-        
-        &lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;Go to IOU application&lt;/li&gt;
-&lt;li&gt;Click on &amp;ldquo;Export app&amp;rdquo; button, save the file IOU.json to the artifacts folder inside iou_tutorial&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;The exported json file will be used to generate Corda Contract State and Contract, and it is also used to facilitate the implementation of CorDapp flows.&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: CorDapp for bob</title>
-      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-dist/bob/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-dist/bob/</guid>
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/model/</guid>
       <description>
         
         
         &lt;p&gt;&lt;video width=&#34;480&#34; height=&#34;320&#34; controls=&#34;controls&#34;&gt;
-    &lt;source src=&#34;https://github.com/TIBCOSoftware/dovetail/blob/master/src/videos/bob.mp4?raw=true&#34; type=&#34;video/mp4&#34;&gt;
+    &lt;source src=&#34;https://github.com/TIBCOSoftware/dovetail/blob/master/src/videos/iou_asset_schema.mp4?raw=true&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;&lt;/p&gt;
-&lt;h3 id=&#34;1-transferiou-receiver-flow&#34;&gt;1. TransferIOU receiver flow&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Create a flow
+&lt;li&gt;Start up and open Dovetail Studio WebUI&lt;/li&gt;
+&lt;li&gt;Go to Connection tab&lt;/li&gt;
+&lt;li&gt;Click &amp;ldquo;Add Connection&amp;rdquo;
 &lt;ul&gt;
-&lt;li&gt;Create a flow&lt;/li&gt;
-&lt;li&gt;flow name: TransferIOUResponder&lt;/li&gt;
-&lt;li&gt;select trigger : Dovetail CorDApp Flow Receiver
+&lt;li&gt;Choose &amp;ldquo;Define Ledger Asset Schema&amp;rdquo; from the list&lt;/li&gt;
+&lt;li&gt;Enter display name, e.g. &amp;ldquo;my first IOU&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Enter asset name &amp;ldquo;IOU&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Enter module name &amp;ldquo;com.example.iou&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Select asset type &amp;ldquo;Linear State&amp;rdquo;
 &lt;ul&gt;
-&lt;li&gt;select receiver from flow type dropdown&lt;/li&gt;
-&lt;li&gt;select false for &amp;ldquo;Use confidential identities for this transaction?&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;initiator flow name: com.alice.iou.flows.TransferIOUInitiator&lt;/li&gt;
-&lt;li&gt;click &amp;ldquo;Continue&amp;rdquo; button&lt;/li&gt;
-&lt;li&gt;select &amp;ldquo;Copy Schema&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;select the trigger, and map flow input&lt;/li&gt;
+&lt;li&gt;LinearId attribute will be automatically added to the pre-defined fields&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Enter addition fields
+&lt;ul&gt;
+&lt;li&gt;issuer, select &amp;ldquo;Party&amp;rdquo; from the type dropdown menu&lt;/li&gt;
+&lt;li&gt;holder, select &amp;ldquo;Party&amp;rdquo; from the type dropdown menu&lt;/li&gt;
+&lt;li&gt;amt, select &amp;ldquo;Amount&lt;Courrency&gt;&amp;rdquo; from the type dropdown menu&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Define party roles
+&lt;ul&gt;
+&lt;li&gt;add &amp;ldquo;issuer&amp;rdquo;, leave other fields as default&lt;/li&gt;
+&lt;li&gt;add &amp;ldquo;holder&amp;rdquo;, leave other fields as default&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Click &amp;ldquo;Donee&amp;rdquo; button&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;2-settleiou-receiver-flow&#34;&gt;2. SettleIOU receiver flow&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Create a flow
-&lt;ul&gt;
-&lt;li&gt;Create a flow&lt;/li&gt;
-&lt;li&gt;flow name: SettleIOUResponder&lt;/li&gt;
-&lt;li&gt;select trigger : Dovetail CorDApp Flow Receiver
-&lt;ul&gt;
-&lt;li&gt;select receiver from flow type dropdown&lt;/li&gt;
-&lt;li&gt;select false for &amp;ldquo;Use confidential identities for this transaction?&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;initiator flow name: com.charlie.iou.flows.SettleIOUInitiator&lt;/li&gt;
-&lt;li&gt;click &amp;ldquo;Continue&amp;rdquo; button&lt;/li&gt;
-&lt;li&gt;select &amp;ldquo;Copy Schema&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;select the trigger, and map flow input&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;3-export-the-bob-applicatio&#34;&gt;3. Export the &amp;ldquo;bob&amp;rdquo; applicatio&lt;/h3&gt;
-&lt;p&gt;export the application to artifiacts/bob.json&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
-      <title>Docs: Generate Corda Client</title>
-      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-client/</link>
+      <title>Docs: Build smart contract</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/build-smart-contract/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-client/</guid>
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/build-smart-contract/</guid>
       <description>
         
         
-        &lt;p&gt;Dovetail CLI generates RPC client from CorDApp flows and Smart contract metadata, the generated client is a standalone springboot web server that exposes REST APIs to allow applications to invoke CorDapp flows.&lt;/p&gt;
-&lt;p&gt;The generated client also contains an embedded event streaming service to pulish vault state changes to specified messaging service, at present, only TIBCO Cloud Messaging is supported, use commandline &amp;ndash;streaming eftl to enable streaming service.&lt;/p&gt;
-&lt;h3 id=&#34;1-create-dependency-pom-file&#34;&gt;1 Create dependency pom file&lt;/h3&gt;
-&lt;p&gt;copy following to artifacts/iou.pom file&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;com.example.iou&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;IOU&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;1.0.0&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-generate-corda-client&#34;&gt;2. Generate Corda Client&lt;/h3&gt;
-&lt;p&gt;run following command from iou_tutorial folder, a web client is generated for charlie, alice and bob. The last command is to generate a generic web client than will be used for party &amp;lsquo;bank&amp;rsquo; to issue and transfer cash.&lt;/p&gt;
-&lt;h3 id=&#34;21-charlie&#34;&gt;2.1. charlie&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dovetail corda client generate --cordapp-json artifacts/charlie.json --smartcontract-json artifacts/IOU.json -v 1.0.0 -t artifacts/corda --cordapp-ns com.charlie.iou.flows --dependency-file artifacts/iou.pom --streaming none
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;22-alice&#34;&gt;2.2. alice&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dovetail corda client generate --cordapp-json artifacts/alice.json --smartcontract-json artifacts/IOU.json -v 1.0.0 -t artifacts/corda --cordapp-ns com.alice.iou.flows --dependency-file artifacts/iou.pom --streaming none
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;23-bob&#34;&gt;2.3. bob&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dovetail corda client generate --cordapp-json artifacts/bob.json --smartcontract-json artifacts/IOU.json -v 1.0.0 -t artifacts/corda --cordapp-ns com.bob.iou.flows --dependency-file artifacts/iou.pom --streaming none
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;24-bank&#34;&gt;2.4. bank&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dovetail corda client generate -v 1.0.0 -t artifacts/corda
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Generate Corda Artifacts</title>
-      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/generate/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/generate/</guid>
-      <description>
-        
-        
-        &lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;Maven should be installed on your system, and mvn is in your PATH&lt;/li&gt;
-&lt;li&gt;Dovetail CLI should installed and in your PATH, it is also included in the cli folder in the corda.zip file (for mac only)&lt;/li&gt;
-&lt;li&gt;Latest relese of dovetail-corda-x.x.x.jar should be installed to your local maven repo, it is also included in corda.zip, you can run cli/mvninstall.sh to install the jar file&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Run following command from iou_tutorial directory, R3 Corda contract  kotlin-IOUContract-1.0.0.jar is generated and written to artifacts/corda/iou folder, and installed in your local maven repository.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;cd iou_tutorial
-dovetail corda contract generate -m artifacts/IOU.json -v 1.0.0 -t artifacts/corda --namespace com.example.iou
-&lt;/code&gt;&lt;/pre&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Generate CorDapp artifacts</title>
-      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-dist/cord-app-gen/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-dist/cord-app-gen/</guid>
-      <description>
-        
-        
-        &lt;h3 id=&#34;1-export-cordapp-flows&#34;&gt;1. Export CorDapp flows&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;Export charlie application as charlie.json to artifacts/ folder&lt;/li&gt;
-&lt;li&gt;Export alice application as alice.json to artifacts/ folder&lt;/li&gt;
-&lt;li&gt;Export bob application as bob.json to artifacts/ folder&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;2-generate-cordapp-dependencies&#34;&gt;2. Generate CorDapp dependencies&lt;/h3&gt;
-&lt;p&gt;CorDapp responder flows have compile time and runtime dependency on their corresponding initiator flows, however since flows are private to each organization, Tibco Dovetail generates a base initator class without implementation details and can be shared with business partners.&lt;/p&gt;
-&lt;p&gt;run following command from iou_tutorial folder&lt;/p&gt;
-&lt;h4 id=&#34;21-charlie&#34;&gt;2.1 charlie&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dovetail corda dapp generate -m artifacts/charlie.json -v 1.0.0 -t artifacts/corda --namespace com.charlie.iou.flows --api
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;22-alice&#34;&gt;2.2 alice&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dovetail corda dapp generate -m artifacts/alice.json -v 1.0.0 -t artifacts/corda --namespace com.alice.iou.flows --api
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;3-create-dependency-pom-file-for-each-organization&#34;&gt;3. Create dependency pom file for each organization&lt;/h3&gt;
-&lt;h4 id=&#34;31-charlie&#34;&gt;3.1 charlie&lt;/h4&gt;
-&lt;p&gt;copy following to artifacts/charlie.pom file&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;com.alice.iou.flows&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;alice-api&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;1.0.0&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;32-alice&#34;&gt;3.2 alice&lt;/h4&gt;
-&lt;p&gt;copy following to artifacts/alice.pom file&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;com.charlie.iou.flows&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;charlie-api&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;1.0.0&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;32-bob&#34;&gt;3.2 bob&lt;/h4&gt;
-&lt;p&gt;copy following to artifacts/bob.pom file&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;com.charlie.iou.flows&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;charlie-api&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;1.0.0&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;com.alice.iou.flows&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;alice-api&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;1.0.0&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;4-generate-cordapps&#34;&gt;4. Generate CorDapps&lt;/h3&gt;
-&lt;p&gt;run following command from iou_tutorial folder&lt;/p&gt;
-&lt;h3 id=&#34;41-charlie&#34;&gt;4.1 charlie&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dovetail corda dapp generate -m artifacts/charlie.json -v 1.0.0 -t artifacts/corda --namespace com.charlie.iou.flows --dependency-file artifacts/charlie.pom
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;42-alice&#34;&gt;4.2 alice&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dovetail corda dapp generate -m artifacts/alice.json -v 1.0.0 -t artifacts/corda --namespace com.alice.iou.flows --dependency-file alice.pom
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;43-bob&#34;&gt;4.3 bob&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dovetail corda dapp generate -m artifacts/bob.json -v 1.0.0 -t artifacts/corda --namespace com.bob.iou.flows --dependency-file bob.pom
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Fabric Samples and Tutorials</title>
-      <link>https://tibcosoftware.github.io/dovetail/docs/labs/fabic-sample/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/fabic-sample/</guid>
-      <description>
-        
-        
-        &lt;p&gt;You can follow Hyperledger Fabric samples and tutorials in our &lt;a href=&#34;https://github.com/TIBCOSoftware/dovetail-contrib/tree/develop/hyperledger-fabric#getting-started&#34;&gt;Dovetail Contrib&lt;/a&gt; repository.&lt;/p&gt;
+        &lt;p&gt;Before anything download the fabric_hw.json and fabric_hw_client.json from the &lt;a href=&#34;../create-smart-contract&#34;&gt;create smart contract&lt;/a&gt; section.&lt;/p&gt;
+&lt;p&gt;Also make sure the &lt;a href=&#34;../../../../getting-started/environment-prerequisites&#34;&gt;environment prerequisites&lt;/a&gt; for hyperledger fabric have been installed.&lt;/p&gt;
+&lt;h4 id=&#34;clone-dovetail-contrib-repository&#34;&gt;Clone dovetail-contrib repository&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git clone https://github.com/TIBCOSoftware/dovetail-contrib.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;build-using-fabric-scripts&#34;&gt;Build using fabric-scripts&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#204a87&#34;&gt;cd&lt;/span&gt; dovetail-contrib/hyperledger-fabric/fabric-scripts/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Replace fabric_hw.json with full path to your json file&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;make &lt;span style=&#34;color:#000&#34;&gt;APP_FILE&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;/path/to/fabric_hw.json &lt;span style=&#34;color:#000&#34;&gt;APP_NAME&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;fabric_hw create
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;make &lt;span style=&#34;color:#000&#34;&gt;APP_NAME&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;fabric_hw build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;After you follow these steps, your smart contract chaincode can be found under your current folder in a fabric_hw folder.&lt;/p&gt;
 
       </description>
     </item>

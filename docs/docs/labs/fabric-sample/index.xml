@@ -1,0 +1,49 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project Dovetail™ – Fabric Samples and Tutorials</title>
+    <link>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/</link>
+    <description>Recent content in Fabric Samples and Tutorials on Project Dovetail™</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Fabric Hello World Tutorial</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/</guid>
+      <description>
+        
+        
+        &lt;p&gt;During this tutorial we will use Dovetail to create a hyperledger fabric Smart Contract and a client application that exposes the smart contract as a rest API all using Project Dovetail.&lt;/p&gt;
+&lt;p&gt;This is a very simple smart contract and rest API that mocks a key value store as defined in the following diagram&lt;/p&gt;
+&lt;div&gt;
+  &lt;img src=&#34;../Fabric_HW_tutorial.png&#34; width=&#34;900px&#34;&gt;&lt;/img&gt;
+&lt;/div&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Advanced Samples and Tutorials</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/advanced/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/advanced/</guid>
+      <description>
+        
+        
+        &lt;p&gt;For more Hyperledger Fabric samples and tutorials go to our &lt;a href=&#34;https://github.com/TIBCOSoftware/dovetail-contrib/tree/develop/hyperledger-fabric#getting-started&#34;&gt;Dovetail Contrib&lt;/a&gt; repository.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
