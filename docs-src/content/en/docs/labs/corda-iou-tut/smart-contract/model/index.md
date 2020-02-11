@@ -1,7 +1,7 @@
 ---
 title: "IOU Smart Contract Data Model"
 linkTitle: "Model Ledger Asset"
-weight: 1
+weight: 7
 description: >
     Define contract state data schema that should be stored on the ledger
 ---

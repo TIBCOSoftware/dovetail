@@ -14,49 +14,45 @@
     
     
     <item>
-      <title>Docs: IOU Smart Contract Data Model</title>
-      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/model/</link>
+      <title>Docs: Export IOU Smart Contract Application</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/export/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/model/</guid>
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/export/</guid>
       <description>
         
         
-        &lt;p&gt;&lt;video width=&#34;480&#34; height=&#34;320&#34; controls=&#34;controls&#34;&gt;
-    &lt;source src=&#34;https://github.com/TIBCOSoftware/dovetail/blob/master/src/videos/iou_asset_schema.mp4?raw=true&#34; type=&#34;video/mp4&#34;&gt;
-&lt;/video&gt;&lt;/p&gt;
+        &lt;blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;Start up and open Dovetail Studio WebUI&lt;/li&gt;
-&lt;li&gt;Go to Connection tab&lt;/li&gt;
-&lt;li&gt;Click &amp;ldquo;Add Connection&amp;rdquo;
-&lt;ul&gt;
-&lt;li&gt;Choose &amp;ldquo;Define Ledger Asset Schema&amp;rdquo; from the list&lt;/li&gt;
-&lt;li&gt;Enter display name, e.g. &amp;ldquo;my first IOU&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;Enter asset name &amp;ldquo;IOU&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;Enter module name &amp;ldquo;com.example.iou&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;Select asset type &amp;ldquo;Linear State&amp;rdquo;
-&lt;ul&gt;
-&lt;li&gt;LinearId attribute will be automatically added to the pre-defined fields&lt;/li&gt;
+&lt;li&gt;Go to IOU application&lt;/li&gt;
+&lt;li&gt;Click on &amp;ldquo;Export app&amp;rdquo; button, save the file IOU.json to the artifacts folder inside iou_tutorial&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Enter addition fields
-&lt;ul&gt;
-&lt;li&gt;issuer, select &amp;ldquo;Party&amp;rdquo; from the type dropdown menu&lt;/li&gt;
-&lt;li&gt;holder, select &amp;ldquo;Party&amp;rdquo; from the type dropdown menu&lt;/li&gt;
-&lt;li&gt;amt, select &amp;ldquo;Amount&lt;Courrency&gt;&amp;rdquo; from the type dropdown menu&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Define party roles
-&lt;ul&gt;
-&lt;li&gt;add &amp;ldquo;issuer&amp;rdquo;, leave other fields as default&lt;/li&gt;
-&lt;li&gt;add &amp;ldquo;holder&amp;rdquo;, leave other fields as default&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Click &amp;ldquo;Donee&amp;rdquo; button&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The exported json file will be used to generate Corda Contract State and Contract, and it is also used to facilitate the implementation of CorDapp flows.&lt;/p&gt;
 
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Generate Corda Artifacts</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/generate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/generate/</guid>
+      <description>
+        
+        
+        &lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Maven should be installed on your system, and mvn is in your PATH&lt;/li&gt;
+&lt;li&gt;Dovetail CLI should installed and in your PATH, it is also included in the cli folder in the corda.zip file (for mac only)&lt;/li&gt;
+&lt;li&gt;Latest relese of dovetail-corda-x.x.x.jar should be installed to your local maven repo, it is also included in corda.zip, you can run cli/mvninstall.sh to install the jar file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Run following command from iou_tutorial directory, R3 Corda contract  kotlin-IOUContract-1.0.0.jar is generated and written to artifacts/corda/iou folder, and installed in your local maven repository.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd iou_tutorial
+dovetail corda contract generate -m artifacts/IOU.json -v 1.0.0 -t artifacts/corda --namespace com.example.iou
+&lt;/code&gt;&lt;/pre&gt;
       </description>
     </item>
     
@@ -180,45 +176,49 @@
     </item>
     
     <item>
-      <title>Docs: Export IOU Smart Contract Application</title>
-      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/export/</link>
+      <title>Docs: IOU Smart Contract Data Model</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/model/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/export/</guid>
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/model/</guid>
       <description>
         
         
-        &lt;blockquote&gt;
+        &lt;p&gt;&lt;video width=&#34;480&#34; height=&#34;320&#34; controls=&#34;controls&#34;&gt;
+    &lt;source src=&#34;https://github.com/TIBCOSoftware/dovetail/blob/master/src/videos/iou_asset_schema.mp4?raw=true&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Go to IOU application&lt;/li&gt;
-&lt;li&gt;Click on &amp;ldquo;Export app&amp;rdquo; button, save the file IOU.json to the artifacts folder inside iou_tutorial&lt;/li&gt;
+&lt;li&gt;Start up and open Dovetail Studio WebUI&lt;/li&gt;
+&lt;li&gt;Go to Connection tab&lt;/li&gt;
+&lt;li&gt;Click &amp;ldquo;Add Connection&amp;rdquo;
+&lt;ul&gt;
+&lt;li&gt;Choose &amp;ldquo;Define Ledger Asset Schema&amp;rdquo; from the list&lt;/li&gt;
+&lt;li&gt;Enter display name, e.g. &amp;ldquo;my first IOU&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Enter asset name &amp;ldquo;IOU&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Enter module name &amp;ldquo;com.example.iou&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Select asset type &amp;ldquo;Linear State&amp;rdquo;
+&lt;ul&gt;
+&lt;li&gt;LinearId attribute will be automatically added to the pre-defined fields&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;The exported json file will be used to generate Corda Contract State and Contract, and it is also used to facilitate the implementation of CorDapp flows.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Enter addition fields
+&lt;ul&gt;
+&lt;li&gt;issuer, select &amp;ldquo;Party&amp;rdquo; from the type dropdown menu&lt;/li&gt;
+&lt;li&gt;holder, select &amp;ldquo;Party&amp;rdquo; from the type dropdown menu&lt;/li&gt;
+&lt;li&gt;amt, select &amp;ldquo;Amount&lt;Courrency&gt;&amp;rdquo; from the type dropdown menu&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Define party roles
+&lt;ul&gt;
+&lt;li&gt;add &amp;ldquo;issuer&amp;rdquo;, leave other fields as default&lt;/li&gt;
+&lt;li&gt;add &amp;ldquo;holder&amp;rdquo;, leave other fields as default&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Click &amp;ldquo;Donee&amp;rdquo; button&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Generate Corda Artifacts</title>
-      <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/generate/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/generate/</guid>
-      <description>
-        
-        
-        &lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;Maven should be installed on your system, and mvn is in your PATH&lt;/li&gt;
-&lt;li&gt;Dovetail CLI should installed and in your PATH, it is also included in the cli folder in the corda.zip file (for mac only)&lt;/li&gt;
-&lt;li&gt;Latest relese of dovetail-corda-x.x.x.jar should be installed to your local maven repo, it is also included in corda.zip, you can run cli/mvninstall.sh to install the jar file&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Run following command from iou_tutorial directory, R3 Corda contract  kotlin-IOUContract-1.0.0.jar is generated and written to artifacts/corda/iou folder, and installed in your local maven repository.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;cd iou_tutorial
-dovetail corda contract generate -m artifacts/IOU.json -v 1.0.0 -t artifacts/corda --namespace com.example.iou
-&lt;/code&gt;&lt;/pre&gt;
       </description>
     </item>
     

@@ -1,7 +1,7 @@
 ---
 title: "Implement IOU Smart Contract"
 linkTitle: "Implement S-Contract"
-weight: 2
+weight: 7
 description: >
     In this step, we will walk you through step by step the implementation of IOU smart contract transactions: IssueIOU, TransferIOU and SettleIOU.
 ---

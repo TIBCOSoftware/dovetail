@@ -14,6 +14,24 @@
     
     
     <item>
+      <title>Docs: Fabric Samples and Tutorials</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This is a list of step by step tutorials on how to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Model, generate and deploy smart contracts using Dovetail UI.&lt;/li&gt;
+&lt;li&gt;Model, generate and deploy a call application that exposes your smart contract as a classic API (REST, GraphQL, etc&amp;hellip;) also using Dovetail UI.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Corda IOU Smart Contract Tutorial</title>
       <link>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -58,20 +76,6 @@ rm corda.zip
 &lt;li&gt;copy extracted network/corda/* to your network/corda folder&lt;/li&gt;
 &lt;li&gt;copy extracted cli/* to your cli folder&lt;/li&gt;
 &lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Fabric Samples and Tutorials</title>
-      <link>https://tibcosoftware.github.io/dovetail/docs/labs/fabic-sample/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/fabic-sample/</guid>
-      <description>
-        
-        
-        &lt;p&gt;You can follow Hyperledger Fabric samples and tutorials in our &lt;a href=&#34;https://github.com/TIBCOSoftware/dovetail-contrib/tree/develop/hyperledger-fabric#getting-started&#34;&gt;Dovetail Contrib&lt;/a&gt; repository.&lt;/p&gt;
 
       </description>
     </item>

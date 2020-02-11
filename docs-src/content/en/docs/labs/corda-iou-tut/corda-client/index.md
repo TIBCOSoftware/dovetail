@@ -1,7 +1,7 @@
 ---
 title: "Generate Corda Client"
 linkTitle: "Generate Corda Client"
-weight: 3
+weight: 6
 description: >
   generates RPC client from CorDApp flows and Smart contract metadata
 ---
