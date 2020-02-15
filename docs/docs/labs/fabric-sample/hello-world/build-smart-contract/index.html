@@ -25,12 +25,12 @@
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/build-smart-contract/" />
-<meta property="article:modified_time" content="2020-02-10T14:58:45-08:00" /><meta property="og:site_name" content="Project Dovetail™" />
+<meta property="article:modified_time" content="2020-02-14T13:11:27-08:00" /><meta property="og:site_name" content="Project Dovetail™" />
 <meta itemprop="name" content="Build smart contract">
 <meta itemprop="description" content="Instructions on how to build a hyperledger smart contract built in TCI (TIBCO Cloud Integration)
 ">
-<meta itemprop="dateModified" content="2020-02-10T14:58:45-08:00" />
-<meta itemprop="wordCount" content="72">
+<meta itemprop="dateModified" content="2020-02-14T13:11:27-08:00" />
+<meta itemprop="wordCount" content="38">
 
 
 
@@ -272,6 +272,18 @@
       
       
       <a class="td-sidebar-link td-sidebar-link__page  active" id="m-dovetaildocslabsfabric-samplehello-worldbuild-smart-contract" href="/dovetail/docs/labs/fabric-sample/hello-world/build-smart-contract/">Build smart contract</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-dovetaildocslabsfabric-samplehello-worldcreate-client" href="/dovetail/docs/labs/fabric-sample/hello-world/create-client/">Create client app</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-dovetaildocslabsfabric-samplehello-worldbuild-client" href="/dovetail/docs/labs/fabric-sample/hello-world/build-client/">Build client</a>
       
       
     </li>
@@ -577,21 +589,17 @@
 
 
 
-<p class="-text-primary pt-3 h6" >Reading time: 0 minutes and 19 seconds.</p>
+<p class="-text-primary pt-3 h6" >Reading time: 0 minutes and 10 seconds.</p>
 <p>
 <div class="td-content">
 	<h1>Build smart contract</h1>
 	<div class="lead">Instructions on how to build a hyperledger smart contract built in TCI (TIBCO Cloud Integration)</div>
-	<p>Before anything download the fabric_hw.json and fabric_hw_client.json from the <a href="../create-smart-contract">create smart contract</a> section.</p>
-<p>Also make sure the <a href="../../../../getting-started/environment-prerequisites">environment prerequisites</a> for hyperledger fabric have been installed.</p>
+	<p>Before anything download the <a href="../../fabric_hw.json">fabric_hw.json</a> model example.</p>
 <h4 id="clone-dovetail-contrib-repository">Clone dovetail-contrib repository</h4>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/TIBCOSoftware/dovetail-contrib.git
-</code></pre></div><h4 id="build-using-fabric-scripts">Build using fabric-scripts</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#204a87">cd</span> dovetail-contrib/hyperledger-fabric/fabric-scripts/
-</code></pre></div><p>Replace fabric_hw.json with full path to your json file</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">make <span style="color:#000">APP_FILE</span><span style="color:#ce5c00;font-weight:bold">=</span>/path/to/fabric_hw.json <span style="color:#000">APP_NAME</span><span style="color:#ce5c00;font-weight:bold">=</span>fabric_hw create
-</code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">make <span style="color:#000">APP_NAME</span><span style="color:#ce5c00;font-weight:bold">=</span>fabric_hw build
-</code></pre></div><p>After you follow these steps, your smart contract chaincode can be found under your current folder in a fabric_hw folder.</p>
+</code></pre></div><h4 id="build-using-dovetail-tools">Build using dovetail-tools</h4>
+<p>Follow instructions in our <a href="https://github.com/TIBCOSoftware/dovetail-contrib/tree/master/hyperledger-fabric/dovetail-tools">dovetail-contrib</a> page.</p>
+<p>After you follow these steps, your smart contract chaincode can be deployed to your hyperledger blockchain.</p>
 
 	
 		<style>
@@ -655,7 +663,7 @@
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified February 10, 2020: <a  href="https://github.com/TIBCOSoftware/dovetail//commit/843c31c8eb4313ba7d7e5ef0e1fdef35920363a1">New docs with TCI (843c31c)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified February 14, 2020: <a  href="https://github.com/TIBCOSoftware/dovetail//commit/e727f1a3a58acd60d5d8775355a47ada70a2e005">Add client steps in hello world (e727f1a)</a>
 </div>
 </div>
 

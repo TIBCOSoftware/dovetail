@@ -6,7 +6,7 @@ description: >
   Instructions on how to create a hyperledger smart contract into TCI (TIBCO Cloud Integration)
 ---
 
-Before anything download the [fabric_hw.json](../../fabric_hw.json) and [fabric_hw_client.json](../../fabric_hw_client.json) model example from our latest release.
+Before anything download the [fabric_hw.json](../../fabric_hw.json) model example.
 
 * Inside your Develop Flogo environment on TCI select "Create" button to create a new app.
 * Enter "fabric_hw" and select "create".
