@@ -215,7 +215,7 @@
 &lt;h2 id=&#34;before-you-get-started&#34;&gt;Before you get started&lt;/h2&gt;
 &lt;p&gt;Before you can get started with the cli tools you need to make sure you have the &lt;a href=&#34;https://golang.org/doc/install&#34;&gt;Go programming language&lt;/a&gt; and &lt;a href=&#34;https://git-scm.com/book/en/v2/Getting-Started-Installing-Git&#34;&gt;git&lt;/a&gt; installed. Go v1.13.x is required.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Don&amp;rsquo;t forget to set your &lt;code&gt;GOPATH&lt;/code&gt; variable and make sure that &lt;code&gt;$GOPATH/bin&lt;/code&gt; is part of your &lt;code&gt;PATH&lt;/code&gt;
+&lt;p&gt;Don&#39;t forget to set your &lt;code&gt;GOPATH&lt;/code&gt; variable and make sure that &lt;code&gt;$GOPATH/bin&lt;/code&gt; is part of your &lt;code&gt;PATH&lt;/code&gt;
 (see &lt;a href=&#34;https://golang.org/doc/code.html#GOPATH&#34;&gt;here&lt;/a&gt; or &lt;a href=&#34;https://github.com/golang/go/wiki/SettingGOPATH&#34;&gt;here&lt;/a&gt; for more details)&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;installing-the-cli-tools&#34;&gt;Installing the cli tools&lt;/h2&gt;
@@ -329,7 +329,7 @@ You can add /path/to/dovetail-cli/bin/dovetail to your PATH env variable for eas
         
         
         &lt;h3 id=&#34;1-issue-cash&#34;&gt;1 Issue cash&lt;/h3&gt;
-&lt;p&gt;Use bank&amp;rsquo;s swagger UI to issue and transfer cash to charlie.&lt;/p&gt;
+&lt;p&gt;Use bank&#39;s swagger UI to issue and transfer cash to charlie.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;go to security-controller section&lt;/p&gt;
@@ -371,7 +371,7 @@ You can add /path/to/dovetail-cli/bin/dovetail to your PATH env variable for eas
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;2-issue-an-iou&#34;&gt;2 Issue an IOU&lt;/h3&gt;
-&lt;p&gt;Use charlie&amp;rsquo;s swagger UI to issue an IOU&lt;/p&gt;
+&lt;p&gt;Use charlie&#39;s swagger UI to issue an IOU&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;go to security-controller section&lt;/p&gt;
@@ -424,7 +424,7 @@ You can add /path/to/dovetail-cli/bin/dovetail to your PATH env variable for eas
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;3-transfer-the-iou&#34;&gt;3 Transfer the IOU&lt;/h3&gt;
-&lt;p&gt;Use alice&amp;rsquo;s swagger to transfer IOU to bob.&lt;/p&gt;
+&lt;p&gt;Use alice&#39;s swagger to transfer IOU to bob.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;go to security-controller section&lt;/p&gt;
@@ -476,7 +476,7 @@ You can add /path/to/dovetail-cli/bin/dovetail to your PATH env variable for eas
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;4-settle-the-iou&#34;&gt;4 Settle the IOU&lt;/h3&gt;
-&lt;p&gt;Use charlie&amp;rsquo;s swagger UI to settle the IOU with cash&lt;/p&gt;
+&lt;p&gt;Use charlie&#39;s swagger UI to settle the IOU with cash&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;go to main-controller section
 &lt;ul&gt;

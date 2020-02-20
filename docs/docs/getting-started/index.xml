@@ -44,7 +44,7 @@
 &lt;h2 id=&#34;before-you-get-started&#34;&gt;Before you get started&lt;/h2&gt;
 &lt;p&gt;Before you can get started with the cli tools you need to make sure you have the &lt;a href=&#34;https://golang.org/doc/install&#34;&gt;Go programming language&lt;/a&gt; and &lt;a href=&#34;https://git-scm.com/book/en/v2/Getting-Started-Installing-Git&#34;&gt;git&lt;/a&gt; installed. Go v1.13.x is required.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Don&amp;rsquo;t forget to set your &lt;code&gt;GOPATH&lt;/code&gt; variable and make sure that &lt;code&gt;$GOPATH/bin&lt;/code&gt; is part of your &lt;code&gt;PATH&lt;/code&gt;
+&lt;p&gt;Don&#39;t forget to set your &lt;code&gt;GOPATH&lt;/code&gt; variable and make sure that &lt;code&gt;$GOPATH/bin&lt;/code&gt; is part of your &lt;code&gt;PATH&lt;/code&gt;
 (see &lt;a href=&#34;https://golang.org/doc/code.html#GOPATH&#34;&gt;here&lt;/a&gt; or &lt;a href=&#34;https://github.com/golang/go/wiki/SettingGOPATH&#34;&gt;here&lt;/a&gt; for more details)&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;installing-the-cli-tools&#34;&gt;Installing the cli tools&lt;/h2&gt;
