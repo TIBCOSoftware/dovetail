@@ -1,7 +1,7 @@
 ---
 title: "Corda Distributed Application"
 linkTitle: "Corda Application"
-weight: 2
+weight: 6
 description: >
   Development of a Corda Distributed Application
 ---

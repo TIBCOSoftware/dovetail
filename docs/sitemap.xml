@@ -3,13 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://tibcosoftware.github.io/dovetail/docs/getting-started/dovetail-ui/</loc>
+    <lastmod>2020-02-10T14:58:45-08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-dist/charlie/</loc>
     <lastmod>2020-02-07T18:55:02+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://tibcosoftware.github.io/dovetail/docs/getting-started/</loc>
-    <lastmod>2020-02-07T18:06:57+01:00</lastmod>
+    <lastmod>2020-02-10T14:58:45-08:00</lastmod>
   </url>
   
   <url>
@@ -23,32 +28,7 @@
   </url>
   
   <url>
-    <loc>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/</loc>
-    <lastmod>2020-02-07T18:06:57+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-test/start-nodes/</loc>
-    <lastmod>2020-02-07T18:06:57+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-dist/</loc>
-    <lastmod>2020-02-07T18:06:57+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tibcosoftware.github.io/dovetail/docs/getting-started/dovetail-cli/</loc>
-    <lastmod>2020-02-07T18:49:30+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-dist/alice/</loc>
-    <lastmod>2020-02-07T18:55:02+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/implement/</loc>
     <lastmod>2020-02-07T18:55:02+01:00</lastmod>
   </url>
   
@@ -64,11 +44,36 @@
   
   <url>
     <loc>https://tibcosoftware.github.io/dovetail/docs/getting-started/environment-prerequisites/</loc>
+    <lastmod>2020-02-10T14:58:45-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-dist/alice/</loc>
+    <lastmod>2020-02-07T18:55:02+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/implement/</loc>
+    <lastmod>2020-02-07T18:55:02+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tibcosoftware.github.io/dovetail/docs/source-code/</loc>
     <lastmod>2020-02-07T18:06:57+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/export/</loc>
+    <loc>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/</loc>
+    <lastmod>2020-02-10T14:58:45-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/</loc>
+    <lastmod>2020-02-10T14:58:45-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-dist/cord-app-gen/</loc>
     <lastmod>2020-02-07T18:06:57+01:00</lastmod>
   </url>
   
@@ -79,37 +84,62 @@
   
   <url>
     <loc>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-client/</loc>
-    <lastmod>2020-02-07T18:06:57+01:00</lastmod>
+    <lastmod>2020-02-10T14:58:45-08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tibcosoftware.github.io/dovetail/docs/source-code/</loc>
-    <lastmod>2020-02-07T18:06:57+01:00</lastmod>
+    <loc>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/extensions/</loc>
+    <lastmod>2020-02-10T14:58:45-08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/generate/</loc>
-    <lastmod>2020-02-07T18:06:57+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-dist/cord-app-gen/</loc>
-    <lastmod>2020-02-07T18:06:57+01:00</lastmod>
+    <loc>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/</loc>
+    <lastmod>2020-02-10T14:58:45-08:00</lastmod>
   </url>
   
   <url>
     <loc>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/corda-test/</loc>
-    <lastmod>2020-02-07T18:06:57+01:00</lastmod>
+    <lastmod>2020-02-10T14:58:45-08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/</loc>
-    <lastmod>2020-02-07T18:06:57+01:00</lastmod>
+    <loc>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/create-smart-contract/</loc>
+    <lastmod>2020-02-14T13:11:27-08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tibcosoftware.github.io/dovetail/docs/labs/fabic-sample/</loc>
-    <lastmod>2020-02-07T18:06:57+01:00</lastmod>
+    <loc>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/export/</loc>
+    <lastmod>2020-02-10T14:58:45-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/generate/</loc>
+    <lastmod>2020-02-10T14:58:45-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/implement/</loc>
+    <lastmod>2020-02-10T14:58:45-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tibcosoftware.github.io/dovetail/docs/labs/corda-iou-tut/smart-contract/model/</loc>
+    <lastmod>2020-02-10T14:58:45-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/build-smart-contract/</loc>
+    <lastmod>2020-02-14T13:11:27-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/create-client/</loc>
+    <lastmod>2020-02-14T13:11:27-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/build-client/</loc>
+    <lastmod>2020-02-14T13:11:27-08:00</lastmod>
   </url>
   
   <url>

@@ -1,7 +1,7 @@
 ---
 title: "Generate Corda Artifacts"
 linkTitle: "Generate Corda Artifacts"
-weight: 4
+weight: 7
 description: >
     generate Corda Contract State, Contract, and Flow
 ---

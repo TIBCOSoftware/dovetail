@@ -1,0 +1,142 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project Dovetail™ – Fabric Hello World Tutorial</title>
+    <link>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/</link>
+    <description>Recent content in Fabric Hello World Tutorial on Project Dovetail™</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Load fabric extensions</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/extensions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/extensions/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Before we start modelling our fabric application, we need to load the fabric extensions into flogo TCI.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;First log into TIBCO Cloud Integration as indicated in our &lt;a href=&#34;../../../../getting-started/dovetail-ui&#34;&gt;Dovetail UI&lt;/a&gt; section.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Open &amp;ldquo;Develop Flogo&amp;rdquo; environment.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select the &amp;ldquo;extensions&amp;rdquo; tab and upload the fabric extensions found at our &lt;a href=&#34;https://github.com/TIBCOSoftware/dovetail-contrib/releases&#34;&gt;releases&lt;/a&gt; repository (NOTE: You will need to download and then upload the fabric-extension.zip and fabric-client-extension.zip files).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;IMPORTANT: For smart contract modelling only Open Source extensions can be used, for this hello world tutorial we will use the following extensions&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;fabric-extension.zip from &lt;a href=&#34;https://github.com/TIBCOSoftware/dovetail-contrib&#34;&gt;dovetail-contrib&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/project-flogo/contrib/tree/master/activity/log&#34;&gt;Flogo log&lt;/a&gt; activity.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/project-flogo/contrib/tree/master/activity/actreturn&#34;&gt;Flogo return&lt;/a&gt; activity.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For more detail information go to our &lt;a href=&#34;https://github.com/TIBCOSoftware/dovetail-contrib/tree/master/hyperledger-fabric/tci&#34;&gt;dovetail-contrib&lt;/a&gt; page.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Create smart contract</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/create-smart-contract/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/create-smart-contract/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Before anything download the &lt;a href=&#34;../../fabric_hw.json&#34;&gt;fabric_hw.json&lt;/a&gt; model example.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Inside your Develop Flogo environment on TCI select &amp;ldquo;Create&amp;rdquo; button to create a new app.&lt;/li&gt;
+&lt;li&gt;Enter &amp;ldquo;fabric_hw&amp;rdquo; and select &amp;ldquo;create&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Select &amp;ldquo;create a TIBCO Flogo App&amp;rdquo; option.&lt;/li&gt;
+&lt;li&gt;Click on &amp;ldquo;Import App&amp;rdquo; option.&lt;/li&gt;
+&lt;li&gt;Upload fabric_hw.json selecting &amp;ldquo;import all&amp;rdquo; option.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After you import fabric_hw.json you can see a very simple smart contract with 2 transactions &amp;ldquo;get_value&amp;rdquo; and &amp;ldquo;set_value&amp;rdquo;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;set_value: Logs a message &amp;ldquo;Inside get_value&amp;rdquo; and then sets a value for a given key.&lt;/li&gt;
+&lt;li&gt;get_value: Logs a message &amp;ldquo;Setting value&amp;rdquo; and then returns the value of a given key.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For more detail information on how to create apps and model apps to our &lt;a href=&#34;https://integration.cloud.tibco.com/docs/index.html&#34;&gt;TCI docs&lt;/a&gt; page.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Build smart contract</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/build-smart-contract/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/build-smart-contract/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Before anything download the &lt;a href=&#34;../../fabric_hw.json&#34;&gt;fabric_hw.json&lt;/a&gt; model example.&lt;/p&gt;
+&lt;h4 id=&#34;clone-dovetail-contrib-repository&#34;&gt;Clone dovetail-contrib repository&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git clone https://github.com/TIBCOSoftware/dovetail-contrib.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;build-using-dovetail-tools&#34;&gt;Build using dovetail-tools&lt;/h4&gt;
+&lt;p&gt;Follow instructions in our &lt;a href=&#34;https://github.com/TIBCOSoftware/dovetail-contrib/tree/master/hyperledger-fabric/dovetail-tools&#34;&gt;dovetail-contrib&lt;/a&gt; page.&lt;/p&gt;
+&lt;p&gt;After you follow these steps, your smart contract chaincode can be deployed to your hyperledger blockchain.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Create client app</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/create-client/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/create-client/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Before anything download the &lt;a href=&#34;../../fabric_hw_client.json&#34;&gt;fabric_hw_client.json&lt;/a&gt; model example.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Inside your Develop Flogo environment on TCI select &amp;ldquo;Create&amp;rdquo; button to create a new app.&lt;/li&gt;
+&lt;li&gt;Enter &amp;ldquo;fabric_hw_client&amp;rdquo; and select &amp;ldquo;create&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Select &amp;ldquo;create a TIBCO Flogo App&amp;rdquo; option.&lt;/li&gt;
+&lt;li&gt;Click on &amp;ldquo;Import App&amp;rdquo; option.&lt;/li&gt;
+&lt;li&gt;Upload fabric_hw_client.json selecting &amp;ldquo;import all&amp;rdquo; option.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After you import fabric_hw_client.json you can see a very simple rest application with 2 transactions &amp;ldquo;get_request&amp;rdquo; and &amp;ldquo;set_request&amp;rdquo;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;get_request: Logs a message and then calls the smart contract fabric_hw to store a value for a given key.&lt;/li&gt;
+&lt;li&gt;get_request: Logs a message and then calls the smart contract fabric_hw to return the value of a given key.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For more detail information on how to create apps and model apps to our &lt;a href=&#34;https://integration.cloud.tibco.com/docs/index.html&#34;&gt;TCI docs&lt;/a&gt; page.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Build client</title>
+      <link>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/build-client/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tibcosoftware.github.io/dovetail/docs/labs/fabric-sample/hello-world/build-client/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Before anything download the &lt;a href=&#34;../../fabric_hw_client.json&#34;&gt;fabric_hw_client.json&lt;/a&gt; model example.&lt;/p&gt;
+&lt;h4 id=&#34;clone-dovetail-contrib-repository&#34;&gt;Clone dovetail-contrib repository&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git clone https://github.com/TIBCOSoftware/dovetail-contrib.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;build-using-dovetail-tools&#34;&gt;Build using dovetail-tools&lt;/h4&gt;
+&lt;p&gt;Follow instructions in our &lt;a href=&#34;https://github.com/TIBCOSoftware/dovetail-contrib/tree/master/hyperledger-fabric/dovetail-tools&#34;&gt;dovetail-contrib&lt;/a&gt; page.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -70,7 +70,7 @@
         
         
         &lt;h3 id=&#34;1-issue-cash&#34;&gt;1 Issue cash&lt;/h3&gt;
-&lt;p&gt;Use bank&#39;s swagger UI to issue and transfer cash to charlie.&lt;/p&gt;
+&lt;p&gt;Use bank&amp;rsquo;s swagger UI to issue and transfer cash to charlie.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;go to security-controller section&lt;/p&gt;
@@ -112,7 +112,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;2-issue-an-iou&#34;&gt;2 Issue an IOU&lt;/h3&gt;
-&lt;p&gt;Use charlie&#39;s swagger UI to issue an IOU&lt;/p&gt;
+&lt;p&gt;Use charlie&amp;rsquo;s swagger UI to issue an IOU&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;go to security-controller section&lt;/p&gt;
@@ -165,7 +165,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;3-transfer-the-iou&#34;&gt;3 Transfer the IOU&lt;/h3&gt;
-&lt;p&gt;Use alice&#39;s swagger to transfer IOU to bob.&lt;/p&gt;
+&lt;p&gt;Use alice&amp;rsquo;s swagger to transfer IOU to bob.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;go to security-controller section&lt;/p&gt;
@@ -217,7 +217,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;4-settle-the-iou&#34;&gt;4 Settle the IOU&lt;/h3&gt;
-&lt;p&gt;Use charlie&#39;s swagger UI to settle the IOU with cash&lt;/p&gt;
+&lt;p&gt;Use charlie&amp;rsquo;s swagger UI to settle the IOU with cash&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;go to main-controller section
 &lt;ul&gt;

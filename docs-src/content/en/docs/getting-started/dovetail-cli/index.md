@@ -7,7 +7,7 @@ description: >
 ---
 
 ## Introduction
-The dovetail cli is a tool to mainly generate smart contracts for a given model built using ui tool [Dovetail Studio](ch01-01-installation.md), so we recommend you to learn how to do that first.
+The dovetail cli is a tool to mainly generate smart contracts for a given model built using ui tool [Dovetail UI](../dovetail-ui), so we recommend you to learn how to do that first.
 
 ## Before you get started
 Before you can get started with the cli tools you need to make sure you have the [Go programming language](https://golang.org/doc/install) and [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed. Go v1.13.x is required.
