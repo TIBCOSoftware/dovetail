@@ -215,7 +215,7 @@
 &lt;h2 id=&#34;before-you-get-started&#34;&gt;Before you get started&lt;/h2&gt;
 &lt;p&gt;Before you can get started with the cli tools you need to make sure you have the &lt;a href=&#34;https://golang.org/doc/install&#34;&gt;Go programming language&lt;/a&gt; and &lt;a href=&#34;https://git-scm.com/book/en/v2/Getting-Started-Installing-Git&#34;&gt;git&lt;/a&gt; installed. Go v1.13.x is required.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Don&#39;t forget to set your &lt;code&gt;GOPATH&lt;/code&gt; variable and make sure that &lt;code&gt;$GOPATH/bin&lt;/code&gt; is part of your &lt;code&gt;PATH&lt;/code&gt;
+&lt;p&gt;Don&amp;rsquo;t forget to set your &lt;code&gt;GOPATH&lt;/code&gt; variable and make sure that &lt;code&gt;$GOPATH/bin&lt;/code&gt; is part of your &lt;code&gt;PATH&lt;/code&gt;
 (see &lt;a href=&#34;https://golang.org/doc/code.html#GOPATH&#34;&gt;here&lt;/a&gt; or &lt;a href=&#34;https://github.com/golang/go/wiki/SettingGOPATH&#34;&gt;here&lt;/a&gt; for more details)&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;installing-the-cli-tools&#34;&gt;Installing the cli tools&lt;/h2&gt;
@@ -329,7 +329,7 @@ You can add /path/to/dovetail-cli/bin/dovetail to your PATH env variable for eas
         
         
         &lt;h3 id=&#34;1-issue-cash&#34;&gt;1 Issue cash&lt;/h3&gt;
-&lt;p&gt;Use bank&#39;s swagger UI to issue and transfer cash to charlie.&lt;/p&gt;
+&lt;p&gt;Use bank&amp;rsquo;s swagger UI to issue and transfer cash to charlie.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;go to security-controller section&lt;/p&gt;
@@ -353,7 +353,7 @@ You can add /path/to/dovetail-cli/bin/dovetail to your PATH env variable for eas
     &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
         &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;quantity&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;100000&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
         &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;currency&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;USD&amp;#34;&lt;/span&gt;
-    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
     &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;issuerRef&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;00&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
     &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;recipient&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;O=charlie,L=New York,C=US&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
     &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;anonymous&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
@@ -371,7 +371,7 @@ You can add /path/to/dovetail-cli/bin/dovetail to your PATH env variable for eas
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;2-issue-an-iou&#34;&gt;2 Issue an IOU&lt;/h3&gt;
-&lt;p&gt;Use charlie&#39;s swagger UI to issue an IOU&lt;/p&gt;
+&lt;p&gt;Use charlie&amp;rsquo;s swagger UI to issue an IOU&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;go to security-controller section&lt;/p&gt;
@@ -405,7 +405,7 @@ You can add /path/to/dovetail-cli/bin/dovetail to your PATH env variable for eas
     &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;amt&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
         &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;quantity&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;10000&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
         &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;currency&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;USD&amp;#34;&lt;/span&gt;
-    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
     &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;extId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;iou1&amp;#34;&lt;/span&gt;
 &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
@@ -424,7 +424,7 @@ You can add /path/to/dovetail-cli/bin/dovetail to your PATH env variable for eas
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;3-transfer-the-iou&#34;&gt;3 Transfer the IOU&lt;/h3&gt;
-&lt;p&gt;Use alice&#39;s swagger to transfer IOU to bob.&lt;/p&gt;
+&lt;p&gt;Use alice&amp;rsquo;s swagger to transfer IOU to bob.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;go to security-controller section&lt;/p&gt;
@@ -457,7 +457,7 @@ You can add /path/to/dovetail-cli/bin/dovetail to your PATH env variable for eas
     &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;iouId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
         &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;externalId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;iou1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
         &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;paste the linearId.id value here&amp;#34;&lt;/span&gt;
-    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
     &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;newHoder&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;O=bob,L=New York,C=US&amp;#34;&lt;/span&gt;
 &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
@@ -476,7 +476,7 @@ You can add /path/to/dovetail-cli/bin/dovetail to your PATH env variable for eas
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;4-settle-the-iou&#34;&gt;4 Settle the IOU&lt;/h3&gt;
-&lt;p&gt;Use charlie&#39;s swagger UI to settle the IOU with cash&lt;/p&gt;
+&lt;p&gt;Use charlie&amp;rsquo;s swagger UI to settle the IOU with cash&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;go to main-controller section
 &lt;ul&gt;
@@ -655,29 +655,29 @@ mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -DgenerateP
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;3-create-dependency-pom-file-for-each-organization&#34;&gt;3. Create dependency pom file for each organization&lt;/h3&gt;
 &lt;h4 id=&#34;31-charlie&#34;&gt;3.1 charlie&lt;/h4&gt;
 &lt;p&gt;copy following to artifacts/charlie.pom file&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;com.alice.iou.flows&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;alice-api&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;1.0.0&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;com.alice.iou.flows&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;alice-api&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;1.0.0&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
 &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;32-alice&#34;&gt;3.2 alice&lt;/h4&gt;
 &lt;p&gt;copy following to artifacts/alice.pom file&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;com.charlie.iou.flows&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;charlie-api&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;1.0.0&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;com.charlie.iou.flows&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;charlie-api&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;1.0.0&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
 &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;32-bob&#34;&gt;3.2 bob&lt;/h4&gt;
 &lt;p&gt;copy following to artifacts/bob.pom file&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;com.charlie.iou.flows&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;charlie-api&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;1.0.0&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;com.charlie.iou.flows&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;charlie-api&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;1.0.0&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
 &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;com.alice.iou.flows&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;alice-api&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;1.0.0&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;com.alice.iou.flows&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;alice-api&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;1.0.0&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
 &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;4-generate-cordapps&#34;&gt;4. Generate CorDapps&lt;/h3&gt;
 &lt;p&gt;run following command from iou_tutorial folder&lt;/p&gt;
@@ -718,10 +718,10 @@ mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -DgenerateP
 &lt;p&gt;The generated client also contains an embedded event streaming service to pulish vault state changes to specified messaging service, at present, only TIBCO Cloud Messaging is supported, use commandline &amp;ndash;streaming eftl to enable streaming service.&lt;/p&gt;
 &lt;h3 id=&#34;1-create-dependency-pom-file&#34;&gt;1 Create dependency pom file&lt;/h3&gt;
 &lt;p&gt;copy following to artifacts/iou.pom file&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;com.example.iou&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;IOU&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt;1.0.0&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;com.example.iou&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;IOU&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;1.0.0&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
 &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-generate-corda-client&#34;&gt;2. Generate Corda Client&lt;/h3&gt;
 &lt;p&gt;run following command from iou_tutorial folder, a web client is generated for charlie, alice and bob. The last command is to generate a generic web client than will be used for party &amp;lsquo;bank&amp;rsquo; to issue and transfer cash.&lt;/p&gt;
